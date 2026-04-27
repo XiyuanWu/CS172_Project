@@ -1,0 +1,9 @@
+# Seed URLs for the crawler (one per line).
+# Lines starting with '#' and blank lines are ignored.
+# Replace / extend this list with the seeds you want to crawl from.
+
+https://www.ucr.edu/
+https://www.ucr.edu/about
+https://engineering.ucr.edu/
+https://www.cs.ucr.edu/
+https://news.ucr.edu/
