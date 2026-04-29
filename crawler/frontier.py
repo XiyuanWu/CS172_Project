@@ -44,7 +44,7 @@ class Frontier:
 
 # Tests
 if __name__ == "__main__":
-    print("Test: Single Threaded Flow (In case multithreading is not implemented by P3)")
+    print("Test 1: Single Threaded Flow (In case multithreading is not implemented by P3)")
     f = Frontier()
 
     f.add("https://www.ucr.edu", 0)
@@ -62,3 +62,33 @@ if __name__ == "__main__":
         print(f"depth = {depth} {url}")
 
     print("Empty:", f.is_empty())
+
+    print("\nTest 2: Multithreaded Flow")
+
+    import threading
+    import random
+    
+    f = Frontier()
+
+    def producer(producer_id: int) -> None:
+        for i in range(5):
+            depth = random.choice([0,1,10])
+            f.add(f"https://www.ucr.edu/p{producer_id}-{i}", depth)
+
+    threads = [threading.Thread(target=producer,args=(i,)) for i in range(4)]
+
+    for t in threads:
+        t.start()
+
+    for t in threads:
+        t.join()
+
+    print(f"4 concurrent threads running producer, len = {len(f)}")
+
+    url_counter = 0
+    while not f.is_empty():
+        url, depth = f.next()
+        url_counter += 1
+        print(f"counter = {url_counter} depth = {depth} {url}")
+    
+    
