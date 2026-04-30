@@ -1,11 +1,17 @@
 """URL frontier (queue + BFS depth tracking).
 
-Owned by: Prathmesh Jain
+Owned by: P2 - Prathmesh Jain
 
 Agreed interface (dev-doc-a.md, section 5):
     Frontier.add(url, depth)
     Frontier.next() -> (url, depth)
     Frontier.is_empty() -> bool
+
+Additions (for the multi-threaded crawler):
+    Frontier.task_done()  -- worker calls this after a URL is fully
+                             processed (downloaded, parsed, children added).
+    Frontier.join()       -- main thread blocks until every URL ever
+                             added has been task_done()'d.
 
 Behavioral requirements:
     * BFS order (FIFO). Pages at depth d are crawled before depth d+1.
@@ -17,7 +23,6 @@ Behavioral requirements:
 from __future__ import annotations
 
 import queue
-
 from typing import Tuple
 
 from config import CONFIG
@@ -41,6 +46,14 @@ class Frontier:
     def __len__(self) -> int:
         return self._queue.qsize()
     
+    def task_done(self) -> None:
+        self._queue.task_done()
+
+    def join(self) -> None:
+        self._queue.join()
+    
+
+
 
 # Tests
 if __name__ == "__main__":
@@ -62,6 +75,7 @@ if __name__ == "__main__":
         print(f"depth = {depth} {url}")
 
     print("Empty:", f.is_empty())
+
 
     print("\nTest 2: Multithreaded Flow")
 
@@ -91,4 +105,44 @@ if __name__ == "__main__":
         url_counter += 1
         print(f"counter = {url_counter} depth = {depth} {url}")
     
+
+    print("\nTest 3: Multithreaded queue end")
+
+    f = Frontier()
+    crawled = []
+    crawled_lock = threading.Lock()
+
+    f.add("https://www.ucr.edu", 0)
+
+    def test_worker(worker_id:int) -> None:
+        while True:
+            try:
+                url, depth = f.next()
+                print(f"worker = {worker_id} depth = {depth} {url}")
+            except queue.Empty:
+                import time
+                time.sleep(0.1)
+                continue
+
+            with crawled_lock:
+                crawled.append(url)
+            
+            # Fake Child links getting added
+            if depth == 0:
+                for i in range(3):
+                    f.add(f"https://www.ucr.edu/child{i}", 1)
+            elif depth == 1:
+                for i in range(2):
+                    f.add(f"{url}/grandchild{i}", 2)
+
+            f.task_done()
+
+    workers = [threading.Thread(target=test_worker, args=(i,), daemon=True) for i in range(3)]
+
+    for w in workers:
+        w.start()
     
+    f.join()
+
+    print(f"crawl finished. crawled {len(crawled)} URLs (expected 10)")
+    print(f"  examples: {crawled[:4]} ...")
