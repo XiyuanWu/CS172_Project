@@ -22,15 +22,43 @@ This file is a STUB. Implementation is owned by P5.
 
 from __future__ import annotations
 
+import threading
+from urllib.parse import urlparse
+
+from config import CONFIG
+
+_visited: set[str] = set()
+_lock = threading.Lock()
+
 
 def is_valid_url(url: str) -> bool:
     """Return True if `url` is HTTP(S), in-domain, and not a skipped type."""
-    raise NotImplementedError("P5: implement is_valid_url(url)")
+    try:
+        parsed = urlparse(url)
+    except Exception:
+        return False
+
+    if parsed.scheme not in ("http", "https"):
+        return False
+
+    if CONFIG.allowed_domain:
+        host = parsed.netloc.lower().split(":")[0]
+        domain = CONFIG.allowed_domain.lower()
+        if host != domain and not host.endswith("." + domain):
+            return False
+
+    path_lower = parsed.path.lower()
+    if any(path_lower.endswith(ext) for ext in CONFIG.skip_extensions):
+        return False
+
+    return True
 
 
 def has_visited(url: str) -> bool:
-    raise NotImplementedError("P5: implement has_visited(url)")
+    with _lock:
+        return url in _visited
 
 
 def mark_visited(url: str) -> None:
-    raise NotImplementedError("P5: implement mark_visited(url)")
+    with _lock:
+        _visited.add(url)
