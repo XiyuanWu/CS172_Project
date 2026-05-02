@@ -1,13 +1,13 @@
 """HTML link extraction and URL normalization.
 
-Owned by: Person 4.
+Owned by: Jake Wang.
 
 Agreed interface (dev-doc-a.md, section 5):
     extract_links(html, base_url) -> [urls]
 
 Behavioral requirements:
     * Parse all <a href="..."> hyperlinks from `html`.
-    * Convert relative URLs to absolute URLs using `base_url`.
+    * Convert relative links to absolute URLs using `base_url`.
     * Remove URL fragments (#section).
     * Normalize URLs (lowercase scheme/host, strip default ports, etc.)
       so '<base>/page' and '<base>/page/' don't both pass through later
