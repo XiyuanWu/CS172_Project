@@ -16,8 +16,6 @@ Behavioral requirements:
       'www.ucr.edu' and 'cs.ucr.edu').
     * Reject URLs whose path ends with an extension in CONFIG.skip_extensions.
     * `has_visited` / `mark_visited` operate on a shared visited set.
-
-This file is a STUB. Implementation is owned by P5.
 """
 
 from __future__ import annotations
