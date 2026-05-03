@@ -73,7 +73,7 @@ def extract_links(html: str, base_url: str) -> List[str]:
         # reassemble the full normalized URL from its components
         normalized = urlunparse((scheme, netloc, path, parsed.params, parsed.query, ""))
 
-        # Step 4: de-duplicate
+        # de-duplicate
         if normalized not in seen:
             seen.add(normalized)
             results.append(normalized)
