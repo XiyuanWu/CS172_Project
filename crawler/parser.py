@@ -28,7 +28,7 @@ def extract_links(html: str, base_url: str) -> List[str]:
     hrefs = []
 
     # Parse HTML with BeautifulSoup/lxml for all <a href> link strings
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, "html.parser")
 
     for tag in soup.find_all("a", href=True):
         hrefs.append(tag["href"]) # Append raw href string, e.g. "/about" or "https://..."
