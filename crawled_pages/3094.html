@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+      <meta name='robots' content='noindex, nofollow' />
+      <!-- Remove once in PROD -->
+      <link rel='dns-prefetch' href='//cdn.lbl.gov' />
+      <link rel='dns-prefetch' href='//code.jquery.com' />
+      <link rel='dns-prefetch' href='//cdn.datatables.net' />
+      <link rel='dns-prefetch' href='//use.typekit.net' />
+      <!-- Required CSS files START -->
+      <link rel='stylesheet' id='lbl-component-styles-css' href='https://cdn.lbl.gov/stable/3/css/global.css?ver=3.0.7' type='text/css' media='all' />
+      <link rel='stylesheet' id='lbl-fonts-css' href='https://use.typekit.net/evi6dpc.css?ver=6.7.1' type='text/css' media='all' />
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.10/css/jquery.dataTables.min.css">
+      <!-- Required CSS files END -->
+      <!-- Required JS files START -->
+      <script type="text/javascript" src="https://cdn.lbl.gov/stable/3/js/lblFullComponents.js?ver=3.0.7" id="lbl-components-js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" id="jquery-js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.10/datatables.min.js?ver=1.12.1" id="datatables_local-js"></script>
+      <script type="text/javascript" src="/bundle.js"></script>
+      <!-- Required JS files END -->
+      <!-- Required JS Scripts START -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('search').focus();
+         });
+      </script>
+      <!-- Required JS Scripts END -->
+      <!-- Google Site Verification -->
+      <meta name="google-site-verification" content="gBIPt8QWQxENdTctOBjkZ11eBFJm8j-vSoKsc1MDEdc">
+      <!-- Favicon -->
+      <link rel="icon" href="https://www.lbl.gov/wp-content/themes/lbl-child-theme-www/favicon.png">
+   </head>
+   <body class="home blog">
+      <div class="page-wrap">
+         <!-- BLDS headers and hero START -->
+         <lbl-top-header></lbl-top-header>
+         <lbl-header theme='bu'>
+            <div class="logo" slot="logo">
+               <a href="https://phonebook.lbl.gov" aria-label="">
+                  <h1></h1>
+               </a>
+            </div>
+            <div slot="search">
+               <lbl-search-form placeholder-text="Search this site" search-url="https://phonebook.lbl.gov/" search-query-parameter="s" slot="search"></lbl-search-form>
+            </div>
+         </lbl-header>
+         <div id="page" class="hfeed site container">
+            <div id="content" class="site-content">
+               <div id="primary" class="content-area">
+                  <main id="main" class="site-main">
+                     <div id="post-wrap">
+                        <lbl-hero-basic title="Phonebook" layout="basic-full-image">
+                           <lbl-pattern slot="pattern" theme="research-hero"></lbl-pattern>
+                        </lbl-hero-basic>
+                        <!-- BLDS headers and hero END -->
+                        <!-- Phone book logic START -->
+                        <lbl-container>
+                           <div id="wrap" class="wrap">
+                              <div id="phonebook-body">
+                                 <span class="text_above_search_box">Enter your Phonebook Search Query - </span>
+                                 <span class="see_advanced_search_options">
+                                    <a href="https://docs.google.com/document/d/1GKMqC0LNEF7nvu9xExmNccNGZppICZOZ63txAYQW1R4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">See Advanced Search Options</a>
+                                 </span>
+                                 <div class="search-box">
+                                    <input type="text" id="search" placeholder="Search Phonebook" autofocus>
+                                    <button type="submit" class="search-btn">Search</button>
+                                 </div>
+                                 <div class="options-wrapper">
+                                    <span class="include_former_employee_checkbox" style="display: none;">
+                                       <input type="checkbox" id="include-former-employee-checkbox">
+                                       <label for="include-former-employee-checkbox" class="include_former_employee_checkbox_text">
+                                       Display Former Employees
+                                       </label> 
+                                    </span>
+                                    <span class="sort_options_dropdown">
+                                       <label for="sortOptions">Sort by:</label>
+                                       <select id="sortOptions">
+                                          <option value="last">Last Name</option>
+                                          <option value="mail">Email</option>
+                                       </select>
+                                    </span>
+                                 </div>
+                                 <table id="employeeTable" class="display" width="100%"></table>
+                                 <div class="div-between-wrap-and-footer"></div>
+                              </div>
+                              <!-- #phonebook-body -->
+                           </div>
+                           <!-- #wrap -->
+                           <div id="phonebook-footer">
+                              <div class="area_below_employee_table">
+                                 <span class="additional-resources"> Additional Resources: </span>
+                                 <span>
+                                 <a href="https://hris.hr.lbl.gov" target="_blank" rel="noopener noreferrer">Edit your directory information</a> | </span>
+                                 <span>
+                                 <a href="https://commons.lbl.gov/pages/viewpage.action?pageId=84906298" target="_blank" rel="noopener noreferrer">Departments</a> | </span>
+                                 <span>
+                                 <a href="https://dnscontacts.lbl.gov/" target="_blank" rel="noopener noreferrer">Hostname information</a>
+                                 </span>
+                              </div>
+                              <div class="card-grid">
+                                 <div class="card">
+                                    <p class="card-header">Emergency Contacts</p>
+                                    <p class="card-text">In an emergency, dial 911 from any lab or mobile phone.</p>
+                                    <div class="more-link">
+                                       <span>MORE</span>
+                                       <lbl-button slot="btn" parent-theme="cloud" type="go-ghost" link-url="https://securityandemergencyservices.lbl.gov/" link-target="_blank" rel="noopener noreferrer"></lbl-button>
+                                    </div>
+                                 </div>
+                                 <div class="card">
+                                    <p class="card-header">Berkeley Lab</p>
+                                    <p class="card-header">Main Number</p>
+                                    <p class="card-text">510-486-4000</p>
+                                 </div>
+                                 <div class="card">
+                                    <p class="card-header">Berkeley Lab Address</p>
+                                    <!-- <p class="card-header">Address</p> -->
+                                    <p class="card-text">Lawrence Berkeley National Laboratory</p>
+                                    <p>1 Cyclotron Road</p>
+                                    <p>Berkeley, CA 94720</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- #phonebook-footer -->
+                        </lbl-container>
+                        <!-- Phone book logic END-->
+                     </div>
+                     <!-- #post-wrap -->
+                  </main>
+                  <!-- #main -->
+               </div>
+               <!-- #primary -->
+            </div>
+            <!-- #content -->
+         </div>
+         <!-- #page .container -->
+         <!-- BLDS footer START -->
+         <lbl-bu-footer logo-url="https://phonebook.lbl.gov" logo-title="" logo-sub-title=""></lbl-bu-footer>
+         <lbl-bottom-footer></lbl-bottom-footer>
+         <!-- BLDS footer END -->
+         <!-- Google Tag Manager -->
+         <script>
+            (function(w, d, s, l, i) {
+              w[l] = w[l] || [];
+              w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+              });
+              var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+              j.async = true;
+              j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+              f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-M544LVV');
+         </script>
+         <!-- End Google Tag Manager -->
+      </div>
+      <!-- /.page-wrap -->
+   </body>
+</html>

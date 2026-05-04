@@ -1,6 +1,6 @@
 """HTML link extraction and URL normalization.
 
-Owned by: Jake Wang.
+Owned by: Person 4: Jake Wang.
 
 Agreed interface (dev-doc-a.md, section 5):
     extract_links(html, base_url) -> [urls]
@@ -49,17 +49,27 @@ def extract_links(html: str, base_url: str) -> List[str]:
         # strip fragment (#section)
         defragged, _ = urldefrag(absolute)
 
-        # normalize
-        parsed = urlparse(defragged)
+        # normalize (malformed netloc can make .hostname / .port raise ValueError)
+        try:
+            parsed = urlparse(defragged)
+        except ValueError:
+            continue
 
         # skip non-http/https URLs
         if parsed.scheme not in ("http", "https"):
             continue
 
-        # extract scheme/host/port; hostname is always lowercase, unlike netloc
-        host = parsed.hostname or ""
-        port = parsed.port
+        try:
+            # extract scheme/host/port; hostname is always lowercase, unlike netloc
+            host = parsed.hostname or ""
+            port = parsed.port
+        except ValueError:
+            # e.g. netloc with non-integer "port" like host:10.130.31
+            continue
+
         scheme = parsed.scheme.lower()
+        if not host:
+            continue
 
         # strip default ports so http://site.com:80 and http://site.com are treated the same
         if (scheme == "http" and port == 80) or (scheme == "https" and port == 443):
