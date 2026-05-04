@@ -18,8 +18,6 @@ You will be graded on the correctness and efficiency of your crawler (e.g., how 
 In all cases, you should collect at least 500 MB of raw data.
 
 
-
-
 ### Deliverables:
 
 Report (4-5 pages) in pdf that includes:
@@ -36,8 +34,7 @@ Example: [user@server]./crawler.sh <seed-File:seed.txt> <num-pages: 10000> <hops
 
 5. Screenshots showing the system in action.
 
-2: Zip file with your code
-
+6. Zip file with your code.
 
 
 

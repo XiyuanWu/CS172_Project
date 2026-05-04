@@ -62,6 +62,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
                    help="Number of concurrent download workers.")
     p.add_argument("--timeout", dest="timeout", type=float, default=None,
                    help="Per-request HTTP timeout in seconds.")
+    p.add_argument("--polite-delay", dest="polite_delay", type=float, default=None,
+                   help="Seconds to sleep after each dequeued URL (default from config.py). "
+                        "Use 0 to disable.")
     p.add_argument("-v", "--verbose", action="store_true",
                    help="Enable DEBUG-level logging.")
     return p
@@ -101,6 +104,8 @@ def apply_cli_overrides(args: argparse.Namespace) -> None:
         CONFIG.num_workers = args.workers
     if args.timeout is not None:
         CONFIG.request_timeout = args.timeout
+    if args.polite_delay is not None:
+        CONFIG.polite_delay = max(args.polite_delay, 0.0)
 
 
 def setup_logging(verbose: bool) -> None:
@@ -153,30 +158,34 @@ def run_crawl(seeds: List[str]) -> None:
         url, depth = frontier.next()
         log.debug("Fetching depth=%d url=%s", depth, url)
 
-        html, status = download(url)
-        if html is None:
-            log.debug("Skip url=%s status=%s", url, status)
-            continue
-
-        save_page(url, html, depth)
-        pages_saved += 1
-        bytes_saved += len(html.encode("utf-8"))
-        if pages_saved % 50 == 0:
-            elapsed = time.time() - started
-            log.info("Saved %d pages / %.2f MB (%.1f pages/s, frontier=%d)",
-                     pages_saved, bytes_saved / (1024 * 1024),
-                     pages_saved / max(elapsed, 1e-6), len(frontier))
-
-        if depth >= CONFIG.max_hops:
-            continue
-
-        for link in extract_links(html, url):
-            if not is_valid_url(link):
+        try:
+            html, status = download(url)
+            if html is None:
+                log.debug("Skip url=%s status=%s", url, status)
                 continue
-            if has_visited(link):
+
+            save_page(url, html, depth)
+            pages_saved += 1
+            bytes_saved += len(html.encode("utf-8"))
+            if pages_saved % 50 == 0:
+                elapsed = time.time() - started
+                log.info("Saved %d pages / %.2f MB (%.1f pages/s, frontier=%d)",
+                         pages_saved, bytes_saved / (1024 * 1024),
+                         pages_saved / max(elapsed, 1e-6), len(frontier))
+
+            if depth >= CONFIG.max_hops:
                 continue
-            mark_visited(link)
-            frontier.add(link, depth + 1)
+
+            for link in extract_links(html, url):
+                if not is_valid_url(link):
+                    continue
+                if has_visited(link):
+                    continue
+                mark_visited(link)
+                frontier.add(link, depth + 1)
+        finally:
+            if CONFIG.polite_delay > 0:
+                time.sleep(CONFIG.polite_delay)
 
     elapsed = time.time() - started
     log.info("Crawl finished: %d pages, %.2f MB in %.1fs",
@@ -191,9 +200,10 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     log = logging.getLogger("crawler.main")
     log.info("Configuration: seed_file=%s max_pages=%d max_hops=%d "
-             "output_dir=%s target_size_mb=%d allowed_domain=%r workers=%d",
+             "output_dir=%s target_size_mb=%d polite_delay=%.3fs "
+             "allowed_domain=%r workers=%d",
              CONFIG.seed_file, CONFIG.max_pages, CONFIG.max_hops,
-             CONFIG.output_dir, CONFIG.target_size_mb,
+             CONFIG.output_dir, CONFIG.target_size_mb, CONFIG.polite_delay,
              CONFIG.allowed_domain, CONFIG.num_workers)
 
     try:
