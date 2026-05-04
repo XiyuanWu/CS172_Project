@@ -1,0 +1,1364 @@
+<!doctype html>
+<html lang=en-US>
+    <head><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://service.force.com/embeddedservice/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/ https://payments.salesforce.com/ https://js.stripe.com/ https://www.paypal.com/sdk/js https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com import: blob: https://uip.canary.lwc.dev https://secure.payconex.net/iframe/iframe-lib-1.0.0.js https://cert.payconex.net https://pace2--aquat--c.sandbox.vf.force.com https://pace2--aquat.sandbox.my.salesforce.com https://pace2--aquat.sandbox.my.site.com/UCSF https://pace2--aquat--c.sandbox.vf.force.com/apex/BluefinContainer https://api.cquotient.com https://datalayer.ucsfhealth.org https://assets.adobedtm.com https://assets.adobedtm.com/db5f13cb240b/c5fa03228f1c/launch-0597a469d2a9-development.min.js https://vimeo.com https://adobedc.demdex.net https://edge.adobedc.net https://giving.ucsf.edu https://cloud.our.ucsf.edu https://siteimproveanalytics.com https://8343.global.siteimproveanalytics.io https://datalayer.ucsfhealth.org/ucsf-data-layer.js https://wisepops.net https://activity.wisepops.com https://cdn.wisepops.com https://tracking.wisepops.com https://infograph.venngage.com https://ucsf.co1.qualtrics.com https://google.com/pay https://www.gstatic.com; object-src 'self' www.google.com; style-src 'self' 'unsafe-inline' https://service.force.com/embeddedservice/ https://fonts.googleapis.com/css2 https://fonts.googleapis.com/css https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ blob: https://content.instrumentation.getconga.com https://data.instrumentation.getconga.com https://*.congamerge.com https://services.congamerge.com https://app.launchdarkly.com https://datalayer.ucsfhealth.org https://assets.adobedtm.com https://edge.adobedc.net https://cloud.our.ucsf.edu https://siteimproveanalytics.com https://8343.global.siteimproveanalytics.io https://*.clmfed.docusign.com https://*.clm.docusign.mil https://*.docusign.net https://api.mixpanel.com https://*.springcm.com https://adobedc.demdex.net https://*.docusign.com https://wisepops.net https://activity.wisepops.com https://cdn.wisepops.com https://tracking.wisepops.com https://pace2.my.site.com https://pace2.my.salesforce.com https://pace2.lightning.force.com https://secure.payconex.net https://api.cquotient.com https://cert.payconex.net https://pace2--c.vf.force.com https://fonts.cdnfonts.com https://ucsf.co1.qualtrics.com https://google.com https://pay.google.com; img-src 'self' data: blob: https://pace2.my.salesforce.com https://pace2.file.force.com https://img.youtube.com https://i.ytimg.com https://i.vimeocdn.com https://login.salesforce.com/icons/ https://payments.salesforce.com/icons/ https://cdn.content.aws-prod1-useast1.aws.sfdc.cl/icons/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/icons/ https://*.adyen.com https://www.sandbox.paypal.com https://www.paypal.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.gstatic.com https://usa728.sfdc-8tgtt5.salesforce.com/icons/ https://content.instrumentation.getconga.com https://data.instrumentation.getconga.com https://*.congamerge.com https://services.congamerge.com https://app.launchdarkly.com https://datalayer.ucsfhealth.org https://assets.adobedtm.com https://edge.adobedc.net https://cloud.our.ucsf.edu https://ucsf.my.salesforce.com https://siteimproveanalytics.com https://8343.global.siteimproveanalytics.io https://*.clmfed.docusign.com https://*.clm.docusign.mil https://*.docusign.net https://api.mixpanel.com https://*.springcm.com https://adobedc.demdex.net https://*.docusign.com https://wisepops.net https://activity.wisepops.com https://cdn.wisepops.com https://tracking.wisepops.com https://infograph.venngage.com https://pace2.my.site.com https://pace2.lightning.force.com https://secure.payconex.net https://api.cquotient.com https://cert.payconex.net https://pace2--c.vf.force.com https://fonts.cdnfonts.com https://ucsf.co1.qualtrics.com https://google.com https://pay.google.com apple-pay-gateway-cert.apple.com; media-src 'self' blob: https://content.instrumentation.getconga.com https://data.instrumentation.getconga.com https://*.congamerge.com https://services.congamerge.com https://app.launchdarkly.com https://datalayer.ucsfhealth.org https://assets.adobedtm.com https://edge.adobedc.net https://cloud.our.ucsf.edu https://siteimproveanalytics.com https://8343.global.siteimproveanalytics.io https://*.clmfed.docusign.com https://*.clm.docusign.mil https://*.docusign.net https://api.mixpanel.com https://*.springcm.com https://adobedc.demdex.net https://*.docusign.com https://wisepops.net https://activity.wisepops.com https://cdn.wisepops.com https://tracking.wisepops.com https://infograph.venngage.com https://pace2.my.site.com https://pace2.my.salesforce.com https://pace2.lightning.force.com https://secure.payconex.net https://api.cquotient.com https://cert.payconex.net https://pace2--c.vf.force.com https://ucsf.co1.qualtrics.com;  frame-src 'self' https://service.force.com/embeddedservice/ https://usa728.sfdc-8tgtt5.salesforce.com https://sfdc-link-preview-staging.sfdc.sh https://sfdc-link-preview.hk.salesforce.com https://cdn.embedly.com https://www.youtube.com https://player.vimeo.com https://play.vidyard.com https://player.cloudinary.com https://fast.wistia.net https://players.brightcove.net https://s1.adis.ws https://scormanywhere.secure.force.com https://appiniummastertrial.secure.force.com https://js.stripe.com/ https://www.paypal.com https://www.sandbox.paypal.com https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://pal-test.adyen.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://pay.google.com https://*.a.forceusercontent.com/lightningmaps/ https://*.a.forceusercontent.com https://location.force.com https://pace2.file.force.com https://content.instrumentation.getconga.com https://data.instrumentation.getconga.com https://*.congamerge.com https://services.congamerge.com https://app.launchdarkly.com https://datalayer.ucsfhealth.org https://assets.adobedtm.com https://edge.adobedc.net https://cloud.our.ucsf.edu https://siteimproveanalytics.com https://8343.global.siteimproveanalytics.io https://*.clmfed.docusign.com https://*.clm.docusign.mil https://*.docusign.net https://api.mixpanel.com https://*.springcm.com https://adobedc.demdex.net https://*.docusign.com https://wisepops.net https://activity.wisepops.com https://cdn.wisepops.com https://tracking.wisepops.com https://infograph.venngage.com https://pace2.my.site.com https://pace2.my.salesforce.com https://pace2.lightning.force.com https://secure.payconex.net https://api.cquotient.com https://cert.payconex.net https://pace2--c.vf.force.com https://ucsf.co1.qualtrics.com https://google.com; font-src 'self' data: https://fonts.gstatic.com/ https://content.instrumentation.getconga.com https://data.instrumentation.getconga.com https://*.congamerge.com https://services.congamerge.com https://app.launchdarkly.com https://datalayer.ucsfhealth.org https://assets.adobedtm.com https://edge.adobedc.net https://cloud.our.ucsf.edu https://siteimproveanalytics.com https://8343.global.siteimproveanalytics.io https://*.clmfed.docusign.com https://*.clm.docusign.mil https://*.docusign.net https://api.mixpanel.com https://*.springcm.com https://adobedc.demdex.net https://*.docusign.com https://wisepops.net https://activity.wisepops.com https://cdn.wisepops.com https://tracking.wisepops.com https://infograph.venngage.com https://pace2.my.site.com https://pace2.my.salesforce.com https://pace2.lightning.force.com https://secure.payconex.net https://api.cquotient.com https://cert.payconex.net https://pace2--c.vf.force.com https://fonts.cdnfonts.com https://ucsf.co1.qualtrics.com https://google.com https://pay.google.com; connect-src 'self' https://www.paypal.com https://www.sandbox.paypal.com https://pace2.my.salesforce-scrt.com https://fonts.googleapis.com/css2 https://payments.salesforce.com/ https://cdn.content.aws-dev2-uswest2.aws.sfdc.cl/ https://checkoutshopper-live.adyen.com/ https://checkoutshopper-test.adyen.com/ https://js.stripe.com/ https://www.google.com/recaptcha/ https://*.api.salesforce.com https://o11y.sfproxy-core1.sfdc-8tgtt5.svc.sfdcfc.net/ui-telemetry https://content.instrumentation.getconga.com https://data.instrumentation.getconga.com https://*.congamerge.com https://services.congamerge.com https://app.launchdarkly.com https://datalayer.ucsfhealth.org https://assets.adobedtm.com https://edge.adobedc.net https://cloud.our.ucsf.edu https://siteimproveanalytics.com https://8343.global.siteimproveanalytics.io https://*.clmfed.docusign.com https://*.clm.docusign.mil https://*.docusign.net https://api.mixpanel.com https://*.springcm.com https://adobedc.demdex.net https://*.docusign.com https://wisepops.net https://activity.wisepops.com https://cdn.wisepops.com https://tracking.wisepops.com https://infograph.venngage.com https://pace2.my.site.com https://pace2.my.salesforce.com https://pace2.lightning.force.com https://secure.payconex.net https://api.cquotient.com https://cert.payconex.net https://pace2--c.vf.force.com https://ucsf.co1.qualtrics.com https://google.com https://pay.google.com apple-pay-gateway-cert.apple.com; ">
+        <meta name='basePath' content='' />
+        <meta name='deployTarget' content='CORE' />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1" />
+        <meta
+            name="lwr-revised"
+            content="236.0" />
+
+        <style>
+            /* required to give the component width/height and make it visible to test framework */
+            :root {
+                --lwc-borderWidthThin: 1px;
+            }
+            webruntime-app {
+                display: block;
+            }
+        </style>
+        <script>
+            /**
+             * Helper to launch SLDS modal for off-framework prompts
+             */
+            function launchModal({ id, titleLabel, contentLabel, buttonLabel, callback }) {
+                const modalTemplate = `<div id="${id}">
+                <section
+                role="alertdialog"
+                tabindex="-1"
+                aria-labelledby="prompt-heading-id"
+                aria-describedby="prompt-message-wrapper"
+                class="slds-modal slds-fade-in-open slds-modal_prompt"
+                aria-modal="true"
+                style="color: rgb(62, 62, 60)"
+                >
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header slds-theme_info slds-theme_alert-texture">
+                            <h2 class="slds-text-heading_medium">${titleLabel}</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium">
+                            <p id="prompt-message-id">${contentLabel}</p>
+                        </div>
+                        <footer class="slds-modal__footer slds-theme_default">
+                            <button class="slds-button slds-button_neutral js-button">${buttonLabel}</button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>`;
+                const div = document.createElement('div');
+                // eslint-disable-next-line @lwc/lwc/no-inner-html
+                div.innerHTML = modalTemplate;
+                div.querySelector('.js-button').addEventListener('click', callback);
+                if (!document.body) {
+                    document.body = document.createElement('body');
+                }
+                document.body.appendChild(div.querySelector(`#${id}`));
+            }
+
+            /**
+             * Handler for incompatible browsers
+             */
+            window.onload = () => {
+                if (!window.isBrowserSupportedByWebruntime) {
+                    const WEBRUNTIME_UNSUPPORTED_BROWSER_MODAL_ID = 'webruntime-browser-not-supported-message';
+                    launchModal({
+                        id: WEBRUNTIME_UNSUPPORTED_BROWSER_MODAL_ID,
+                        titleLabel: `Your browser isn't supported`,
+                        contentLabel: `Your browser doesn’t support some features on this site. For the best experience, update your browser to the latest version, or switch to another browser.`,
+                        buttonLabel: `Got It`,
+                        callback: () => {
+                            // eslint-disable-next-line @lwc/lwc/no-document-query
+                            const modal = document.querySelector(`#${WEBRUNTIME_UNSUPPORTED_BROWSER_MODAL_ID}`);
+                            document.body.removeChild(modal);
+                        },
+                    });
+                }
+            };
+
+            /**
+             * Handler for failed-to-load-resource client-errors
+             */
+            window.document.addEventListener('client-error', (error) => {
+                if (error.detail.type === 'FAILED_TO_LOAD_RESOURCE') {
+                    launchModal({
+                        id: 'webruntime-client-error-failed-to-load-resource',
+                        titleLabel: `Oops!`,
+                        contentLabel: `Something went wrong. Please try refreshing the app`,
+                        buttonLabel: `Refresh`,
+                        callback: () => {
+                            const url = new URL(window.location);
+                            url.searchParams.set('lwr.cachebust', new Date().getTime());
+                            window.location = url.href;
+                        },
+                    });
+                } else if (error.detail.type === 'TOO_MANY_REQUESTS') {
+                    window.document.cookie = 'TooManyRequests=true;max-age=30;';
+                    window.location.reload();
+                }
+            });
+        </script>
+        
+        <script type="text/javascript">!function(){"use strict";const e=`/webruntime${"/log/errors"}`;const n="UNKNOWN_ERROR";function t(){return e="basePath",document?.querySelector(`meta[name="${e}"]`)?.getAttribute("content")||"";var e}const{window:o}=globalThis;function r({subject:r,error:s={},extra:a}){let i,c,d;s?(i=s.message,c=s.stack,d=s.wcstack):a&&(i=a.message);const{pathname:u,hostname:l}=o.location,m={subject:r,message:i,stack:c,wcstack:d,extra:a,location:{pathname:u,hostname:l}},v=t();!function(e){document.dispatchEvent(new CustomEvent("client-error",{detail:{error:e,type:n}}))}(m),function(e,n){const t=JSON.stringify(n);if(!(window&&window.navigator&&window.navigator.sendBeacon&&window.navigator.sendBeacon(e,t))){const n=new XMLHttpRequest;n.open("POST",e,!0),n.setRequestHeader("Content-Type","text/plain;charset=UTF-8"),n.send(t)}}(globalThis.location.origin+v+e,m)}const s=(e={})=>{const{reason:n={}}=e;r({subject:"unhandledrejection",error:n})};function a(e={},n={}){const{message:t,filename:o,lineno:s,colno:a,error:i}=e;r({subject:"window error",error:i,extra:{message:t,filename:o,lineno:s,colno:a},...n})}o?.addEventListener("error",a),o?.addEventListener("unhandledrejection",s),o?.addEventListener("removeErrorReporting",function(){o?.removeEventListener("unhandledrejection",s),o?.removeEventListener("error",a),o?.removeEventListener("removeErrorReporting",this)})}();
+</script>
+        <script type="text/javascript">!function(){"use strict";const e="webruntime";function t(t){return`/${e}${t}`}const o=t("/log/metrics"),n=t("/log/errors");function r(e,t){const o=JSON.stringify(t);if(!(window&&window.navigator&&window.navigator.sendBeacon&&window.navigator.sendBeacon(e,o))){const t=new XMLHttpRequest;t.open("POST",e,!0),t.setRequestHeader("Content-Type","text/plain;charset=UTF-8"),t.send(o)}}function a(e){return document?.querySelector(`meta[name="${e}"]`)?.getAttribute("content")||""}function s(){return a("basePath")}function i(){return a("deployTarget")||"CORE"}const c=`${e}-app-bootstrap`;function l(e){!function(e){const t=e?.detail||{};t.name=t.name||"",t.duration=t.duration||"",c===t.name&&(t.deployTarget=i(),r(s()+o,{webruntimeBootstrap:t,info:"lwr.bootstrap.end"}))}(e),globalThis?.removeEventListener("bootstrapLoaded",this)}globalThis?.addEventListener("bootstrapLoaded",l),globalThis.LWR=globalThis.LWR||{},globalThis.LWR&&Object.isExtensible(globalThis.LWR)&&(globalThis.LWR.onError=e=>{!function(e){const{message:t,stack:o,wcstack:a}=e,{pathname:c,hostname:l}=globalThis.location;let d=[];try{globalThis.performance&&globalThis.performance.getEntriesByType&&(d=globalThis.performance.getEntriesByType("resource").map(e=>({name:e.name,entryType:e.entryType,startTime:e.startTime,duration:e.duration,fetchStart:e.fetchStart,domainLookupStart:e.domainLookupStart,domainLookupEnd:e.domainLookupEnd,connectStart:e.connectStart,connectEnd:e.connectEnd,requestStart:e.requestStart,responseStart:e.responseStart,responseEnd:e.responseEnd,responseStatus:e.responseStatus,transferSize:e.transferSize,encodedBodySize:e.encodedBodySize,decodedBodySize:e.decodedBodySize,initiatorType:e.initiatorType,nextHopProtocol:e.nextHopProtocol,failed:e.failed||!1})))}catch(e){globalThis.console&&globalThis.console.error&&globalThis.console.error("Error collecting resource performance data",e)}r(s()+n,{subject:"bootstrap error",webruntimeBootstrap:{deployTarget:i(),resources:d,resourceCount:d.length},message:t,stack:o,wcstack:a,location:{pathname:c,hostname:l}})}(e),globalThis.launchModal&&launchModal({id:"webruntime-client-bootstrap-error-failed-to-load-lwr",titleLabel:"Oops!",contentLabel:"Something went wrong. Please try refreshing the app",buttonLabel:"Refresh",callback:function(){var e=new URL(window.location);e.searchParams.set("lwr.cachebust",(new Date).getTime()),window.location=e.href}}),globalThis?.removeEventListener("bootstrapLoaded",l),globalThis?.dispatchEvent(new CustomEvent("removeErrorReporting")),delete globalThis.LWR.onError})}();
+</script>
+        <script type="text/javascript">({})?.a?.a;window.supportsOptionalChaining=true;
+</script>
+        <script type="text/javascript">!function(){const e={documentCreateElement:Document.prototype.createElement,elementSetAttribute:Element.prototype.setAttribute,elementAttachShadow:Element.prototype.attachShadow,elementAppendChild:Element.prototype.appendChild,htmlelementAddEventListener:Element.prototype.addEventListener,iframeContentDocumentGet:Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype,"contentDocument").get,iframeContentWindowGet:Object.getOwnPropertyDescriptor(HTMLIFrameElement.prototype,"contentWindow").get};Object.freeze(e),Object.defineProperty(window,"originalDomApis",{writable:!1,value:e});const t=window.frames;Object.defineProperty(window,"frames",{get:function(){const e=[];for(let n=0;n<t.length;n++)try{t[n].frameElement.getRootNode().nodeType===Node.DOCUMENT_FRAGMENT_NODE||e.push(t[n])}catch(o){e.push(t[n])}return e.length===t.length?t:e}})}();</script>
+        <script type="text/javascript">!function(){"use strict";window.isBrowserSupportedByWebruntime=function(){const n="performance"in window&&"mark"in window.performance,i="customElements"in window;return n&&i&&void 0!==window.supportsOptionalChaining}()}();
+</script>
+        <script type="text/javascript">globalThis.lwcRuntimeFlags = globalThis.lwcRuntimeFlags || {};
+globalThis.lwcRuntimeFlags = { ...globalThis.lwcRuntimeFlags, ...{"ENABLE_LEGACY_SCOPE_TOKENS":false,"ENABLE_FORCE_SHADOW_MIGRATE_MODE":false,"ENABLE_MIXED_SHADOW_MODE":false,"LEGACY_LOCKER_ENABLED":false,"ENABLE_LEGACY_SIGNAL_CONTEXT_VALIDATION":false,"DISABLE_LEGACY_VALIDATION":false,"ENABLE_EXPERIMENTAL_SIGNALS":false,"DISABLE_SYNTHETIC_SHADOW":false,"DISABLE_SCOPE_TOKEN_VALIDATION":false,"DISABLE_DETACHED_REHYDRATION":true,"DISABLE_LIGHT_DOM_UNSCOPED_CSS":false,"ENABLE_LEGACY_CONTEXT_CONNECTION":false,"ENABLE_SLOT_FORWARDING_FIX":true,"DISABLE_NATIVE_CUSTOM_ELEMENT_LIFECYCLE":true,"DISABLE_TEMPORARY_V5_COMPILER_SUPPORT":true} };
+globalThis.LWR = globalThis.LWR || {};
+globalThis.LWR.initDeferDOM = false;
+globalThis.LWR.customInit = (lwr) => {
+
+        LWR.define('@app/apexApiBasePath', [], function() { return "/webruntime/api"; });
+        LWR.define('@app/apiBasePath', [], function() { return "/webruntime/api"; });
+        LWR.define('@app/basePath', [], function() { return ""; });
+        LWR.define('@app/deployTarget', [], function() { return "CORE"; });
+        LWR.define('@app/guestUuidCookieName', [], function() { return "guest_uuid_essential_0DM8Z000000LlBU"; });
+        LWR.define('@app/isDesignMode', [], function() { return false; });
+        LWR.define('@app/isPreviewMode', [], function() { return false; });
+        LWR.define('@app/isSsrCodeTypeEnabled', [], function() { return false; });
+        LWR.define('@app/routes', [], function() { return [{"devName":"Forgot_Password","label":"Forgot Password","createdOnVersion":null,"isPublic":true,"viewId":"f1a066bd-9069-48a4-bf36-1b65c891bf49","hasVanityURL":false,"patternMap":{},"id":"7eae8d8e-64ab-4e9f-a4c9-c9a9662bc9df","path":"/ForgotPassword","view":"forgot_password","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Forgot_Password"}}},{"devName":"Fundraise_for_UCSF__c","label":"Fundraise for UCSF","createdOnVersion":null,"isPublic":true,"viewId":"0c0829d7-a4ed-482a-ab3e-2942d990469e","hasVanityURL":false,"patternMap":{},"id":"bd3169e7-f8ae-4d4b-bb1e-cd595e2347d7","path":"/ways-to-give/fundraise-for-ucsf","view":"fundraise_for_UCSF_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Fundraise_for_UCSF__c"}}},{"devName":"Order_Summary","label":"Order Summary Details","createdOnVersion":null,"isPublic":true,"viewId":"6a20c1cb-7641-4119-93cd-84786677dd46","hasVanityURL":false,"patternMap":{"recordId":"((?!OrderSummary$)[^\\s\\/]+)"},"id":"61d738dd-cf7d-4503-8a0a-5fb51e1bab50","path":"/OrderSummary/:recordId","view":"detail_1Os","isRoot":false,"isDefault":false,"page":{"type":"standard__recordPage","attributes":{"objectApiName":"OrderSummary"}}},{"devName":"Home","label":"Home","createdOnVersion":null,"isPublic":true,"viewId":"2186c23b-7a82-401a-920d-d1638d8d9109","hasVanityURL":false,"patternMap":{},"id":"0222f4e0-7446-4f38-8eca-db7957168b1b","path":"/","view":"home","isRoot":true,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Home"}}},{"devName":"Company_Matching_Gifts__c","label":"Company Matching Gifts","createdOnVersion":null,"isPublic":true,"viewId":"9cac3b14-3a4b-4304-9c2f-9dc3beddf28d","hasVanityURL":false,"patternMap":{},"id":"b44f3ae1-8781-43da-9242-4e89f20e23b6","path":"/ways-to-give/company-matching-gifts","view":"company_Matching_Gifts","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Company_Matching_Gifts__c"}}},{"devName":"Subscription_Confirmation__c","label":"Subscription Confirmation","createdOnVersion":null,"isPublic":true,"viewId":"ad750a1a-d764-44a2-8941-13fff91fb554","hasVanityURL":false,"patternMap":{},"id":"e6ac9511-5d90-49ff-b3fd-ee47c89062f0","path":"/subscription-confirmation","view":"subscription_Confirmation","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Subscription_Confirmation__c"}}},{"devName":"Payment_Options_and_FAQ__c","label":"Payment Options and FAQ","createdOnVersion":null,"isPublic":true,"viewId":"ecd29051-a51c-4834-a077-dae8d2b5bacd","hasVanityURL":false,"patternMap":{},"id":"7244e7dc-3e50-492a-b628-6c054b2e9a6d","path":"/ways-to-give/payment-options-and-faq","view":"payment_Options_and_FAQ_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Payment_Options_and_FAQ__c"}}},{"devName":"Chen_Scholars__c","label":"Chen Scholars","createdOnVersion":null,"isPublic":true,"viewId":"34e49231-57b6-489d-a976-b22c64aaa6e1","hasVanityURL":false,"patternMap":{},"id":"567468e4-67fd-410d-85de-2871392f7ef5","path":"/chen-scholars","view":"chen_Scholars","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Chen_Scholars__c"}}},{"devName":"Become_a_UCSF_insider__c","label":"Become a UCSF insider!","createdOnVersion":null,"isPublic":true,"viewId":"0849089e-f002-42ad-9127-1b324828a404","hasVanityURL":false,"patternMap":{},"id":"7e339b93-a92b-4c6d-bfdb-3a6b1b1a435a","path":"/become-ucsf-insider","view":"become_a_UCSF_insider","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Become_a_UCSF_insider__c"}}},{"devName":"Chancellors_Circle_Events__c","label":"Chancellors Circle Events","createdOnVersion":null,"isPublic":true,"viewId":"409276c0-0520-4c10-9cb9-ceab9943915d","hasVanityURL":false,"patternMap":{},"id":"3539b771-460d-4875-8ad0-352431155a4d","path":"/chancellors-circle-events","view":"chancellors_Circle_Events","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Chancellors_Circle_Events__c"}}},{"devName":"Error","label":"Error","createdOnVersion":null,"isPublic":true,"viewId":"e8c3dfec-8ff0-41f0-ad61-ba47507f7608","hasVanityURL":false,"patternMap":{},"id":"41192343-e28f-4a05-a492-5868f5432976","path":"/error","view":"error","isRoot":false,"isDefault":true,"page":{"type":"comm__namedPage","attributes":{"name":"Error"}}},{"devName":"Privacy_Policy","label":"Privacy Policy","createdOnVersion":null,"isPublic":true,"viewId":"77e4e1ab-170c-4117-be20-6f65f5b205bf","hasVanityURL":false,"patternMap":{},"id":"643fcaa5-0e45-459b-8f10-71c74229f19a","path":"/privacy-policy","view":"privacy_policy","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Privacy_Policy"}}},{"devName":"Contact__c","label":"Contact","createdOnVersion":null,"isPublic":true,"viewId":"9a82e4ab-4b2d-4653-8831-f40f829c3641","hasVanityURL":false,"patternMap":{},"id":"ac982ef6-a7dd-40e3-baff-9b77cb6ff396","path":"/contact","view":"contact","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Contact__c"}}},{"devName":"Corporate_and_Foundation_Giving__c","label":"Corporate and Foundation Giving","createdOnVersion":null,"isPublic":true,"viewId":"b9f9b98e-4dbb-4976-97d8-c0c005eb79c0","hasVanityURL":false,"patternMap":{},"id":"d328727d-1cd1-4230-a3be-b863d8a7eded","path":"/ways-to-give/corporate-and-foundation-giving","view":"corporate_and_Foundation_Giving_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Corporate_and_Foundation_Giving__c"}}},{"devName":"Ways_To_Give__c","label":"Ways To Give","createdOnVersion":null,"isPublic":true,"viewId":"16b37cf5-7c6e-4385-b20a-b93b052b300f","hasVanityURL":false,"patternMap":{},"id":"474bb4fa-c432-45f7-a491-7cbb76227759","path":"/ways-to-give","view":"ways_To_Give_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Ways_To_Give__c"}}},{"devName":"about__c","label":"About","createdOnVersion":null,"isPublic":true,"viewId":"0d33201a-c927-422b-aa3b-aa99557fed6d","hasVanityURL":false,"patternMap":{},"id":"c31f030b-c7dc-4257-ba22-da950b2c78b2","path":"/about","view":"about_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"about__c"}}},{"devName":"Register","label":"Register","createdOnVersion":null,"isPublic":true,"viewId":"513d4b7f-ce25-4f0e-aec4-83a3f642ca74","hasVanityURL":false,"patternMap":{},"id":"dbb49de4-cf45-457b-8c1a-72f822ea20df","path":"/SelfRegister","view":"self_register","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Register"}}},{"devName":"Achieving_Health_Equity__c","label":"Achieving Health Equity","createdOnVersion":null,"isPublic":true,"viewId":"cb562042-a0a6-4afe-9d67-fd2cd43eee64","hasVanityURL":false,"patternMap":{},"id":"796ebb03-acad-4b4c-9057-31d5adf5fc41","path":"/achieving-health-equity","view":"achieving_Health_Equity","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Achieving_Health_Equity__c"}}},{"devName":"Product_Detail_1","label":"Product","createdOnVersion":null,"isPublic":true,"viewId":"774a6126-d56d-401b-98e2-1af2dc33c359","hasVanityURL":true,"patternMap":{"recordId":"(01t[a-zA-Z0-9](?:0[a-zA-Z0-9]{2}|[a-zA-Z0-9]{2}0)[a-zA-Z0-9]{8}(?:[a-zA-Z0-9]{3})?)","recordName":"([^\\/\\s]+)"},"id":"ce5970bf-98ec-413f-8ef1-08b79056bc24","path":"/fund/:recordName/:recordId","view":"detail_01t","isRoot":false,"isDefault":false,"page":{"type":"standard__recordPage","attributes":{"objectApiName":"Product2"}}},{"devName":"Product_Detail","label":"Product","createdOnVersion":null,"isPublic":true,"viewId":"774a6126-d56d-401b-98e2-1af2dc33c359","hasVanityURL":true,"patternMap":{"urlName":"([^\\/\\s]+)"},"id":"8a04c7df-cd13-489b-b275-f3cbfdcf22e0","path":"/fund/:urlName","view":"detail_01t","isRoot":false,"isDefault":false,"page":{"type":"standard__recordPage","attributes":{"objectApiName":"Product2"}}},{"devName":"Category_Detail_1","label":"Category","createdOnVersion":null,"isPublic":true,"viewId":"a1e29b5e-23a9-4127-9b42-269a5f23d41b","hasVanityURL":true,"patternMap":{"recordId":"(0ZG[a-zA-Z0-9](?:0[a-zA-Z0-9]{2}|[a-zA-Z0-9]{2}0)[a-zA-Z0-9]{8}(?:[a-zA-Z0-9]{3})?)","categoryPath":"([^\\/\\s\\?#]+(?:(?:/[^\\/\\s\\?#]+){0,7}))"},"id":"1cd5f366-52c7-4e43-9025-36d581d52d89","path":"/category/:categoryPath/:recordId","view":"detail_0ZG","isRoot":false,"isDefault":false,"page":{"type":"standard__recordPage","attributes":{"objectApiName":"ProductCategory"}}},{"devName":"Category_Detail","label":"Category","createdOnVersion":null,"isPublic":true,"viewId":"a1e29b5e-23a9-4127-9b42-269a5f23d41b","hasVanityURL":true,"patternMap":{"urlPath":"([^\\/\\s\\?#]+(?:(?:/[^\\/\\s\\?#]+){0,7}))"},"id":"f1925f25-ccc8-49e1-920d-d6dd80037c0e","path":"/category/:urlPath","view":"detail_0ZG","isRoot":false,"isDefault":false,"page":{"type":"standard__recordPage","attributes":{"objectApiName":"ProductCategory"}}},{"devName":"Split_Shipment","label":"Split Shipment","createdOnVersion":null,"isPublic":true,"viewId":"4d95fa22-4a42-4945-80c5-9e1a7afdd4b1","hasVanityURL":false,"patternMap":{},"id":"1e341434-85a9-4b0c-bfba-a20f0b22edf6","path":"/split-shipment","view":"split_shipment","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Split_Shipment"}}},{"devName":"Infrastructure_and_operations__c","label":"Infrastructure and Operations","createdOnVersion":null,"isPublic":true,"viewId":"6133af18-10b6-4f4d-8a53-f871e8d2077b","hasVanityURL":false,"patternMap":{},"id":"f193b341-4896-47b4-857a-78de36a12930","path":"/io","view":"infrastructure_and_operations","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Infrastructure_and_operations__c"}}},{"devName":"Alumni_Reunion_Giving__c","label":"Alumni Reunion Giving","createdOnVersion":null,"isPublic":true,"viewId":"19415f0e-9e37-4f09-8ad3-514cb423f1ab","hasVanityURL":false,"patternMap":{},"id":"969c7edb-1e4b-4b93-86be-5120ef2a456d","path":"/ways-to-give/alumni-reunion-giving","view":"alumni_Reunion_Giving_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Alumni_Reunion_Giving__c"}}},{"devName":"Current_Cart","label":"Cart","createdOnVersion":null,"isPublic":true,"viewId":"0605bc1b-50b5-49e3-b04e-a043f200265b","hasVanityURL":false,"patternMap":{},"id":"8b59f03c-bc4e-4063-9049-0a9d81b9c569","path":"/cart","view":"current_cart","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Current_Cart"}}},{"devName":"Order_Lookup","label":"Order Lookup","createdOnVersion":null,"isPublic":true,"viewId":"5180065b-7197-4093-be3a-1ae2140b8a4a","hasVanityURL":false,"patternMap":{},"id":"8b187341-786b-4f89-a8c8-7a59db9a29fe","path":"/OrderLookup","view":"order_lookup","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Order_Lookup"}}},{"devName":"Securities_and_Wire_Transfers__c","label":"Securities  and Wire Transfers","createdOnVersion":null,"isPublic":true,"viewId":"6282b0f6-b94c-4cbd-b733-66a6c086280e","hasVanityURL":false,"patternMap":{},"id":"3a7c45d9-ac7e-46a7-b98b-251909af9b92","path":"/ways-to-give/securities-and-wire-transfers","view":"securities_and_Wire_Transfers","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Securities_and_Wire_Transfers__c"}}},{"devName":"News_Detail__c","label":"News Detail","createdOnVersion":null,"isPublic":true,"viewId":"7b5def52-89c8-43e2-9e24-0d4ae3193b79","hasVanityURL":true,"patternMap":{"urlAlias":"([^\\/\\s]+)"},"id":"b0e78fcb-f9d0-453e-be15-760764eeeeed","path":"/news/:urlAlias","view":"newsDetail","isRoot":false,"isDefault":false,"page":{"type":"standard__managedContentPage","attributes":{"contentTypeName":"sfdc_cms__news"}}},{"devName":"Philanthropy_Resources__c","label":"Philanthropy Resources","createdOnVersion":null,"isPublic":true,"viewId":"186f7c46-5ed8-41a4-982f-f4ed74df033d","hasVanityURL":false,"patternMap":{},"id":"66d2a5c8-34f7-43da-99b7-473b86c984a6","path":"/philanthropy-resources-ucsf-faculty-and-staff","view":"philanthropy_Resources","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Philanthropy_Resources__c"}}},{"devName":"leadership_and_Staff__c","label":"Leadership and Staff","createdOnVersion":null,"isPublic":true,"viewId":"a11a61f8-bf1d-4489-abe7-ca207f401743","hasVanityURL":false,"patternMap":{},"id":"9895523f-33c4-479e-b207-6ff9cfda4735","path":"/leadership-and-staff","view":"leadership_and_Staff_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"leadership_and_Staff__c"}}},{"devName":"Order","label":"Order Confirmation","createdOnVersion":null,"isPublic":true,"viewId":"6082bdfc-746b-480d-9a72-1c6b429c6a81","hasVanityURL":false,"patternMap":{},"id":"f215d28d-f837-450b-a0ee-be95f446597b","path":"/order","view":"order","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Order"}}},{"devName":"Donor_Advised_Funds__c","label":"Donor-Advised Funds","createdOnVersion":null,"isPublic":true,"viewId":"14f060c4-6879-4a9c-ab61-9341c7464590","hasVanityURL":false,"patternMap":{},"id":"cafa9efe-3e3c-406c-9d44-cea1c167a034","path":"/ways-to-give/donor-advised-funds","view":"donor_Advised_Funds_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Donor_Advised_Funds__c"}}},{"devName":"Check_Password","label":"Check Password","createdOnVersion":null,"isPublic":true,"viewId":"bb07de0e-bd48-4796-b7f3-4ee0ec129906","hasVanityURL":false,"patternMap":{},"id":"85aacc13-e78b-407b-a8c2-60917e7a9083","path":"/CheckPasswordResetEmail","view":"check_password","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Check_Password"}}},{"devName":"Gift_Planning__c","label":"Gift Planning","createdOnVersion":null,"isPublic":true,"viewId":"75590cd1-55cb-4263-9bab-25085b93e922","hasVanityURL":false,"patternMap":{},"id":"dad77c1e-1037-4cf2-9f17-70d6f50d2f27","path":"/ways-to-give/gift-planning","view":"gift_Planning_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Gift_Planning__c"}}},{"devName":"Terms_And_Conditions","label":"Terms And Conditions","createdOnVersion":null,"isPublic":true,"viewId":"aa8d67ce-661c-43bf-92ef-c8e63ad4b120","hasVanityURL":false,"patternMap":{},"id":"3bdf1226-b5bb-4922-bb38-b739a276807d","path":"/terms-and-conditions","view":"terms_and_conditions","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Terms_And_Conditions"}}},{"devName":"Current_Checkout","label":"Checkout","createdOnVersion":null,"isPublic":true,"viewId":"c6132d9d-0644-4a40-97e9-7b1bc7844298","hasVanityURL":false,"patternMap":{},"id":"39f7d5c0-7cd4-4513-8794-8bab9881fb22","path":"/checkout","view":"current_checkout","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Current_Checkout"}}},{"devName":"Honor_and_Memorial_Gifts__c","label":"Honorary and Memorial Gifts","createdOnVersion":null,"isPublic":true,"viewId":"75292ba3-1770-4149-9571-bcfa6dfc1aa3","hasVanityURL":false,"patternMap":{},"id":"a25f2cd6-d2a2-4dba-ae15-5e93859c75e5","path":"/ways-to-give/honor-and-memorial-gifts","view":"honor_and_Memorial_Gifts_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Honor_and_Memorial_Gifts__c"}}},{"devName":"Employee_Giving__c","label":"UCSF Employee Giving","createdOnVersion":null,"isPublic":true,"viewId":"dcdb9d34-8d8e-413f-924e-33d260c8c807","hasVanityURL":false,"patternMap":{},"id":"49bddcd7-bb23-4caa-b9de-f199d501c14b","path":"/ways-to-give/employee-giving","view":"employee_Giving_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Employee_Giving__c"}}},{"devName":"Search","label":"Search","createdOnVersion":null,"isPublic":true,"viewId":"b9eba06c-f981-4f14-a4fd-630ffb2353eb","hasVanityURL":false,"patternMap":{"term":"([^\\/\\s]+)"},"id":"43e5ce56-f8f7-4fd8-97b3-6f747e4ab2e1","path":"/global-search/:term","view":"global_search","isRoot":false,"isDefault":false,"page":{"type":"standard__search","attributes":{}}},{"devName":"Endowments__c","label":"Endowments","createdOnVersion":null,"isPublic":true,"viewId":"8ada9662-5cad-4921-b4b9-f7b5850855bb","hasVanityURL":false,"patternMap":{},"id":"73aa6171-647b-4179-937d-111f6b6b4c26","path":"/ways-to-give/endowments","view":"endowments_1","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Endowments__c"}}},{"devName":"endowed_professorships__c","label":"Endowed Professorships","createdOnVersion":null,"isPublic":true,"viewId":"a07900e9-237a-4562-840f-78365f076eae","hasVanityURL":false,"patternMap":{},"id":"99e68233-4013-44e0-afe2-98148fba461c","path":"/endowed-professorships","view":"endowed_Professorships","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"endowed_professorships__c"}}},{"devName":"Payment_Processing","label":"Payment Processing","createdOnVersion":null,"isPublic":true,"viewId":"abca58eb-045e-4ad6-a82a-d4234b0b2e07","hasVanityURL":false,"patternMap":{},"id":"7a53bfff-9667-478e-bda2-6a2d35ca04f9","path":"/payment-processing","view":"payment_processing","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Payment_Processing"}}},{"devName":"UCSF_FInancial_Highlights__c","label":"UCSF Financial Highlights","createdOnVersion":null,"isPublic":true,"viewId":"fa40cd03-e30d-4b9b-99b1-b25d04bd3a9f","hasVanityURL":false,"patternMap":{},"id":"381c2cc8-637a-42ef-b6d3-0fdca880ffb5","path":"/ucsf-financial-highlights","view":"uCSF_FInancial_Highlights","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"UCSF_FInancial_Highlights__c"}}},{"devName":"Login","label":"Login","createdOnVersion":null,"isPublic":true,"viewId":"db920573-7fd2-4298-a66f-6ab78eac55af","hasVanityURL":false,"patternMap":{},"id":"65932c75-a187-4b8e-89bc-428238659c4f","path":"/login","view":"login_main","isRoot":false,"isDefault":false,"page":{"type":"comm__namedPage","attributes":{"name":"Login"}}}]; });
+        LWR.define('@app/templateDevName', [], function() { return "b2c-lite-storefront"; });
+        LWR.define('@app/uiBasePath', [], function() { return ""; });
+        LWR.define('@app/versionKey', [], function() { return "0882fb1e7c"; });
+        LWR.define('@app/viewToThemeLayoutMap', [], function() { return {"forgot_password":"externalLayout","fundraise_for_UCSF_1":"commerceLayout","detail_1Os":"commerceLayout","home":"commerceLayout","company_Matching_Gifts":"commerceLayout","subscription_Confirmation":"commerceLayout","payment_Options_and_FAQ_1":"commerceLayout","chen_Scholars":"commerceLayout","become_a_UCSF_insider":"commerceLayout","chancellors_Circle_Events":"commerceLayout","error":"commerceLayout","privacy_policy":"commerceLayout","contact":"commerceLayout","corporate_and_Foundation_Giving_1":"commerceLayout","ways_To_Give_1":"commerceLayout","about_1":"commerceLayout","self_register":"externalLayout","achieving_Health_Equity":"commerceLayout","detail_01t":"commerceLayout","detail_0ZG":"commerceLayout","split_shipment":"checkoutLayout","infrastructure_and_operations":"commerceLayout","alumni_Reunion_Giving_1":"commerceLayout","current_cart":"commerceLayout","order_lookup":"commerceLayout","securities_and_Wire_Transfers":"commerceLayout","newsDetail":"commerceLayout","philanthropy_Resources":"commerceLayout","leadership_and_Staff_1":"commerceLayout","order":"commerceLayout","donor_Advised_Funds_1":"commerceLayout","check_password":"externalLayout","gift_Planning_1":"commerceLayout","terms_and_conditions":"commerceLayout","current_checkout":"checkoutLayout","honor_and_Memorial_Gifts_1":"commerceLayout","employee_Giving_1":"commerceLayout","global_search":"commerceLayout","endowments_1":"commerceLayout","endowed_Professorships":"commerceLayout","payment_processing":"externalLayout","uCSF_FInancial_Highlights":"commerceLayout","login_main":"externalLayout"}; });
+        LWR.define('@app/webruntimeFrameworkVersion', [], function() { return "260.70"; });
+        LWR.define('@salesforce/community/Id', [], function() { return "0DB8Z000000LnWzWAK"; });
+        LWR.define('@salesforce/community/basePath', [], function() { return ""; });
+        LWR.define('@salesforce/i18n/lang', [], function() { return "en-US"; });
+        LWR.define('@salesforce/site/Id', [], function() { return "0DM8Z000000LlBUWA0"; });
+        LWR.define('@salesforce/site/activeLanguages', [], function() { return [{"label":"English (US)","code":"en-US","default":true}]; });
+        LWR.define('@salesforce/webstore/Id', [], function() { return "0ZE8Z000000LBbLWAW"; });
+lwr.define("webruntime/dispatcher", [], function(){ return function o11yDipatcherInit(dispatcher) { typeof lwr !== 'undefined' && lwr.attachDispatcher(dispatcher); };});
+LWR.define('@salesforce/user/Id', ['@app/user'], function(m) { return (m && typeof m === 'object' && 'default' in m ? m.default : m)['id'] });
+LWR.define('@salesforce/user/isGuest', ['@app/user'], function(m) { return (m && typeof m === 'object' && 'default' in m ? m.default : m)['isGuest'] });
+lwr.initializeApp();
+globalThis.process = { env: { NODE_ENV: "dev" } };};</script>
+        <script type="text/javascript">globalThis.CLWR = globalThis.CLWR || {};
+globalThis.CLWR.gates = {"enableLwrLinkInfoProvider":false,"enableLwrRouteValidation":false};
+</script>
+        <script type="text/javascript">globalThis.LWR = globalThis.LWR || {};
+Object.assign(globalThis.LWR, {
+  "bootstrapModule": "@lwrjs/app-service/communities_app/module/amd/v/0_20_6",
+  "autoBoot": false,
+  "rootComponents": [
+    "webruntime/app/v/1_66_1143-260_0"
+  ],
+  "requiredModules": [
+    "lwc/v/8_25_1",
+    "@lwrjs/app-service/communities_app/module/amd/v/0_20_6"
+  ],
+  "importMappings": {
+    "default": "/webruntime/component/latest/prod/en-US/",
+    "imports": {
+      "/webruntime/component/latest/prod/en-US/lwc": "/webruntime/framework/9faac7844c/prod/lwr_lwc",
+      "@app/csrfToken": "/webruntime/module/@app/csrfToken",
+      "@app/loginPath": "/webruntime/module/@app/loginPath",
+      "@app/user": "/webruntime/module/@app/user",
+      "@perm/": "/webruntime/perm/",
+      "@salesforce/client/formFactor": "/webruntime/module/@salesforce/client/formFactor",
+      "@salesforce/customPermission/": "/webruntime/perm/custom/",
+      "@salesforce/featureFlag/": "/webruntime/module/@salesforce/featureFlag/",
+      "@salesforce/user/Id": "/webruntime/module/@salesforce/user/Id",
+      "@salesforce/user/isGuest": "/webruntime/module/@salesforce/user/isGuest",
+      "@salesforce/userPermission/": "/webruntime/perm/",
+      "@udd/": "/webruntime/module/@udd/",
+      "@view/about_1": "/webruntime/view/8a62babf7d160a8141a1178ff6f89651/prod/en-US/about_1_view",
+      "@view/achieving_Health_Equity": "/webruntime/view/5fd02ebe122f1c4b40e697fbed961a66/prod/en-US/achieving_Health_Equity_view",
+      "@view/alumni_Reunion_Giving_1": "/webruntime/view/204fe7094dba9eaa1818d49a1d3d8e78/prod/en-US/alumni_Reunion_Giving_1_view",
+      "@view/become_a_UCSF_insider": "/webruntime/view/f619aabe171ea759c1cb3e5c027f2593/prod/en-US/become_a_UCSF_insider_view",
+      "@view/chancellors_Circle_Events": "/webruntime/view/ff5b7ac8a02864ca1850410171a700a4/prod/en-US/chancellors_Circle_Events_view",
+      "@view/check_password": "/webruntime/view/72eafc8bc9b3cbd4f3d96a0b1d7e05e3/prod/en-US/check_password_view",
+      "@view/checkoutLayout": "/webruntime/view/e4a00707450f4eedc108a83be5851764/prod/en-US/checkoutLayout_view",
+      "@view/chen_Scholars": "/webruntime/view/1bcce7aceda59756f7ccc2a794a7bf96/prod/en-US/chen_Scholars_view",
+      "@view/commerceLayout": "/webruntime/view/ac0055611cac234066b4f6861ec8d557/prod/en-US/commerceLayout_view",
+      "@view/company_Matching_Gifts": "/webruntime/view/04503cb50e8cef9ff9a0e03c3c226cce/prod/en-US/company_Matching_Gifts_view",
+      "@view/contact": "/webruntime/view/a92c2d8eeef8e2ccb025604a7e943642/prod/en-US/contact_view",
+      "@view/corporate_and_Foundation_Giving_1": "/webruntime/view/7724f17c840712de75bf79fc823f939e/prod/en-US/corporate_and_Foundation_Giving_1_view",
+      "@view/current_cart": "/webruntime/view/7aebf0cfaf950b058de9a9a56cde25f9/prod/en-US/current_cart_view",
+      "@view/current_checkout": "/webruntime/view/3ca215ece3a1326eb497036bd2984600/prod/en-US/current_checkout_view",
+      "@view/detail_01t": "/webruntime/view/c08ec76e197e636ba92a67947d1cc6a8/prod/en-US/detail_01t_view",
+      "@view/detail_0ZG": "/webruntime/view/541a947015cf38d6cc2de3317fb8df4c/prod/en-US/detail_0ZG_view",
+      "@view/detail_1Os": "/webruntime/view/b7b827c9b02e03b20b5ac26a8800d2de/prod/en-US/detail_1Os_view",
+      "@view/donor_Advised_Funds_1": "/webruntime/view/d0168e1ce2dcc428d107fbb7c459f3c5/prod/en-US/donor_Advised_Funds_1_view",
+      "@view/employee_Giving_1": "/webruntime/view/1870e88329b62e5654166a96f43b5b18/prod/en-US/employee_Giving_1_view",
+      "@view/endowed_Professorships": "/webruntime/view/46abb270f78430d59da9604a039b8e0e/prod/en-US/endowed_Professorships_view",
+      "@view/endowments_1": "/webruntime/view/56ab86d3d36004c8dddbc841a12e570f/prod/en-US/endowments_1_view",
+      "@view/error": "/webruntime/view/01fba3b37a1c2113e5e694133a2a5373/prod/en-US/error_view",
+      "@view/externalLayout": "/webruntime/view/ce73e71fc4a100f64e3acec721a78853/prod/en-US/externalLayout_view",
+      "@view/forgot_password": "/webruntime/view/24b849ba11113ad9fee6180571c5d8f1/prod/en-US/forgot_password_view",
+      "@view/fundraise_for_UCSF_1": "/webruntime/view/cce955228c052657d8eb3e1514f1f8a6/prod/en-US/fundraise_for_UCSF_1_view",
+      "@view/gift_Planning_1": "/webruntime/view/31ccfe560836bdd5bf2109814a6f2bcb/prod/en-US/gift_Planning_1_view",
+      "@view/global_search": "/webruntime/view/5aedac99fd89eba0a2a69ff8557216d5/prod/en-US/global_search_view",
+      "@view/home": "/webruntime/view/76894328508921f53acf4b535ac25145/prod/en-US/home_view",
+      "@view/honor_and_Memorial_Gifts_1": "/webruntime/view/5fa988d8fcad8ec792a92fc4e4848606/prod/en-US/honor_and_Memorial_Gifts_1_view",
+      "@view/infrastructure_and_operations": "/webruntime/view/4398f0ed138d40121cf36b5200d215d0/prod/en-US/infrastructure_and_operations_view",
+      "@view/leadership_and_Staff_1": "/webruntime/view/11913547bf2626ecdd05e842ca83ad2b/prod/en-US/leadership_and_Staff_1_view",
+      "@view/login_main": "/webruntime/view/5bc4ec7da645e71fff36cacc78b71ec4/prod/en-US/login_main_view",
+      "@view/newsDetail": "/webruntime/view/4cdce5d2e7dc7f4a26e0567822348ea0/prod/en-US/newsDetail_view",
+      "@view/order": "/webruntime/view/3545682f189232df46f65b87da346942/prod/en-US/order_view",
+      "@view/order_lookup": "/webruntime/view/20d5e9f898bc013908666d89a22b37ee/prod/en-US/order_lookup_view",
+      "@view/payment_Options_and_FAQ_1": "/webruntime/view/8281a618001d3319394933941f2c0b55/prod/en-US/payment_Options_and_FAQ_1_view",
+      "@view/payment_processing": "/webruntime/view/bcb699c028c0bc12f6dbbafa2373cf98/prod/en-US/payment_processing_view",
+      "@view/philanthropy_Resources": "/webruntime/view/dc0a49d3e80e50bdce95428848739bc5/prod/en-US/philanthropy_Resources_view",
+      "@view/privacy_policy": "/webruntime/view/0d400e21f5f8c7255eebe8e4ca4daf73/prod/en-US/privacy_policy_view",
+      "@view/securities_and_Wire_Transfers": "/webruntime/view/ec703ef9c2e43a631e1151c7c4bcf809/prod/en-US/securities_and_Wire_Transfers_view",
+      "@view/self_register": "/webruntime/view/7a2f0124c0c0d7ac29479ec0ab10ce72/prod/en-US/self_register_view",
+      "@view/split_shipment": "/webruntime/view/5e6f3f0f1ba27176cca62d8eefbdbcc5/prod/en-US/split_shipment_view",
+      "@view/subscription_Confirmation": "/webruntime/view/e9ea22ba5b91f627b83e0a4cca9edbe4/prod/en-US/subscription_Confirmation_view",
+      "@view/terms_and_conditions": "/webruntime/view/345dce970992ce1fa34d565e4e8fd7de/prod/en-US/terms_and_conditions_view",
+      "@view/uCSF_FInancial_Highlights": "/webruntime/view/c51241301cbc0191449acfd0a1575318/prod/en-US/uCSF_FInancial_Highlights_view",
+      "@view/ways_To_Give_1": "/webruntime/view/2702e5c450ca6bae525da678bba20ff7/prod/en-US/ways_To_Give_1_view",
+      "b2c_lite_commerce/einsteinApi": "/webruntime/component/3eb5169a178b5c472a0d4e2c4be56696/prod/en-US/b2c_lite_commerce/einsteinApi_cmp",
+      "commerce/einsteinApi": "/webruntime/component/db27f46305b281d4f419ef4dc019b11b/prod/en-US/commerce/einsteinApi_cmp",
+      "commerce/productQuickViewPanel": "/webruntime/component/03a881f74c44e7532f77735d565f72eb/prod/en-US/commerce/productQuickViewPanel_cmp",
+      "commerce_cart/miniCartPanel": "/webruntime/component/256feac104ffacb1e090f565e979dadb/prod/en-US/commerce_cart/miniCartPanel_cmp",
+      "commerce_product_details/addToCartUtils": "/webruntime/component/bf28418fa0e754ee8f5a5a24f48d2e2f/prod/en-US/commerce_product_details/addToCartUtils_cmp",
+      "dxp_content_layout/paginatorShowMore": "/webruntime/component/674125dc8101f54c8db3806efd773461/prod/en-US/dxp_content_layout/paginatorShowMore_cmp",
+      "dxp_content_layout/paginatorStandard": "/webruntime/component/40e9f783a20b8a1028bc9a6dabc52f33/prod/en-US/dxp_content_layout/paginatorStandard_cmp",
+      "experience_einstein/activitiesApi": "/webruntime/component/7d202755be7b00f5363f6b4ed88bb087/prod/en-US/experience_einstein/activitiesApi_cmp",
+      "experience_einstein/auraActivitiesApi": "/webruntime/component/3641d8e1942e0f7c16bf38bb6145fc5e/prod/en-US/experience_einstein/auraActivitiesApi_cmp",
+      "force/ldsEngineWebruntime": "/webruntime/component/322c484cfe842ce3d127d176a3385928/prod/en-US/force/ldsEngineWebruntime_cmp",
+      "force/ldsWebruntimeOneStoreInit": "/webruntime/component/c1efe9dc97950b7146c60861cf207aff/prod/en-US/force/ldsWebruntimeOneStoreInit_cmp",
+      "force/luvioLwcBindings": "/webruntime/component/259a789b5905e4a3e65c0942cc97421d/prod/en-US/force/luvioLwcBindings_cmp",
+      "force/luvioRuntimeWebruntime": "/webruntime/component/5b8557d8725fba2dbf2e6a4968ec430c/prod/en-US/force/luvioRuntimeWebruntime_cmp",
+      "forceContent/fileUploadModal": "/webruntime/component/de906cd77d30bb6b7fc9d546e70a703b/prod/en-US/forceContent/fileUploadModal_cmp",
+      "lightning/auraDynamic": "/webruntime/component/f2955555e0a68e9a0806e1fb4ad01992/prod/en-US/lightning/auraDynamic_cmp",
+      "lightning/iconSvgTemplatesAction": "/webruntime/component/690cc86db2aa6b8eac47756b3498b478/prod/en-US/lightning/iconSvgTemplatesAction_cmp",
+      "lightning/iconSvgTemplatesActionRtl": "/webruntime/component/4b405a4b5d4409ed7ed6b90fadf7e182/prod/en-US/lightning/iconSvgTemplatesActionRtl_cmp",
+      "lightning/iconSvgTemplatesCustom": "/webruntime/component/c2741b300fab1d8e4e5311b790170a13/prod/en-US/lightning/iconSvgTemplatesCustom_cmp",
+      "lightning/iconSvgTemplatesCustomRtl": "/webruntime/component/1e8acad194a85b809dd5407eeb2b700c/prod/en-US/lightning/iconSvgTemplatesCustomRtl_cmp",
+      "lightning/iconSvgTemplatesDoctype": "/webruntime/component/76351bafc1588eedbdb38011a997bab4/prod/en-US/lightning/iconSvgTemplatesDoctype_cmp",
+      "lightning/iconSvgTemplatesDoctypeRtl": "/webruntime/component/5a20b492863fe3fd7d4c4a03f5636c2c/prod/en-US/lightning/iconSvgTemplatesDoctypeRtl_cmp",
+      "lightning/iconSvgTemplatesStandard": "/webruntime/component/c6af1b54335cb6d6ececbba2567f98bc/prod/en-US/lightning/iconSvgTemplatesStandard_cmp",
+      "lightning/iconSvgTemplatesStandardRtl": "/webruntime/component/ecd511aa64465535e8d36920e1ec3abe/prod/en-US/lightning/iconSvgTemplatesStandardRtl_cmp",
+      "lightning/iconSvgTemplatesUtility": "/webruntime/component/1074252f940be176c8db426e06852430/prod/en-US/lightning/iconSvgTemplatesUtility_cmp",
+      "lightning/iconSvgTemplatesUtilityRtl": "/webruntime/component/d083bb17a4d93a880d30aaf97dcb0f49/prod/en-US/lightning/iconSvgTemplatesUtilityRtl_cmp",
+      "mobileruntime/hybridAppManager": "/webruntime/framework/808097b394/prod/lwr_mobile",
+      "o11y/collectors": "/webruntime/component/0af3d31fc8338a2518abfa12ed682846/prod/en-US/o11y/collectors_cmp",
+      "o11y/simple_collector": "/webruntime/component/769a3bbaf4b329a78402db88550744d6/prod/en-US/o11y/simple_collector_cmp",
+      "webruntime/handlebarsEngine": "/webruntime/framework/b5e1b3d5f0/prod/lwr_handlebars"
+    }
+  }
+});</script>
+        <script src="/webruntime/framework/1e7fb74fd8/prod/lwr_loader"></script>
+        <script type="text/javascript">/**
+* Copyright (c) 2021, salesforce.com, inc.
+* All rights reserved.
+* SPDX-License-Identifier: MIT
+* For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+*/
+/* LWR Error Shim v0.20.6 */
+!function(){"use strict";const o=globalThis;if(!(o.LWR&&o.LWR.define)){const r=new Error("The LWR application failed to bootstrap");if(!o.LWR||!o.LWR.onError)throw r;o.LWR.onError(r)}}();
+</script>
+        <script src="/webruntime/framework/9b66f4a4e3/prod/lwr_bootstrap"></script>
+        <script src="/webruntime/framework/744f7852ef/prod/lwr_app_bootstrap_hook"></script>
+        <script src="/webruntime/framework/9faac7844c/prod/lwr_lwc"></script>
+        <script src="/webruntime/framework/267c7bc833/prod/lwr_app"></script>
+        <script type="text/javascript">LWR.define('lwc', ['lwc/v/8_25_1'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">
+        LWR.define('@app/authenticationCookieName', [], function() { return "__Secure-has-sid"; });
+        LWR.define('@app/extraRouteParams', [], function() { return {}; });
+        LWR.define('@app/imageOpt', [], function() { return "none"; });
+        LWR.define('@app/isMobileAppMode', [], function() { return false; });</script>
+        <script type="text/javascript">LWR.define('@app/apexApiBasePath/v/1', ['@app/apexApiBasePath'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/apiBasePath/v/1', ['@app/apiBasePath'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/authenticationCookieName/v/1', ['@app/authenticationCookieName'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/basePath/v/1', ['@app/basePath'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/csrfToken/v/1', ['@app/csrfToken'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/deployTarget/v/1', ['@app/deployTarget'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/extraRouteParams/v/1', ['@app/extraRouteParams'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/guestUuidCookieName/v/1', ['@app/guestUuidCookieName'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/imageOpt/v/1', ['@app/imageOpt'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/isDesignMode/v/1', ['@app/isDesignMode'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/isMobileAppMode/v/1', ['@app/isMobileAppMode'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/isPreviewMode/v/1', ['@app/isPreviewMode'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/isSsrCodeTypeEnabled/v/1', ['@app/isSsrCodeTypeEnabled'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/o11yApiEndpoint/v/1', ['@app/o11yApiEndpoint'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/o11yConfiguration/v/1', ['@app/o11yConfiguration'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/o11yFalconEnabled/v/1', ['@app/o11yFalconEnabled'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/o11yGuestToken/v/1', ['@app/o11yGuestToken'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/o11ySamplingRate/v/1', ['@app/o11ySamplingRate'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/routes/v/1', ['@app/routes'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/templateDevName/v/1', ['@app/templateDevName'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/uiBasePath/v/1', ['@app/uiBasePath'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/user/v/1', ['@app/user'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/versionKey/v/1', ['@app/versionKey'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/viewToThemeLayoutMap/v/1', ['@app/viewToThemeLayoutMap'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@app/webruntimeFrameworkVersion/v/1', ['@app/webruntimeFrameworkVersion'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@salesforce/community/Id/v/1', ['@salesforce/community/Id'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@salesforce/i18n/lang/v/1', ['@salesforce/i18n/lang'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@salesforce/site/activeLanguages/v/1', ['@salesforce/site/activeLanguages'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@salesforce/site/Id/v/1', ['@salesforce/site/Id'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('@salesforce/webstore/Id/v/1', ['@salesforce/webstore/Id'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script type="text/javascript">LWR.define('webruntime/dispatcher/v/1', ['webruntime/dispatcher'], function(m) { return m && typeof m === 'object' && 'default' in m ? m.default : m; });</script>
+        <script src="/webruntime/view/76894328508921f53acf4b535ac25145/prod/en-US/home_view"></script>
+        <script src="/webruntime/component/259a789b5905e4a3e65c0942cc97421d/prod/en-US/force/luvioLwcBindings_cmp"></script>
+        <script src="/webruntime/component/5b8557d8725fba2dbf2e6a4968ec430c/prod/en-US/force/luvioRuntimeWebruntime_cmp"></script>
+        <script src="/webruntime/view/ac0055611cac234066b4f6861ec8d557/prod/en-US/commerceLayout_view"></script>
+        <script src="/webruntime/component/322c484cfe842ce3d127d176a3385928/prod/en-US/force/ldsEngineWebruntime_cmp"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><style type="text/css" id="webruntime-branding">:root{--dxp-g-brand:rgb(0, 107, 233);--dxp-s-text-heading-medium-letter-spacing:0em;--dxp-s-form-element-text-font-family:"Poppins";--dxp-s-form-element-spacing-horizontal-start:12px;--dxp-s-text-heading-small-text-decoration:none;--dxp-s-dropdown-text-color:var(--dxp-g-root-contrast);--dxp-s-tertiary-button-text-color:#1C1C1C;--dxp-s-form-element-caption-text-font-family:"Poppins";--dxp-s-form-element-spacing-block-start:0px;--dxp-g-neutral-contrast-3:#ffffff;--dxp-s-text-heading-medium-text-transform:none;--dxp-g-neutral-contrast-2:#000000;--dxp-g-neutral-contrast-1:#000000;--dxp-s-button-color-focus-contrast:#FFF;--dxp-s-tertiary-button-border-color-1:rgba(0,0,0,0);--dxp-s-button-border-color-active:rgb(0, 88, 192);--dxp-s-link-text-color-1:rgb(0, 88, 192);--dxp-s-form-element-label-font-style:normal;--dxp-g-info:#16325c;--dxp-g-root:#ffffff;--dxp-s-tertiary-button-text-color-focus:rgb(5, 32, 73);--dxp-s-form-element-text-text-decoration:none;--dxp-s-form-element-caption-text-font-weight:400;--dxp-s-body-line-height:1.5;--dxp-s-text-heading-extra-small-font-style:normal;--dxp-s-button-large-padding-block-end:0.875rem;--dxp-s-body-text-decoration:none;--dxp-s-section-content-spacing-inline-end-mobile:0.75rem;--dxp-s-form-element-text-font-weight:400;--dxp-s-tertiary-button-color-1:rgba(0,0,0,0);--dxp-s-text-heading-medium-font-style:normal;--dxp-s-form-checkbox-color-background-checked:var(--dxp-s-form-checkbox-color-background);--dxp-s-secondary-button-color-focus:#707275;--dxp-s-text-heading-extra-extra-small-line-height:1.25;--dxp-g-warning-2:#e27d00;--dxp-g-warning-3:#673900;--dxp-s-form-element-color-border:var(--dxp-g-neutral-3);--dxp-g-warning-1:#ffa534;--dxp-s-header-content-max-width-mobile:none;--dxp-s-secondary-button-color-hover:#707275;--dxp-s-text-heading-large-letter-spacing:0em;--dxp-s-button-padding-inline-end:1rem;--dxp-s-tertiary-button-border-color-hover:rgba(0, 0, 0, 0);--dxp-s-tertiary-button-border-color-focus:rgba(0, 0, 0, 0);--dxp-s-body-font-style:normal;--dxp-g-warning-contrast:#000000;--dxp-s-form-element-text-text-transform:none;--dxp-s-button-large-padding-inline-start:5.25rem;--dxp-s-text-heading-medium-line-height:2;--dxp-s-column-spacer-size:1rem;--dxp-s-text-heading-large-text-transform:none;--dxp-s-secondary-button-border-color:#1C1C1C;--dxp-s-text-heading-extra-large-letter-spacing:0em;--dxp-s-text-heading-large-font-size:3.5rem;--dxp-s-secondary-button-text-color:#1C1C1C;--dxp-s-form-element-text-font-style:normal;--dxp-s-button-font-family:"helvetica neue";--dxp-s-form-element-placeholder-text-color:var(--dxp-g-neutral-3);--dxp-s-form-element-color-background:var(--dxp-g-root);--dxp-s-tertiary-button-border-color-active:var(--dxp-s-tertiary-button-border-color-focus);--dxp-s-button-padding-block-start:0.625rem;--dxp-s-text-heading-extra-extra-small-font-style:normal;--dxp-s-button-font-weight:500;--dxp-s-body-font-weight:500;--dxp-s-body-small-line-height:1.25;--dxp-s-html-font-family:"Poppins";--dxp-g-offline:#444444;--dxp-s-button-small-font-size:1rem;--dxp-s-button-radius-border:23px;--dxp-s-button-small-padding-block-end:0.5rem;--dxp-s-component-wrapper-spacer-size-mobile:1.5rem;--dxp-s-form-element-label-font-size:1rem;--dxp-s-text-heading-extra-small-line-height:1.25;--dxp-s-text-heading-small-line-height:1.25;--dxp-s-section-content-spacing-block-end:0rem;--dxp-s-secondary-button-text-color-focus:rgb(5, 32, 73);--dxp-g-success-3:#07190f;--dxp-g-warning:#ffb75d;--dxp-g-success-2:#237747;--dxp-g-success-1:#36b66c;--dxp-s-button-small-padding-inline-end:0.75rem;--dxp-s-column-spacer-size-mobile:0.75rem;--dxp-s-text-heading-small-font-family:"HelveticaNeueLTW04-65Medium";--dxp-s-text-heading-large-font-style:normal;--dxp-g-info-contrast-3:#ffffff;--dxp-s-form-checkbox-color-border-checked:var(--dxp-s-form-checkbox-color-border);--dxp-s-button-color-active:rgb(0, 88, 192);--dxp-s-section-content-spacing-inline-start-mobile:0.75rem;--dxp-s-section-content-spacing-block-end-mobile:1rem;--dxp-s-html-font-size:16px;--dxp-s-body-font-family:"HelveticaNeueLTW04-45Light";--dxp-s-link-text-decoration-focus:underline;--dxp-g-info-contrast-1:#ffffff;--dxp-s-dropdown-text-color-hover:var(--dxp-g-neutral-contrast);--dxp-g-info-contrast-2:#ffffff;--dxp-s-text-heading-extra-large-font-family:"HelveticaNeueLTW06-75Bold";--dxp-s-text-heading-medium-text-decoration:none;--dxp-s-secondary-button-color-active:#707275;--dxp-s-form-element-label-line-height:1.5;--dxp-s-text-heading-extra-extra-small-font-family:"Salesforce Sans";--dxp-s-text-heading-small-font-weight:500;--dxp-s-text-heading-large-font-weight:300;--dxp-s-form-element-text-color:var(--dxp-g-root-contrast);--dxp-g-destructive-contrast:#ffffff;--dxp-s-form-checkbox-radius-border:0px;--dxp-g-destructive-contrast-1:#ffffff;--dxp-g-destructive-contrast-2:#ffffff;--dxp-g-root-1:#ebebeb;--dxp-g-destructive-contrast-3:#ffffff;--dxp-g-root-2:#c2c2c2;--dxp-s-section-content-spacing-inline-start:3rem;--dxp-g-root-3:#858585;--dxp-s-button-color-1:rgb(0, 88, 192);--dxp-s-form-element-color-background-active:var(--dxp-s-form-element-color-background);--dxp-s-body-text-color:rgb(5, 32, 73);--dxp-s-footer-content-max-width-mobile:none;--dxp-g-brand-contrast:#ffffff;--dxp-s-button-border-color-hover:#707275;--dxp-s-text-heading-extra-small-letter-spacing:0em;--dxp-s-form-element-width-border:2px;--dxp-s-body-small-text-color:rgb(5, 32, 73);--dxp-s-form-checkbox-width-border:2px;--dxp-s-button-color-active-contrast:var(--dxp-s-button-color-focus-contrast);--dxp-s-button-line-height:1.9;--dxp-s-button-small-padding-inline-start:0.75rem;--dxp-s-site-logo-url:url(/sfsites/c/cms/delivery/media/MCMCXJ5XM66BBPVOK5ZO4HYSTSBU);--dxp-s-text-heading-extra-extra-small-text-transform:none;--dxp-s-form-element-color-border-focus:#177EAB;--dxp-s-button-large-radius-border:50px;--dxp-s-text-heading-extra-extra-small-font-weight:600;--dxp-s-button-border-color:var(--dxp-s-button-color);--dxp-s-secondary-button-color:rgba(0, 0, 0, 0);--dxp-s-text-heading-extra-small-text-decoration:none;--dxp-s-text-heading-extra-extra-small-color:var(--dxp-g-root-contrast);--dxp-s-form-element-radius-border:0px;--dxp-s-form-element-text-color-focus:var(--dxp-s-form-element-text-color);--dxp-s-tertiary-button-border-color:rgba(0, 0, 0, 0);--dxp-g-destructive:#c23934;--dxp-s-tertiary-button-color-active:rgba(0, 0, 0, 0);--dxp-s-dropdown-color-border:var(--dxp-g-neutral);--dxp-g-offline-contrast:#ffffff;--dxp-s-text-heading-large-color:rgb(5, 32, 73);--dxp-s-button-large-padding-block-start:0.875rem;--dxp-s-link-text-decoration-hover:underline;--dxp-s-button-color-focus:rgb(5, 32, 73);--dxp-s-form-element-text-line-height:1.5;--dxp-s-form-element-caption-text-line-height:1.5;--dxp-s-site-logo-path:/sfsites/c/cms/delivery/media/MCMCXJ5XM66BBPVOK5ZO4HYSTSBU;--dxp-s-body-small-font-family:"HelveticaNeueLTW04-45Light";--dxp-s-body-small-letter-spacing:0em;--dxp-s-text-heading-extra-large-text-transform:none;--dxp-s-form-element-label-text-transform:none;--dxp-g-success:#4bca81;--dxp-s-form-checkbox-color-background:var(--dxp-s-form-element-color-background);--dxp-s-form-element-label-letter-spacing:0;--dxp-s-form-element-label-font-weight:400;--dxp-s-button-text-decoration:none;--dxp-s-text-heading-extra-large-line-height:1.25;--dxp-s-button-border-color-focus:#707275;--dxp-g-warning-contrast-3:#ffffff;--dxp-s-button-large-font-size:1.25rem;--dxp-s-button-small-radius-border:23px;--dxp-s-body-font-size:1.125rem;--dxp-s-dropdown-color-background:var(--dxp-g-root);--dxp-s-body-small-text-decoration:none;--dxp-s-secondary-button-text-color-active:rgb(0, 88, 192);--dxp-s-text-heading-large-line-height:1.25;--dxp-s-button-color-hover:rgb(5, 32, 73);--dxp-s-button-font-size:1rem;--dxp-s-button-letter-spacing:0em;--dxp-g-warning-contrast-2:#000000;--dxp-g-warning-contrast-1:#000000;--dxp-s-button-padding-inline-start:1rem;--dxp-g-root-contrast-1:rgb(2, 15, 35);--dxp-g-root-contrast:rgb(5, 32, 73);--dxp-g-root-contrast-2:rgb(0, 0, 0);--dxp-g-root-contrast-3:rgb(0, 0, 0);--dxp-s-header-content-max-width:1440px;--dxp-s-section-columns-max-width:1440px;--dxp-s-form-element-spacing-block-end:0px;--dxp-s-button-text-transform:none;--dxp-s-body-text-transform:none;--dxp-s-form-element-label-font-family:"Poppins";--dxp-s-form-checkbox-color-border:var(--dxp-s-form-element-color-border);--dxp-s-form-element-caption-text-text-transform:none;--dxp-s-body-letter-spacing:0em;--dxp-s-form-element-caption-text-letter-spacing:0;--dxp-s-tertiary-button-color:rgba(0, 0, 0, 0);--dxp-s-body-small-font-style:normal;--dxp-s-text-heading-small-font-style:normal;--dxp-s-text-heading-extra-extra-small-font-size:0.625rem;--dxp-s-text-heading-small-color:rgb(5, 32, 73);--dxp-s-section-content-spacing-block-start:0rem;--dxp-s-html-font-size-mobile:10px;--dxp-s-section-content-spacing-inline-end:3rem;--dxp-s-body-small-font-weight:300;--dxp-g-offline-3:#000000;--dxp-g-offline-2:#070707;--dxp-g-offline-1:#303030;--dxp-s-button-color-contrast-1:var(--dxp-g-brand-contrast-1);--dxp-s-secondary-button-border-color-active:rgb(0, 88, 192);--dxp-s-text-heading-extra-extra-small-letter-spacing:0em;--dxp-s-text-heading-extra-large-text-decoration:none;--dxp-g-success-contrast:#000000;--dxp-s-text-heading-small-font-size:1.5rem;--dxp-s-button-font-style:normal;--dxp-s-body-small-text-transform:none;--dxp-g-brand-contrast-1:rgb(255, 255, 255);--dxp-g-brand-contrast-3:rgb(255, 255, 255);--dxp-s-button-color-hover-contrast:#FFF;--dxp-g-brand-contrast-2:rgb(255, 255, 255);--dxp-g-brand-1:rgb(0, 88, 192);--dxp-g-brand-2:rgb(0, 51, 111);--dxp-g-brand-3:rgb(0, 0, 0);--dxp-s-secondary-button-text-color-1:var(--dxp-s-button-color-1);--dxp-s-link-text-color-hover:var(--dxp-s-link-text-color-1);--dxp-g-offline-contrast-3:#ffffff;--dxp-g-offline-contrast-2:#ffffff;--dxp-s-button-small-padding-block-start:0.5rem;--dxp-s-tertiary-button-color-hover:rgba(0, 0, 0, 0);--dxp-s-text-heading-extra-small-font-family:"Salesforce Sans";--dxp-s-form-element-caption-text-text-decoration:none;--dxp-s-body-small-font-size:2rem;--dxp-g-destructive-1:#a2302b;--dxp-g-offline-contrast-1:#ffffff;--dxp-s-text-heading-small-text-transform:none;--dxp-s-tertiary-button-text-color-1:var(--dxp-s-button-color-1);--dxp-g-info-contrast:#ffffff;--dxp-s-link-text-color:var(--dxp-g-brand);--dxp-s-text-heading-extra-extra-small-text-decoration:none;--dxp-g-neutral:#ecebea;--dxp-g-destructive-2:#611d1a;--dxp-g-destructive-3:#010000;--dxp-s-form-element-label-color:var(--dxp-g-root-contrast);--dxp-s-text-heading-extra-large-font-weight:700;--dxp-s-text-heading-large-font-family:"HelveticaNeueLTW04-45Light";--dxp-s-text-heading-extra-large-font-style:normal;--dxp-s-tertiary-button-text-color-active:rgb(0, 88, 192);--dxp-s-text-heading-extra-small-text-transform:none;--dxp-s-text-heading-extra-small-font-weight:600;--dxp-s-form-element-text-font-size:1rem;--dxp-s-secondary-button-border-color-hover:rgb(5, 32, 73);--dxp-s-button-large-padding:5.25rem;--dxp-g-info-2:#000000;--dxp-g-info-3:#000000;--dxp-s-secondary-button-border-color-focus:rgb(5, 32, 73);--dxp-s-text-heading-medium-font-weight:300;--dxp-g-info-1:#0e203b;--dxp-g-neutral-contrast:#000000;--dxp-s-dropdown-color-background-hover:var(--dxp-g-neutral);--dxp-s-button-color:rgb(0, 107, 233);--dxp-g-neutral-3:#76716b;--dxp-g-neutral-2:#b2aeaa;--dxp-s-text-heading-extra-large-color:rgb(5, 32, 73);--dxp-g-neutral-1:#d9d7d5;--dxp-s-secondary-button-color-1:var(--dxp-g-root-1);--dxp-g-success-contrast-3:#ffffff;--dxp-g-success-contrast-2:#ffffff;--dxp-s-text-heading-extra-large-font-size:4rem;--dxp-s-secondary-button-border-color-1:var(--dxp-s-button-color-1);--dxp-s-tertiary-button-color-focus:rgba(0, 0, 0, 0);--dxp-s-form-element-caption-text-font-size:0.75rem;--dxp-s-form-element-spacing-horizontal-end:12px;--dxp-g-success-contrast-1:#000000;--dxp-s-component-wrapper-spacer-size:0rem;--dxp-s-button-large-padding-inline-end:5.25rem;--dxp-s-text-heading-extra-small-color:var(--dxp-g-root-contrast);--dxp-s-tertiary-button-text-color-hover:rgb(5, 32, 73);--dxp-s-link-text-decoration:none;--dxp-s-text-heading-medium-font-size:2.125rem;--dxp-s-form-element-label-text-decoration:none;--dxp-s-text-heading-extra-small-font-size:0.8125rem;--dxp-s-button-color-contrast:#fff;--dxp-s-button-padding-block-end:0.625rem;--dxp-s-section-columns-max-width-mobile:none;--dxp-s-text-heading-medium-color:rgb(5, 32, 73);--dxp-s-button-small-padding:0.75rem;--dxp-s-text-heading-large-text-decoration:none;--dxp-s-form-element-caption-text-font-style:normal;--dxp-s-button-padding:1rem;--dxp-s-secondary-button-text-color-hover:rgb(5, 32, 73);--dxp-s-text-heading-medium-font-family:"HelveticaNeueLTW04-45Light";--dxp-s-footer-content-max-width:1440px;--dxp-s-text-heading-small-letter-spacing:0em;--dxp-s-form-element-text-letter-spacing:0;--dxp-s-section-content-spacing-block-start-mobile:1rem;--dxp-g-brand-h:212;--dxp-g-brand-s:100%;--dxp-g-brand-l:46%;--dxp-g-brand-a:1.0;--dxp-s-tertiary-button-text-color-h:0;--dxp-s-tertiary-button-text-color-s:0%;--dxp-s-tertiary-button-text-color-l:11%;--dxp-s-tertiary-button-text-color-a:1.0;--dxp-s-button-color-focus-contrast-h:0;--dxp-s-button-color-focus-contrast-s:0%;--dxp-s-button-color-focus-contrast-l:100%;--dxp-s-button-color-focus-contrast-a:1.0;--dxp-s-button-border-color-active-h:213;--dxp-s-button-border-color-active-s:100%;--dxp-s-button-border-color-active-l:38%;--dxp-s-button-border-color-active-a:1.0;--dxp-g-info-h:216;--dxp-g-info-s:61%;--dxp-g-info-l:22%;--dxp-g-info-a:1.0;--dxp-g-root-h:0;--dxp-g-root-s:0%;--dxp-g-root-l:100%;--dxp-g-root-a:1.0;--dxp-s-tertiary-button-text-color-focus-h:216;--dxp-s-tertiary-button-text-color-focus-s:87%;--dxp-s-tertiary-button-text-color-focus-l:15%;--dxp-s-tertiary-button-text-color-focus-a:1.0;--dxp-s-secondary-button-color-focus-h:216;--dxp-s-secondary-button-color-focus-s:2%;--dxp-s-secondary-button-color-focus-l:45%;--dxp-s-secondary-button-color-focus-a:1.0;--dxp-s-secondary-button-color-hover-h:216;--dxp-s-secondary-button-color-hover-s:2%;--dxp-s-secondary-button-color-hover-l:45%;--dxp-s-secondary-button-color-hover-a:1.0;--dxp-s-tertiary-button-border-color-hover-h:0;--dxp-s-tertiary-button-border-color-hover-s:0%;--dxp-s-tertiary-button-border-color-hover-l:0%;--dxp-s-tertiary-button-border-color-hover-a:0.0;--dxp-s-tertiary-button-border-color-focus-h:0;--dxp-s-tertiary-button-border-color-focus-s:0%;--dxp-s-tertiary-button-border-color-focus-l:0%;--dxp-s-tertiary-button-border-color-focus-a:0.0;--dxp-g-warning-contrast-h:0;--dxp-g-warning-contrast-s:0%;--dxp-g-warning-contrast-l:0%;--dxp-g-warning-contrast-a:1.0;--dxp-s-secondary-button-border-color-h:0;--dxp-s-secondary-button-border-color-s:0%;--dxp-s-secondary-button-border-color-l:11%;--dxp-s-secondary-button-border-color-a:1.0;--dxp-s-secondary-button-text-color-h:0;--dxp-s-secondary-button-text-color-s:0%;--dxp-s-secondary-button-text-color-l:11%;--dxp-s-secondary-button-text-color-a:1.0;--dxp-g-offline-h:0;--dxp-g-offline-s:0%;--dxp-g-offline-l:27%;--dxp-g-offline-a:1.0;--dxp-s-secondary-button-text-color-focus-h:216;--dxp-s-secondary-button-text-color-focus-s:87%;--dxp-s-secondary-button-text-color-focus-l:15%;--dxp-s-secondary-button-text-color-focus-a:1.0;--dxp-g-warning-h:33;--dxp-g-warning-s:100%;--dxp-g-warning-l:68%;--dxp-g-warning-a:1.0;--dxp-s-button-color-active-h:213;--dxp-s-button-color-active-s:100%;--dxp-s-button-color-active-l:38%;--dxp-s-button-color-active-a:1.0;--dxp-s-secondary-button-color-active-h:216;--dxp-s-secondary-button-color-active-s:2%;--dxp-s-secondary-button-color-active-l:45%;--dxp-s-secondary-button-color-active-a:1.0;--dxp-g-destructive-contrast-h:0;--dxp-g-destructive-contrast-s:0%;--dxp-g-destructive-contrast-l:100%;--dxp-g-destructive-contrast-a:1.0;--dxp-s-body-text-color-h:216;--dxp-s-body-text-color-s:87%;--dxp-s-body-text-color-l:15%;--dxp-s-body-text-color-a:1.0;--dxp-g-brand-contrast-h:0;--dxp-g-brand-contrast-s:0%;--dxp-g-brand-contrast-l:100%;--dxp-g-brand-contrast-a:1.0;--dxp-s-button-border-color-hover-h:216;--dxp-s-button-border-color-hover-s:2%;--dxp-s-button-border-color-hover-l:45%;--dxp-s-button-border-color-hover-a:1.0;--dxp-s-body-small-text-color-h:216;--dxp-s-body-small-text-color-s:87%;--dxp-s-body-small-text-color-l:15%;--dxp-s-body-small-text-color-a:1.0;--dxp-s-form-element-color-border-focus-h:198;--dxp-s-form-element-color-border-focus-s:76%;--dxp-s-form-element-color-border-focus-l:38%;--dxp-s-form-element-color-border-focus-a:1.0;--dxp-s-secondary-button-color-h:0;--dxp-s-secondary-button-color-s:0%;--dxp-s-secondary-button-color-l:0%;--dxp-s-secondary-button-color-a:0.0;--dxp-s-tertiary-button-border-color-h:0;--dxp-s-tertiary-button-border-color-s:0%;--dxp-s-tertiary-button-border-color-l:0%;--dxp-s-tertiary-button-border-color-a:0.0;--dxp-g-destructive-h:2;--dxp-g-destructive-s:58%;--dxp-g-destructive-l:48%;--dxp-g-destructive-a:1.0;--dxp-s-tertiary-button-color-active-h:0;--dxp-s-tertiary-button-color-active-s:0%;--dxp-s-tertiary-button-color-active-l:0%;--dxp-s-tertiary-button-color-active-a:0.0;--dxp-g-offline-contrast-h:0;--dxp-g-offline-contrast-s:0%;--dxp-g-offline-contrast-l:100%;--dxp-g-offline-contrast-a:1.0;--dxp-s-text-heading-large-color-h:216;--dxp-s-text-heading-large-color-s:87%;--dxp-s-text-heading-large-color-l:15%;--dxp-s-text-heading-large-color-a:1.0;--dxp-s-button-color-focus-h:216;--dxp-s-button-color-focus-s:87%;--dxp-s-button-color-focus-l:15%;--dxp-s-button-color-focus-a:1.0;--dxp-g-success-h:146;--dxp-g-success-s:55%;--dxp-g-success-l:54%;--dxp-g-success-a:1.0;--dxp-s-button-border-color-focus-h:216;--dxp-s-button-border-color-focus-s:2%;--dxp-s-button-border-color-focus-l:45%;--dxp-s-button-border-color-focus-a:1.0;--dxp-s-secondary-button-text-color-active-h:213;--dxp-s-secondary-button-text-color-active-s:100%;--dxp-s-secondary-button-text-color-active-l:38%;--dxp-s-secondary-button-text-color-active-a:1.0;--dxp-s-button-color-hover-h:216;--dxp-s-button-color-hover-s:87%;--dxp-s-button-color-hover-l:15%;--dxp-s-button-color-hover-a:1.0;--dxp-g-root-contrast-h:216;--dxp-g-root-contrast-s:87%;--dxp-g-root-contrast-l:15%;--dxp-g-root-contrast-a:1.0;--dxp-s-tertiary-button-color-h:0;--dxp-s-tertiary-button-color-s:0%;--dxp-s-tertiary-button-color-l:0%;--dxp-s-tertiary-button-color-a:0.0;--dxp-s-text-heading-small-color-h:216;--dxp-s-text-heading-small-color-s:87%;--dxp-s-text-heading-small-color-l:15%;--dxp-s-text-heading-small-color-a:1.0;--dxp-s-secondary-button-border-color-active-h:213;--dxp-s-secondary-button-border-color-active-s:100%;--dxp-s-secondary-button-border-color-active-l:38%;--dxp-s-secondary-button-border-color-active-a:1.0;--dxp-g-success-contrast-h:0;--dxp-g-success-contrast-s:0%;--dxp-g-success-contrast-l:0%;--dxp-g-success-contrast-a:1.0;--dxp-s-button-color-hover-contrast-h:0;--dxp-s-button-color-hover-contrast-s:0%;--dxp-s-button-color-hover-contrast-l:100%;--dxp-s-button-color-hover-contrast-a:1.0;--dxp-s-tertiary-button-color-hover-h:0;--dxp-s-tertiary-button-color-hover-s:0%;--dxp-s-tertiary-button-color-hover-l:0%;--dxp-s-tertiary-button-color-hover-a:0.0;--dxp-g-info-contrast-h:0;--dxp-g-info-contrast-s:0%;--dxp-g-info-contrast-l:100%;--dxp-g-info-contrast-a:1.0;--dxp-g-neutral-h:30;--dxp-g-neutral-s:5%;--dxp-g-neutral-l:92%;--dxp-g-neutral-a:1.0;--dxp-s-tertiary-button-text-color-active-h:213;--dxp-s-tertiary-button-text-color-active-s:100%;--dxp-s-tertiary-button-text-color-active-l:38%;--dxp-s-tertiary-button-text-color-active-a:1.0;--dxp-s-secondary-button-border-color-hover-h:216;--dxp-s-secondary-button-border-color-hover-s:87%;--dxp-s-secondary-button-border-color-hover-l:15%;--dxp-s-secondary-button-border-color-hover-a:1.0;--dxp-s-secondary-button-border-color-focus-h:216;--dxp-s-secondary-button-border-color-focus-s:87%;--dxp-s-secondary-button-border-color-focus-l:15%;--dxp-s-secondary-button-border-color-focus-a:1.0;--dxp-g-neutral-contrast-h:0;--dxp-g-neutral-contrast-s:0%;--dxp-g-neutral-contrast-l:0%;--dxp-g-neutral-contrast-a:1.0;--dxp-s-button-color-h:212;--dxp-s-button-color-s:100%;--dxp-s-button-color-l:46%;--dxp-s-button-color-a:1.0;--dxp-s-text-heading-extra-large-color-h:216;--dxp-s-text-heading-extra-large-color-s:87%;--dxp-s-text-heading-extra-large-color-l:15%;--dxp-s-text-heading-extra-large-color-a:1.0;--dxp-s-tertiary-button-color-focus-h:0;--dxp-s-tertiary-button-color-focus-s:0%;--dxp-s-tertiary-button-color-focus-l:0%;--dxp-s-tertiary-button-color-focus-a:0.0;--dxp-s-tertiary-button-text-color-hover-h:216;--dxp-s-tertiary-button-text-color-hover-s:87%;--dxp-s-tertiary-button-text-color-hover-l:15%;--dxp-s-tertiary-button-text-color-hover-a:1.0;--dxp-s-button-color-contrast-h:0;--dxp-s-button-color-contrast-s:0%;--dxp-s-button-color-contrast-l:100%;--dxp-s-button-color-contrast-a:1.0;--dxp-s-text-heading-medium-color-h:216;--dxp-s-text-heading-medium-color-s:87%;--dxp-s-text-heading-medium-color-l:15%;--dxp-s-text-heading-medium-color-a:1.0;--dxp-s-secondary-button-text-color-hover-h:216;--dxp-s-secondary-button-text-color-hover-s:87%;--dxp-s-secondary-button-text-color-hover-l:15%;--dxp-s-secondary-button-text-color-hover-a:1.0;}</style> <script>var DataLayerEvents=function(){"use strict";return class{constructor(){this.resetEvents(),this._subscribers=[]}resetEvents(){this._events=new Proxy([],{set:(s,t,e)=>{const r=s[t],i=Reflect.set(s,t,e);return"length"!==t&&r!==e&&this.emitEvents(),i}})}subscribe(s){this._subscribers.find((t=>t.constructor.toString()===s.constructor.toString()))||this._subscribers.push(s)}unsubscribe(s){this._subscribers=this._subscribers.filter((t=>t!==s))}push(s){this._events.push(s)}emitEvents(){if(this._subscribers.length){const s=[...this._events];this.resetEvents(),this._subscribers.forEach((t=>{try{"function"==typeof t.next&&t.next(s)}catch(s){"function"==typeof t.error&&t.error(s)}}))}}size(){return this._events.length}}}();
+</script><script>window.dataLayerEvents = new DataLayerEvents();
+window.document.addEventListener('experience_interaction', (event) => {
+window.dataLayerEvents.push(event);
+});
+window.document.addEventListener('click', (event) => {
+window.dataLayerEvents.push(event);
+});
+window.ECEngmtEvtDispatchers = [];
+window.expTagMgrConfig = {};
+</script><script async src="/webruntime/framework/89b8fc6d3b/prod/o11y-event-dispatcher"></script><script async src="/webruntime/framework/60d542e3ae/prod/experience-web-sdk"></script><script>window.expTagMgrConfig.dispatcherCount = 1;
+</script><style>
+@font-face {
+  font-family: "GranjonLTW01-Roman"; 
+  src: url("/sfsites/c/resource/ucsfwebfonts/GranjonLTW01-Roman.eot?#iefix") format("eot"), /* IE6-IE8 */
+  url("/sfsites/c/resource/ucsfwebfonts/GranjonLTW01-Roman.woff2") format("woff2"), /* Super Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/GranjonLTW01-Roman.woff") format("woff"), /* Pretty Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/GranjonLTW01-Roman.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTW04-45Light"; /* Specify font-weight: 200 in D2C admin */
+  src: url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-45Light.eot?#iefix") format("eot"), /* IE6-IE8 */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-45Light.woff2") format("woff2"), /* Super Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-45Light.woff") format("woff"), /* Pretty Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-45Light.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTW04-55Roman"; /* Specify font-weight: 300 in D2C admin */
+  src: url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-55Roman.eot?#iefix") format("eot"), /* IE6-IE8 */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-55Roman.woff2") format("woff2"), /* Super Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-55Roman.woff") format("woff"), /* Pretty Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-55Roman.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTW04-56Italic";
+  src: url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-56Italic.eot?#iefix") format("eot"), /* IE6-IE8 */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-56Italic.woff2") format("woff2"), /* Super Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-56Italic.woff") format("woff"), /* Pretty Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-56Italic.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTW04-65Medium"; /* Specify font-weight: 500 in D2C admin */
+  src: url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-65Medium.eot?#iefix") format("eot"), /* IE9 Compat Modes */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-65Medium.woff2") format("woff2"), /* Super Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-65Medium.woff") format("woff"), /* Pretty Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW04-65Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLTW06-75Bold"; /* Specify font-weight: 700 in D2C admin */
+  src: url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW06-75Bold.eot?#iefix") format("eot"), /* IE6-IE8 */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW06-75Bold.woff2") format("woff2"), /* Super Modern Browsers */
+  url("/sfsites/c/resource/ucsfwebfonts/HelveticaNeueLTW06-75Bold.woff") format("woff"), /* Pretty Modern Browsers */
+  url("/sfsites/c/resource/ucswebfonts/HelveticaNeueLTW06-75Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+
+ /* Preload some GUI images since we don't use sprites yet. */
+body::after{
+   position:absolute; width:0; height:0; overflow:hidden; z-index:-1; 
+   content:url("/sfsites/c/resource/ucsf_svg_icons_1/cart-nav.svg") 
+       url("/sfsites/c/resource/ucsf_svg_icons_1/cart-nav-hover.svg") 
+       url("/sfsites/c/resource/ucsf_svg_icons_1/external-link.svg") 
+       url("/sfsites/c/resource/ucsf_svg_icons_1/external-link-hover.svg")
+       url("/sfsites/c/resource/ucsf_svg_icons_1/x-nav-blue-hover.svg")
+       url("/sfsites/c/resource/ucsf_svg_icons_1/x-nav-blue.svg")
+       url('/sfsites/c/resource/ucsf_play_pause/pause_alt.svg')
+       url('/sfsites/c/resource/ucsf_play_pause/play.svg')
+       url('/sfsites/c/resource/ucsf_cine_poster_mobile')
+       url('/sfsites/c/resource/ucsf_cine_poster_desktop')
+       ;
+}
+</style>    
+
+
+<!-- UCSF HEALTH DAYA LAYER -->
+<script src="https://datalayer.ucsfhealth.org/ucsf-data-layer.js" defer></script> 
+
+<!-- PROD -->
+<script src="https://assets.adobedtm.com/db5f13cb240b/b1130ce1ceae/launch-db8f55f3e131.min.js" async></script>
+
+
+
+<script type="text/javascript"> 
+/*<![CDATA[*/ 
+(function() { 
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true; 
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_8343.js'; 
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s); 
+})(); 
+/*]]>*/ 
+</script> 
+
+<!-- branding / SLDS stylesheets -->
+<link rel="stylesheet" href="/assets/styles/salesforce-lightning-design-system.min.css?0882fb1e7c">
+<link rel="stylesheet" href="/assets/styles/dxp-site-spacing-styling-hooks.min.css?0882fb1e7c">
+<link rel="stylesheet" href="/assets/styles/dxp-styling-hooks.min.css?0882fb1e7c">
+<link rel="stylesheet" href="/assets/styles/dxp-slds-extensions.min.css?0882fb1e7c">
+
+<!-- General -->
+<link rel="shortcut icon" href="/sfsites/c/resource/ucsf_favicon/favicon.ico?0882fb1e7c">
+<link rel="stylesheet" href="/assets/css/theme.css?0882fb1e7c">
+
+<!-- UCSF -->
+<link rel="stylesheet" href="/sfsites/c/resource/ucsf_og_global_overrides?0882fb1e7c">
+
+<meta property="og:site_name" content="Giving to UCSF">
+<meta property="og:title" content="Your gift can ignite discovery and inspire cures">
+<meta property="og:description" content="What are you passionate about? Unlocking the brain’s mysteries? Battling health inequity? Donate to UCSF today, and together we will  build a healthier tomorrow.">
+<meta property="og:image:url" content="https://giving.ucsf.edu/sfsites/c/cms/delivery/media/MCG656GM356JE7DP4FHGIHAYSTPA">
+<meta property="og:image:secure_url" content="https://giving.ucsf.edu/sfsites/c/cms/delivery/media/MCG656GM356JE7DP4FHGIHAYSTPA">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@UCSF">
+<meta name="twitter:title" content="Your gift can ignite discovery and inspire cures">
+<meta name="twitter:description" content="What are you passionate about? Unlocking the brain’s mysteries? Battling health inequity? Donate to UCSF today, and together we will  build a healthier tomorrow.">
+<meta name="twitter:image" content="https://giving.ucsf.edu/sfsites/c/cms/delivery/media/MCG656GM356JE7DP4FHGIHAYSTPA">
+
+<style>
+    body .main-body-section {
+        background-color: var(--ucsf-white);
+    }
+      
+    
+	
+
+
+.slds-button--brand, 
+.slds-button.slds-button_icon.slds-button_icon-brand, 
+.slds-button_brand,
+lightning-button[variant=brand]::part(button) {
+    padding:1rem 2rem !important;
+}
+
+
+
+    
+    /* below not working? */
+    a.lwc-59kp5sov61j.slds-button.slds-button_brand:first-letter,
+    a.lwc-335ufohkk69.slds-button.slds-button_brand:first-letter {
+    padding-right: 5px;
+    font-size: 2rem;
+        
+}
+    .category-section {
+   background-color: var(--ucsf-light-gray);
+}
+    
+/* SearchResults H1 (--HNLight) */
+.searchresults-heading-light-h1,
+.searchresults-heading-light-h1 h1 {
+   font-family: var(--HNLight);
+   font-weight: var(--HNLightWeight) !important;
+   font-size: 2rem;
+   line-height: 1.25;
+   letter-spacing: -0.038rem;
+   margin-bottom: 0;
+   text-shadow: 1px 1px 1px var(--ucsf-small-text-shadow);
+}
+@media screen and (min-width: 768px) {} /* tablet and up */
+/* desktop and up */
+@media screen and (min-width: 1024px) {
+   .searchresults-heading-light-h1,
+   .searchresults-heading-light-h1 h1 {
+      font-size: 3.5rem;
+      line-height: 1.25;
+      letter-spacing: -0.075rem;
+   }
+} 
+.searchresults-section {}
+
+.searchresults-section div[c-categorydescription_categorydescription].category-description_main {
+   padding-bottom:2rem;
+}
+    
+   article.results-container aside.filters div.filters-header h2.filters-title {
+   font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight);
+   font-size: 1.125rem; 
+   color: var(--ucsf-cta-blue);
+}
+    aside.filters div.filters-header {
+   align-items: center;
+}
+aside.filters div.filters-header h2.filters-title {
+   margin:0;
+}
+    
+    /* ============ BELOW ========= */
+    
+
+.lwc-36vevjtd9ac h2, 
+.lwc-4u4j45agqbn h2, 
+.lwc-20bef5plkfo h2 {
+   font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight);
+   font-size: 1.125rem; 
+   color: var(--ucsf-cta-blue);
+   margin:0;
+}
+.lwc-36vevjtd9ac ul.categories,
+.lwc-4u4j45agqbn ul.categories,
+.lwc-20bef5plkfo ul.categories {
+   margin-bottom: 1rem;
+}
+.lwc-36vevjtd9ac ul.categories li a,
+.lwc-4u4j45agqbn ul.categories li a,
+.lwc-20bef5plkfo ul.categories li a {
+   text-decoration: none;
+   border-bottom: none;
+   font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight);
+   font-size: 0.875rem;
+
+}
+.lwc-36vevjtd9ac ul.categories li a:hover,
+.lwc-4u4j45agqbn ul.categories li a:hover,
+.lwc-20bef5plkfo ul.categories li a:hover {
+   text-decoration: none;
+   color: var(--ucsf-cta-blue);
+   border-bottom: 2px solid var(--ucsf-cta-blue);
+}
+    .facet-body .lwc-1q54g11aet8,
+.facet-body span::part(input-checkbox) {
+	height:2.25rem;
+    margin:0;
+    padding:0;
+    font-size: .88rem;
+    font-family: var(--HNRoman);
+    font-weight: var(--HNRomanWeight);
+}
+    lightning-primitive-input-checkbox[lwc-66unc5l95ad] {
+   height:2.25rem;
+}
+commerce_search-facet-item.lwc-7aoidjjdg4i {
+   height:2.25rem;
+}
+    commerce_search-facet-item.lwc-64711lksfdt {
+   margin:0;
+   padding:0;
+}
+lightning-primitive-input-checkbox[lwc-66unc5l95ad] input[type="checkbox"]+label {
+   background:none;
+   border:none;
+   padding:0;
+   margin:0;
+   cursor:pointer;
+}
+
+lightning-primitive-input-checkbox[lwc-66unc5l95ad] input[type="checkbox"]+label:hover {
+   background:none;
+   border:none;
+}
+    
+    
+    
+    
+    
+    /* ==========.ABOVE ========= */
+    
+ .slds-checkbox [type=checkbox]+.slds-checkbox__label .slds-checkbox_faux {
+   border-width: 1px;
+} 
+.slds-checkbox [type=checkbox]:checked+.slds-checkbox__label .slds-checkbox_faux {
+   	background-color: var(--ucsf-cta-blue);
+	border: 2px solid var(--ucsf-cta-blue);
+}
+    /*
+:root {
+   --dxp-c-checkbox-width-border: 1px;
+   --dxp-s-form-element-width-border: 1px;
+}
+    */
+    .slds-checkbox [type=checkbox]:checked+.slds-checkbox__label .slds-checkbox_faux:after {
+    height: .3rem;
+    width: .65rem;    
+    top: 45%;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+}
+
+
+
+.category-sort dxp_base-text-block.eyebrow p {
+	 font-family: var(--HNBold);
+   font-weight: var(--HNBoldWeight);
+   font-size: 0.75rem;
+   line-height: 1.4;
+   letter-spacing: 0.1rem;
+   margin:0;
+   padding:0;
+   text-shadow: 1px 1px 1px var(--ucsf-small-text-shadow);
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+section.results-container .sorting-menu {
+   margin-bottom:1rem;
+}
+    
+community_layout-section.category-section-results {
+   /* background-color: var(--ucsf-white); */
+   background:none;
+}
+.searchresults-section {}
+
+.searchresults-section c-categorydescription_categorydescription.category-description_main {
+   padding-bottom:2rem;
+}
+
+
+
+    
+commerce_search-product-grid ul.lwc-7r0fpe1q2mp {
+   border: 2px solid var(--ucsf-cta-blue);
+   border-radius: 75px;
+   padding: 25px 0;
+   margin-bottom:0;
+}     
+    commerce_search-product-grid ul.lwc-7r0fpe1q2mp li {
+    	border-bottom-width: 2px;
+        padding:2rem 2.5rem;
+    }
+    commerce_search-product-grid ul.lwc-7r0fpe1q2mp li:last-child {
+        border-bottom:none;
+        
+    }
+    
+    section.cardContainerList div.fieldsArea a {
+   text-decoration: none;
+   border:none;
+}
+section.cardContainerList div.fieldsArea a:hover div:nth-child(1) commerce_search-product-field lightning-formatted-rich-text span {
+   color:var(--ucsf-dark-blue);
+   /* border-bottom: 2px solid var(--ucsf-dark-blue); */
+   text-decoration-line: underline;
+   text-underline-offset: 0.5rem;
+   text-decoration-thickness: 2px;
+}
+
+.fieldsArea a div:nth-child(1) commerce_search-product-field lightning-formatted-rich-text span {
+   display: inline-block;
+   margin-bottom:1.5rem;
+   font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight);
+   font-size: 1.5rem;
+   color: var(--ucsf-cta-blue);
+   /* border-bottom: 2px solid var(--ucsf-cta-blue); */
+
+   text-decoration-line: underline;
+   text-underline-offset: 0.5rem;
+   text-decoration-thickness: 2px;
+   /* text-decoration-thickness: 2px; */
+   
+}
+/* .fieldsArea a div:nth-child(1) commerce_search-product-field lightning-formatted-rich-text span:hover,
+.fieldsArea a div:nth-child(1) commerce_search-product-field lightning-formatted-rich-text span:focus {
+   text-decoration-line: underline;
+   text-underline-offset: 0.5rem;
+   text-decoration-thickness: from-font;
+} */
+
+.fieldsArea a div:nth-child(2) commerce_search-product-field lightning-formatted-rich-text span {
+   display:block;
+   font-family: var(--HNLight);
+   font-weight: var(--HNLightWeight);
+   font-size: 1.13rem;
+   line-height:1.8;
+   text-overflow: unset;
+   white-space: normal;
+}
+    .callToActionButton.lwc-70omf7k760p {
+    height: unset;
+}
+    
+    /* CARD CONTAINER */
+    
+section.cardContainerList.lwc-70omf7k760p {
+   display:flex;
+   flex-direction: column;
+   width:100%;
+   margin:0;
+   padding:0;
+   overflow:unset;
+   grid-template-columns: none;
+   grid-template-areas: none;
+   flex-grow:unset;
+}
+@media screen and (min-width: 768px) {
+
+   section.cardContainerList.lwc-70omf7k760p {
+      flex-direction: row;
+   }
+}
+
+
+section.cardContainerList div.fieldsArea {
+   display:block;
+   grid-area: none;
+   padding:0;
+   flex:1 1 auto;
+   width: 75%;
+}
+    section.cardContainerList div.fieldsArea commerce_search-product-field>div {
+   white-space:normal
+}
+
+
+section.cardContainerList div.callToActionArea {
+   align-items: center;
+   grid-area:none;
+   justify-self: unset;
+   flex: 1 1 25%;
+   justify-content: flex-start !important;
+   margin-top:2rem !important;
+}
+@media screen and (min-width: 768px) {
+
+   section.cardContainerList.lwc-70omf7k760p {
+      justify-content: flex-end !important;
+      margin-top:0 !important;
+   }
+}
+
+section.cardContainerList div.callToActionArea .callToActionButton {
+   height: unset;
+   white-space: nowrap;
+}
+    
+    
+    
+    
+    
+    
+section.results .category-results-list {
+   border-left:80px solid transparent;
+}
+    article.results-container aside.filters {
+    flex: 1 0 25%;
+    max-width: unset !important;
+}
+
+article.results-container section.results  {
+   flex: 1 1 75%;
+   border-left: 50px solid transparent;
+}
+
+section.cardContainerList div.fieldsArea {
+   display:block;
+   grid-area: none;
+   padding:0;
+   flex:1 1 auto;
+   width: 100%;
+}
+@media screen and (min-width: 768px) {
+   section.cardContainerList div.fieldsArea {
+      width: 75%;
+   }
+}
+
+section.cardContainerList div.fieldsArea commerce_search-product-field>div {
+   white-space:normal
+}
+
+
+section.cardContainerList div.callToActionArea {
+   align-items: center;
+   grid-area:none;
+   justify-self: unset;
+   flex: 1 1 25%;
+   justify-content: flex-start;
+   margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+   section.cardContainerList div.callToActionArea {
+      justify-content: flex-end !important;
+      margin-top: 0 !important;
+   }
+}
+
+
+section.cardContainerList div.callToActionArea .callToActionButton {
+   height: unset;
+   white-space: nowrap;
+}
+section.cardContainerList div.callToActionArea  a {
+   position: relative;
+   padding:0.75rem 3rem !important;
+}
+    
+body .homepage-main-body-content {
+   background-color: var(--ucsf-white) !important; 
+}
+
+
+
+.homepage-search-input {
+   width:100%;
+   max-width:800px;
+   margin:0 auto;
+}
+.homepage-search-input div.input-container {
+   height: unset !important;
+   border-radius: 100px;
+   box-shadow: 0px 12px 12px rgba(0,0,0,0.04);
+   /* filter: drop-shadow(0px 12px 12px rgba(0,0,0,0.04)); */
+   margin:0 1rem;
+}
+.homepage-search-input .input-wrapper {
+   border-radius: 100px 0 0 100px !important;
+   border-width:2px !important;
+   padding:2rem 0 2rem 2rem !important;
+   height:100px;
+   border-right: none !important;
+   background-color: var(--ucsf-white) !important;
+}
+.homepage-search-input input.search-input-with-button {
+   padding:0 !important;
+   font-family: var(--HNLight);
+   font-weight: var(--HNLightWeight);
+   font-size: 1.5rem !important;
+   line-height: normal;
+   color: var(--ucsf-blue-gray);
+   background-color: var(--ucsf-white);
+}
+
+.homepage-search-input button.input-search-button {
+   height:100px !important;
+   padding:2rem 2rem 2rem 0 !important;
+   border-radius: 0 100px 100px 0 !important;
+   border-width: 2px;
+   background-color: var(--ucsf-white);
+   border-left: none !important;
+}
+.homepage-search-input div#placeholder {
+
+}
+.homepage-search-input button.input-search-button svg {
+
+   width: 30px !important;
+   height:30px !important;
+   fill: var(--ucsf-cta-blue) !important;
+}
+
+.cat-search-searchbox.homepage-search-input,
+.cat-search-searchbox.homepage-search-input::placeholder {
+   margin-bottom:1rem !important;
+   color: var(--ucsf-blue-gray) !important;
+}
+
+/* fii */
+
+.pdp-main-body-section,
+.static-main-body-section {
+   background-color: var(--ucsf-white);
+   margin: 0 !important;
+   padding:0 !important;
+}
+
+/* first items on bottom (lowest z-index); last items on top (highest z-index) */
+.pdp-main-body-content,
+.static-main-body-content {
+   background-color: var(--ucsf-white) !important;
+}
+
+ .confirmation-main-body-content {
+   background:none !important;
+   background-color: var(--ucsf-white) !important;
+}
+ 
+    .pdp-main-body-content,
+.static-main-body-content {
+   padding:0 1rem;
+}
+
+.pdp-main-body-content,
+.static-main-body-content{
+   padding:0 1rem;
+}
+
+@media screen and (min-width: 768px ) {
+   .pdp-main-body-content,
+   .static-main-body-content{      
+      padding:0 2rem;
+   }
+}
+@media screen and (min-width: 1024px ) {
+   .pdp-main-body-content,
+   .static-main-body-content{
+      padding:0 3rem;
+   }
+}
+@media screen and (min-width: 1280px ) {
+   .pdp-main-body-content,
+   .static-main-body-content{
+      padding:0 6rem;
+   }
+} 
+
+
+
+.static-details-content h3 {
+   margin-bottom:0;
+}
+    .static-details-content.endowed-professorships .h3 {
+   margin:3rem 0;
+}
+
+
+    
+commerce_product_details-gallery-image{
+   height: auto !important;
+}
+.static-details-content h3 {
+   margin-bottom:0;
+}
+commerce_product_details-gallery .images commerce_product_details-gallery-image.desktop-gallery-image,
+commerce_product_details-gallery .images commerce_product_details-gallery-image.mobile-gallery-image  {
+   width:var(--unset, unset);
+   height:var(--unset, unset);
+   border:var(--none, none);
+   width:100%; 
+   margin-right:0; 
+}
+
+commerce_product_details-gallery .images commerce_product_details-horizontal-scroller {
+   display:unset;
+    width:100%;
+}
+
+
+    
+c-donationamountselector_donationamountselector .customInputField::before {
+    position: absolute;
+    content: "$";
+    top: 10px;
+    left: 18px;
+    z-index: 100;
+    font-weight: 700;
+    color: var(--ucsf-cta-blue);
+}
+    /* FOOBER --- */
+   
+   /* Important for static content headers  */
+.ucsf-page-static-content.content-top {
+   
+}
+
+@media screen and (min-width: 1024px ) {
+   .ucsf-page-static-content.content-top {
+      max-width: 60%;
+      padding-right:3rem;
+   }    
+    
+}
+    
+    
+   community_builder-output-rich-text address,
+.ucsf-page-static-content address {
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+community_builder-output-rich-text ul,
+.ucsf-page-static-content ul {
+  list-style-type: disc;
+  
+} 
+community_builder-output-rich-text li,
+.ucsf-page-static-content li {
+  margin-left:3rem;
+  margin-bottom:0.5rem;
+} 
+
+community_builder-output-rich-text table tr ,
+.ucsf-page-static-content table tr {
+  border-bottom: 1px solid #000;
+} 
+community_builder-output-rich-text table td,
+.ucsf-page-static-content table td {
+    padding: 0.75rem 0.5rem;
+    line-height: 1.5rem;
+} 
+community_builder-output-rich-text table td.chair ,
+.ucsf-page-static-content table td.chair {
+  width: 50%
+} 
+ 
+    
+    
+    
+  
+
+/** online giving FAQ */
+.online-giving-faq {}
+
+.online-giving-faq p {
+   margin-bottom:1rem;
+}
+.online-giving-faq .dxp-tabs-container {
+   
+}
+.online-giving-faq .dxp-tabs-container dxp_layout-tab-bar  .dxp-tabs-container {
+   
+}
+@media screen and (min-width: 768px ) {
+   .online-giving-faq .dxp-tabs-container{
+   
+   }
+   .online-giving-faq .dxp-tabs-container dxp_layout-tab-bar  .dxp-tabs-container {
+   
+   }
+}
+.online-giving-faq .dxp-tab-container {
+   padding: 0 3rem 6rem 3rem;
+}
+
+.online-giving-faq  dxp_layout-tab > div.dxp-tab-container dxp_base-text-block:nth-child(1) {
+   border-bottom: 1px solid var(--ucsf-hr-on-white-or-gray);
+}
+.online-giving-faq  dxp_layout-tab > div.dxp-tab-container dxp_base-horizontal-line {
+   --dxp-c-horizontal-line-color: var(--ucsf-hr-on-white-or-gray);
+}
+
+.online-giving-faq dxp_base-text-block.component-wrapper-spacer p {
+   margin-bottom:1rem;
+}
+
+.online-giving-faq ul.dxp-tab-bar-container {
+   width: 100%;
+   background-color: white;
+}
+@media screen and (min-width: 768px) {
+   .online-giving-faq ul.dxp-tab-bar-container {
+      width: 300px;
+   }   
+}
+
+.online-giving-faq li.dxp-tab-nav-container {
+   padding:0;
+   margin:0;
+   border:none;
+}
+.dxp-tab-bar-hover-tab-vertical[data-active="false"]:hover {
+   margin:0;
+   padding:0 !important;
+   border:none;
+}
+.online-giving-faq li.dxp-tab-nav-container p {
+   margin:0;
+}
+.online-giving-faq li.dxp-tab-bar-visible-tab-hover dxp_base-text-block p {
+}
+.online-giving-faq li.dxp-tab-bar-visible-tab-hover div[aria-selected="false"] dxp_base-text-block p {
+   padding: 1rem 1rem 1rem 2rem;
+   font-weight: normal;
+   border-left: 6px solid transparent;
+}
+.online-giving-faq li.dxp-tab-bar-visible-tab-hover div[aria-selected="false"] {
+   margin: 0 5px 10px 0;
+   box-shadow: none;
+}
+
+.online-giving-faq li.dxp-tab-bar-visible-tab-hover div[aria-selected="true"] {
+   margin: 0 5px 10px 0;
+   box-shadow: 0px 5px 8px rgba(0,0,0,0.1);
+}
+
+.online-giving-faq li.dxp-tab-bar-visible-tab-hover div[aria-selected="true"] dxp_base-text-block p {
+   padding: 1rem 1rem 1rem 2rem;
+   color: var(--ucsf-cta-blue);
+   border-left: 6px solid var(--ucsf-cta-blue);
+   font-weight: bold;
+}
+
+/* ===== CART. ===== */
+
+.cart-content-form {
+   background-color: var(--ucsf-white);
+}
+.cart-content-form .cart-title h2 {
+   font-family: var(--HNBold);
+   font-weight: var(--HNBoldWeight);
+   font-size: 2rem !important;
+   color: var(--ucsf-navy);
+   line-height: 1.125;
+   letter-spacing: -0.038rem ;
+   margin-bottom: 2rem;
+   text-shadow: 1px 1px 1px var(--ucsf-small-text-shadow);
+}
+@media screen and (min-width: 768px) {
+   .cart-content-form .cart-title h2  {
+      font-size: 3rem !important;   
+   }
+} 
+
+@media screen and (min-width: 1024px) {
+   .cart-content-form .cart-title h2  {
+      font-size: 4rem !important;
+      letter-spacing: -0.125rem;
+   }
+} 
+
+.cart-content-summary {
+   position: relative;
+}
+
+
+.cart-summary-title h1 {
+   font-family: var(--HNLight);
+   font-weight: var(--HNLightWeight);
+   font-size: 2.125rem !important;
+   line-height: normal;
+   margin-bottom: 2rem;
+   letter-spacing: 0.013em !important;
+
+}
+.cart-item-count {
+   position:absolute;
+   z-index: 2;
+   width: 28px;
+   height:28px;
+   right: 0;
+   top:10px;
+   background-color: var(--ucsf-dark-blue);
+   border-radius: 50px;
+}
+.cart-item-count p {
+   font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight);
+   font-size: 1rem;
+   line-height: 1.6 !important;
+   text-align: center !important;
+   color: var(--ucsf-white) !important;
+   margin-bottom:0;
+}
+
+.cart-content-summary .description-name-label h2 {
+   font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight);
+   font-size: 1.125rem;
+   line-height: 1.25;
+   letter-spacing: -0.013rem;
+   color: var(--ucsf-navy) !important;
+   margin-bottom: 1rem;
+}
+
+commerce_cart-items .actualPrice span.actualPriceText::before {
+   position: absolute;
+   display:block;
+   content: "Gift Amount:";
+   text-align: right;
+   left:-127px;
+   top: 4px;
+   font-family: var(--HNBold);
+   font-weight: var(--HNBoldWeight);
+   font-size: 0.75rem;
+   color: var(--ucsf-navy) !important;
+   line-height: 1.4;
+   letter-spacing: 0.1rem;
+   margin:0;
+   padding:0;
+   text-shadow: 1px 1px 1px var(--ucsf-small-text-shadow);
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+
+commerce_cart-items .actualPrice span.actualPriceText {
+   position: relative;
+   font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight);
+   font-size: 1.125rem;
+   line-height: 1.25;
+   letter-spacing: -0.013rem;
+   color: var(--ucsf-navy) !important;
+}
+
+/* Same as Eyebrow */
+commerce_cart-items .item_details_description_fields span {
+   font-family: var(--HNBold);
+   font-weight: var(--HNBoldWeight);
+   font-size: 0.75rem;
+   color: var(--ucsf-navy) !important;
+   line-height: 1.4;
+   letter-spacing: 0.1rem;
+   margin:0;
+   padding:0;
+   text-shadow: 1px 1px 1px var(--ucsf-small-text-shadow);
+   text-transform: uppercase;
+
+}
+commerce_cart-items .item_details_description_fields div:first-child {
+   display: none;/* hide sku which cannot be removed from cart */
+}
+
+commerce_cart-items  .item_details {
+   flex-direction: column;
+}
+
+commerce_cart-items  ul.items {
+   margin-bottom:1rem;
+}
+
+ul.items li commerce_cart-item {
+   padding:0;
+   margin-bottom:1rem;
+}
+
+commerce_product_information-variant-attributes-display ul {
+   margin-bottom:0;
+}
+
+commerce_cart-items .item_actions commerce-action-button button {
+   font-size: 0.75rem;
+   color:var(--ucsf-navy) !important;
+}
+commerce_cart-items .item_actions commerce-action-button button:hover {
+   
+   color:var(--ucsf-cta-blue) !important;
+   /* border-bottom: 1px solid var(--ucsf-cta-blue); */
+}
+
+commerce_cart-summary .total-price {
+   justify-content: end !important;
+   align-items: baseline !important;
+}
+.cart-layout-content .sidebar .cart-total-text,
+.cart-layout-content .sidebar .cart-total-text p {
+    font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight);
+   font-size: 0.75rem !important;
+   color: var(--ucsf-navy) !important;
+   line-height: 1.4;
+   letter-spacing: 0.013rem;
+   margin:0;
+   margin-right:2rem;
+   padding:0;
+   text-shadow: 1px 1px 1px var(--ucsf-small-text-shadow);
+}
+
+commerce_cart-summary .total-price .cart-total-text h2 {
+   font-family: var(--HNBold);
+   font-weight: var(--HNBoldWeight);
+   font-size: 0.75rem !important;
+   color: var(--ucsf-navy) !important;
+   line-height: 1.4;
+   letter-spacing: 0.1rem;
+   margin:0;
+   margin-right:2rem;
+   padding:0;
+   text-shadow: 1px 1px 1px var(--ucsf-small-text-shadow);
+   text-transform: uppercase;
+}
+
+commerce_cart-summary .total-price dd lightning-formatted-number {
+   font-family: var(--HNMedium);
+   font-weight: var(--HNMediumWeight) !important;
+   font-size: 1.125rem !important;
+   line-height: 1.25;
+   letter-spacing: -0.013rem;
+   color: var(--ucsf-navy) !important;
+}  
+    
+    
+    
+ .static-more-ways-to-give .contact-info {
+    font-family: var(--HNRoman);
+    font-weight: var(--HNRomanWeight);
+    font-size: 1.13rem;
+    line-height: 1.2;
+    text-align: left;
+
+}
+.static-more-ways-to-give .contact-info p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    /* white-space: nowrap; */
+} 
+
+.static-more-ways-to-give .title {
+    font-family: var(--GranRoman);
+    font-weight: var(--GranRomanWeight);
+    font-size: 2.25rem;
+    line-height: 1.125;
+    letter-spacing: -0.038rem;
+    margin-bottom: 2rem; 
+    text-shadow: 1px 1px 1px var(--ucsf-small-text-shadow);
+}
+    
+    
+/* =========================================================== */
+/* ============================= BCH ========================= */
+/* =========================================================== */
+
+.bch-main-body-section {
+
+}
+.bch-homepage-main-body-content {
+   margin: 0;
+}
+   .bch-homepage-hero {
+   }
+
+   .bch-homepage-hero .home-heading-light-h2 {
+      font-size: 3.635rem;
+   }
+
+
+.bch-homepage-explore-funds {
+
+}
+.bch-explore-funds-to-support-banner {
+   margin:3rem 0;
+}
+
+.bch-homepage-tiles-row1 {
+   margin:0 1rem;
+}
+.bch-homepage-tiles-row2 {
+   margin:0 1rem 2rem;
+}
+
+   .explore-subtitle {
+
+   }
+   .bch-find-your-funds-description {
+   }
+   .bch-find-your-funds-description p {
+      max-width:60%;
+      margin:0 auto;
+   }
+
+.bch-homepage-more-ways-to-give {
+   margin:3.75rem 0;
+}
+    
+</style>
+
+<!-- WISEPOPS -->
+<script data-cfasync="false">(function(w,i,s,e){window[w]=window[w]||function(){(window[w].q=window[w].q||[]).push(arguments)};window[w].l=Date.now();s=document.createElement('script');e=document.getElementsByTagName('script')[0];s.defer=1;s.src=i;e.parentNode.insertBefore(s, e)})('wisepops', 'https://wisepops.net/loader.js?v=2&h=jrLD6p3qVZ');</script>
+    </head>
+    <body id="main">
+        <webruntime-app></webruntime-app>
+    </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang='en'>
+<!--
+You are looking at the Advance platform.
+    ___       __
+   /   | ____/ /   ______ _____  ________
+  / /| |/ __  / | / / __ `/ __ \/ ___/ _ \
+ / ___ / /_/ /| |/ / /_/ / / / / /__/  __/
+/_/  |_\__,_/ |___/\__,_/_/ /_/\___/\___/
+
+
+To learn more please contact Amit Sagar at amit.sagar@gravyty.com
+-->
+
+<head>
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-54759192-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ6GTT68JF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WQ6GTT68JF');
+    </script>
+
+  <script>
+
+    // custom event for when analytics load
+    window.addEventListener('AnalyticsLoaded', function() {
+      var options = JSON.parse('{}')
+      window.SnapAnalytics = new window.AnalyticsConstructor('6646663b0d37d324845d1444', options)
+    });
+  </script>
+
+<script type="text/javascript">
+  const projectToken = "18046ed62337588ac810c2e36a021e40";
+  if (projectToken) {
+    (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
+    var debugMode = false;
+
+    mixpanel.init("18046ed62337588ac810c2e36a021e40", {debug: debugMode, autocapture: true});
+
+    const slugs = window.location.pathname.split("/").slice(1);
+    const globalProperties = {
+          product: "Advance",
+          section: slugs.slice(0, -1).join("/"),
+          subpage: slugs[slugs.length - 1],
+          userType: "User"
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const appealId = params.get('appeal_id');
+    if (appealId) {
+      globalProperties["appealId"] = appealId;
+    }
+
+      globalProperties["tenantId"] = "6646663b0d37d324845d1444";
+      globalProperties["tenantUrl"] = "give.ucanr.edu";
+      globalProperties["tenantName"] = "University of California - Agriculture and Natural Resources";
+
+      globalProperties["dbRegion"] = "us-east-1";
+
+    mixpanel.register(globalProperties);
+  }
+</script>
+
+
+
+
+<script src="https://assets.prod.us-east-1.advance.graduway.com/packs/vendor-bundle-bd129a4a60f721822863.js" crossorigin="anonymous" integrity="sha384-Zxlgs9RDr0wpAeThLmqtQxxhsHL1ZXnXWy0xZeTjVcMh46/jGcZNchNArL9YRzXe"></script>
+<title>University of California - Agriculture and Natural Resources</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png" />
+<link rel="stylesheet" media="all" href="https://assets.prod.us-east-1.advance.graduway.com/assets/application-2edde9121b636a98ad25f6e41edafbfaf93d2fec095813b4ba3a1c7d995dcff5.css" />
+<link href='/entity_styles.css?entity_id=6646663b0d37d324845d1444' media='all' rel='stylesheet'>
+<script>
+//<![CDATA[
+window.gon={};gon.assets={"vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png","like_plus":"/images/likeplus.png","athletics":"/images/athletics.jpg","alumni":"/images/alumni.jpg","academy":"/images/academy.jpg","residence":"/images/residence.jpg","institutes":"/images/center_and_institutes.jpg","students":"/images/students.jpg","abroad":"/images/abroad.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","all_categories":"/images/all_categories.png","cc_security":"/images/cc_security.png"};
+//]]>
+</script>
+<script>
+  ENTITY_INITIAL_DATA = { id: "6646663b0d37d324845d1444" }
+  localStorage.setItem("entity_id", "6646663b0d37d324845d1444");
+  localStorage.setItem("entity_name", "University of California - Agriculture and Natural Resources");
+</script>
+<meta content='University of California - Agriculture and Natural Resources' property='og:title'>
+<meta content='' property='og:description'>
+<meta content='https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity_page/img/66da3c2c5b1c39247cfecbaa/9515c307-58f4-4ce0-a3aa-8bfdae043c42.png' property='og:image'>
+<meta content='https://give.ucanr.edu/pages/research-and-extension-centers' property='og:url'>
+
+<style>
+
+/* Fix donor wall Line issue*/
+.donor-card .ellipsis-2 {
+    word-break: break-word;
+}
+
+
+/* Remove whitespace from carousel banner on homepage */
+@media (min-width: 970px) {
+  .glide.contain .glide__slide img {
+    object-fit: cover !important;
+  }
+}
+
+/* Make carousel banner mobile responsive */
+#tatnall-slider {
+  min-height: 27vw !important;
+}
+
+@media (max-width: 970px) {
+  .glide.contain .glide__slide img {
+    object-fit: cover !important;
+  }
+}
+/* END Make carousel banner mobile responsive */
+
+/* Change Select Category label text on giving form */
+label#select-campaign-label {
+  text-indent: -9999px !important;
+  line-height: 0 !important;
+}
+
+label#select-campaign-label::after {
+  content: "Select a Program";
+  text-indent: 0;
+  display: block;
+  line-height: initial;
+}
+/* END Change Select Category label text on giving form */
+
+/* Change Search Funds label text on giving form */
+label#mui-1-label {
+  text-indent: -9999px !important;
+  line-height: 0 !important;
+}
+label#mui-1-label::after {
+  content: "Search County or Fund Name";
+  text-indent: 0;
+  display: block;
+  line-height: initial;
+  background-color: white;
+}
+/* END Change Search Funds label text on giving form */
+
+.section_thermometer {
+    background-color: #fff;
+}
+
+/* Hide thermometer button */
+.section_thermometer__contents .button_container {
+    display: none!important;
+}
+
+/*Fix thermometer height*/
+@media (min-width: 1200px) {
+    .microsite .section_thermometer.closed {
+        height: unset !important;
+        padding: 3em 0 1em 0;
+    }
+    .microsite .section_thermometer.closed .section_thermometer__contents {
+        height: unset !important;
+        padding: 1em;
+    }
+}
+
+/* Reduce thermometer spacing */
+.section_thermometer__contents {
+min-height: auto!important;
+padding: 1em 1em!important;
+}
+
+/* Remove heatmap title */
+.highchart-container--map h2.stat__type {
+   display: none;
+}
+
+/*Removes hyperlink from leaderboard */
+.item.flex-3 {
+    pointer-events: none !important;
+color: #000000 !important; 
+}
+
+/* Disable donor wall links */
+.sg-grid-card.donor-card a {
+pointer-events: none;
+}
+
+/* Change donor wall background color */
+.section-donors {
+background-color: #005fae!important;
+}
+
+/* Change donor wall title color */
+.sg-title {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: 15px 0;
+}
+
+/* Change Donor Wall input background color */
+.section-donors .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
+    background-color: white !important;
+}
+
+/* Hide broken down stats on heatmap as requested by client */
+.stat-by-hour {
+    display: none !important;
+}
+
+/* Hide matching gifts title */
+.matching-gifts .matching-gifts-title {
+    display: none!important;
+}
+
+/* Add custom footer image */
+footer.navbar {
+    background-image: url(https://i.imgur.com/W8nW2RB.png);
+    /* https://i.imgur.com/W8nW2RB.png */
+}
+
+footer.navbar .color-overlay {
+    background-color: transparent;
+}
+
+ /* Change giving form donor wall comment label */ .giving-form-v2 .sg-modal-flex .MuiInputLabel-formControl[for=comment] { visibility: hidden; } .giving-form-v2 .sg-modal-flex .MuiInputLabel-formControl[for=comment]::before { visibility: visible; content:'What inspires you to give?(Public Comment 250 Word Max) '; background-color: #fff; } @media (max-width: 547px) { .giving-form-v2 .sg-modal-flex .MuiInputLabel-formControl[for=comment]::before { content:'What inspires you to give? (Public) '; margin-right: -5vw; } }
+
+
+/* Resize Giving Menu Bar and Footer Buttons to Meet Accessibility Standards - AC (Apr 14, 2026) */
+.giving-nav-giving-btn {
+    padding: 12px 12px!important;
+    font-size: 18px!important;
+}
+.giving-nav-link.primary-color-text {
+    padding: 12px 12px!important;
+    padding-left: 30px!important;
+    font-size: 18px!important;
+}
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+</style>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ6GTT68JF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WQ6GTT68JF');
+</script>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1 maximum-scale=2, user-scalable=0' name='viewport'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="jkFZO86sk9tQdKolRkvkdtfqVCJqLjOVOIgYh+I+7aP3jJSRphLgOwVFfvKbksxM2w2Skhf+LSuMxId4mWdOQw==" />
+<meta content='pk_live_51Q7vDkDYIZnmBnvYoovSN2foPGDD19AeIzHfYe6ggoNPJInF0ZuZKhCAFQxHks843awqm8uyRbmnTo3C33jdVyeo00cgGNrNOB' name='gravyty_pay_publishable_key'>
+
+<body class='microsite'>
+<form class='hide touchnet-form'>
+<input class='touchnet-ticket' name='TICKET' type='text'>
+<input class='touchnet-ticket-name' name='TICKET_NAME' type='text'>
+<input class='touchnet-upay-site' name='UPAY_SITE_ID' type='text'>
+</form>
+
+<script type="application/json" class="js-react-on-rails-component" data-component-name="MenuBar" data-dom-id="MenuBar-react-component-220ff066-d80f-49a8-ac5c-b9c806757d75">{"menu":{"id":"6646663f0d37d324845d144f","name":"UC ANR Main Menu Bar","giving_button_config":"launch","giving_button_text":"MAKE A GIFT","menu_links":[{"id":"66fc6bbacc372824c1955319","text":"Ways to Give","url":"https://give.ucanr.edu/pages/ways-to-give-28","external":false,"drop_down":false,"dropdown_links":null,"position":0}],"menu_type":"giving_day","main_logo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/menu_bar/main_logo/6646663f0d37d324845d144f/UC_Agriculture_and_Natural_Resources__3___1__1.png","countdown":true,"countdown_end":"2025-12-03T07:59:00.000+00:00","countdown_campaign":{"id":"66d7910aca48fb2368db00dd","name":"UCANR Grandparent Shell Fund","start_date":"2024-09-03T22:43:00.000Z","end_date":"2025-06-30T16:20:00.000Z","goal_progress":165299.04,"total_raised":165299.04,"total_donations":0,"total_entity_donations":null,"goal_progress_percent":4,"url":"https://give.ucanr.edu/campaigns/ucanr-grandparent-shell-fund","external_donation_url":null,"external_id":null,"call_to_action":null,"call_to_action_header":null,"call_to_action_logo":null,"call_to_action_url":"https://give.ucanr.edu/campaigns/ucanr-grandparent-shell-fund","call_to_action_button_text":null,"causes_list_dropdown":[],"entity_primary_color":"0,95,174","request_affinity":false,"campaign_tracker_position":null,"goal_display_type":"goal_progress","camp_type":"dollars","amount_raised_including_family":165299.0,"total_family_donations_count":1024,"total_family_supporters":870,"total_unique_alumni_donors_count":0,"total_unique_family_donors_count":870,"is_touchnet":false,"is_cashnet":false,"display_campaign_stats":true,"shell_campaign":true,"allow_subscriptions":null,"allow_stripe_subscriptions":false,"hide_average_donation":false,"custom_fields":[{"_id":{"$oid":"691cd4933b49c0ca44c76668"},"all_campaigns":true,"allow_user_input":false,"c_at":"2025-11-18T20:18:27.053Z","display_on_step":null,"entity_id":{"$oid":"6646663b0d37d324845d1444"},"event_ids":[],"everyday_form_ids":[{"$oid":"672d32e3f5558724783efe3f"},{"$oid":"672d2ead85a8052484497578"},{"$oid":"672d2f3ca8389f246d16619c"},{"$oid":"672d2fa3f047192495c7d476"},{"$oid":"672d302ba8389f246f166482"},{"$oid":"672d309e07f4fb24659ad7e1"},{"$oid":"672d30e733d237245b05a6e8"},{"$oid":"672d3186f047192485c7ef68"},{"$oid":"672d31fc5aff7d247c08a85a"},{"$oid":"672d326307f4fb24659ad7e3"},{"$oid":"672d2e3533d237245b05a69c"},{"$oid":"672d333807f4fb24699ae937"},{"$oid":"672d33f85aff7d2485089d9a"},{"$oid":"672d344ff047192495c7d4cf"},{"$oid":"672d3f7507f4fb24659ad8dc"},{"$oid":"672d3fc707f4fb24699ae974"},{"$oid":"672d4024c745a724638a9811"},{"$oid":"672d4080a8389f246d16626e"},{"$oid":"672d410ea8389f246f1665a4"},{"$oid":"672d41bb07f4fb24679ace44"},{"$oid":"672d2a6b85a805247d497e31"},{"$oid":"672d1c0a07f4fb24699ae64f"},{"$oid":"672d2687f5558724803f03d9"},{"$oid":"672d271af047192485c7ef0f"},{"$oid":"672d27935aff7d247a08973b"},{"$oid":"672d2806a8389f246f166301"},{"$oid":"672d28804ca7b1247256759c"},{"$oid":"672d28db4ca7b1247e567895"},{"$oid":"672d2950c745a724638a9654"},{"$oid":"672d2a166a6e16248363e01e"},{"$oid":"672d42355aff7d2485089f37"},{"$oid":"672d2ae085a805247d497e32"},{"$oid":"672d2b406a6e16248363e069"},{"$oid":"672d2bc0f5558724803f03e8"},{"$oid":"672d2c44f5558724753f2916"},{"$oid":"672d2ca16a6e16248163ddb7"},{"$oid":"672d2cfc33d237246205a1ed"},{"$oid":"672d2d63c745a7245f8a9bd8"},{"$oid":"672d2ddd85a805247b496b82"},{"$oid":"68fa5df24a5897d192fcf010"},{"$oid":"67804912000b73576e32a0be"},{"$oid":"67cb223ebd9ef2eb4ffe4557"},{"$oid":"68478620b4667cc71d69ffda"},{"$oid":"68bb1f67d119b6cb72abf6e8"},{"$oid":"68e6942b558785c96a98bd9a"},{"$oid":"68fa5c4d9a04b826ea32a385"},{"$oid":"68fa5cd603ce2a5fbea75914"},{"$oid":"68fa5d24f80706c7e5098f14"},{"$oid":"68fa5d85e671ecc970f2a3ec"},{"$oid":"675cad8a12b681247fe07a47"},{"$oid":"68fa5e7f687dcc1808cff140"},{"$oid":"68fa5ecd30be999dcedce123"},{"$oid":"68fa5f15f80706c7f0098f92"},{"$oid":"68fbbb39687dcc1711d01137"},{"$oid":"68fbbc9df807067fec09889c"},{"$oid":"6900f7754a58973120fd0a05"},{"$oid":"6900f7c77fd7ab9cd0cbadc6"},{"$oid":"6903a4baadb7b7e0d1b8ffb1"},{"$oid":"69064275f8070680e309ed9c"},{"$oid":"672d46bef5558724733efa30"},{"$oid":"672d428a33d237245905ac7e"},{"$oid":"672d42f85aff7d247808a18d"},{"$oid":"672d436ac745a7245d8aa36c"},{"$oid":"672d43b533d237245b05a846"},{"$oid":"672d44c607f4fb24699ae976"},{"$oid":"672d455485a805247d49813a"},{"$oid":"672d45a44ca7b124725679e5"},{"$oid":"672d46034ca7b1246b5670e7"},{"$oid":"672d465d85a8052495497291"},{"$oid":"672d1a77f047192495c7d32b"},{"$oid":"672d4741a8389f246f1665bb"},{"$oid":"672d47a133d237246905b36d"},{"$oid":"672d47fc33d237245905acd2"},{"$oid":"672d60bb33d237246905b421"},{"$oid":"6733e268c745a7245f8ac0c0"},{"$oid":"6733e31185a8052484499980"},{"$oid":"6733e70ea8389f24791689d3"},{"$oid":"675c976312b6812481e07a53"},{"$oid":"672b014bc745a7245f8a8f74"},{"$oid":"672aedc3f5558724803ef9e2"},{"$oid":"672aeeaf4ca7b12472566a08"},{"$oid":"672aef445aff7d2485089314"},{"$oid":"672af01c6a6e16247f63d629"},{"$oid":"672af1395aff7d247c089dc9"},{"$oid":"672af1cd6a6e16248a63d05e"},{"$oid":"672afebb4ca7b124695678ca"},{"$oid":"672aff96f047192495c7ca6f"},{"$oid":"672b0086a8389f246f165848"},{"$oid":"672aec9ff047192495c7ca57"},{"$oid":"672b01f933d237246905a937"},{"$oid":"672b036cf5558724733eedd3"},{"$oid":"672b040207f4fb24709ade2e"},{"$oid":"672ba98f07f4fb24679ac230"},{"$oid":"672bab3f4ca7b1247e566fad"},{"$oid":"672c348a33d237246905acb9"},{"$oid":"672c350f07f4fb24679ac624"},{"$oid":"672c35bf4ca7b1246b566959"},{"$oid":"672c3631f5558724803efdd9"},{"$oid":"67117c21ca9dd3248bfd8fed"},{"$oid":"670472766014b1246c53bbb1"},{"$oid":"671173c0335f6424788ddc08"},{"$oid":"671175c2a00e1224889884f5"},{"$oid":"6711788fc7ea55247940f9e0"},{"$oid":"67117941fb361524840292c8"},{"$oid":"671179b8335f64247f8dd445"},{"$oid":"67117a50fb3615247d0290f3"},{"$oid":"67117b099c8da124727e5a77"},{"$oid":"67117b90335f64247f8dd44c"},{"$oid":"672c36a6f047192495c7cfeb"},{"$oid":"67117d46a00e122488988503"},{"$oid":"67117eaa97690f24800894ed"},{"$oid":"67117f5aa00e12248f98825e"},{"$oid":"67117fbea00e122488988507"},{"$oid":"6711803a9c8da1247e7e5dae"},{"$oid":"671180b3335f6424888dde69"},{"$oid":"672aea1af047192485c7e367"},{"$oid":"672aebbdc745a7246c8a7d2f"},{"$oid":"672d060033d237245b05a398"},{"$oid":"672c46fa33d237245905a3aa"},{"$oid":"672c474785a8052484496e68"},{"$oid":"672c47a4a8389f2479165f5a"},{"$oid":"672c47f333d237246905ad34"},{"$oid":"672d03d733d237245905a6c6"},{"$oid":"672d043df5558724753f266d"},{"$oid":"672d04be07f4fb24699ae557"},{"$oid":"672d052733d237246905af7f"},{"$oid":"672d0590f047192485c7ed43"},{"$oid":"672c4651f047192485c7e870"},{"$oid":"672d067bf5558724733ef5b0"},{"$oid":"672d06eb07f4fb24679ac942"},{"$oid":"672d08c285a805247d497a0f"},{"$oid":"672d17ddf5558724783efb1e"},{"$oid":"672d1857c745a7245f8a9a45"},{"$oid":"672d18cea8389f246d166010"},{"$oid":"672d1932c745a7245f8a9a46"},{"$oid":"672d1999f04719248ec7ff70"},{"$oid":"672d19fbc745a7246c8a8718"},{"$oid":"672c423ac745a7245f8a94d7"},{"$oid":"672c37225aff7d24850896dd"},{"$oid":"672c37be6a6e16248163d8a9"},{"$oid":"672c382fa8389f246f165c1f"},{"$oid":"672c3eccc745a7246c8a827d"},{"$oid":"672c3f8b6a6e16248363da02"},{"$oid":"672c402fc745a7246c8a827e"},{"$oid":"672c40a4f5558724753f2256"},{"$oid":"672c41126a6e16248163d91c"},{"$oid":"672c419a07f4fb24659ad1c7"},{"$oid":"66e345723c5a11247ed30a0e"},{"$oid":"672c42ad6a6e16248363da0b"},{"$oid":"672c431c5aff7d247c08a235"},{"$oid":"672c43895aff7d2478089955"},{"$oid":"672c442d33d237245b05a00f"},{"$oid":"672c447f33d237245b05a010"},{"$oid":"672c44e333d237245b05a011"},{"$oid":"672c45524ca7b1247256707c"},{"$oid":"672c45ba6a6e16248a63d464"},{"$oid":"69f3dd66535f3fcbbb30826f"}],"html_control":"input","label":"In honor/memory of","membership_ids":[],"multiple":false,"name":"tribute","position":11,"required":false,"stored_with":"donation","ticket_level_ids":[],"u_at":"2025-11-20T17:19:57.439Z","entity_custom_values":[]},{"_id":{"$oid":"673cb560179c6f2490de1bba"},"all_campaigns":true,"allow_user_input":false,"c_at":"2024-11-19T15:57:20.838Z","display_on_step":null,"entity_id":{"$oid":"6646663b0d37d324845d1444"},"event_ids":[],"everyday_form_ids":[],"html_control":"input","label":"Comment","membership_ids":[],"multiple":false,"name":"write_in","position":9,"required":false,"stored_with":"donation","ticket_level_ids":[],"u_at":"2024-11-23T00:55:51.116Z","entity_custom_values":[]},{"_id":{"$oid":"674114afbda64d2488fa9efa"},"all_campaigns":true,"allow_user_input":false,"c_at":"2024-11-22T23:33:03.580Z","display_on_step":null,"entity_id":{"$oid":"6646663b0d37d324845d1444"},"event_ids":[],"everyday_form_ids":[{"$oid":"67117f5aa00e12248f98825e"},{"$oid":"672d3f7507f4fb24659ad8dc"},{"$oid":"672aea1af047192485c7e367"},{"$oid":"670472766014b1246c53bbb1"},{"$oid":"675c976312b6812481e07a53"},{"$oid":"672d3186f047192485c7ef68"},{"$oid":"672d03d733d237245905a6c6"},{"$oid":"672aec9ff047192495c7ca57"},{"$oid":"672d043df5558724753f266d"},{"$oid":"67804912000b73576e32a0be"},{"$oid":"672d04be07f4fb24699ae557"},{"$oid":"67117c21ca9dd3248bfd8fed"},{"$oid":"672aedc3f5558724803ef9e2"},{"$oid":"672aebbdc745a7246c8a7d2f"},{"$oid":"672d052733d237246905af7f"},{"$oid":"672aeeaf4ca7b12472566a08"},{"$oid":"671180b3335f6424888dde69"},{"$oid":"672aef445aff7d2485089314"},{"$oid":"672d0590f047192485c7ed43"},{"$oid":"672d44c607f4fb24699ae976"},{"$oid":"672d31fc5aff7d247c08a85a"},{"$oid":"672d060033d237245b05a398"},{"$oid":"675cad8a12b681247fe07a47"},{"$oid":"67117eaa97690f24800894ed"},{"$oid":"672af1395aff7d247c089dc9"},{"$oid":"672d067bf5558724733ef5b0"},{"$oid":"672af1cd6a6e16248a63d05e"},{"$oid":"672d06eb07f4fb24679ac942"},{"$oid":"672d455485a805247d49813a"},{"$oid":"672d45a44ca7b124725679e5"},{"$oid":"6903a4baadb7b7e0d1b8ffb1"},{"$oid":"672d326307f4fb24659ad7e3"},{"$oid":"672d08c285a805247d497a0f"},{"$oid":"672af01c6a6e16247f63d629"},{"$oid":"672afebb4ca7b124695678ca"},{"$oid":"672d17ddf5558724783efb1e"},{"$oid":"672d46034ca7b1246b5670e7"},{"$oid":"672aff96f047192495c7ca6f"},{"$oid":"672d32e3f5558724783efe3f"},{"$oid":"672d1857c745a7245f8a9a45"},{"$oid":"672d465d85a8052495497291"},{"$oid":"672b0086a8389f246f165848"},{"$oid":"672b014bc745a7245f8a8f74"},{"$oid":"672b01f933d237246905a937"},{"$oid":"672d18cea8389f246d166010"},{"$oid":"672b036cf5558724733eedd3"},{"$oid":"672d46bef5558724733efa30"},{"$oid":"672b040207f4fb24709ade2e"},{"$oid":"672d1932c745a7245f8a9a46"},{"$oid":"672ba98f07f4fb24679ac230"},{"$oid":"672d1999f04719248ec7ff70"},{"$oid":"672bab3f4ca7b1247e566fad"},{"$oid":"672d19fbc745a7246c8a8718"},{"$oid":"672c348a33d237246905acb9"},{"$oid":"672d333807f4fb24699ae937"},{"$oid":"672d1a77f047192495c7d32b"},{"$oid":"672c350f07f4fb24679ac624"},{"$oid":"672d1c0a07f4fb24699ae64f"},{"$oid":"672c35bf4ca7b1246b566959"},{"$oid":"672d2687f5558724803f03d9"},{"$oid":"672c3631f5558724803efdd9"},{"$oid":"672d33f85aff7d2485089d9a"},{"$oid":"672d271af047192485c7ef0f"},{"$oid":"672c36a6f047192495c7cfeb"},{"$oid":"67cb223ebd9ef2eb4ffe4557"},{"$oid":"672c37225aff7d24850896dd"},{"$oid":"672d27935aff7d247a08973b"},{"$oid":"672d2806a8389f246f166301"},{"$oid":"67117a50fb3615247d0290f3"},{"$oid":"672c382fa8389f246f165c1f"},{"$oid":"672d344ff047192495c7d4cf"},{"$oid":"672d28804ca7b1247256759c"},{"$oid":"672c37be6a6e16248163d8a9"},{"$oid":"672d28db4ca7b1247e567895"},{"$oid":"672c3eccc745a7246c8a827d"},{"$oid":"672d2950c745a724638a9654"},{"$oid":"67117fbea00e122488988507"},{"$oid":"672c3f8b6a6e16248363da02"},{"$oid":"672d2a166a6e16248363e01e"},{"$oid":"672d2a6b85a805247d497e31"},{"$oid":"672c402fc745a7246c8a827e"},{"$oid":"672c40a4f5558724753f2256"},{"$oid":"672d2ae085a805247d497e32"},{"$oid":"672d3fc707f4fb24699ae974"},{"$oid":"672c41126a6e16248163d91c"},{"$oid":"672d4024c745a724638a9811"},{"$oid":"672d2b406a6e16248363e069"},{"$oid":"672c423ac745a7245f8a94d7"},{"$oid":"672d4080a8389f246d16626e"},{"$oid":"6733e31185a8052484499980"},{"$oid":"672d410ea8389f246f1665a4"},{"$oid":"672c42ad6a6e16248363da0b"},{"$oid":"6733e268c745a7245f8ac0c0"},{"$oid":"672c419a07f4fb24659ad1c7"},{"$oid":"672d41bb07f4fb24679ace44"},{"$oid":"672d2bc0f5558724803f03e8"},{"$oid":"672c431c5aff7d247c08a235"},{"$oid":"672d2c44f5558724753f2916"},{"$oid":"672c43895aff7d2478089955"},{"$oid":"672d2ca16a6e16248163ddb7"},{"$oid":"672c442d33d237245b05a00f"},{"$oid":"672c447f33d237245b05a010"},{"$oid":"672d2cfc33d237246205a1ed"},{"$oid":"672d4741a8389f246f1665bb"},{"$oid":"672c44e333d237245b05a011"},{"$oid":"672d42355aff7d2485089f37"},{"$oid":"672d2d63c745a7245f8a9bd8"},{"$oid":"672c45524ca7b1247256707c"},{"$oid":"672d428a33d237245905ac7e"},{"$oid":"672d2ddd85a805247b496b82"},{"$oid":"6733e70ea8389f24791689d3"},{"$oid":"672d47a133d237246905b36d"},{"$oid":"672c45ba6a6e16248a63d464"},{"$oid":"672d2e3533d237245b05a69c"},{"$oid":"672c4651f047192485c7e870"},{"$oid":"672d42f85aff7d247808a18d"},{"$oid":"672d2ead85a8052484497578"},{"$oid":"672c46fa33d237245905a3aa"},{"$oid":"672c474785a8052484496e68"},{"$oid":"672d2f3ca8389f246d16619c"},{"$oid":"672d2fa3f047192495c7d476"},{"$oid":"672c47a4a8389f2479165f5a"},{"$oid":"672d436ac745a7245d8aa36c"},{"$oid":"672d302ba8389f246f166482"},{"$oid":"671175c2a00e1224889884f5"},{"$oid":"67117b90335f64247f8dd44c"},{"$oid":"672d60bb33d237246905b421"},{"$oid":"671179b8335f64247f8dd445"},{"$oid":"67117b099c8da124727e5a77"},{"$oid":"671173c0335f6424788ddc08"},{"$oid":"6711803a9c8da1247e7e5dae"},{"$oid":"67117941fb361524840292c8"},{"$oid":"67117d46a00e122488988503"},{"$oid":"66e345723c5a11247ed30a0e"},{"$oid":"6711788fc7ea55247940f9e0"},{"$oid":"672c47f333d237246905ad34"},{"$oid":"672d309e07f4fb24659ad7e1"},{"$oid":"672d47fc33d237245905acd2"},{"$oid":"672d43b533d237245b05a846"},{"$oid":"672d30e733d237245b05a6e8"},{"$oid":"68fa5df24a5897d192fcf010"},{"$oid":"68478620b4667cc71d69ffda"},{"$oid":"68bb1f67d119b6cb72abf6e8"},{"$oid":"68e6942b558785c96a98bd9a"},{"$oid":"68fa5c4d9a04b826ea32a385"},{"$oid":"68fa5cd603ce2a5fbea75914"},{"$oid":"68fa5d24f80706c7e5098f14"},{"$oid":"68fa5d85e671ecc970f2a3ec"},{"$oid":"68fa5e7f687dcc1808cff140"},{"$oid":"68fa5ecd30be999dcedce123"},{"$oid":"68fa5f15f80706c7f0098f92"},{"$oid":"68fbbb39687dcc1711d01137"},{"$oid":"68fbbc9df807067fec09889c"},{"$oid":"6900f7754a58973120fd0a05"},{"$oid":"6900f7c77fd7ab9cd0cbadc6"},{"$oid":"69064275f8070680e309ed9c"},{"$oid":"69f3dd66535f3fcbbb30826f"}],"html_control":"boolean","label":"UC ANR Retiree?","membership_ids":[],"multiple":false,"name":"anr_retiree","position":8,"required":false,"stored_with":"donation","ticket_level_ids":[],"u_at":"2025-11-18T20:24:16.069Z","entity_custom_values":[{"name":"Yes"}]}],"status":"active","spreedly_key":null,"average_donation":0.0,"currency_code":null,"causes_required":false,"img":null,"auto_dock_category":null,"donation_levels":[],"giving_level_1":50.0,"giving_level_2":100.0,"giving_level_3":200.0,"logo":null},"display_countdown":false,"display_search":false,"display_stats":false,"stat_type":"total_family_donations_count","polling_interval":0},"user":{},"assets":{"countries":["United States","Canada","United Kingdom","Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia, Plurinational State of","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, The Democratic Republic of the","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See (Vatican City State)","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran, Islamic Republic of","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Democratic People's Republic of","Korea, Republic of","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia, Federated States of","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","North Macedonia","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela, Bolivarian Republic of","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"],"images":{"all_categories":"/images/all_categories.png","academy":"/images/academy.jpg","athletics":"/images/athletics.jpg","center_and_institutes":"/images/center_and_institutes.jpg","club_sports":"/images/athletics.jpg","graduate_school":"/images/academy.jpg","nd_international":"/images/abroad.jpg","ndaa_club":"/images/alumni.jpg","residence_hall":"/images/residence.jpg","special_interests":"/images/all_categories.png","student_experience":"/images/all_categories.png","student_group":"/images/students.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","cc_security":"/images/cc_security.png","like_plus":"/images/likeplus.png","vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png"},"authenticity_token":"+445YgIXXau62k4CLAFLkxO7u8K6rC/zvkV4/0Z2knaCQ/TIaqkuS+/rmtXx2GOpH1x9csd8MU0KCecAPS8xlg=="},"website":{"id":"6646663e0d37d324845d1445","host":"give.ucanr.edu","website_shorthand":null,"website_header":true,"head_logo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/website/head_logo/6646663e0d37d324845d1445/UC_Agriculture_and_Natural_Resources__3___1__1.png","head_logo_link":"https://give.ucanr.edu","mst_home_page_url":"give.ucanr.edu/pages/home-2650","donation_modal_header":null,"scripts":null,"site_flag_url":null},"entity":{"id":"6646663b0d37d324845d1444","name":"University of California - Agriculture and Natural Resources","donation_modal_header":null,"select_category_copy":"Select a Category","campaign_categories":["Agriculture and Natural Resources (UC ANR)","California Institute for Water Resources","Community Nutrition and Health","Informatics and GIS","Nutrition Policy Institute","UC ANR Fire Network","UC ANR Innovate","UC ANR Policy Institute","UC Cooperative Extension","UC Environmental Stewards","UC Integrated Pest Management","UC Master Food Preserver","UC Master Gardener","UC Organic Agriculture Institute","UC Research and Extension Centers","UC Small Farms Network","UC Sustainable Agriculture Research and Education Program"],"giving_day_amount":50,"microsite_campaign":null,"features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"external_give_link":"https://givingday.ucanr.edu/pages/home-2720#open_giving_form=true","headlogo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/headlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","membership_index_banner":null,"host":"give.ucanr.edu","donation_address_required":true,"donation_phone_number_required":true,"minimum_giving_day_amount":5,"gift_confirmation_text":null,"paypal_merchant_id":null,"name_strip_tags":"University of California - Agriculture and Natural Resources","description":null,"favicon":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","thumb":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/thumb_UC_Agriculture_and_Natural_Resources__3___1_.png"}},"meta_tags":[],"footlogo":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png"},"footer_tagline":null,"facebook_url":"https://www.facebook.com/ucanr","twitter_url":"https://x.com/ucanr","instagram_url":"https://www.instagram.com/ucanr/","linkedin_url":"https://www.linkedin.com/school/ucanr/posts/?feedView=all","youtube_url":"https://www.youtube.com/user/ucanr","snapchat_url":null,"entity_urls":[],"copyright":null,"get_facebook_key":"815834321794088","membership_title":null,"membership_description":null,"membership_header_banner":{"url":null},"secondarycolor":"253,189,16","primarycolor":"0,95,174","donation_confirmation_text":null,"sharewizard_campaign_html_pending":null,"paypal_verified":false,"quick_give_enabled":false,"sharewizard_campaign_html_closed":null,"has_giving_form_confirmation_step":false,"min_donation_amount":1,"country":null,"available_locales":{"English":"en","Cymraeg":"cy","French":"fr","German":"de","Italian":"it","Portuguese":"pt","Spanish":"es"},"default_locale":"en","language":"English","currency_code":"USD","currency_symbol":"$","date_format":"M/D/YY","timezone":"America/Los_Angeles","processing_flat_fee":0.0001,"processing_percent":0.03,"stripe_publishable_key":null,"ein":null,"chariot_cid":null,"urls":[],"allow_braintree_subscriptions":false}}</script>
+    <div id="MenuBar-react-component-220ff066-d80f-49a8-ac5c-b9c806757d75"></div>
+    
+
+<main id='main-content'>
+<script src="https://assets.prod.us-east-1.advance.graduway.com/packs/modal-bundle-9fbbac762749badab2a4.js" crossorigin="anonymous" defer="defer" integrity="sha384-KFbIMK/Vpjqmmq2jh6ehh0xdGNMbBo+ut2nSLUEhfn2mCwZW1gXmKLo8IRXlLZdw"></script>
+
+<script type="application/json" id="js-react-on-rails-context">{"inMailer":false,"i18nLocale":"en","i18nDefaultLocale":"en","href":"https://give.ucanr.edu/pages/research-and-extension-centers","location":"/pages/research-and-extension-centers","scheme":"https","host":"give.ucanr.edu","port":null,"pathname":"/pages/research-and-extension-centers","search":null,"httpAcceptLanguage":null,"serverSide":false}</script>
+<script type="application/json" class="js-react-on-rails-component" data-component-name="GlobalModalWrapper" data-dom-id="GlobalModalWrapper-react-component-0263b069-d1ec-449e-af4c-cd81aca120c8">{"entity":{"currency_symbol":"$","currency_code":"USD","features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"name":"University of California - Agriculture and Natural Resources","country":null,"secondarycolor":"253,189,16","processing_flat_fee":0.0001,"processing_percent":0.03,"language":"English","primarycolor":"0,95,174","select_category_copy":"Select a Category","minimum_giving_day_amount":5,"default_giving_day_amount":50,"double_donation_public_key":"NGZlYzk5YmUtM2Jm","dd_private_api_key":"rjPAZRvyQqVimJu3","paypal_verified":false,"gravyty_pay_account_id":"acct_1ST6hLDe4GMTJwl9","quick_give_enabled":false,"donation_phone_number_required":true,"id":"6646663b0d37d324845d1444"},"entityId":"6646663b0d37d324845d1444","paypalClientId":"ARs3Do0dqOZNsT7i4sk6WLLrDWZhHg_4mK0mQAq8BnMawaDpBaWZpe8Lz_zp9jk2t4hxBVy5JlKEZGI6"}</script>
+    <div id="GlobalModalWrapper-react-component-0263b069-d1ec-449e-af4c-cd81aca120c8"></div>
+    
+
+
+
+
+
+
+    <script type="application/json" class="js-react-on-rails-component" data-component-name="Sections" data-dom-id="Sections-react-component-20d2c54c-748b-4bf5-bc88-ed84818a3af7">{"sections":{"allIds":["67040f40bd1c5c2480ad8218"],"byId":{"67040f40bd1c5c2480ad8218":{"id":"67040f40bd1c5c2480ad8218","name":"Banner RECS Wyzywig","type":"WysiwygSection","use_new_design":false,"body":"\u003cimg src=\"https://gw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com/University+of+California+Agriculture+and+Natural+Resources/RECs+-+Banner_Hero+Image.png\" width=\"100%\"\u003e"}}},"assets":{"countries":["United States","Canada","United Kingdom","Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia, Plurinational State of","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, The Democratic Republic of the","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See (Vatican City State)","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran, Islamic Republic of","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Democratic People's Republic of","Korea, Republic of","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia, Federated States of","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","North Macedonia","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela, Bolivarian Republic of","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"],"images":{"all_categories":"/images/all_categories.png","academy":"/images/academy.jpg","athletics":"/images/athletics.jpg","center_and_institutes":"/images/center_and_institutes.jpg","club_sports":"/images/athletics.jpg","graduate_school":"/images/academy.jpg","nd_international":"/images/abroad.jpg","ndaa_club":"/images/alumni.jpg","residence_hall":"/images/residence.jpg","special_interests":"/images/all_categories.png","student_experience":"/images/all_categories.png","student_group":"/images/students.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","cc_security":"/images/cc_security.png","like_plus":"/images/likeplus.png","vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png"},"authenticity_token":"+445YgIXXau62k4CLAFLkxO7u8K6rC/zvkV4/0Z2knaCQ/TIaqkuS+/rmtXx2GOpH1x9csd8MU0KCecAPS8xlg=="},"entity":{"id":"6646663b0d37d324845d1444","name":"University of California - Agriculture and Natural Resources","donation_modal_header":null,"select_category_copy":"Select a Category","campaign_categories":["Agriculture and Natural Resources (UC ANR)","California Institute for Water Resources","Community Nutrition and Health","Informatics and GIS","Nutrition Policy Institute","UC ANR Fire Network","UC ANR Innovate","UC ANR Policy Institute","UC Cooperative Extension","UC Environmental Stewards","UC Integrated Pest Management","UC Master Food Preserver","UC Master Gardener","UC Organic Agriculture Institute","UC Research and Extension Centers","UC Small Farms Network","UC Sustainable Agriculture Research and Education Program"],"giving_day_amount":50,"microsite_campaign":null,"features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"external_give_link":"https://givingday.ucanr.edu/pages/home-2720#open_giving_form=true","headlogo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/headlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","membership_index_banner":null,"host":"give.ucanr.edu","donation_address_required":true,"donation_phone_number_required":true,"minimum_giving_day_amount":5,"gift_confirmation_text":null,"paypal_merchant_id":null,"name_strip_tags":"University of California - Agriculture and Natural Resources","description":null,"favicon":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","thumb":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/thumb_UC_Agriculture_and_Natural_Resources__3___1_.png"}},"meta_tags":[],"footlogo":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png"},"footer_tagline":null,"facebook_url":"https://www.facebook.com/ucanr","twitter_url":"https://x.com/ucanr","instagram_url":"https://www.instagram.com/ucanr/","linkedin_url":"https://www.linkedin.com/school/ucanr/posts/?feedView=all","youtube_url":"https://www.youtube.com/user/ucanr","snapchat_url":null,"entity_urls":[],"copyright":null,"get_facebook_key":"815834321794088","membership_title":null,"membership_description":null,"membership_header_banner":{"url":null},"secondarycolor":"253,189,16","primarycolor":"0,95,174","donation_confirmation_text":null,"sharewizard_campaign_html_pending":null,"paypal_verified":false,"quick_give_enabled":false,"sharewizard_campaign_html_closed":null,"has_giving_form_confirmation_step":false,"min_donation_amount":1,"country":null,"available_locales":{"English":"en","Cymraeg":"cy","French":"fr","German":"de","Italian":"it","Portuguese":"pt","Spanish":"es"},"default_locale":"en","language":"English","currency_code":"USD","currency_symbol":"$","date_format":"M/D/YY","timezone":"America/Los_Angeles","processing_flat_fee":0.0001,"processing_percent":0.03,"stripe_publishable_key":null,"ein":null,"chariot_cid":null,"urls":[],"allow_braintree_subscriptions":false},"currentUser":null}</script>
+    <div id="Sections-react-component-20d2c54c-748b-4bf5-bc88-ed84818a3af7"></div>
+    
+
+
+    
+
+
+<div id="content-box" class="is-wrapper content-box-wrapper">
+  <div class="is-section is-box type-opensans is-section-auto last-box scroll-target">
+    <div class="is-overlay"></div>
+    <div class="is-boxes">
+        <div class="is-box-centered is-opacity-95">
+            <div class="is-container v2 container is-content-880" style="max-width: 880px;">
+                <div class="row clearfix">
+                    <div class="column full">
+                        <p style="font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px;">The University of California Agriculture and Natural Resources operates nine <span class="font-semibold">Research and Extension Centers (RECs)</span>. Extending from the Oregon border in the north, through the Sierra Foothills and Central Valley, along the Pacific Coast and south to the Mexico border, the REC System provides a premier research management organization supporting the efforts of county- and campus-based academics, as well as researchers from land grant institutions in other states, the California State University system, and the United States Department of Agriculture. Our centers are also focal points for community participation and active involvement in regional agricultural and natural resource challenges. </p>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="column full">
+                        <div class="spacer height-40"></div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="column full text-center">
+                        <div><a href="https://give.ucanr.edu/pages/research-and-extension-centers#open_giving_form=true&amp;auto_load_category=UC%20Research%20and%20Extension%20Centers" style="display: inline-block; text-decoration: none; transition: 0.16s; border-style: solid; cursor: pointer; background-color: rgb(0, 95, 174); color: rgb(255, 255, 255); border-color: rgb(0, 95, 174); border-width: 2px; border-radius: 5px; padding: 13px 28px; line-height: 21px; font-weight: 400; font-size: 14px; letter-spacing: 3px;" title="" class="uppercase" target="_blank">Make a gift!</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---OTHERS--->
+<link data-name="contentstyle" data-class="type-opensans" href="/contentbox/public/assets/styles/type-opensans.css" rel="stylesheet">
+</div>
+
+
+
+
+
+
+    <script type="application/json" class="js-react-on-rails-component" data-component-name="Sections" data-dom-id="Sections-react-component-061c6374-ca95-49e2-a014-dd17b1612608">{"sections":{"allIds":["6705b601335f64247f8d750b"],"byId":{"6705b601335f64247f8d750b":{"id":"6705b601335f64247f8d750b","name":"RECS heatmap","type":"HeatmapSection","use_new_design":false,"colors":{"color1":"0,95,174","color2":"253,189,16"},"filter_results":false,"filter_to_regions":[],"map_data":[{"area":"California","value":30},{"area":"Georgia","value":1}],"map_type":"united_states"}}},"assets":{"countries":["United States","Canada","United Kingdom","Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia, Plurinational State of","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, The Democratic Republic of the","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See (Vatican City State)","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran, Islamic Republic of","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Democratic People's Republic of","Korea, Republic of","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia, Federated States of","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","North Macedonia","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela, Bolivarian Republic of","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"],"images":{"all_categories":"/images/all_categories.png","academy":"/images/academy.jpg","athletics":"/images/athletics.jpg","center_and_institutes":"/images/center_and_institutes.jpg","club_sports":"/images/athletics.jpg","graduate_school":"/images/academy.jpg","nd_international":"/images/abroad.jpg","ndaa_club":"/images/alumni.jpg","residence_hall":"/images/residence.jpg","special_interests":"/images/all_categories.png","student_experience":"/images/all_categories.png","student_group":"/images/students.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","cc_security":"/images/cc_security.png","like_plus":"/images/likeplus.png","vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png"},"authenticity_token":"+445YgIXXau62k4CLAFLkxO7u8K6rC/zvkV4/0Z2knaCQ/TIaqkuS+/rmtXx2GOpH1x9csd8MU0KCecAPS8xlg=="},"entity":{"id":"6646663b0d37d324845d1444","name":"University of California - Agriculture and Natural Resources","donation_modal_header":null,"select_category_copy":"Select a Category","campaign_categories":["Agriculture and Natural Resources (UC ANR)","California Institute for Water Resources","Community Nutrition and Health","Informatics and GIS","Nutrition Policy Institute","UC ANR Fire Network","UC ANR Innovate","UC ANR Policy Institute","UC Cooperative Extension","UC Environmental Stewards","UC Integrated Pest Management","UC Master Food Preserver","UC Master Gardener","UC Organic Agriculture Institute","UC Research and Extension Centers","UC Small Farms Network","UC Sustainable Agriculture Research and Education Program"],"giving_day_amount":50,"microsite_campaign":null,"features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"external_give_link":"https://givingday.ucanr.edu/pages/home-2720#open_giving_form=true","headlogo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/headlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","membership_index_banner":null,"host":"give.ucanr.edu","donation_address_required":true,"donation_phone_number_required":true,"minimum_giving_day_amount":5,"gift_confirmation_text":null,"paypal_merchant_id":null,"name_strip_tags":"University of California - Agriculture and Natural Resources","description":null,"favicon":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","thumb":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/thumb_UC_Agriculture_and_Natural_Resources__3___1_.png"}},"meta_tags":[],"footlogo":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png"},"footer_tagline":null,"facebook_url":"https://www.facebook.com/ucanr","twitter_url":"https://x.com/ucanr","instagram_url":"https://www.instagram.com/ucanr/","linkedin_url":"https://www.linkedin.com/school/ucanr/posts/?feedView=all","youtube_url":"https://www.youtube.com/user/ucanr","snapchat_url":null,"entity_urls":[],"copyright":null,"get_facebook_key":"815834321794088","membership_title":null,"membership_description":null,"membership_header_banner":{"url":null},"secondarycolor":"253,189,16","primarycolor":"0,95,174","donation_confirmation_text":null,"sharewizard_campaign_html_pending":null,"paypal_verified":false,"quick_give_enabled":false,"sharewizard_campaign_html_closed":null,"has_giving_form_confirmation_step":false,"min_donation_amount":1,"country":null,"available_locales":{"English":"en","Cymraeg":"cy","French":"fr","German":"de","Italian":"it","Portuguese":"pt","Spanish":"es"},"default_locale":"en","language":"English","currency_code":"USD","currency_symbol":"$","date_format":"M/D/YY","timezone":"America/Los_Angeles","processing_flat_fee":0.0001,"processing_percent":0.03,"stripe_publishable_key":null,"ein":null,"chariot_cid":null,"urls":[],"allow_braintree_subscriptions":false},"currentUser":null}</script>
+    <div id="Sections-react-component-061c6374-ca95-49e2-a014-dd17b1612608"></div>
+    
+
+
+
+
+
+    <script type="application/json" class="js-react-on-rails-component" data-component-name="Sections" data-dom-id="Sections-react-component-727e892e-0ead-497d-bd12-f94016c88e39">{"sections":{"allIds":["690e4dd14ba477c912acd04f"],"byId":{"690e4dd14ba477c912acd04f":{"id":"690e4dd14ba477c912acd04f","name":"RECS Donor Wall","type":"DonorSection","use_new_design":false,"header":"Thank you to our donors!","show_donation_amount":true}}},"assets":{"countries":["United States","Canada","United Kingdom","Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia, Plurinational State of","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, The Democratic Republic of the","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See (Vatican City State)","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran, Islamic Republic of","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Democratic People's Republic of","Korea, Republic of","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia, Federated States of","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","North Macedonia","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela, Bolivarian Republic of","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"],"images":{"all_categories":"/images/all_categories.png","academy":"/images/academy.jpg","athletics":"/images/athletics.jpg","center_and_institutes":"/images/center_and_institutes.jpg","club_sports":"/images/athletics.jpg","graduate_school":"/images/academy.jpg","nd_international":"/images/abroad.jpg","ndaa_club":"/images/alumni.jpg","residence_hall":"/images/residence.jpg","special_interests":"/images/all_categories.png","student_experience":"/images/all_categories.png","student_group":"/images/students.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","cc_security":"/images/cc_security.png","like_plus":"/images/likeplus.png","vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png"},"authenticity_token":"+445YgIXXau62k4CLAFLkxO7u8K6rC/zvkV4/0Z2knaCQ/TIaqkuS+/rmtXx2GOpH1x9csd8MU0KCecAPS8xlg=="},"entity":{"id":"6646663b0d37d324845d1444","name":"University of California - Agriculture and Natural Resources","donation_modal_header":null,"select_category_copy":"Select a Category","campaign_categories":["Agriculture and Natural Resources (UC ANR)","California Institute for Water Resources","Community Nutrition and Health","Informatics and GIS","Nutrition Policy Institute","UC ANR Fire Network","UC ANR Innovate","UC ANR Policy Institute","UC Cooperative Extension","UC Environmental Stewards","UC Integrated Pest Management","UC Master Food Preserver","UC Master Gardener","UC Organic Agriculture Institute","UC Research and Extension Centers","UC Small Farms Network","UC Sustainable Agriculture Research and Education Program"],"giving_day_amount":50,"microsite_campaign":null,"features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"external_give_link":"https://givingday.ucanr.edu/pages/home-2720#open_giving_form=true","headlogo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/headlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","membership_index_banner":null,"host":"give.ucanr.edu","donation_address_required":true,"donation_phone_number_required":true,"minimum_giving_day_amount":5,"gift_confirmation_text":null,"paypal_merchant_id":null,"name_strip_tags":"University of California - Agriculture and Natural Resources","description":null,"favicon":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","thumb":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/thumb_UC_Agriculture_and_Natural_Resources__3___1_.png"}},"meta_tags":[],"footlogo":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png"},"footer_tagline":null,"facebook_url":"https://www.facebook.com/ucanr","twitter_url":"https://x.com/ucanr","instagram_url":"https://www.instagram.com/ucanr/","linkedin_url":"https://www.linkedin.com/school/ucanr/posts/?feedView=all","youtube_url":"https://www.youtube.com/user/ucanr","snapchat_url":null,"entity_urls":[],"copyright":null,"get_facebook_key":"815834321794088","membership_title":null,"membership_description":null,"membership_header_banner":{"url":null},"secondarycolor":"253,189,16","primarycolor":"0,95,174","donation_confirmation_text":null,"sharewizard_campaign_html_pending":null,"paypal_verified":false,"quick_give_enabled":false,"sharewizard_campaign_html_closed":null,"has_giving_form_confirmation_step":false,"min_donation_amount":1,"country":null,"available_locales":{"English":"en","Cymraeg":"cy","French":"fr","German":"de","Italian":"it","Portuguese":"pt","Spanish":"es"},"default_locale":"en","language":"English","currency_code":"USD","currency_symbol":"$","date_format":"M/D/YY","timezone":"America/Los_Angeles","processing_flat_fee":0.0001,"processing_percent":0.03,"stripe_publishable_key":null,"ein":null,"chariot_cid":null,"urls":[],"allow_braintree_subscriptions":false},"currentUser":null}</script>
+    <div id="Sections-react-component-727e892e-0ead-497d-bd12-f94016c88e39"></div>
+    
+
+
+<script>
+  var SECTIONS_INITIAL_DATA = {};
+</script>
+
+
+
+
+<footer class='entity navbar navbar-default' style='display: none;'>
+<div class='color-overlay'>
+<div class='container'>
+<div class='row text-center'>
+<p><img alt="University of California - Agriculture and Natural Resources Logo" src="https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png" /></p>
+<p class='tagline'></p>
+<div class='divider-social'></div>
+<h5 class='social-tagline'>Connect With Us:</h5>
+<ul class='social-list'>
+<li>
+<a aria-label="Visit us on Facebook" class="footer-link" target="_blank" alt="Visit us on Facebook" href="https://www.facebook.com/ucanr"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-facebook'></i>
+</span>
+</a></li>
+<li>
+<a aria-label="Visit us on Twitter" class="footer-link" target="_blank" alt="Visit our Twitter" href="https://x.com/ucanr"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-x-twitter'></i>
+</span>
+</a></li>
+<li>
+<a aria-label="Visit us on Instagram" class="footer-link" target="_blank" alt="Visit us on Instagram" href="https://www.instagram.com/ucanr/"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-instagram'></i>
+</span>
+</a></li>
+<li>
+<a aria-label="Visit us on LinkedIn" class="footer-link" target="_blank" alt="Visit us on LinkedIn" href="https://www.linkedin.com/school/ucanr/posts/?feedView=all"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-linkedin'></i>
+</span>
+</a></li>
+<li>
+<a aria-label="Visit us on Youtube" class="footer-link" target="_blank" alt="Visit us on Youtube" href="https://www.youtube.com/user/ucanr"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-youtube'></i>
+</span>
+</a></li>
+</ul>
+<div class='divider-social'></div>
+<div class='powered-by-footer'>
+<span>Powered by:</span>
+<a target="_blank" href="https://gravyty.com/advance/"><img alt="Gravyty logo" class="powered-by-logo" src="https://gw-advance-prod-us-east-1.s3.amazonaws.com/grad_advance/gravyty_logo_white_32.png" /></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+</main>
+
+<script>
+  // browser support
+  var $buoop = {
+    vs:{i:10,f:-4,o:-4,s:10,c:-8},
+    api:4,
+    reminder: 48
+  };
+  function $buo_f(){
+   var e = document.createElement("script");
+   e.src = "//browser-update.org/update.min.js";
+   document.body.appendChild(e);
+  };
+  try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+  catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+<script crossorigin='anonymous' integrity='sha384-N9wh46v7v7OEvT0UTi0W+atRe90iigAz+dTJfM+gC0LhPYuyiHk7Pa0sSturY8hS' src='https://assets.prod.us-east-1.advance.graduway.com/javascripts/spreedly-iframe-1.136.min.js' type='text/javascript'></script>
+<script crossorigin='anonymous' integrity='sha384-k62isOxi8JG4rmOzplPz4PrUZJsaPsd3qccKhrtWhcl7M7rmaAEeyTCfCA8iBI7X' src='https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js'></script>
+
+  <script src="https://assets.prod.us-east-1.advance.graduway.com/packs/sections-bundle-a4e5181067f07c3a991c.js" crossorigin="anonymous" integrity="sha384-wKOfg6QEtCWWQ0DV70sCOBaXgMowPfqYbUAxIFmmQxEj/aHXFTvARoEHEs+ac79/"></script>
+
+<script>
+  $(window).on('load', function() {
+    setTimeout(function(){ $("footer.entity").show(); }, 500);
+  });
+</script>
+
+
+
+</body>
+<script src='/contentbox/public/box/box-flex.js'></script>
+<link href='/contentbox/public/box/box-flex.css' rel='stylesheet'>
+<link href='/contentbox/public/assets/scripts/glide/css/glide.core.css' rel='stylesheet'>
+<link href='/contentbox/public/assets/scripts/glide/css/glide.theme.css' rel='stylesheet'>
+<script src='/contentbox/public/assets/scripts/glide/glide.js'></script>
+</head>
+</html>

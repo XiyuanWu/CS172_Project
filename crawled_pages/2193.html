@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang='en'>
+<!--
+You are looking at the Advance platform.
+    ___       __
+   /   | ____/ /   ______ _____  ________
+  / /| |/ __  / | / / __ `/ __ \/ ___/ _ \
+ / ___ / /_/ /| |/ / /_/ / / / / /__/  __/
+/_/  |_\__,_/ |___/\__,_/_/ /_/\___/\___/
+
+
+To learn more please contact Amit Sagar at amit.sagar@gravyty.com
+-->
+
+<head>
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-54759192-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ6GTT68JF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WQ6GTT68JF');
+    </script>
+
+  <script>
+
+    // custom event for when analytics load
+    window.addEventListener('AnalyticsLoaded', function() {
+      var options = JSON.parse('{}')
+      window.SnapAnalytics = new window.AnalyticsConstructor('6646663b0d37d324845d1444', options)
+    });
+  </script>
+
+<script type="text/javascript">
+  const projectToken = "18046ed62337588ac810c2e36a021e40";
+  if (projectToken) {
+    (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
+    var debugMode = false;
+
+    mixpanel.init("18046ed62337588ac810c2e36a021e40", {debug: debugMode, autocapture: true});
+
+    const slugs = window.location.pathname.split("/").slice(1);
+    const globalProperties = {
+          product: "Advance",
+          section: slugs.slice(0, -1).join("/"),
+          subpage: slugs[slugs.length - 1],
+          userType: "User"
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const appealId = params.get('appeal_id');
+    if (appealId) {
+      globalProperties["appealId"] = appealId;
+    }
+
+      globalProperties["tenantId"] = "6646663b0d37d324845d1444";
+      globalProperties["tenantUrl"] = "give.ucanr.edu";
+      globalProperties["tenantName"] = "University of California - Agriculture and Natural Resources";
+
+      globalProperties["dbRegion"] = "us-east-1";
+
+    mixpanel.register(globalProperties);
+  }
+</script>
+
+
+
+
+<script src="https://assets.prod.us-east-1.advance.graduway.com/packs/vendor-bundle-bd129a4a60f721822863.js" crossorigin="anonymous" integrity="sha384-Zxlgs9RDr0wpAeThLmqtQxxhsHL1ZXnXWy0xZeTjVcMh46/jGcZNchNArL9YRzXe"></script>
+<title>University of California - Agriculture and Natural Resources</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png" />
+<link rel="stylesheet" media="all" href="https://assets.prod.us-east-1.advance.graduway.com/assets/application-2edde9121b636a98ad25f6e41edafbfaf93d2fec095813b4ba3a1c7d995dcff5.css" />
+<link href='/entity_styles.css?entity_id=6646663b0d37d324845d1444' media='all' rel='stylesheet'>
+<script>
+//<![CDATA[
+window.gon={};gon.assets={"vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png","like_plus":"/images/likeplus.png","athletics":"/images/athletics.jpg","alumni":"/images/alumni.jpg","academy":"/images/academy.jpg","residence":"/images/residence.jpg","institutes":"/images/center_and_institutes.jpg","students":"/images/students.jpg","abroad":"/images/abroad.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","all_categories":"/images/all_categories.png","cc_security":"/images/cc_security.png"};
+//]]>
+</script>
+<script>
+  ENTITY_INITIAL_DATA = { id: "6646663b0d37d324845d1444" }
+  localStorage.setItem("entity_id", "6646663b0d37d324845d1444");
+  localStorage.setItem("entity_name", "University of California - Agriculture and Natural Resources");
+</script>
+<meta content='University of California - Agriculture and Natural Resources' property='og:title'>
+<meta content='' property='og:description'>
+<meta content='https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity_page/img/6646663f0d37d324845d1447/63fba4e3-432d-412d-a8dc-3a1ee9bd64c9.png' property='og:image'>
+<meta content='https://give.ucanr.edu/pages/home-2650' property='og:url'>
+
+<style>
+
+/* Fix donor wall Line issue*/
+.donor-card .ellipsis-2 {
+    word-break: break-word;
+}
+
+
+/* Remove whitespace from carousel banner on homepage */
+@media (min-width: 970px) {
+  .glide.contain .glide__slide img {
+    object-fit: cover !important;
+  }
+}
+
+/* Make carousel banner mobile responsive */
+#tatnall-slider {
+  min-height: 27vw !important;
+}
+
+@media (max-width: 970px) {
+  .glide.contain .glide__slide img {
+    object-fit: cover !important;
+  }
+}
+/* END Make carousel banner mobile responsive */
+
+/* Change Select Category label text on giving form */
+label#select-campaign-label {
+  text-indent: -9999px !important;
+  line-height: 0 !important;
+}
+
+label#select-campaign-label::after {
+  content: "Select a Program";
+  text-indent: 0;
+  display: block;
+  line-height: initial;
+}
+/* END Change Select Category label text on giving form */
+
+/* Change Search Funds label text on giving form */
+label#mui-1-label {
+  text-indent: -9999px !important;
+  line-height: 0 !important;
+}
+label#mui-1-label::after {
+  content: "Search County or Fund Name";
+  text-indent: 0;
+  display: block;
+  line-height: initial;
+  background-color: white;
+}
+/* END Change Search Funds label text on giving form */
+
+.section_thermometer {
+    background-color: #fff;
+}
+
+/* Hide thermometer button */
+.section_thermometer__contents .button_container {
+    display: none!important;
+}
+
+/*Fix thermometer height*/
+@media (min-width: 1200px) {
+    .microsite .section_thermometer.closed {
+        height: unset !important;
+        padding: 3em 0 1em 0;
+    }
+    .microsite .section_thermometer.closed .section_thermometer__contents {
+        height: unset !important;
+        padding: 1em;
+    }
+}
+
+/* Reduce thermometer spacing */
+.section_thermometer__contents {
+min-height: auto!important;
+padding: 1em 1em!important;
+}
+
+/* Remove heatmap title */
+.highchart-container--map h2.stat__type {
+   display: none;
+}
+
+/*Removes hyperlink from leaderboard */
+.item.flex-3 {
+    pointer-events: none !important;
+color: #000000 !important; 
+}
+
+/* Disable donor wall links */
+.sg-grid-card.donor-card a {
+pointer-events: none;
+}
+
+/* Change donor wall background color */
+.section-donors {
+background-color: #005fae!important;
+}
+
+/* Change donor wall title color */
+.sg-title {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: 15px 0;
+}
+
+/* Change Donor Wall input background color */
+.section-donors .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
+    background-color: white !important;
+}
+
+/* Hide broken down stats on heatmap as requested by client */
+.stat-by-hour {
+    display: none !important;
+}
+
+/* Hide matching gifts title */
+.matching-gifts .matching-gifts-title {
+    display: none!important;
+}
+
+/* Add custom footer image */
+footer.navbar {
+    background-image: url(https://i.imgur.com/W8nW2RB.png);
+    /* https://i.imgur.com/W8nW2RB.png */
+}
+
+footer.navbar .color-overlay {
+    background-color: transparent;
+}
+
+ /* Change giving form donor wall comment label */ .giving-form-v2 .sg-modal-flex .MuiInputLabel-formControl[for=comment] { visibility: hidden; } .giving-form-v2 .sg-modal-flex .MuiInputLabel-formControl[for=comment]::before { visibility: visible; content:'What inspires you to give?(Public Comment 250 Word Max) '; background-color: #fff; } @media (max-width: 547px) { .giving-form-v2 .sg-modal-flex .MuiInputLabel-formControl[for=comment]::before { content:'What inspires you to give? (Public) '; margin-right: -5vw; } }
+
+
+/* Resize Giving Menu Bar and Footer Buttons to Meet Accessibility Standards - AC (Apr 14, 2026) */
+.giving-nav-giving-btn {
+    padding: 12px 12px!important;
+    font-size: 18px!important;
+}
+.giving-nav-link.primary-color-text {
+    padding: 12px 12px!important;
+    padding-left: 30px!important;
+    font-size: 18px!important;
+}
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+</style>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ6GTT68JF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WQ6GTT68JF');
+</script>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1 maximum-scale=2, user-scalable=0' name='viewport'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="smjzCk6d0IVljddsOtP2w94cDpkC0Zu9oVAj8N/mYqMwAAhUBPw3xDsA+M+BLGGDXytmBCQwACjAfrfh9wqI7Q==" />
+<meta content='pk_live_51Q7vDkDYIZnmBnvYoovSN2foPGDD19AeIzHfYe6ggoNPJInF0ZuZKhCAFQxHks843awqm8uyRbmnTo3C33jdVyeo00cgGNrNOB' name='gravyty_pay_publishable_key'>
+
+<body class='microsite'>
+<form class='hide touchnet-form'>
+<input class='touchnet-ticket' name='TICKET' type='text'>
+<input class='touchnet-ticket-name' name='TICKET_NAME' type='text'>
+<input class='touchnet-upay-site' name='UPAY_SITE_ID' type='text'>
+</form>
+
+<script type="application/json" class="js-react-on-rails-component" data-component-name="MenuBar" data-dom-id="MenuBar-react-component-faf51bca-658e-4634-8449-cf22c2f5e805">{"menu":{"id":"6646663f0d37d324845d144f","name":"UC ANR Main Menu Bar","giving_button_config":"launch","giving_button_text":"MAKE A GIFT","menu_links":[{"id":"66fc6bbacc372824c1955319","text":"Ways to Give","url":"https://give.ucanr.edu/pages/ways-to-give-28","external":false,"drop_down":false,"dropdown_links":null,"position":0}],"menu_type":"giving_day","main_logo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/menu_bar/main_logo/6646663f0d37d324845d144f/UC_Agriculture_and_Natural_Resources__3___1__1.png","countdown":true,"countdown_end":"2025-12-03T07:59:00.000+00:00","countdown_campaign":{"id":"66d7910aca48fb2368db00dd","name":"UCANR Grandparent Shell Fund","start_date":"2024-09-03T22:43:00.000Z","end_date":"2025-06-30T16:20:00.000Z","goal_progress":165299.04,"total_raised":165299.04,"total_donations":0,"total_entity_donations":null,"goal_progress_percent":4,"url":"https://give.ucanr.edu/campaigns/ucanr-grandparent-shell-fund","external_donation_url":null,"external_id":null,"call_to_action":null,"call_to_action_header":null,"call_to_action_logo":null,"call_to_action_url":"https://give.ucanr.edu/campaigns/ucanr-grandparent-shell-fund","call_to_action_button_text":null,"causes_list_dropdown":[],"entity_primary_color":"0,95,174","request_affinity":false,"campaign_tracker_position":null,"goal_display_type":"goal_progress","camp_type":"dollars","amount_raised_including_family":165299.0,"total_family_donations_count":1024,"total_family_supporters":870,"total_unique_alumni_donors_count":0,"total_unique_family_donors_count":870,"is_touchnet":false,"is_cashnet":false,"display_campaign_stats":true,"shell_campaign":true,"allow_subscriptions":null,"allow_stripe_subscriptions":false,"hide_average_donation":false,"custom_fields":[{"_id":{"$oid":"691cd4933b49c0ca44c76668"},"all_campaigns":true,"allow_user_input":false,"c_at":"2025-11-18T20:18:27.053Z","display_on_step":null,"entity_id":{"$oid":"6646663b0d37d324845d1444"},"event_ids":[],"everyday_form_ids":[{"$oid":"672d32e3f5558724783efe3f"},{"$oid":"672d2ead85a8052484497578"},{"$oid":"672d2f3ca8389f246d16619c"},{"$oid":"672d2fa3f047192495c7d476"},{"$oid":"672d302ba8389f246f166482"},{"$oid":"672d309e07f4fb24659ad7e1"},{"$oid":"672d30e733d237245b05a6e8"},{"$oid":"672d3186f047192485c7ef68"},{"$oid":"672d31fc5aff7d247c08a85a"},{"$oid":"672d326307f4fb24659ad7e3"},{"$oid":"672d2e3533d237245b05a69c"},{"$oid":"672d333807f4fb24699ae937"},{"$oid":"672d33f85aff7d2485089d9a"},{"$oid":"672d344ff047192495c7d4cf"},{"$oid":"672d3f7507f4fb24659ad8dc"},{"$oid":"672d3fc707f4fb24699ae974"},{"$oid":"672d4024c745a724638a9811"},{"$oid":"672d4080a8389f246d16626e"},{"$oid":"672d410ea8389f246f1665a4"},{"$oid":"672d41bb07f4fb24679ace44"},{"$oid":"672d2a6b85a805247d497e31"},{"$oid":"672d1c0a07f4fb24699ae64f"},{"$oid":"672d2687f5558724803f03d9"},{"$oid":"672d271af047192485c7ef0f"},{"$oid":"672d27935aff7d247a08973b"},{"$oid":"672d2806a8389f246f166301"},{"$oid":"672d28804ca7b1247256759c"},{"$oid":"672d28db4ca7b1247e567895"},{"$oid":"672d2950c745a724638a9654"},{"$oid":"672d2a166a6e16248363e01e"},{"$oid":"672d42355aff7d2485089f37"},{"$oid":"672d2ae085a805247d497e32"},{"$oid":"672d2b406a6e16248363e069"},{"$oid":"672d2bc0f5558724803f03e8"},{"$oid":"672d2c44f5558724753f2916"},{"$oid":"672d2ca16a6e16248163ddb7"},{"$oid":"672d2cfc33d237246205a1ed"},{"$oid":"672d2d63c745a7245f8a9bd8"},{"$oid":"672d2ddd85a805247b496b82"},{"$oid":"68fa5df24a5897d192fcf010"},{"$oid":"67804912000b73576e32a0be"},{"$oid":"67cb223ebd9ef2eb4ffe4557"},{"$oid":"68478620b4667cc71d69ffda"},{"$oid":"68bb1f67d119b6cb72abf6e8"},{"$oid":"68e6942b558785c96a98bd9a"},{"$oid":"68fa5c4d9a04b826ea32a385"},{"$oid":"68fa5cd603ce2a5fbea75914"},{"$oid":"68fa5d24f80706c7e5098f14"},{"$oid":"68fa5d85e671ecc970f2a3ec"},{"$oid":"675cad8a12b681247fe07a47"},{"$oid":"68fa5e7f687dcc1808cff140"},{"$oid":"68fa5ecd30be999dcedce123"},{"$oid":"68fa5f15f80706c7f0098f92"},{"$oid":"68fbbb39687dcc1711d01137"},{"$oid":"68fbbc9df807067fec09889c"},{"$oid":"6900f7754a58973120fd0a05"},{"$oid":"6900f7c77fd7ab9cd0cbadc6"},{"$oid":"6903a4baadb7b7e0d1b8ffb1"},{"$oid":"69064275f8070680e309ed9c"},{"$oid":"672d46bef5558724733efa30"},{"$oid":"672d428a33d237245905ac7e"},{"$oid":"672d42f85aff7d247808a18d"},{"$oid":"672d436ac745a7245d8aa36c"},{"$oid":"672d43b533d237245b05a846"},{"$oid":"672d44c607f4fb24699ae976"},{"$oid":"672d455485a805247d49813a"},{"$oid":"672d45a44ca7b124725679e5"},{"$oid":"672d46034ca7b1246b5670e7"},{"$oid":"672d465d85a8052495497291"},{"$oid":"672d1a77f047192495c7d32b"},{"$oid":"672d4741a8389f246f1665bb"},{"$oid":"672d47a133d237246905b36d"},{"$oid":"672d47fc33d237245905acd2"},{"$oid":"672d60bb33d237246905b421"},{"$oid":"6733e268c745a7245f8ac0c0"},{"$oid":"6733e31185a8052484499980"},{"$oid":"6733e70ea8389f24791689d3"},{"$oid":"675c976312b6812481e07a53"},{"$oid":"672b014bc745a7245f8a8f74"},{"$oid":"672aedc3f5558724803ef9e2"},{"$oid":"672aeeaf4ca7b12472566a08"},{"$oid":"672aef445aff7d2485089314"},{"$oid":"672af01c6a6e16247f63d629"},{"$oid":"672af1395aff7d247c089dc9"},{"$oid":"672af1cd6a6e16248a63d05e"},{"$oid":"672afebb4ca7b124695678ca"},{"$oid":"672aff96f047192495c7ca6f"},{"$oid":"672b0086a8389f246f165848"},{"$oid":"672aec9ff047192495c7ca57"},{"$oid":"672b01f933d237246905a937"},{"$oid":"672b036cf5558724733eedd3"},{"$oid":"672b040207f4fb24709ade2e"},{"$oid":"672ba98f07f4fb24679ac230"},{"$oid":"672bab3f4ca7b1247e566fad"},{"$oid":"672c348a33d237246905acb9"},{"$oid":"672c350f07f4fb24679ac624"},{"$oid":"672c35bf4ca7b1246b566959"},{"$oid":"672c3631f5558724803efdd9"},{"$oid":"67117c21ca9dd3248bfd8fed"},{"$oid":"670472766014b1246c53bbb1"},{"$oid":"671173c0335f6424788ddc08"},{"$oid":"671175c2a00e1224889884f5"},{"$oid":"6711788fc7ea55247940f9e0"},{"$oid":"67117941fb361524840292c8"},{"$oid":"671179b8335f64247f8dd445"},{"$oid":"67117a50fb3615247d0290f3"},{"$oid":"67117b099c8da124727e5a77"},{"$oid":"67117b90335f64247f8dd44c"},{"$oid":"672c36a6f047192495c7cfeb"},{"$oid":"67117d46a00e122488988503"},{"$oid":"67117eaa97690f24800894ed"},{"$oid":"67117f5aa00e12248f98825e"},{"$oid":"67117fbea00e122488988507"},{"$oid":"6711803a9c8da1247e7e5dae"},{"$oid":"671180b3335f6424888dde69"},{"$oid":"672aea1af047192485c7e367"},{"$oid":"672aebbdc745a7246c8a7d2f"},{"$oid":"672d060033d237245b05a398"},{"$oid":"672c46fa33d237245905a3aa"},{"$oid":"672c474785a8052484496e68"},{"$oid":"672c47a4a8389f2479165f5a"},{"$oid":"672c47f333d237246905ad34"},{"$oid":"672d03d733d237245905a6c6"},{"$oid":"672d043df5558724753f266d"},{"$oid":"672d04be07f4fb24699ae557"},{"$oid":"672d052733d237246905af7f"},{"$oid":"672d0590f047192485c7ed43"},{"$oid":"672c4651f047192485c7e870"},{"$oid":"672d067bf5558724733ef5b0"},{"$oid":"672d06eb07f4fb24679ac942"},{"$oid":"672d08c285a805247d497a0f"},{"$oid":"672d17ddf5558724783efb1e"},{"$oid":"672d1857c745a7245f8a9a45"},{"$oid":"672d18cea8389f246d166010"},{"$oid":"672d1932c745a7245f8a9a46"},{"$oid":"672d1999f04719248ec7ff70"},{"$oid":"672d19fbc745a7246c8a8718"},{"$oid":"672c423ac745a7245f8a94d7"},{"$oid":"672c37225aff7d24850896dd"},{"$oid":"672c37be6a6e16248163d8a9"},{"$oid":"672c382fa8389f246f165c1f"},{"$oid":"672c3eccc745a7246c8a827d"},{"$oid":"672c3f8b6a6e16248363da02"},{"$oid":"672c402fc745a7246c8a827e"},{"$oid":"672c40a4f5558724753f2256"},{"$oid":"672c41126a6e16248163d91c"},{"$oid":"672c419a07f4fb24659ad1c7"},{"$oid":"66e345723c5a11247ed30a0e"},{"$oid":"672c42ad6a6e16248363da0b"},{"$oid":"672c431c5aff7d247c08a235"},{"$oid":"672c43895aff7d2478089955"},{"$oid":"672c442d33d237245b05a00f"},{"$oid":"672c447f33d237245b05a010"},{"$oid":"672c44e333d237245b05a011"},{"$oid":"672c45524ca7b1247256707c"},{"$oid":"672c45ba6a6e16248a63d464"},{"$oid":"69f3dd66535f3fcbbb30826f"}],"html_control":"input","label":"In honor/memory of","membership_ids":[],"multiple":false,"name":"tribute","position":11,"required":false,"stored_with":"donation","ticket_level_ids":[],"u_at":"2025-11-20T17:19:57.439Z","entity_custom_values":[]},{"_id":{"$oid":"673cb560179c6f2490de1bba"},"all_campaigns":true,"allow_user_input":false,"c_at":"2024-11-19T15:57:20.838Z","display_on_step":null,"entity_id":{"$oid":"6646663b0d37d324845d1444"},"event_ids":[],"everyday_form_ids":[],"html_control":"input","label":"Comment","membership_ids":[],"multiple":false,"name":"write_in","position":9,"required":false,"stored_with":"donation","ticket_level_ids":[],"u_at":"2024-11-23T00:55:51.116Z","entity_custom_values":[]},{"_id":{"$oid":"674114afbda64d2488fa9efa"},"all_campaigns":true,"allow_user_input":false,"c_at":"2024-11-22T23:33:03.580Z","display_on_step":null,"entity_id":{"$oid":"6646663b0d37d324845d1444"},"event_ids":[],"everyday_form_ids":[{"$oid":"67117f5aa00e12248f98825e"},{"$oid":"672d3f7507f4fb24659ad8dc"},{"$oid":"672aea1af047192485c7e367"},{"$oid":"670472766014b1246c53bbb1"},{"$oid":"675c976312b6812481e07a53"},{"$oid":"672d3186f047192485c7ef68"},{"$oid":"672d03d733d237245905a6c6"},{"$oid":"672aec9ff047192495c7ca57"},{"$oid":"672d043df5558724753f266d"},{"$oid":"67804912000b73576e32a0be"},{"$oid":"672d04be07f4fb24699ae557"},{"$oid":"67117c21ca9dd3248bfd8fed"},{"$oid":"672aedc3f5558724803ef9e2"},{"$oid":"672aebbdc745a7246c8a7d2f"},{"$oid":"672d052733d237246905af7f"},{"$oid":"672aeeaf4ca7b12472566a08"},{"$oid":"671180b3335f6424888dde69"},{"$oid":"672aef445aff7d2485089314"},{"$oid":"672d0590f047192485c7ed43"},{"$oid":"672d44c607f4fb24699ae976"},{"$oid":"672d31fc5aff7d247c08a85a"},{"$oid":"672d060033d237245b05a398"},{"$oid":"675cad8a12b681247fe07a47"},{"$oid":"67117eaa97690f24800894ed"},{"$oid":"672af1395aff7d247c089dc9"},{"$oid":"672d067bf5558724733ef5b0"},{"$oid":"672af1cd6a6e16248a63d05e"},{"$oid":"672d06eb07f4fb24679ac942"},{"$oid":"672d455485a805247d49813a"},{"$oid":"672d45a44ca7b124725679e5"},{"$oid":"6903a4baadb7b7e0d1b8ffb1"},{"$oid":"672d326307f4fb24659ad7e3"},{"$oid":"672d08c285a805247d497a0f"},{"$oid":"672af01c6a6e16247f63d629"},{"$oid":"672afebb4ca7b124695678ca"},{"$oid":"672d17ddf5558724783efb1e"},{"$oid":"672d46034ca7b1246b5670e7"},{"$oid":"672aff96f047192495c7ca6f"},{"$oid":"672d32e3f5558724783efe3f"},{"$oid":"672d1857c745a7245f8a9a45"},{"$oid":"672d465d85a8052495497291"},{"$oid":"672b0086a8389f246f165848"},{"$oid":"672b014bc745a7245f8a8f74"},{"$oid":"672b01f933d237246905a937"},{"$oid":"672d18cea8389f246d166010"},{"$oid":"672b036cf5558724733eedd3"},{"$oid":"672d46bef5558724733efa30"},{"$oid":"672b040207f4fb24709ade2e"},{"$oid":"672d1932c745a7245f8a9a46"},{"$oid":"672ba98f07f4fb24679ac230"},{"$oid":"672d1999f04719248ec7ff70"},{"$oid":"672bab3f4ca7b1247e566fad"},{"$oid":"672d19fbc745a7246c8a8718"},{"$oid":"672c348a33d237246905acb9"},{"$oid":"672d333807f4fb24699ae937"},{"$oid":"672d1a77f047192495c7d32b"},{"$oid":"672c350f07f4fb24679ac624"},{"$oid":"672d1c0a07f4fb24699ae64f"},{"$oid":"672c35bf4ca7b1246b566959"},{"$oid":"672d2687f5558724803f03d9"},{"$oid":"672c3631f5558724803efdd9"},{"$oid":"672d33f85aff7d2485089d9a"},{"$oid":"672d271af047192485c7ef0f"},{"$oid":"672c36a6f047192495c7cfeb"},{"$oid":"67cb223ebd9ef2eb4ffe4557"},{"$oid":"672c37225aff7d24850896dd"},{"$oid":"672d27935aff7d247a08973b"},{"$oid":"672d2806a8389f246f166301"},{"$oid":"67117a50fb3615247d0290f3"},{"$oid":"672c382fa8389f246f165c1f"},{"$oid":"672d344ff047192495c7d4cf"},{"$oid":"672d28804ca7b1247256759c"},{"$oid":"672c37be6a6e16248163d8a9"},{"$oid":"672d28db4ca7b1247e567895"},{"$oid":"672c3eccc745a7246c8a827d"},{"$oid":"672d2950c745a724638a9654"},{"$oid":"67117fbea00e122488988507"},{"$oid":"672c3f8b6a6e16248363da02"},{"$oid":"672d2a166a6e16248363e01e"},{"$oid":"672d2a6b85a805247d497e31"},{"$oid":"672c402fc745a7246c8a827e"},{"$oid":"672c40a4f5558724753f2256"},{"$oid":"672d2ae085a805247d497e32"},{"$oid":"672d3fc707f4fb24699ae974"},{"$oid":"672c41126a6e16248163d91c"},{"$oid":"672d4024c745a724638a9811"},{"$oid":"672d2b406a6e16248363e069"},{"$oid":"672c423ac745a7245f8a94d7"},{"$oid":"672d4080a8389f246d16626e"},{"$oid":"6733e31185a8052484499980"},{"$oid":"672d410ea8389f246f1665a4"},{"$oid":"672c42ad6a6e16248363da0b"},{"$oid":"6733e268c745a7245f8ac0c0"},{"$oid":"672c419a07f4fb24659ad1c7"},{"$oid":"672d41bb07f4fb24679ace44"},{"$oid":"672d2bc0f5558724803f03e8"},{"$oid":"672c431c5aff7d247c08a235"},{"$oid":"672d2c44f5558724753f2916"},{"$oid":"672c43895aff7d2478089955"},{"$oid":"672d2ca16a6e16248163ddb7"},{"$oid":"672c442d33d237245b05a00f"},{"$oid":"672c447f33d237245b05a010"},{"$oid":"672d2cfc33d237246205a1ed"},{"$oid":"672d4741a8389f246f1665bb"},{"$oid":"672c44e333d237245b05a011"},{"$oid":"672d42355aff7d2485089f37"},{"$oid":"672d2d63c745a7245f8a9bd8"},{"$oid":"672c45524ca7b1247256707c"},{"$oid":"672d428a33d237245905ac7e"},{"$oid":"672d2ddd85a805247b496b82"},{"$oid":"6733e70ea8389f24791689d3"},{"$oid":"672d47a133d237246905b36d"},{"$oid":"672c45ba6a6e16248a63d464"},{"$oid":"672d2e3533d237245b05a69c"},{"$oid":"672c4651f047192485c7e870"},{"$oid":"672d42f85aff7d247808a18d"},{"$oid":"672d2ead85a8052484497578"},{"$oid":"672c46fa33d237245905a3aa"},{"$oid":"672c474785a8052484496e68"},{"$oid":"672d2f3ca8389f246d16619c"},{"$oid":"672d2fa3f047192495c7d476"},{"$oid":"672c47a4a8389f2479165f5a"},{"$oid":"672d436ac745a7245d8aa36c"},{"$oid":"672d302ba8389f246f166482"},{"$oid":"671175c2a00e1224889884f5"},{"$oid":"67117b90335f64247f8dd44c"},{"$oid":"672d60bb33d237246905b421"},{"$oid":"671179b8335f64247f8dd445"},{"$oid":"67117b099c8da124727e5a77"},{"$oid":"671173c0335f6424788ddc08"},{"$oid":"6711803a9c8da1247e7e5dae"},{"$oid":"67117941fb361524840292c8"},{"$oid":"67117d46a00e122488988503"},{"$oid":"66e345723c5a11247ed30a0e"},{"$oid":"6711788fc7ea55247940f9e0"},{"$oid":"672c47f333d237246905ad34"},{"$oid":"672d309e07f4fb24659ad7e1"},{"$oid":"672d47fc33d237245905acd2"},{"$oid":"672d43b533d237245b05a846"},{"$oid":"672d30e733d237245b05a6e8"},{"$oid":"68fa5df24a5897d192fcf010"},{"$oid":"68478620b4667cc71d69ffda"},{"$oid":"68bb1f67d119b6cb72abf6e8"},{"$oid":"68e6942b558785c96a98bd9a"},{"$oid":"68fa5c4d9a04b826ea32a385"},{"$oid":"68fa5cd603ce2a5fbea75914"},{"$oid":"68fa5d24f80706c7e5098f14"},{"$oid":"68fa5d85e671ecc970f2a3ec"},{"$oid":"68fa5e7f687dcc1808cff140"},{"$oid":"68fa5ecd30be999dcedce123"},{"$oid":"68fa5f15f80706c7f0098f92"},{"$oid":"68fbbb39687dcc1711d01137"},{"$oid":"68fbbc9df807067fec09889c"},{"$oid":"6900f7754a58973120fd0a05"},{"$oid":"6900f7c77fd7ab9cd0cbadc6"},{"$oid":"69064275f8070680e309ed9c"},{"$oid":"69f3dd66535f3fcbbb30826f"}],"html_control":"boolean","label":"UC ANR Retiree?","membership_ids":[],"multiple":false,"name":"anr_retiree","position":8,"required":false,"stored_with":"donation","ticket_level_ids":[],"u_at":"2025-11-18T20:24:16.069Z","entity_custom_values":[{"name":"Yes"}]}],"status":"active","spreedly_key":null,"average_donation":0.0,"currency_code":null,"causes_required":false,"img":null,"auto_dock_category":null,"donation_levels":[],"giving_level_1":50.0,"giving_level_2":100.0,"giving_level_3":200.0,"logo":null},"display_countdown":false,"display_search":false,"display_stats":false,"stat_type":"total_family_donations_count","polling_interval":0},"user":{},"assets":{"countries":["United States","Canada","United Kingdom","Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia, Plurinational State of","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, The Democratic Republic of the","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See (Vatican City State)","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran, Islamic Republic of","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Democratic People's Republic of","Korea, Republic of","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia, Federated States of","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","North Macedonia","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela, Bolivarian Republic of","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"],"images":{"all_categories":"/images/all_categories.png","academy":"/images/academy.jpg","athletics":"/images/athletics.jpg","center_and_institutes":"/images/center_and_institutes.jpg","club_sports":"/images/athletics.jpg","graduate_school":"/images/academy.jpg","nd_international":"/images/abroad.jpg","ndaa_club":"/images/alumni.jpg","residence_hall":"/images/residence.jpg","special_interests":"/images/all_categories.png","student_experience":"/images/all_categories.png","student_group":"/images/students.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","cc_security":"/images/cc_security.png","like_plus":"/images/likeplus.png","vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png"},"authenticity_token":"v+BszkLgGfy8WZZwfDLXWKdxDdt51mMG9g1IGbkhzVY9iJeQCIH+veLUudPHzUAYJkZlRl83+JOXI9wIkc0nGA=="},"website":{"id":"6646663e0d37d324845d1445","host":"give.ucanr.edu","website_shorthand":null,"website_header":true,"head_logo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/website/head_logo/6646663e0d37d324845d1445/UC_Agriculture_and_Natural_Resources__3___1__1.png","head_logo_link":"https://give.ucanr.edu","mst_home_page_url":"give.ucanr.edu/pages/home-2650","donation_modal_header":null,"scripts":null,"site_flag_url":null},"entity":{"id":"6646663b0d37d324845d1444","name":"University of California - Agriculture and Natural Resources","donation_modal_header":null,"select_category_copy":"Select a Category","campaign_categories":["Agriculture and Natural Resources (UC ANR)","California Institute for Water Resources","Community Nutrition and Health","Informatics and GIS","Nutrition Policy Institute","UC ANR Fire Network","UC ANR Innovate","UC ANR Policy Institute","UC Cooperative Extension","UC Environmental Stewards","UC Integrated Pest Management","UC Master Food Preserver","UC Master Gardener","UC Organic Agriculture Institute","UC Research and Extension Centers","UC Small Farms Network","UC Sustainable Agriculture Research and Education Program"],"giving_day_amount":50,"microsite_campaign":null,"features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"external_give_link":"https://givingday.ucanr.edu/pages/home-2720#open_giving_form=true","headlogo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/headlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","membership_index_banner":null,"host":"give.ucanr.edu","donation_address_required":true,"donation_phone_number_required":true,"minimum_giving_day_amount":5,"gift_confirmation_text":null,"paypal_merchant_id":null,"name_strip_tags":"University of California - Agriculture and Natural Resources","description":null,"favicon":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","thumb":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/thumb_UC_Agriculture_and_Natural_Resources__3___1_.png"}},"meta_tags":[],"footlogo":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png"},"footer_tagline":null,"facebook_url":"https://www.facebook.com/ucanr","twitter_url":"https://x.com/ucanr","instagram_url":"https://www.instagram.com/ucanr/","linkedin_url":"https://www.linkedin.com/school/ucanr/posts/?feedView=all","youtube_url":"https://www.youtube.com/user/ucanr","snapchat_url":null,"entity_urls":[],"copyright":null,"get_facebook_key":"815834321794088","membership_title":null,"membership_description":null,"membership_header_banner":{"url":null},"secondarycolor":"253,189,16","primarycolor":"0,95,174","donation_confirmation_text":null,"sharewizard_campaign_html_pending":null,"paypal_verified":false,"quick_give_enabled":false,"sharewizard_campaign_html_closed":null,"has_giving_form_confirmation_step":false,"min_donation_amount":1,"country":null,"available_locales":{"English":"en","Cymraeg":"cy","French":"fr","German":"de","Italian":"it","Portuguese":"pt","Spanish":"es"},"default_locale":"en","language":"English","currency_code":"USD","currency_symbol":"$","date_format":"M/D/YY","timezone":"America/Los_Angeles","processing_flat_fee":0.0001,"processing_percent":0.03,"stripe_publishable_key":null,"ein":null,"chariot_cid":null,"urls":[],"allow_braintree_subscriptions":false}}</script>
+    <div id="MenuBar-react-component-faf51bca-658e-4634-8449-cf22c2f5e805"></div>
+    
+
+<main id='main-content'>
+<script src="https://assets.prod.us-east-1.advance.graduway.com/packs/modal-bundle-9fbbac762749badab2a4.js" crossorigin="anonymous" defer="defer" integrity="sha384-KFbIMK/Vpjqmmq2jh6ehh0xdGNMbBo+ut2nSLUEhfn2mCwZW1gXmKLo8IRXlLZdw"></script>
+
+<script type="application/json" id="js-react-on-rails-context">{"inMailer":false,"i18nLocale":"en","i18nDefaultLocale":"en","href":"https://give.ucanr.edu/pages/home-2650","location":"/pages/home-2650","scheme":"https","host":"give.ucanr.edu","port":null,"pathname":"/pages/home-2650","search":null,"httpAcceptLanguage":null,"serverSide":false}</script>
+<script type="application/json" class="js-react-on-rails-component" data-component-name="GlobalModalWrapper" data-dom-id="GlobalModalWrapper-react-component-0cb1ff57-42f9-4350-a5a3-b464e01f3b84">{"entity":{"currency_symbol":"$","currency_code":"USD","features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"name":"University of California - Agriculture and Natural Resources","country":null,"secondarycolor":"253,189,16","processing_flat_fee":0.0001,"processing_percent":0.03,"language":"English","primarycolor":"0,95,174","select_category_copy":"Select a Category","minimum_giving_day_amount":5,"default_giving_day_amount":50,"double_donation_public_key":"NGZlYzk5YmUtM2Jm","dd_private_api_key":"rjPAZRvyQqVimJu3","paypal_verified":false,"gravyty_pay_account_id":"acct_1ST6hLDe4GMTJwl9","quick_give_enabled":false,"donation_phone_number_required":true,"id":"6646663b0d37d324845d1444"},"entityId":"6646663b0d37d324845d1444","paypalClientId":"ARs3Do0dqOZNsT7i4sk6WLLrDWZhHg_4mK0mQAq8BnMawaDpBaWZpe8Lz_zp9jk2t4hxBVy5JlKEZGI6"}</script>
+    <div id="GlobalModalWrapper-react-component-0cb1ff57-42f9-4350-a5a3-b464e01f3b84"></div>
+    
+
+
+
+    
+
+
+<div id="content-box" class="is-wrapper content-box-wrapper">
+  <div class="is-section is-box is-align-left is-light-text type-opensans is-section-50 last-box scroll-target" id="tatnall-slider">
+    <div class="is-overlay">
+        <div class="is-overlay-content content-selectable" data-module="slider-box" data-module-desc="Slider" data-html="%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22_style_%7Bid%7D%22%20style%3D%22display%3Anone%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%7Bid%7D%20.glide__slides%20li%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-left%3A%200px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-right%3A%200px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%7Bid%7D%20.glide__slides%20li%3Afirst-child%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-left%3A%200px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%40media%20(max-width%3A%201200px)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%7Bid%7D%20.glide__slides%20li%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-left%3A%207.5px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-right%3A%207.5px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%7Bid%7D%20.glide__slides%20li%3Afirst-child%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-left%3A%200px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%40media%20(max-width%3A%20970px)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%7Bid%7D%20.glide__slides%20li%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-left%3A%200px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-right%3A%200px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%7Bid%7D%20.glide__slides%20li%3Afirst-child%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20margin-left%3A%200px%20!important%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22%7Bid%7D%22%20class%3D%22glide%20contain%20%22%20style%3D%22display%3Anone%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20data-glide-el%3D%22track%22%20class%3D%22glide__track%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22glide__slides%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22glide__slide%22%20style%3D%22height%3A100%25%3B%22%3E%3Cimg%20src%3D%22https%3A%2F%2Fgw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com%2FUniversity%2Bof%2BCalifornia%2BAgriculture%2Band%2BNatural%2BResources%2FUC%2BANR%2B2.png%22%20alt%3D%22%22%20%2F%3E%3C%2Fli%3E%3Cli%20class%3D%22glide__slide%22%20style%3D%22height%3A100%25%3B%22%3E%3Cimg%20src%3D%22https%3A%2F%2Fgw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com%2FUniversity%2Bof%2BCalifornia%2BAgriculture%2Band%2BNatural%2BResources%2FUC%2BANR%2B4.png%22%20alt%3D%22%22%20%2F%3E%3C%2Fli%3E%3Cli%20class%3D%22glide__slide%22%20style%3D%22height%3A100%25%3B%22%3E%3Cimg%20src%3D%22https%3A%2F%2Fgw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com%2FUniversity%2Bof%2BCalifornia%2BAgriculture%2Band%2BNatural%2BResources%2FUC%2BANR%2B6.png%22%20alt%3D%22%22%20%2F%3E%3C%2Fli%3E%3Cli%20class%3D%22glide__slide%22%20style%3D%22height%3A100%25%3B%22%3E%3Cimg%20src%3D%22https%3A%2F%2Fgw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com%2FUniversity%2Bof%2BCalifornia%2BAgriculture%2Band%2BNatural%2BResources%2FUC%2BANR%2B8.png%22%20alt%3D%22%22%20%2F%3E%3C%2Fli%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Ful%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22glide__arrows%22%20data-glide-el%3D%22controls%22%3E%3Cbutton%20class%3D%22glide__arrow%20glide__arrow--left%22%20data-glide-dir%3D%22%3C%22%3E%3Csvg%20style%3D%22width%3A4.3vw%3Bheight%3A4.3vw%3Bmin-width%3A30px%3Bmin-height%3A30px%3B%22%20viewBox%3D%220%200%20512%20512%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M352%20115.4L331.3%2096%20160%20256l171.3%20160%2020.7-19.3L201.5%20256z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%3C%2Fbutton%3E%3Cbutton%20class%3D%22glide__arrow%20glide__arrow--right%22%20data-glide-dir%3D%22%3E%22%3E%3Csvg%20style%3D%22width%3A4.3vw%3Bheight%3A4.3vw%3Bmin-width%3A30px%3Bmin-height%3A30px%3B%22%20viewBox%3D%220%200%20512%20512%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M160%20115.4L180.7%2096%20352%20256%20180.7%20416%20160%20396.7%20310.5%20256z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%3C%2Fbutton%3E%3C%2Fdiv%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20css%20%3D%20document.querySelector('%23_style_%7Bid%7D').innerHTML%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20head%20%3D%20document.getElementsByTagName('head')%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20s%20%3D%20document.createElement('style')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20s.appendChild(document.createTextNode(css))%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20head.appendChild(s)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20svgDef%20%3D%20'%3Csvg%20width%3D%220%22%20height%3D%220%22%20style%3D%22position%3Aabsolute%3Bdisplay%3Anone%3B%22%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3Cdefs%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3Csymbol%20viewBox%3D%220%200%20512%20512%22%20id%3D%22ion-ios-arrow-left%22%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3Cpath%20d%3D%22M352%20115.4L331.3%2096%20160%20256l171.3%20160%2020.7-19.3L201.5%20256z%22%3E%3C%2Fpath%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3C%2Fsymbol%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3Csymbol%20viewBox%3D%220%200%20512%20512%22%20id%3D%22ion-ios-arrow-right%22%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3Cpath%20d%3D%22M160%20115.4L180.7%2096%20352%20256%20180.7%20416%20160%20396.7%20310.5%20256z%22%3E%3C%2Fpath%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3C%2Fsymbol%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3C%2Fdefs%3E'%20%2B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20'%3C%2Fsvg%3E'%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20pre%20%3D%20document.querySelector('%23ion-ios-arrow-left')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(!pre)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.body.insertAdjacentHTML('beforeend'%2C%20svgDef)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20docReady%20%3D%20function(fn)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20stateCheck%20%3D%20setInterval(function()%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20if%20(typeof%20Glide%20%3D%3D%3D%20'undefined')%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20waitSlider%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(typeof%20Glide%20!%3D%3D%20'undefined')%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if((new%20Glide).mount)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20Do%20Nothing%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20waitSlider%20%3D%20true%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20waitSlider%20%3D%20true%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(waitSlider)%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(typeof%20skrollrr%20%3D%3D%3D%20'undefined')%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(typeof%20skrollrr.lax%20%3D%3D%3D%20'undefined')%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20clearInterval(stateCheck)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fn()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20catch%20(e)%20%7B%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%201)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20docReady(function()%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20glideSlide%20%3D%20document.querySelector(%22%23%7Bid%7D%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(!glideSlide)%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20glideSlide.style.display%3D%22%22%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20glideSlides%20%3D%20document.querySelectorAll('%23%7Bid%7D%20.glide__slide')%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20perView%20%3D%201%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20glideSlides.forEach(slide%3D%3E%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20video%20%3D%20slide.querySelector('video')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(video)%20changeVideo(video)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20window.addEventListener('resize'%2C%20()%3D%3E%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20glideSlides.forEach(slide%3D%3E%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20video%20%3D%20slide.querySelector('video')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(video)%20changeVideo(video)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20function%20changeVideo(video)%20%7B%0A%09%09%09%09%09%20%20%20%20%20%20%20%20if(!video)%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20changed%3Dfalse%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20source%20%3D%20video.querySelector('source')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vidDefault%20%3D%20source.getAttribute('data-default')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vid240%20%3D%20source.getAttribute('data-240')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vid360%20%3D%20source.getAttribute('data-360')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vid480%20%3D%20source.getAttribute('data-480')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vid540%20%3D%20source.getAttribute('data-540')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vid720%20%3D%20source.getAttribute('data-720')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vid1080%20%3D%20source.getAttribute('data-1080')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vid1440%20%3D%20source.getAttribute('data-1440')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vid2160%20%3D%20source.getAttribute('data-2160')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20vW%20%3D%20window.innerWidth%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vW%3C%3D426)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vid240)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid240)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid240)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid360)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid360)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid360)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid480)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid480)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid480)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid540)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid540)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid540)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid720)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(426%3CvW%20%26%26%20vW%3C%3D640)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vid360)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid360)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid360)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid480)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid480)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid480)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid540)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid540)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid540)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid720)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(640%3CvW%20%26%26%20vW%3C%3D854)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vid480)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid480)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid480)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid540)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid540)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid540)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid720)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(854%3CvW%20%26%26%20vW%3C%3D960)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vid540)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid540)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid540)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid720)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(vW%3E960%20%26%26%20vW%3C%3D1280)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid720)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid720)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(1280%3CvW%20%26%26%20vW%3C%3D1920)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vid1080)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid1080)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid1080)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(1920%3CvW%20%26%26%20vW%3C%3D2560)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vid1440)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid1440)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid1440)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(2560%3CvW)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(vid2160)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid2160)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid2160)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20else%20if(vid1440)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3Dvid1440)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vid1440)%3Bchanged%3Dtrue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(changed)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.pause()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.currentTime%20%3D%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.load()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(video.closest('.play'))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.play()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(source.getAttribute('src')!%3D%3DvidDefault)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.pause()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.currentTime%20%3D%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source.setAttribute('src'%2C%20vidDefault)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.load()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20function%20stopVideo(slide)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20video%20%3D%20slide.querySelector('video')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(video)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.pause()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.currentTime%20%3D%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slide.classList.remove('active')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slide.classList.remove('play')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20function%20playVideo(slide)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20video%20%3D%20slide.querySelector('video')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(video)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20video.play()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slide.classList.add('play')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20function%20coverflow(index)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20activeSlide%20%3D%20glideSlides%5Bindex%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20nextSlide%20%3D%20activeSlide.nextElementSibling%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20next2Slide%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(nextSlide)%20next2Slide%20%3D%20nextSlide.nextElementSibling%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20next3Slide%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(next2Slide)%20next3Slide%20%3D%20next2Slide.nextElementSibling%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.classList.remove('glide__slide--previous')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.classList.remove('glide__slide--following')%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(activeSlide.nextElementSibling)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.nextElementSibling.classList.remove('glide__slide--previous')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.nextElementSibling.classList.remove('glide__slide--following')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.nextElementSibling.classList.add('glide__slide--following')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(activeSlide.previousElementSibling)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.previousElementSibling.classList.remove('glide__slide--previous')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.previousElementSibling.classList.remove('glide__slide--following')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.previousElementSibling.classList.add('glide__slide--previous')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(perView%3D%3D%3D1%20%7C%7C%20perView%3D%3D%3D2%20%7C%7C%20perView%3D%3D%3D3%20%7C%7C%20perView%3D%3D%3D4)%20playVideo(activeSlide)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if((perView%3D%3D%3D2%20%7C%7C%20perView%3D%3D%3D3%20%7C%7C%20perView%3D%3D%3D4)%20%26%26%20nextSlide)%20playVideo(nextSlide)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if((perView%3D%3D%3D3%20%7C%7C%20perView%3D%3D%3D4)%20%26%26%20next2Slide)%20playVideo(next2Slide)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(perView%3D%3D%3D4%20%26%26%20next3Slide)%20playVideo(next3Slide)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20activeSlide.classList.add('active')%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20elms%20%3D%20activeSlide.parentNode.querySelectorAll('.glide__slide')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20elms.forEach(elm%3D%3E%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(elm%3D%3D%3DactiveSlide)%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(perView%3D%3D%3D2)%20if(elm%3D%3D%3DactiveSlide%20%7C%7C%20elm%3D%3D%3DnextSlide)%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(perView%3D%3D%3D3)%20if(elm%3D%3D%3DactiveSlide%20%7C%7C%20elm%3D%3D%3DnextSlide%20%7C%7C%20elm%3D%3D%3Dnext2Slide)%20return%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(perView%3D%3D%3D4)%20if(elm%3D%3D%3DactiveSlide%20%7C%7C%20elm%3D%3D%3DnextSlide%20%7C%7C%20elm%3D%3D%3Dnext2Slide%20%7C%7C%20elm%3D%3D%3Dnext3Slide)%20return%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20stopVideo(elm)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20slider%20%3D%20activeSlide.closest('.glide')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slider.classList.add('running')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20myslider%20%3D%20document.querySelector(%22%23%7Bid%7D%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20_%7Bid%7D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(myslider.classList.contains('coverflow'))%20%7B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_%7Bid%7D%20%3D%20new%20Glide(myslider%2C%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20%22carousel%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoplay%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20animationDuration%3A%201000%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gap%3A%200%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20perView%3A%203%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20startAt%3A%202%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20hoverpause%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arrow%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dots%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20breakpoints%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20575%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20perView%3A%201%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20peek%3A%2050%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20414%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20perView%3A%201%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20peek%3A%2040%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20360%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20perView%3A%201%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20peek%3A%2030%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20focusAt%3A%20%22center%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_%7Bid%7D%20%3D%20new%20Glide(%22%23%7Bid%7D%22%2C%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20%22carousel%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoplay%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20animationDuration%3A%201000%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gap%3A%200%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20perView%3A%201%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20hoverpause%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arrow%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dots%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20breakpoints%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20970%3A%20%7B%20perView%3A%201%2C%20gap%3A%200%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%201280%3A%20%7B%20gap%3A%2015%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_%7Bid%7D.on('mount.after'%2C%20function%20()%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20coverflow(_%7Bid%7D.index%2C%20true)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_%7Bid%7D.on('run'%2C%20function%20(event)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20coverflow(_%7Bid%7D.index)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_%7Bid%7D.mount()%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20ap%20%3D%205000%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if(ap)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20glideElement%20%3D%20%7Bid%7D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20isSliderRunning%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20manageSliderVisibility%20%3D%20(entries)%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(entries%5B0%5D.isIntersecting)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(!isSliderRunning)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_%7Bid%7D.update(%7B%20autoplay%3A%20ap%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20isSliderRunning%20%3D%20true%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(isSliderRunning)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_%7Bid%7D.update(%7B%20autoplay%3A%20false%20%7D)%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20isSliderRunning%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20const%20observer%20%3D%20new%20IntersectionObserver(manageSliderVisibility%2C%20%7B%20threshold%3A%200.5%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20observer.observe(glideElement)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fscript%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20" data-settings="%7B%22type%22%3A%20%22carousel%22%2C%22autoplay%22%3A%20%225000%22%2C%22animationDuration%22%3A1000%2C%22gap%22%3A%200%2C%22perView%22%3A1%2C%22arrow%22%3Atrue%2C%22arrowPreset%22%3A1%2C%22arrowColor%22%3A%20%22%22%2C%22dots%22%3Afalse%2C%22dotsColor%22%3A%20%22%22%2C%22mobileArrows%22%3Afalse%2C%22mobileDots%22%3Afalse%2C%22fit%22%3A%20%22contain%22%2C%22hoverPause%22%3Afalse%2C%22captionAnim%22%3A%20%22appear%22%2C%22images%22%3A%5B%7B%22src%22%3A%20%22https%3A%2F%2Fgw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com%2FUniversity%2Bof%2BCalifornia%2BAgriculture%2Band%2BNatural%2BResources%2FUC%2BANR%2B2.png%22%2C%20%22link%22%3A%20%22%22%2C%20%22caption%22%3A%20%22%22%2C%20%22style%22%3A%20%22%22%7D%2C%7B%22src%22%3A%20%22https%3A%2F%2Fgw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com%2FUniversity%2Bof%2BCalifornia%2BAgriculture%2Band%2BNatural%2BResources%2FUC%2BANR%2B4.png%22%2C%20%22link%22%3A%20%22%22%2C%20%22caption%22%3A%20%22%22%2C%20%22style%22%3A%20%22%22%7D%2C%7B%22src%22%3A%20%22https%3A%2F%2Fgw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com%2FUniversity%2Bof%2BCalifornia%2BAgriculture%2Band%2BNatural%2BResources%2FUC%2BANR%2B6.png%22%2C%20%22link%22%3A%20%22%22%2C%20%22caption%22%3A%20%22%22%2C%20%22style%22%3A%20%22%22%7D%2C%7B%22src%22%3A%20%22https%3A%2F%2Fgw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com%2FUniversity%2Bof%2BCalifornia%2BAgriculture%2Band%2BNatural%2BResources%2FUC%2BANR%2B8.png%22%2C%20%22link%22%3A%20%22%22%2C%20%22caption%22%3A%20%22%22%2C%20%22style%22%3A%20%22%22%7D%5D%7D" data-html-1="%3Cimg%20data-image-embed%3D%22%22%20data-noresize%3D%22%22%20data-sync%3D%22%22%20src%3D%22%2Fcontentbox%2Fpublic%2Fassets%2Fdesigns%2Fimages%2Fbg1.png%22%20alt%3D%22%22%3E" data-html-2="%3Cimg%20data-image-embed%3D%22%22%20data-noresize%3D%22%22%20data-sync%3D%22%22%20src%3D%22%2Fcontentbox%2Fpublic%2Fassets%2Fdesigns%2Fimages%2Fbg2.png%22%20alt%3D%22%22%3E">
+            <div id="_style_rMzMJey" style="display:none">
+
+                #rMzMJey .glide__slides li {
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+                }
+                #rMzMJey .glide__slides li:first-child {
+                margin-left: 0px !important;
+                }
+                @media (max-width: 1200px) {
+                #rMzMJey .glide__slides li {
+                margin-left: 7.5px !important;
+                margin-right: 7.5px !important;
+                }
+                #rMzMJey .glide__slides li:first-child {
+                margin-left: 0px !important;
+                }
+                }
+                @media (max-width: 970px) {
+                #rMzMJey .glide__slides li {
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+                }
+                #rMzMJey .glide__slides li:first-child {
+                margin-left: 0px !important;
+                }
+                }
+            </div>
+            <div id="rMzMJey" class="glide contain " style="display:none">
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide" style="height:100%;"><img src="https://gw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com/University+of+California+Agriculture+and+Natural+Resources/UC+ANR+2.png" alt=""></li>
+                        <li class="glide__slide" style="height:100%;"><img src="https://gw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com/University+of+California+Agriculture+and+Natural+Resources/UC+ANR+4.png" alt=""></li>
+                        <li class="glide__slide" style="height:100%;"><img src="https://gw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com/University+of+California+Agriculture+and+Natural+Resources/UC+ANR+6.png" alt=""></li>
+                        <li class="glide__slide" style="height:100%;"><img src="https://gw-advance-prod-us-east-1-content.s3.us-east-1.amazonaws.com/University+of+California+Agriculture+and+Natural+Resources/UC+ANR+8.png" alt=""></li>
+                    </ul>
+                </div>
+
+                <div class="glide__arrows" data-glide-el="controls"><button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;"><svg style="width:4.3vw;height:4.3vw;min-width:30px;min-height:30px;" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M352 115.4L331.3 96 160 256l171.3 160 20.7-19.3L201.5 256z"></path>
+                        </svg></button><button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;"><svg style="width:4.3vw;height:4.3vw;min-width:30px;min-height:30px;" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z"></path>
+                        </svg></button></div>
+
+            </div>
+            <script>
+                var css = document.querySelector('#_style_rMzMJey').innerHTML;
+                var head = document.getElementsByTagName('head')[0];
+                var s = document.createElement('style');
+                s.appendChild(document.createTextNode(css));
+                head.appendChild(s);
+
+                var svgDef = '<svg width="0" height="0" style="position:absolute;display:none;">' +
+                    '<defs>' +
+                    '<symbol viewBox="0 0 512 512" id="ion-ios-arrow-left">' +
+                    '<path d="M352 115.4L331.3 96 160 256l171.3 160 20.7-19.3L201.5 256z"></path>' +
+                    '</symbol>' +
+                    '<symbol viewBox="0 0 512 512" id="ion-ios-arrow-right">' +
+                    '<path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z"></path>' +
+                    '</symbol>' +
+                    '</defs>' +
+                    '</svg>';
+                var pre = document.querySelector('#ion-ios-arrow-left');
+                if (!pre) {
+                    document.body.insertAdjacentHTML('beforeend', svgDef);
+                }
+
+                var docReady = function(fn) {
+                    var stateCheck = setInterval(function() {
+                        // if (typeof Glide === 'undefined') return;
+                        var waitSlider = false;
+                        if (typeof Glide !== 'undefined') {
+                            if ((new Glide).mount) {
+                                // Do Nothing 
+                            } else {
+                                waitSlider = true;
+                            }
+                        } else {
+                            waitSlider = true;
+                        }
+                        if (waitSlider) return;
+                        if (typeof skrollrr === 'undefined') return;
+                        if (typeof skrollrr.lax === 'undefined') return;
+
+                        clearInterval(stateCheck);
+                        try {
+                            fn();
+                        } catch (e) {}
+                    }, 1);
+                };
+                docReady(function() {
+                    const glideSlide = document.querySelector("#rMzMJey");
+                    if (!glideSlide) return;
+                    glideSlide.style.display = "";
+
+                    const glideSlides = document.querySelectorAll('#rMzMJey .glide__slide');
+
+                    const perView = 1;
+
+                    glideSlides.forEach(slide => {
+                        let video = slide.querySelector('video');
+                        if (video) changeVideo(video);
+                    });
+
+                    window.addEventListener('resize', () => {
+                        glideSlides.forEach(slide => {
+                            let video = slide.querySelector('video');
+                            if (video) changeVideo(video);
+                        });
+                    });
+
+                    function changeVideo(video) {
+                        if (!video) return;
+                        let changed = false;
+                        let source = video.querySelector('source');
+                        let vidDefault = source.getAttribute('data-default');
+                        let vid240 = source.getAttribute('data-240');
+                        let vid360 = source.getAttribute('data-360');
+                        let vid480 = source.getAttribute('data-480');
+                        let vid540 = source.getAttribute('data-540');
+                        let vid720 = source.getAttribute('data-720');
+                        let vid1080 = source.getAttribute('data-1080');
+                        let vid1440 = source.getAttribute('data-1440');
+                        let vid2160 = source.getAttribute('data-2160');
+                        let vW = window.innerWidth;
+                        if (vW <= 426) {
+                            if (vid240) {
+                                if (source.getAttribute('src') !== vid240) {
+                                    source.setAttribute('src', vid240);
+                                    changed = true;
+                                } else return;
+                            } else if (vid360) {
+                                if (source.getAttribute('src') !== vid360) {
+                                    source.setAttribute('src', vid360);
+                                    changed = true;
+                                } else return;
+                            } else if (vid480) {
+                                if (source.getAttribute('src') !== vid480) {
+                                    source.setAttribute('src', vid480);
+                                    changed = true;
+                                } else return;
+                            } else if (vid540) {
+                                if (source.getAttribute('src') !== vid540) {
+                                    source.setAttribute('src', vid540);
+                                    changed = true;
+                                } else return;
+                            } else if (vid720) {
+                                if (source.getAttribute('src') !== vid720) {
+                                    source.setAttribute('src', vid720);
+                                    changed = true;
+                                } else return;
+                            }
+                        } else if (426 < vW && vW <= 640) {
+                            if (vid360) {
+                                if (source.getAttribute('src') !== vid360) {
+                                    source.setAttribute('src', vid360);
+                                    changed = true;
+                                } else return;
+                            } else if (vid480) {
+                                if (source.getAttribute('src') !== vid480) {
+                                    source.setAttribute('src', vid480);
+                                    changed = true;
+                                } else return;
+                            } else if (vid540) {
+                                if (source.getAttribute('src') !== vid540) {
+                                    source.setAttribute('src', vid540);
+                                    changed = true;
+                                } else return;
+                            } else if (vid720) {
+                                if (source.getAttribute('src') !== vid720) {
+                                    source.setAttribute('src', vid720);
+                                    changed = true;
+                                } else return;
+                            }
+                        } else if (640 < vW && vW <= 854) {
+                            if (vid480) {
+                                if (source.getAttribute('src') !== vid480) {
+                                    source.setAttribute('src', vid480);
+                                    changed = true;
+                                } else return;
+                            } else if (vid540) {
+                                if (source.getAttribute('src') !== vid540) {
+                                    source.setAttribute('src', vid540);
+                                    changed = true;
+                                } else return;
+                            } else if (vid720) {
+                                if (source.getAttribute('src') !== vid720) {
+                                    source.setAttribute('src', vid720);
+                                    changed = true;
+                                } else return;
+                            }
+                        } else if (854 < vW && vW <= 960) {
+                            if (vid540) {
+                                if (source.getAttribute('src') !== vid540) {
+                                    source.setAttribute('src', vid540);
+                                    changed = true;
+                                } else return;
+                            } else if (vid720) {
+                                if (source.getAttribute('src') !== vid720) {
+                                    source.setAttribute('src', vid720);
+                                    changed = true;
+                                } else return;
+                            }
+                        } else if (vW > 960 && vW <= 1280) {
+                            if (vid720) {
+                                if (source.getAttribute('src') !== vid720) {
+                                    source.setAttribute('src', vid720);
+                                    changed = true;
+                                } else return;
+                            }
+                        } else if (1280 < vW && vW <= 1920) {
+                            if (vid1080) {
+                                if (source.getAttribute('src') !== vid1080) {
+                                    source.setAttribute('src', vid1080);
+                                    changed = true;
+                                } else return;
+                            }
+                        } else if (1920 < vW && vW <= 2560) {
+                            if (vid1440) {
+                                if (source.getAttribute('src') !== vid1440) {
+                                    source.setAttribute('src', vid1440);
+                                    changed = true;
+                                } else return;
+                            }
+                        } else if (2560 < vW) {
+                            if (vid2160) {
+                                if (source.getAttribute('src') !== vid2160) {
+                                    source.setAttribute('src', vid2160);
+                                    changed = true;
+                                } else return;
+                            } else if (vid1440) {
+                                if (source.getAttribute('src') !== vid1440) {
+                                    source.setAttribute('src', vid1440);
+                                    changed = true;
+                                } else return;
+                            }
+                        }
+
+                        if (changed) {
+                            video.pause();
+                            video.currentTime = 0;
+                            video.load();
+                            if (video.closest('.play')) {
+                                video.play();
+                            }
+                        } else {
+                            if (source.getAttribute('src') !== vidDefault) {
+                                video.pause();
+                                video.currentTime = 0;
+                                source.setAttribute('src', vidDefault);
+                                video.load();
+                            }
+                        }
+                    }
+
+                    function stopVideo(slide) {
+                        const video = slide.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                        slide.classList.remove('active');
+                        slide.classList.remove('play');
+                    }
+
+                    function playVideo(slide) {
+                        let video = slide.querySelector('video');
+                        if (video) {
+                            video.play();
+                        }
+                        slide.classList.add('play');
+                    }
+
+                    function coverflow(index) {
+                        let activeSlide = glideSlides[index];
+                        let nextSlide = activeSlide.nextElementSibling;
+                        let next2Slide;
+                        if (nextSlide) next2Slide = nextSlide.nextElementSibling;
+                        let next3Slide;
+                        if (next2Slide) next3Slide = next2Slide.nextElementSibling;
+
+                        activeSlide.classList.remove('glide__slide--previous');
+                        activeSlide.classList.remove('glide__slide--following');
+
+                        if (activeSlide.nextElementSibling) {
+                            activeSlide.nextElementSibling.classList.remove('glide__slide--previous');
+                            activeSlide.nextElementSibling.classList.remove('glide__slide--following');
+                            activeSlide.nextElementSibling.classList.add('glide__slide--following');
+                        }
+
+                        if (activeSlide.previousElementSibling) {
+                            activeSlide.previousElementSibling.classList.remove('glide__slide--previous');
+                            activeSlide.previousElementSibling.classList.remove('glide__slide--following');
+                            activeSlide.previousElementSibling.classList.add('glide__slide--previous');
+                        }
+
+                        if (perView === 1 || perView === 2 || perView === 3 || perView === 4) playVideo(activeSlide);
+                        if ((perView === 2 || perView === 3 || perView === 4) && nextSlide) playVideo(nextSlide);
+                        if ((perView === 3 || perView === 4) && next2Slide) playVideo(next2Slide);
+                        if (perView === 4 && next3Slide) playVideo(next3Slide);
+
+                        activeSlide.classList.add('active');
+
+                        let elms = activeSlide.parentNode.querySelectorAll('.glide__slide');
+                        elms.forEach(elm => {
+                            if (elm === activeSlide) return;
+                            if (perView === 2)
+                                if (elm === activeSlide || elm === nextSlide) return;
+                            if (perView === 3)
+                                if (elm === activeSlide || elm === nextSlide || elm === next2Slide) return;
+                            if (perView === 4)
+                                if (elm === activeSlide || elm === nextSlide || elm === next2Slide || elm === next3Slide) return;
+
+                            stopVideo(elm);
+                        });
+
+                        const slider = activeSlide.closest('.glide');
+                        slider.classList.add('running');
+                    }
+
+                    let myslider = document.querySelector("#rMzMJey");
+                    let _rMzMJey;
+                    if (myslider.classList.contains('coverflow')) {
+
+                        _rMzMJey = new Glide(myslider, {
+                            type: "carousel",
+                            autoplay: false,
+                            animationDuration: 1000,
+                            gap: 0,
+                            perView: 3,
+                            startAt: 2,
+                            hoverpause: false,
+                            arrow: true,
+                            dots: false,
+                            breakpoints: {
+                                575: {
+                                    perView: 1,
+                                    peek: 50
+                                },
+
+                                414: {
+                                    perView: 1,
+                                    peek: 40
+                                },
+
+                                360: {
+                                    perView: 1,
+                                    peek: 30
+                                }
+                            },
+                            // focusAt: "center",
+                        });
+
+                    } else {
+
+                        _rMzMJey = new Glide("#rMzMJey", {
+                            type: "carousel",
+                            autoplay: false,
+                            animationDuration: 1000,
+                            gap: 0,
+                            perView: 1,
+                            hoverpause: false,
+                            arrow: true,
+                            dots: false,
+                            breakpoints: {
+
+                                970: {
+                                    perView: 1,
+                                    gap: 0
+                                },
+                                1280: {
+                                    gap: 15
+                                }
+                            },
+                        });
+
+                    }
+
+                    _rMzMJey.on('mount.after', function() {
+                        coverflow(_rMzMJey.index, true);
+                    });
+
+                    _rMzMJey.on('run', function(event) {
+                        coverflow(_rMzMJey.index);
+                    });
+
+                    _rMzMJey.mount();
+
+                    const ap = 5000;
+                    if (ap) {
+                        const glideElement = rMzMJey;
+                        let isSliderRunning = false;
+                        const manageSliderVisibility = (entries) => {
+                            if (entries[0].isIntersecting) {
+                                if (!isSliderRunning) {
+                                    _rMzMJey.update({
+                                        autoplay: ap
+                                    });
+                                    isSliderRunning = true;
+                                }
+                            } else {
+                                if (isSliderRunning) {
+                                    _rMzMJey.update({
+                                        autoplay: false
+                                    });
+                                    isSliderRunning = false;
+                                }
+                            }
+                        }
+                        const observer = new IntersectionObserver(manageSliderVisibility, {
+                            threshold: 0.5
+                        });
+                        observer.observe(glideElement);
+                    }
+
+                });
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="is-section is-box box-space type-opensans is-section-auto last-box">
+    <div class="is-overlay" style="background-color: rgb(255, 255, 255);"></div>
+    <div class="is-boxes">
+        <div class="is-box-centered is-opacity-95">
+            <div class="is-container container" style="max-width: 1200px; width: 100%; padding: 40px 20px;">
+                <div class="row clearfix">
+                    <div class="column full">
+                        <p style="font-size: 18px;"></p>
+                        <div class="text-left leading-18">The <span class="font-semibold">UC Agriculture and Natural Resources</span> community stretches across the state of California and includes a network of local Cooperative Extension sites, thirteen statewide programs and institutes, and nine research and extension centers. By working and living among those we serve, ANR expands UC's reach to engage all people and communities in California, ensuring access to the UC system including those who may never set foot on a UC campus. Our innovative science-based solutions impact the people of California through applied research and education supporting sustainable, safe, and nutritious food production and delivery; economic success in a global economy; a sustainable, healthy, and productive environment; and science literacy and youth development programs.</div>
+                        <p></p>
+                        <div class="text-center"><a href="https://give.ucanr.edu/pages/home-2650#open_giving_form=true" style="display: inline-block; text-decoration: none; transition: 0.16s; border-style: solid; cursor: pointer; background-color: rgb(0, 95, 174); color: rgb(255, 255, 255); border-color: rgb(0, 95, 174); border-width: 2px; border-radius: 5px; padding: 13px 28px; line-height: 21px; font-weight: 400; font-size: 14px; letter-spacing: 3px;" target="_blank" title="" class="uppercase border-2 whitespace-nowrap flex justify-center items-center rounded-full" role="button">Make a Gift&nbsp;</a></div>
+                        <div class="display">
+                            <div class="spacer height-20"></div>
+                            <h1 style="color: rgb(0, 95, 174);" class="text-center">Select Program:</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---OTHERS--->
+<link data-name="contentstyle" data-class="type-opensans" href="/contentbox/public/assets/styles/type-opensans.css" rel="stylesheet">
+</div>
+
+
+
+
+
+
+    <script type="application/json" class="js-react-on-rails-component" data-component-name="Sections" data-dom-id="Sections-react-component-77a91fc7-b14c-4998-9aec-8198584640f9">{"sections":{"allIds":["6690453e17b62224726e9c57"],"byId":{"6690453e17b62224726e9c57":{"id":"6690453e17b62224726e9c57","name":"Main homepage program complex linkboxes","type":"ComplexLinkboxSection","use_new_design":false,"title":null,"complex_linkboxes":[{"id":"669045c817b62224726e9c58","link_text":"UC Agriculture and Natural Resources","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/669045c817b62224726e9c58/UC_Agriculture_and_Natural_Resources.png","new_tab":true,"target":"https://give.ucanr.edu/pages/agriculture-and-natural-resources-area-of-greatest-need"},{"id":"669045de380aab2460e587f2","link_text":"4-H Youth Development Program","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/669045de380aab2460e587f2/4-H_Youth_Development_Program.png","new_tab":true,"target":"https://give4h.ucanr.edu/pages/home-2651"},{"id":"6690474e380aab2467e583c4","link_text":"California Institute for Water Resources","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6690474e380aab2467e583c4/California_Institute_for_Water_Resources.png","new_tab":true,"target":"https://give.ucanr.edu/pages/california-institute-for-water-resources"},{"id":"6903dc7f687dccab9bd02a8e","link_text":"Community Nutrition \u0026 Health","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6903dc7f687dccab9bd02a8e/Community_Nutrition___Health.png","new_tab":false,"target":"https://give.ucanr.edu/pages/community-nutrition-and-health-1"},{"id":"6690473817b622246b6e980e","link_text":"Informatics \u0026 GIS","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6690473817b622246b6e980e/Informatics___GIS.png","new_tab":true,"target":"https://give.ucanr.edu/pages/informatics-and-geographic-information-systems"},{"id":"669046c2380aab2467e583c3","link_text":"Nutrition Policy Institute","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/669046c2380aab2467e583c3/Nutrition_Policy_Institute.png","new_tab":true,"target":"https://give.ucanr.edu/pages/nutrition-policy-institute"},{"id":"6903dc5d2c11e66cb8fb6bea","link_text":"UC ANR Fire Network","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6903dc5d2c11e66cb8fb6bea/UC_ANR_Fire_Network.png","new_tab":false,"target":"https://give.ucanr.edu/pages/uc-anr-fire-network"},{"id":"6903dc67fbf31ae3a9788e60","link_text":"UC ANR Innovate","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6903dc67fbf31ae3a9788e60/UC_ANR_Innovate.png","new_tab":false,"target":"https://give.ucanr.edu/pages/uc-anr-innovate"},{"id":"6903dc7103ce2a018fa75c1a","link_text":"UC ANR Policy Institute","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6903dc7103ce2a018fa75c1a/UC_ANR_Policy_Institute.png","new_tab":false,"target":"https://give.ucanr.edu/pages/uc-anr-policy-institute"},{"id":"6690463f17b62224696e96a8","link_text":"UC Cooperative Extension Offices","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6690463f17b62224696e96a8/UC_Cooperative_Extension.png","new_tab":false,"target":"https://give.ucanr.edu/pages/uc-cooperative-extension-offices"},{"id":"66b3c6afc7695e24619d9c34","link_text":"UC Environmental Stewards","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/66b3c6afc7695e24619d9c34/UC_Environmental_Stewards.png","new_tab":true,"target":"https://give.ucanr.edu/pages/environmental-stewards-program"},{"id":"6690466d17b622246b6e980d","link_text":"UC Integrated Pest Management","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6690466d17b622246b6e980d/UC_Integrated_Pest_Management.png","new_tab":true,"target":"https://give.ucanr.edu/pages/integrated-pest-management"},{"id":"669046d717b622247e6e986b","link_text":"UC Master Food Preservers","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/669046d717b622247e6e986b/UC_Master_Food_Preserver.png","new_tab":true,"target":"https://give.ucanr.edu/pages/master-food-preservers"},{"id":"66b3c44bd44010245b05efa8","link_text":"UC Master Gardener","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/66b3c44bd44010245b05efa8/UC_Master_Gardener.png","new_tab":true,"target":"https://give.ucanr.edu/pages/uc-master-gardener-program"},{"id":"669047c079ac56246c386f6e","link_text":"UC Organic Agriculture Institute","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/669047c079ac56246c386f6e/UC_Organic_Agriculture_Institute.png","new_tab":true,"target":"https://give.ucanr.edu/pages/organic-ag-institute"},{"id":"669046589ff532246dd1513d","link_text":"UC Research \u0026 Extension Centers","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/669046589ff532246dd1513d/UC_Research_and_Extension_Centers.png","new_tab":true,"target":"https://give.ucanr.edu/pages/research-and-extension-centers"},{"id":"6903dc77edd824a23b4affa9","link_text":"UC Small Farms Network","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/6903dc77edd824a23b4affa9/UC_Small_Farms_Network.png","new_tab":false,"target":"https://give.ucanr.edu/pages/uc-small-farms-network"},{"id":"669047739ff532246dd1513f","link_text":"UC Sustainable Agriculture Research \u0026 Education Program","img":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/complex_linkbox/img/669047739ff532246dd1513f/UC_Sustainable_Agriculture_Research___Education_Program.png","new_tab":true,"target":"https://give.ucanr.edu/pages/sustainable-agriculture-research-and-education-program"}]}}},"assets":{"countries":["United States","Canada","United Kingdom","Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia, Plurinational State of","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, The Democratic Republic of the","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See (Vatican City State)","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran, Islamic Republic of","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Democratic People's Republic of","Korea, Republic of","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia, Federated States of","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","North Macedonia","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela, Bolivarian Republic of","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"],"images":{"all_categories":"/images/all_categories.png","academy":"/images/academy.jpg","athletics":"/images/athletics.jpg","center_and_institutes":"/images/center_and_institutes.jpg","club_sports":"/images/athletics.jpg","graduate_school":"/images/academy.jpg","nd_international":"/images/abroad.jpg","ndaa_club":"/images/alumni.jpg","residence_hall":"/images/residence.jpg","special_interests":"/images/all_categories.png","student_experience":"/images/all_categories.png","student_group":"/images/students.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","cc_security":"/images/cc_security.png","like_plus":"/images/likeplus.png","vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png"},"authenticity_token":"v+BszkLgGfy8WZZwfDLXWKdxDdt51mMG9g1IGbkhzVY9iJeQCIH+veLUudPHzUAYJkZlRl83+JOXI9wIkc0nGA=="},"entity":{"id":"6646663b0d37d324845d1444","name":"University of California - Agriculture and Natural Resources","donation_modal_header":null,"select_category_copy":"Select a Category","campaign_categories":["Agriculture and Natural Resources (UC ANR)","California Institute for Water Resources","Community Nutrition and Health","Informatics and GIS","Nutrition Policy Institute","UC ANR Fire Network","UC ANR Innovate","UC ANR Policy Institute","UC Cooperative Extension","UC Environmental Stewards","UC Integrated Pest Management","UC Master Food Preserver","UC Master Gardener","UC Organic Agriculture Institute","UC Research and Extension Centers","UC Small Farms Network","UC Sustainable Agriculture Research and Education Program"],"giving_day_amount":50,"microsite_campaign":null,"features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"external_give_link":"https://givingday.ucanr.edu/pages/home-2720#open_giving_form=true","headlogo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/headlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","membership_index_banner":null,"host":"give.ucanr.edu","donation_address_required":true,"donation_phone_number_required":true,"minimum_giving_day_amount":5,"gift_confirmation_text":null,"paypal_merchant_id":null,"name_strip_tags":"University of California - Agriculture and Natural Resources","description":null,"favicon":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","thumb":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/thumb_UC_Agriculture_and_Natural_Resources__3___1_.png"}},"meta_tags":[],"footlogo":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png"},"footer_tagline":null,"facebook_url":"https://www.facebook.com/ucanr","twitter_url":"https://x.com/ucanr","instagram_url":"https://www.instagram.com/ucanr/","linkedin_url":"https://www.linkedin.com/school/ucanr/posts/?feedView=all","youtube_url":"https://www.youtube.com/user/ucanr","snapchat_url":null,"entity_urls":[],"copyright":null,"get_facebook_key":"815834321794088","membership_title":null,"membership_description":null,"membership_header_banner":{"url":null},"secondarycolor":"253,189,16","primarycolor":"0,95,174","donation_confirmation_text":null,"sharewizard_campaign_html_pending":null,"paypal_verified":false,"quick_give_enabled":false,"sharewizard_campaign_html_closed":null,"has_giving_form_confirmation_step":false,"min_donation_amount":1,"country":null,"available_locales":{"English":"en","Cymraeg":"cy","French":"fr","German":"de","Italian":"it","Portuguese":"pt","Spanish":"es"},"default_locale":"en","language":"English","currency_code":"USD","currency_symbol":"$","date_format":"M/D/YY","timezone":"America/Los_Angeles","processing_flat_fee":0.0001,"processing_percent":0.03,"stripe_publishable_key":null,"ein":null,"chariot_cid":null,"urls":[],"allow_braintree_subscriptions":false},"currentUser":null}</script>
+    <div id="Sections-react-component-77a91fc7-b14c-4998-9aec-8198584640f9"></div>
+    
+
+
+
+
+
+    <script type="application/json" class="js-react-on-rails-component" data-component-name="Sections" data-dom-id="Sections-react-component-59bb4f7f-6c34-4b07-a476-98b2839b2a5b">{"sections":{"allIds":["6646663f0d37d324845d144d"],"byId":{"6646663f0d37d324845d144d":{"id":"6646663f0d37d324845d144d","name":"EntityTemplateService","type":"DonorSection","use_new_design":false,"header":"Thank you to our supporters!","show_donation_amount":true}}},"assets":{"countries":["United States","Canada","United Kingdom","Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia, Plurinational State of","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, The Democratic Republic of the","Cook Islands","Costa Rica","Croatia","Cuba","Curaçao","Cyprus","Czechia","Côte d'Ivoire","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See (Vatican City State)","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran, Islamic Republic of","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea, Democratic People's Republic of","Korea, Republic of","Kuwait","Kyrgyzstan","Lao People's Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia, Federated States of","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","North Macedonia","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena, Ascension and Tristan da Cunha","Saint Kitts and Nevis","Saint Lucia","Saint Martin (French part)","Saint Pierre and Miquelon","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Sweden","Switzerland","Syrian Arab Republic","Taiwan","Tajikistan","Tanzania, United Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela, Bolivarian Republic of","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe","Åland Islands"],"images":{"all_categories":"/images/all_categories.png","academy":"/images/academy.jpg","athletics":"/images/athletics.jpg","center_and_institutes":"/images/center_and_institutes.jpg","club_sports":"/images/athletics.jpg","graduate_school":"/images/academy.jpg","nd_international":"/images/abroad.jpg","ndaa_club":"/images/alumni.jpg","residence_hall":"/images/residence.jpg","special_interests":"/images/all_categories.png","student_experience":"/images/all_categories.png","student_group":"/images/students.jpg","units":"/images/units.jpg","bottle_cap":"/images/bottlecap_logo.png","cc_security":"/images/cc_security.png","like_plus":"/images/likeplus.png","vote_box_white":"/images/vote-box-white.png","vote_box":"/images/vote-box.png"},"authenticity_token":"v+BszkLgGfy8WZZwfDLXWKdxDdt51mMG9g1IGbkhzVY9iJeQCIH+veLUudPHzUAYJkZlRl83+JOXI9wIkc0nGA=="},"entity":{"id":"6646663b0d37d324845d1444","name":"University of California - Agriculture and Natural Resources","donation_modal_header":null,"select_category_copy":"Select a Category","campaign_categories":["Agriculture and Natural Resources (UC ANR)","California Institute for Water Resources","Community Nutrition and Health","Informatics and GIS","Nutrition Policy Institute","UC ANR Fire Network","UC ANR Innovate","UC ANR Policy Institute","UC Cooperative Extension","UC Environmental Stewards","UC Integrated Pest Management","UC Master Food Preserver","UC Master Gardener","UC Organic Agriculture Institute","UC Research and Extension Centers","UC Small Farms Network","UC Sustainable Agriculture Research and Education Program"],"giving_day_amount":50,"microsite_campaign":null,"features_enabled":["challenges","donation_display_name_merge_tag","donation_wall_comments","double_donation","everyday_forms","gravyty_pay","matching_gifts_v2","subscriptions"],"external_give_link":"https://givingday.ucanr.edu/pages/home-2720#open_giving_form=true","headlogo":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/headlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","membership_index_banner":null,"host":"give.ucanr.edu","donation_address_required":true,"donation_phone_number_required":true,"minimum_giving_day_amount":5,"gift_confirmation_text":null,"paypal_merchant_id":null,"name_strip_tags":"University of California - Agriculture and Natural Resources","description":null,"favicon":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__3___1_.png","thumb":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/favicon/6646663b0d37d324845d1444/thumb_UC_Agriculture_and_Natural_Resources__3___1_.png"}},"meta_tags":[],"footlogo":{"url":"https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png"},"footer_tagline":null,"facebook_url":"https://www.facebook.com/ucanr","twitter_url":"https://x.com/ucanr","instagram_url":"https://www.instagram.com/ucanr/","linkedin_url":"https://www.linkedin.com/school/ucanr/posts/?feedView=all","youtube_url":"https://www.youtube.com/user/ucanr","snapchat_url":null,"entity_urls":[],"copyright":null,"get_facebook_key":"815834321794088","membership_title":null,"membership_description":null,"membership_header_banner":{"url":null},"secondarycolor":"253,189,16","primarycolor":"0,95,174","donation_confirmation_text":null,"sharewizard_campaign_html_pending":null,"paypal_verified":false,"quick_give_enabled":false,"sharewizard_campaign_html_closed":null,"has_giving_form_confirmation_step":false,"min_donation_amount":1,"country":null,"available_locales":{"English":"en","Cymraeg":"cy","French":"fr","German":"de","Italian":"it","Portuguese":"pt","Spanish":"es"},"default_locale":"en","language":"English","currency_code":"USD","currency_symbol":"$","date_format":"M/D/YY","timezone":"America/Los_Angeles","processing_flat_fee":0.0001,"processing_percent":0.03,"stripe_publishable_key":null,"ein":null,"chariot_cid":null,"urls":[],"allow_braintree_subscriptions":false},"currentUser":null}</script>
+    <div id="Sections-react-component-59bb4f7f-6c34-4b07-a476-98b2839b2a5b"></div>
+    
+
+
+<script>
+  var SECTIONS_INITIAL_DATA = {};
+</script>
+
+
+
+
+<footer class='entity navbar navbar-default' style='display: none;'>
+<div class='color-overlay'>
+<div class='container'>
+<div class='row text-center'>
+<p><img alt="University of California - Agriculture and Natural Resources Logo" src="https://gw-advance-prod-us-east-1-system.s3.amazonaws.com/uploads/entity/footlogo/6646663b0d37d324845d1444/UC_Agriculture_and_Natural_Resources__2___3__1.png" /></p>
+<p class='tagline'></p>
+<div class='divider-social'></div>
+<h5 class='social-tagline'>Connect With Us:</h5>
+<ul class='social-list'>
+<li>
+<a aria-label="Visit us on Facebook" class="footer-link" target="_blank" alt="Visit us on Facebook" href="https://www.facebook.com/ucanr"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-facebook'></i>
+</span>
+</a></li>
+<li>
+<a aria-label="Visit us on Twitter" class="footer-link" target="_blank" alt="Visit our Twitter" href="https://x.com/ucanr"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-x-twitter'></i>
+</span>
+</a></li>
+<li>
+<a aria-label="Visit us on Instagram" class="footer-link" target="_blank" alt="Visit us on Instagram" href="https://www.instagram.com/ucanr/"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-instagram'></i>
+</span>
+</a></li>
+<li>
+<a aria-label="Visit us on LinkedIn" class="footer-link" target="_blank" alt="Visit us on LinkedIn" href="https://www.linkedin.com/school/ucanr/posts/?feedView=all"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-linkedin'></i>
+</span>
+</a></li>
+<li>
+<a aria-label="Visit us on Youtube" class="footer-link" target="_blank" alt="Visit us on Youtube" href="https://www.youtube.com/user/ucanr"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x footer-nav-link'></i>
+<i class='fa fa-brands fa-youtube'></i>
+</span>
+</a></li>
+</ul>
+<div class='divider-social'></div>
+<div class='powered-by-footer'>
+<span>Powered by:</span>
+<a target="_blank" href="https://gravyty.com/advance/"><img alt="Gravyty logo" class="powered-by-logo" src="https://gw-advance-prod-us-east-1.s3.amazonaws.com/grad_advance/gravyty_logo_white_32.png" /></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+</main>
+
+<script>
+  // browser support
+  var $buoop = {
+    vs:{i:10,f:-4,o:-4,s:10,c:-8},
+    api:4,
+    reminder: 48
+  };
+  function $buo_f(){
+   var e = document.createElement("script");
+   e.src = "//browser-update.org/update.min.js";
+   document.body.appendChild(e);
+  };
+  try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+  catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+<script crossorigin='anonymous' integrity='sha384-N9wh46v7v7OEvT0UTi0W+atRe90iigAz+dTJfM+gC0LhPYuyiHk7Pa0sSturY8hS' src='https://assets.prod.us-east-1.advance.graduway.com/javascripts/spreedly-iframe-1.136.min.js' type='text/javascript'></script>
+<script crossorigin='anonymous' integrity='sha384-k62isOxi8JG4rmOzplPz4PrUZJsaPsd3qccKhrtWhcl7M7rmaAEeyTCfCA8iBI7X' src='https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js'></script>
+
+  <script src="https://assets.prod.us-east-1.advance.graduway.com/packs/sections-bundle-a4e5181067f07c3a991c.js" crossorigin="anonymous" integrity="sha384-wKOfg6QEtCWWQ0DV70sCOBaXgMowPfqYbUAxIFmmQxEj/aHXFTvARoEHEs+ac79/"></script>
+
+<script>
+  $(window).on('load', function() {
+    setTimeout(function(){ $("footer.entity").show(); }, 500);
+  });
+</script>
+
+
+
+</body>
+<script src='/contentbox/public/box/box-flex.js'></script>
+<link href='/contentbox/public/box/box-flex.css' rel='stylesheet'>
+<link href='/contentbox/public/assets/scripts/glide/css/glide.core.css' rel='stylesheet'>
+<link href='/contentbox/public/assets/scripts/glide/css/glide.theme.css' rel='stylesheet'>
+<script src='/contentbox/public/assets/scripts/glide/glide.js'></script>
+</head>
+</html>

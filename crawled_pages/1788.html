@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>On Demand | UCI Health</title>
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./content/site.css?_v=1.0.0.182" rel="stylesheet">
+    <link href="./content/siteaddtl.css?_v=1.0.0.182" rel="stylesheet">
+    <link href="./content/fontawesome.min.css" rel="stylesheet">
+    <link href="content/regular.min.css" rel="stylesheet">
+    <link href="./content/solid.min.css" rel="stylesheet">
+    <link href="./content/light.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="sticky-top">
+        <div class="container navbar-brand-wrapper">
+            <a class="navbar-brand" href="/"><img src="./images/UCI-Health-logo-SVG.svg" alt="UCI Health logo SVG" class="UCI-Health-logo"></a>
+            <div class="pin-location-wrapper float-end">
+                <i class="fas fa-map-marker-alt float-start pin-location"></i>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-wrapper" aria-label="navbar">
+
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                    In this section<i class="fal fa-plus fs-3 float-end"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExample03">
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" viewport="carefinder" aria-current="page">Care <br>Finder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" viewport="videovisit">Video <br>Visit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" viewport="inhome">At-<br>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" viewport="inperson">In-<br>Person</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" viewport="otherservices">Other <br>Services</a>
+                        </li>
+                        <li class="nav-item tab-Conditions-treated">
+                            <a class="nav-link" viewport="conditionstreated">Conditions <br>Treated</a>
+                        </li>
+                        <li class="nav-item tab-compare">
+                            <a class="nav-link tab-compare" viewport="compare"><br>Compare</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container body-content hollow-top-layout">
+        <img src="images/loader.gif" alt="loading indicator" id="loading-indicator" />
+        <div id="appversion" hidden>?_v=1.0.0.182</div>
+        <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item active" aria-current="page">Care Finder</li>
+            </ol>
+        </nav>
+        <div class="viewport" name="carefinder">
+            <section class="begin breadcrumbhost">
+                <div class="row search_diplay_section">
+                    <h1>Not feeling well?</h1>
+                    <div class="col-12">
+                        <section class="begin">
+                            <div class="interactive-form">
+                                <span class="begin-question-wrapper">
+                                    <input type="search" value="" id="search-text-box" placeholder="| Let us know how we can help." class="form-control begin-question" required="required" title="Let us know how we can help.">
+                                    <span class="req-placeholder">As you start typing, we'll search for symptoms that match your concern. If you need a specialist, try our <a href="https://www.ucihealth.org/find-a-doctor" target="_blank">provider directory</a> or give us a call.</span>
+                                </span>
+                                <ul class="keywords keywords-square symptoms_found" data-templateid="symptoms_template">
+                                </ul>
+                                <h3 id="workflowmessage_noresults" style="display:none;">Can't find what you're looking for? Try our provider search tool to find a specialist or give us a call at 714-456-7890 and we'll help you find the care you need.</h3>
+                            </div>                          
+                        </section>
+                    </div>
+                </div>
+                <h3 id="workflowmessage_noneoftheabove" style="display:none;">Looking for a specialist? Try searching for a <a href="https://www.ucihealth.org/find-a-doctor">provider</a> in our directory or check out our <a href="https://www.ucihealth.org/medical-services"> other services</a>.</h3>
+                <h1 id="workflowmessage" style="display:none;">Are you experiencing of these conditions?</h1>
+                <div class="accordion" data-templateid="condition_template">
+                </div>
+                <div class="row" id="careoptionsdisplay" style="display:none;">
+                    <div class="col-12 col-lg-10 col-xl-11 col-xl-c8p9">
+                        <div class="row row-cols-1 row-cols-md-2 g-4 options" id="careoptions">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-xl-1 col-xl-c1p1 sidebar service-status">
+                        <section class="btn-secondary position-relative hoverdark startover">
+                            <h4>Start over</h4>
+                            <a class="text-white stretched-link"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+                        </section>
+                        <section class="help-me-choose position-relative hoverdark helpmechoose">
+                            <h4>Help me choose</h4>
+                            <a class="text-white stretched-link"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+                        </section>
+                    </div>
+                </div>
+                <div id="userselections">
+                </div>
+            </section>
+        </div>
+        <div class="viewport" name="videovisit" style="display:none;">
+            <section class="servicedetails othersections mainservice" data-careoptionid="1">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-7 col-xl-c5p8 serviceinfo servicepanel" style="display:none;">
+                        <section class="breadcrumbhost">
+                            <p class="h4">$(CareInformationHeader)</p>
+                            <h1>$(Title)</h1>
+                            <p>$(CareInformation)</p>
+                            <div class="openclosed">
+                            </div>
+                            <div class="schedule">
+                            </div>
+                            <hr />
+                            <p>$(CareInformationAdditional)</p>
+                            <div class="col-12 bg-blue text-center">Related Services</div>
+                            <div class="row col-grid two-col-grid">
+                                <div class="col-12 col-lg-6 relatedservices" data-templateid="pharmacytemplate">
+                                </div>
+                                <div class="col-12 col-lg-6 relatedservices" data-templateid="getlabservicestemplate">
+                                </div>
+                            </div>
+                            <P>Device Requirements</P>
+                            <p>You can download the UCI Health app on the App Store (iOS) or from Google Play (Android). If you already have the app, please verify that you are on the latest version.</p>
+                            <p>
+                                <a href="https://apps.apple.com/us/app/my-uci-health/id1371776512" target="_blank"><img src="images/icon-apple-store.png" alt="Apple store"></a>&nbsp;&nbsp;
+                                <a href="https://play.google.com/store/apps/details?id=edu.uci.health.MyUCIHealth1" target="_blank"><img height="40" width="120" src="images/icon-googleplay-store.png" alt="Google Play store"></a>
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-4 col-xl-4 col-xl-c3p1 servicepanel">
+                        <section>
+                            <h2 class="serviceinfo" style="display:none;">$(ConditionsTreatedMessage)</h2>
+                            <div class="conditions_treated_list" data-templateid="conditionstreatedtemplate" data-conditionstemplateid="viewallconditionstreatedtemplate">
+                            </div>
+                        </section>
+                        <div class="col-12 bg-blue text-center btnviewallconditions hoverdark">View All conditions treated<i class="fal fa-plus fs-3 float-end"></i></div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-xl-1 col-xl-c1p1 sidebar right-sidebar careoption_tiles servicepanel service-status" data-careoptionid="1">
+                        <section class="wait-time" data-templateid="box1template">
+                        </section>
+                        <section class="cost" data-templateid="box2template">
+                        </section>
+                        <section class="video-visit hoverdark position-relative" data-templateid="videovisittemplate">
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="viewport" name="inhome" style="display:none;">
+            <section class="servicedetails othersections mainservice" data-careoptionid="2">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-7 col-xl-c5p8 serviceinfo servicepanel" style="display:none;">
+                        <section class="breadcrumbhost">
+                            <h4>$(CareInformationHeader)</h4>
+                            <h1>$(Title)</h1>
+                            <p>$(CareInformation)</p>
+                            <div class="openclosed">
+                            </div>
+                            <div class="schedule">
+                            </div>
+                            <hr />
+                            <p>$(CareInformationAdditional)</p>
+                            <div class="col-12 bg-blue text-center">Related Services</div>
+                            <div class="row col-grid two-col-grid">
+                                <div class="col-12 col-lg-6 relatedservices" data-templateid="pharmacytemplate">
+                                </div>
+                                <div class="col-12 col-lg-6 relatedservices" data-templateid="getlabservicestemplate">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-4 col-xl-4 col-xl-c3p1 servicepanel">
+                        <section>
+                            <h2 class="serviceinfo" style="display:none;">$(ConditionsTreatedMessage)</h2>
+                            <div class="conditions_treated_list" data-templateid="conditionstreatedtemplate" data-conditionstemplateid="viewallconditionstreatedtemplate">
+                            </div>
+                        </section>
+                        <div class="col-12 bg-blue text-center btnviewallconditions hoverdark">View All conditions treated<i class="fal fa-plus fs-3 float-end"></i></div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-xl-1 col-xl-c1p1 sidebar right-sidebar careoption_tiles servicepanel service-status" data-careoptionid="2">
+                        <section class="wait-time" data-templateid="box1template">
+                        </section>
+                        <section class="cost" data-templateid="box2template">
+                        </section>
+                        <section class="video-visit hoverdark position-relative" data-templateid="inhometemplate">
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="viewport" name="inperson" style="display:none;">
+            <section class="servicedetails othersections mainservice" data-careoptionid="3">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-7 col-xl-c5p8 serviceinfo servicepanel" style="display:none;">
+                        <section class="breadcrumbhost">
+                            <h4>$(CareInformationHeader)</h4>
+                            <h1>$(Title)</h1>
+                            <p>$(CareInformation)</p>
+                            <div class="openclosed">
+                            </div>
+                            <div class="schedule">
+                            </div>
+                            <hr />
+                            <p>$(CareInformationAdditional)</p>
+                            <div class="col-12 bg-blue text-center">Related Services</div>
+                            <div class="row col-grid two-col-grid">
+                                <div class="col-12 col-lg-6 relatedservices" data-templateid="pharmacytemplate">
+                                </div>
+                                <div class="col-12 col-lg-6 relatedservices" data-templateid="accesswalkincaretemplate">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-4 col-xl-4 col-xl-c3p1 servicepanel">
+                        <section>
+                            <h2 class="serviceinfo" style="display:none;">$(ConditionsTreatedMessage)</h2>
+                            <div class="conditions_treated_list" data-templateid="conditionstreatedtemplate" data-conditionstemplateid="viewallconditionstreatedtemplate">
+                            </div>
+                        </section>
+                        <div class="col-12 bg-blue text-center btnviewallconditions hoverdark">View All conditions treated<i class="fal fa-plus fs-3 float-end"></i></div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-xl-1 col-xl-c1p1 sidebar right-sidebar careoption_tiles servicepanel service-status" data-careoptionid="3">
+                        <section class="wait-time" data-templateid="box1template">
+                        </section>
+                        <section class="cost" data-templateid="box2template">
+                        </section>
+                        <section class="video-visit hoverdark position-relative" data-templateid="inpersontemplate">
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="viewport" name="otherservices" style="display:none;">
+            <section class="servicedetails othersections mainservice" data-careoptionid="4">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-7 col-xl-c5p8 serviceinfo servicepanel" style="display:none;">
+                        <section class="breadcrumbhost">
+                            <h1>$(CareInformationHeader)</h1>
+                            <h3>$(Description)</h3>
+                            <p>$(CareInformation)</p>
+                            <hr />
+                            <div class="col-12 bg-blue text-center">Related Services</div>
+                            <div class="row col-grid two-col-grid">
+                                <div class="col-12 col-lg-6 relatedservices" data-templateid="pharmacytemplate">
+                                </div>
+                                <div class="col-12 col-lg-6 relatedservices" data-templateid="getlabservicestemplate">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-4 col-xl-4 col-xl-c3p1 servicepanel">
+                        <section id="nearestlocation" data-templateid="nearestlocationtemplate">
+                            <h3>Nearest UCI Health location</h3>
+                            <h4><a class="nolocation">Update your location</a></h4>
+                        </section>
+                        <section>
+                            <h3 class="serviceinfo">Featured UCI Health Medical Services</h3>
+                            <div class="" data-templateid="conditionstreatedtemplate" data-conditionstemplateid="viewallconditionstreatedtemplate">
+                                <h5><a href="https://www.ucihealth.org/medical-services/cancer-center" target="_blank">Cancer Care</a></h5>
+                                <h5><a href="https://www.ucihealth.org/medical-services/primary-care" target="_blank">Primary Care</a></h5>
+                                <h5><a href="https://www.ucihealth.org/medical-services/digestive-health-institute" target="_blank">Digestive Diseases</a></h5>
+                                <h5><a href="https://www.ucihealth.org/medical-services/cardiology" target="_blank">Heart Health</a></h5>
+                                <h5><a href="https://www.ucihealth.org/medical-services/surgery" target="_blank">Surgery</a></h5>
+                                <h5><a href="https://www.ucihealth.org/medical-services/neurology" target="_blank">Neurology</a></h5>
+                                <h5><a href="https://www.ucihealth.org/medical-services/womens-health" target="_blank">Women's Health</a></h5>
+                            </div>
+                        </section>
+                        <a href="https://www.ucihealth.org/medical-services" target="_blank" class="bg-blue text-center hoverdark">View All UCI Health Medical Services<i class="fal fa-plus fs-3 float-end"></i></a>
+                    </div>
+                    <div class="col-12 col-lg-2 col-xl-1 col-xl-c1p1 sidebar right-sidebar servicepanel" data-careoptionid="4">
+                        <section class="video-visit appconfigurabletemplate hoverdark position-relative" data-templateid="findalocation">
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="viewport" name="conditionstreated" style="display:none;">
+            <section class="servicedetails othersections" data-careoptionid="5">
+                <div class="row allgray">
+                    <div class="col-12 col-lg-10 col-xl-11 col-xl-c8p9 breadcrumbhost serviceinfo" style="display:none;">
+                        <h1>$(CareInformationHeader)</h1>
+                        <p>$(CareInformation)</p>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="conditions_treated_display col-12 col-lg-10 col-xl-11 col-xl-c8p9">
+                        <div class="row ct-grid-head">
+                            <div class="col-12 col-lg-3">                                
+                            </div>
+                            <div class="col-12 col-lg-3 serviceheader position-relative" data-targetviewport="videovisit" data-templateid="careoptionheader" data-careoptionid="1">
+                            </div>
+                            <div class="col-12 col-lg-3 serviceheader position-relative" data-targetviewport="inhome" data-templateid="careoptionheader" data-careoptionid="2">
+                            </div>
+                            <div class="col-12 col-lg-3 serviceheader position-relative" data-targetviewport="inperson" data-templateid="careoptionheader" data-careoptionid="3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="viewport" name="compare" style="display:none;">
+            <section class="servicedetails othersections" data-careoptionid="7">
+                <div class="row allgray">
+                    <div class="col-12 col-lg-10 col-xl-11 col-xl-c8p9 breadcrumbhost serviceinfo" style="display:none;">
+                        <h1>$(CareInformationHeader)</h1>
+                        <p>$(CareInformation)</p>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="compare_services_display col-12 col-lg-10 col-xl-11 col-xl-c8p9 ct-grid">
+                        <div class="ct-grid-group ct-grid-group1">
+                            <div class="row ct-grid-head">
+                                <div class="col-12 col-lg-3">
+                                    <h4 id="availabilitycheck"></h4>
+                                </div>
+                                <div class="col-12 col-lg-3 serviceheader position-relative" data-targetviewport="videovisit" data-templateid="careoptionheader" data-careoptionid="1">
+                                </div>
+                                <div class="col-12 col-lg-3 serviceheader position-relative" data-targetviewport="inhome" data-templateid="careoptionheader" data-careoptionid="2">
+                                </div>
+                                <div class="col-12 col-lg-3 serviceheader position-relative" data-targetviewport="inperson" data-templateid="careoptionheader" data-careoptionid="3">
+                                </div>
+                            </div>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>Is it available now?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 openclosed" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 openclosed" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 schedule" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>What are the hours?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 schedule" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a href="" class="stretched-link conditionstreated_servicelink" data-targetviewport="videovisit" title="$(Title)"><i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 schedule" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 schedule" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>How long until I get care?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="careoptionservicewait" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a href="" class="stretched-link conditionstreated_servicelink" data-targetviewport="videovisit" title="$(Title)"><i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="careoptionservicewait" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="careoptionservicewait" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ct-grid-group ct-grid-group2">
+                            <h2>Care</h2>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>Who provides the care?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparecareprovidertemplate" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparecareprovidertemplate" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparecareprovidertemplate" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>How is care provided?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparehowcareisprovidedtemplate" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparehowcareisprovidedtemplate" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparehowcareisprovidedtemplate" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>New or existing patients?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareneworexistingpatientstemplate" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareneworexistingpatientstemplate" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareneworexistingpatientstemplate" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>Age requirements?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareagerequirementtemplate" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareagerequirementtemplate" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareagerequirementtemplate" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ct-grid-group ct-grid-group3">
+                            <h2>Cost</h2>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>How much is each visit?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="careoptionservicecost" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="careoptionservicecost" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="careoptionservicecost" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>Is insurance required?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareinsurancerequiredtemplate" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareinsurancerequiredtemplate" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="compareinsurancerequiredtemplate" data-careoptionid="3">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row ct-grid-body">
+                                <div class="col-12 col-lg-3">
+                                    <h4>How can I pay?</h4>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparepaymentoptionstemplate" data-careoptionid="1">
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparepaymentoptionstemplate" data-careoptionid="2">
+                                    <span class="link-learn-more mobile-view mobile-full-width">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails" data-templateid="comparepaymentoptionstemplate" data-careoptionid="3">     
+                                    <span class="link-learn-more mobile-view">
+                                        $(Title)
+                                        <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(Title)"> <i class="fas fa-angle-right"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="ct-grid-group ct-grid-group4">
+                            <div class="row ct-grid-footer">
+                                <div class="col-12 col-lg-3">
+                                    <!--<h5></h5>-->
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails position-relative" data-templateid="videovisit_large_template" data-careoptionid="1">
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails position-relative" data-templateid="inhome_large_template" data-careoptionid="2">
+                                </div>
+                                <div class="col-12 col-lg-3 careoptiondetails position-relative" data-templateid="inperson_large_template" data-careoptionid="3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="viewport" name="epicscheduling" style="display:none;">
+            <section class="servicedetails othersections" data-careoptionid="6">
+                <div class="row allgray">
+                    <div class="col-12 col-lg-10 col-xl-11 col-xl-c8p9 breadcrumbhost serviceinfo" style="display:none;">
+                        <h1>$(CareInformationHeader)</h1>
+                        <p>$(CareInformation)</p>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <div class="row breadcrumbhost">
+                    <div class="col">
+                        <!--<h1>Let's help you find an appointment.</h1>
+                        <p>Please choose an appointment with one of our available primary care providers.</p>-->
+                        <div class="epic_scheduling">
+                            <div id="openschedulecontainer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="stagingarea" style="display:none;">
+        </div>
+    </div>
+    <footer ucihinclude="./includes/footer.html">
+    </footer>
+    <!-- Box 1 Care Option template. -->
+    <template id="box1template">
+        <h6>$(WaitTimeDesc)</h6>
+        <h3>$(WaitTime)</h3>
+        <small>$(WaitDuration)</small>
+    </template>
+
+    <!-- Box 2 Care Option template. -->
+    <template id="box2template">
+        <h6>$(CostPrefix)</h6>
+        <h3>$(Cost)</h3>
+        <small>$(CostSuffix)</small>
+    </template>
+
+    <!-- Video visit template. -->
+    <template id="videovisittemplate">
+        <h6>$(ActionText)</h6>
+        <a href="$(appconfig.videovisitsurl)" class="text-white stretched-link cta_button" data-cta_purpose="videovisit" target="_blank" title="$(ActionText)"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+    </template>
+    <template id="videovisit_large_template">
+        <h3>$(ActionText)</h3>
+        <a href="$(appconfig.videovisitsurl)" class="text-white stretched-link cta_button" data-cta_purpose="videovisit" target="_blank" title="$(ActionText)"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+    </template>
+
+    <!-- In Home visit template. -->
+    <template id="inhometemplate">
+        <h6>$(ActionText)</h6>
+        <a href="$(appconfig.inhomevisiturl)" class="text-white stretched-link cta_button" data-cta_purpose="inhomevisit" target="_blank" title="$(ActionText)"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+    </template>
+    <template id="inhome_large_template">
+        <h3>$(ActionText)</h3>
+        <a href="$(appconfig.inhomevisiturl)" class="text-white stretched-link cta_button" data-cta_purpose="inhomevisit" target="_blank" title="$(ActionText)"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+    </template>
+
+    <!-- In Person visit template. -->
+    <template id="inpersontemplate">
+        <h6>$(ActionText)</h6>
+        <a class="text-white openscheduleforcareoption stretched-link" data-cta_purpose="inpersonvisit"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+    </template>
+
+    <template id="inperson_large_template">
+        <h3>$(ActionText)</h3>
+        <a class="text-white openscheduleforcareoption stretched-link" data-cta_purpose="inpersonvisit"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+    </template>
+
+    <template id="findalocation">
+        <h6>Find A Location</h6>
+        <a href="$(appconfig.ucilocationsurl)" class="text-white stretched-link" target="_blank" title="Find A Location"><i class="fal fa-arrow-down visit-arrow float-end"></i></a>
+    </template>
+
+    <!-- Care Finder Service template. -->
+    <template id="carefindertemplate">
+        <div class="col">
+            <div class="card h-100" data-targetid="$(ID)">
+                <div class="card-body row">
+                    <div class="col-12 col-lg-9 content">
+                        <h2>$(Title)</h2>
+                        <p>$(CareInformation)</p>
+                        <div class="openclosed">
+                        </div>
+                        <div class="schedule">
+                        </div>
+                        <!--<hr />-->
+                        <!--<p>$(CareInformationAdditional)</p>-->
+                        <a class="btn btn-secondary learn-more-link">Learn more<i class="fal fa-plus fs-3 float-end"></i></a>
+                    </div>
+                    <div class="col-12 col-lg-3 service-status">
+                        <section class="wait-time">
+                            <h6>$(WaitTimeDesc)</h6>
+                            <h3>$(WaitTime)</h3>
+                            <small>$(WaitDuration)</small>
+                        </section>
+                        <section class="cost">
+                            <h6>$(CostPrefix)</h6>
+                            <h3>$(Cost)</h3>
+                            <small>$(CostSuffix)</small>
+                        </section>
+                        <section class="video-visit template_per_careoption position-relative hoverdark" data-templateid="">
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="conditionstreatedtemplate">
+        <h5>$(Title)</h5>
+    </template>
+
+    <template id="viewallconditionstreatedtemplate">
+
+    </template>
+
+    <template id="pharmacytemplate">
+        <p class="h3">UCI Health Pharmacy</p>
+        <p>Get your prescription same day or mailed to your home.</p>
+        <p><i class="fas fa-plus-circle fs-4"></i> <a href="https://www.ucihealth.org/patients-visitors/pharmacy" target="_blank">Learn more about the UCI Health Pharmacy</a></p>
+    </template>
+
+    <template id="getlabservicestemplate">
+        <p class="h3">Get Lab Services</p>
+        <p>UCI Health pathology services provides high-quality laboratory services to meet the changing needs within the community, with 24/7 availability to one of our more than 250 technical experts and client services specialists.</p>
+        <p><i class="fas fa-watch fs-4"></i> <a href="https://www.ucihealth.org/medical-services/pathology/laboratory-locations" target="_blank">Find a location</a></p>
+    </template>
+
+    <template id="accesswalkincaretemplate">
+        <p class="h3">Access Walk-In Care</p>
+        <p>No appointment is needed for our walk-in, after-hours and weekend care locations throughout Orange County, where our highly trained nurse practitioners provide immediate care.</p>
+        <p><i class="fas fa-plus-circle fs-4"></i> <a href="https://www.ucihealth.org/medical-services/walk-in-care" target="_blank">Find a walk-in location</a></p>
+    </template>
+
+    <template id="careoptionheader">
+        <p class="h3"><a class="stretched-link">$(Title)<i class="fal fa-plus fs-3 float-end mt-1"></i></a></p>
+        $(Description)
+    </template>
+
+    <template id="careoptionservicewait">
+        <span>$(WaitTime) $(WaitDuration)</span>
+    </template>
+
+    <template id="careoptionservicecost">
+        <span>$(Cost) $(CostSuffix)</span>
+    </template>
+
+    <template id="nearestlocationtemplate">
+        <small class="text-primary">Nearest UCI Health location</small>
+        <h3>$(Title)</h3>
+        <p>
+            $(Address1)<br />
+            $(City), $(State) $(ZipCode)
+        </p>
+        <p><a href="$(DirectionsURL.Url)" target="_blank">$(responseDistance.distance.text) - Get Directions</a></p>
+        <h6>$(responseDistance.duration.text) - driving time</h6>
+    </template>
+
+    <template id="conditionstreatedrowtemplate">
+        <div class="row ct-grid-body">
+            <div class="col-12 col-lg-3 condition_title" data-templateid="conditionstreatednametemplate">
+            </div>
+            <div class="col-12 col-lg-3" data-availabletemplateid="conditions_treated_startvideo_template" data-notavailabletemplateid="conditions_treated_notavailable_template" data-careoptionid="1">
+            </div>
+            <div class="col-12 col-lg-3" data-availabletemplateid="conditions_treated_startathome_template" data-notavailabletemplateid="conditions_treated_notavailable_template" data-careoptionid="2">
+            </div>
+            <div class="col-12 col-lg-3" data-availabletemplateid="conditions_treated_startatclinic_template" data-notavailabletemplateid="conditions_treated_notavailable_template" data-careoptionid="3">
+            </div>
+        </div>
+    </template>
+
+    <template id="conditionstreatednametemplate">
+        <h5>$(Title)</h5>
+    </template>
+
+    <template id="conditions_treated_notavailable_template">
+        <span class="icon-availability"><i class="fas fa-times fs-3"></i></span>
+        <span class="me-3">Not available</span>
+    </template>
+
+    <template id="conditions_treated_startvideo_template">
+        <div class="link-learn-more mobile-view">$(CareOptionTitle) <a class="stretched-link conditionstreated_servicelink" data-targetviewport="videovisit" title="$(CareOptionTitle)"> <i class="fas fa-angle-right"></i></a></div>
+        <div class="available">
+            <span class="icon-availability"><i class="fas fa-check fs-4 text-success"></i></span>
+            <span class="me-3">$(ActionText)</span>
+            <a href="$(appconfig.videovisitsurl)" class="stretched-link conditionstreated_cta_action" data-cta_purpose="videovisit" target="_blank" title="$(ActionText)"></a>
+        </div>
+    </template>
+
+    <template id="conditions_treated_startathome_template">
+        <div class="link-learn-more mobile-view">$(CareOptionTitle) <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inhome" title="$(CareOptionTitle)"> <i class="fas fa-angle-right"></i></a></div>
+        <div class="available">
+            <span class="icon-availability"><i class="fas fa-check fs-4 text-success"></i></span>
+            <span class="me-3">$(ActionText)</span>
+            <a href="$(appconfig.inhomevisiturl)" class="stretched-link conditionstreated_cta_action" data-cta_purpose="inhomevisit" target="_blank" title="$(ActionText)"></a>
+        </div>
+    </template>
+
+    <template id="conditions_treated_startatclinic_template">
+        <div class="link-learn-more mobile-view">$(CareOptionTitle) <a class="stretched-link conditionstreated_servicelink" data-targetviewport="inperson" title="$(CareOptionTitle)"> <i class="fas fa-angle-right"></i></a></div>
+        <div class="available">
+            <span class="icon-availability"><i class="fas fa-check fs-4 text-success"></i></span>
+            <span class="me-3">$(ActionText)</span>
+            <a class="openschedule stretched-link" data-cta_purpose="inpersonvisit"></a>
+        </div>
+    </template>
+
+    <template id="conditionselected">
+        <div class="alert alert-darkgray condition_selection" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+            <small class="extra-small">Condition</small>$(Title)
+        </div>
+    </template>
+
+    <template id="symptop_search">
+        <div class="alert alert-darkgray symptom_lookup" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+            <small class="extra-small">Symptom</small><div class="symptom_selection">$(Search)</div>
+        </div>
+    </template>
+
+    <template id="condition_template">
+        <a id="$(Id)" data-condition_name="$(Title)">
+            <div class="card">
+                <div class="card-body">
+                    <span class="mb-0">
+                        $(Title)
+                    </span>
+                </div>
+            </div>
+        </a>
+    </template>
+
+    <template id="symptoms_template">
+        <li><button id="$(ID)" data-symptom_name="$(Symptom)">$(Symptom)</button></li>
+    </template>
+
+    <template id="comparecareprovidertemplate">
+        <span>$(CompareWhoProvidesCare)</span>
+    </template>
+
+    <template id="comparehowcareisprovidedtemplate">
+        <span>$(CompareHowIsCareProvided)</span>
+    </template>
+
+    <template id="compareagerequirementtemplate">
+        <span>$(CompareAgeRequirements)</span>
+    </template>
+
+    <template id="compareinsurancerequiredtemplate">
+        <span>$(CompareInsuranceRequired)</span>
+    </template>
+
+    <template id="comparepaymentoptionstemplate">
+        <span>$(ComparePaymentInfo)</span>
+    </template>
+
+    <template id="compareneworexistingpatientstemplate">
+        <span>$(CompareNewOrExistingPatients)</span>
+    </template>
+
+    <template id="seeallconditionstemplate">
+        <a class="seeallconditions">See All Conditions</a>
+    </template>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./scripts/app.core.js?_v=1.0.0.182"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://my.ucihealth.org/UCI/Scripts/lib/Widget/widget_sdk.js?_v=1.0.0.182"></script>
+    <script src="./scripts/moment.min.js"></script>
+    <script src="./scripts/moment-timezone-with-data.js"></script>
+    <script src="./scripts/open-hours.js" charset="utf-8"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMzBsYbSQl3sZggW7Ylb2PKIpxpFg7rNs&callback=initMap" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+    <script src="./scripts/commonfuncs.js?_v=1.0.0.182"></script>
+    <script src="./scripts/maincontroller.js?_v=1.0.0.182"></script>
+    <script src="./scripts/mainview.js?_v=1.0.0.182"></script>
+    <script type="text/javascript">
+        var _mainController;
+        var appbasepath = 'https://' + window.location.host;
+        jQuery(document).ready(function () {
+            _mainController = new maincontroller({
+                appbasepath: appbasepath
+            });
+            _mainController.onLoad();
+        });
+
+    </script>
+</body>
+</html>

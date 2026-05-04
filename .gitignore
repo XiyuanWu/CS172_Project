@@ -23,9 +23,7 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Crawler output (raw HTML can easily exceed 500MB)
-crawled_pages/*
-!crawled_pages/.gitkeep
+# Crawler output: tracked for course submission (re-ignore locally if repo gets too large)
 
 # Logs
 *.log

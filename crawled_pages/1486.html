@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<script>var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://analytics.llnl.gov/" : "http://analytics.llnl.gov/");_paq.push(["setSiteId", "119"]);_paq.push(["setTrackerUrl", u+"matomo.php"]);_paq.push(["setDoNotTrack", 1]);pingUserType('https://osc.llnl.gov/ping/');
+
+function pingUserType(url, callbackFn) {
+    /**
+     * pings the specified URL, and stores last result in localStorage, if possible
+     * if localStorage cache is marked as an internal user, will send to Matomo
+     * without ping re-verification.
+     *  */
+    var pingKey = 'userType',
+        defaultUserType = 'Anonymous',
+        internalUserType = 'Internal',
+        userType = defaultUserType;
+
+    // check localStorage cache (previous pings) for userType, if possible
+    if ("localStorage" in window) {
+        userType = localStorage.getItem(pingKey) || defaultUserType;
+    }
+
+    // if identified as internal from localStorage cache, record as internal
+    if (userType === internalUserType) {
+        recordUserType(userType);
+        return;
+    }
+
+    // use ping URL to attempt to determine user type
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4) {
+            var isSuccess = this.status >= 200 && this.status < 400;
+            if (isSuccess) {
+                userType = internalUserType;
+            }
+            recordUserType(userType);
+        }
+    };
+
+    // consider a timeout to be an unsuccessful attempt
+    xhr.ontimeout = function() {
+        recordUserType(userType);
+        callbackFn();
+    };
+    xhr.timeout = 500;
+    xhr.open('GET', url, true);
+    xhr.send();
+
+    function recordUserType(userType) {
+        if (typeof _paq !== 'undefined') {
+            _paq.push(['setCustomDimension', 1, userType, 'visit']);
+            // ensures the custom Dimension is recorded in the page view in Matomo
+            _paq.push(["trackPageView"]);
+        }
+        if ("localStorage" in window) {
+            localStorage.setItem(pingKey, userType);
+        }
+    }
+}if (!window.matomo_search_results_active) {_paq.push(["trackPageView"]);}_paq.push(["setIgnoreClasses", ["no-tracking","colorbox"]]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src="/sites/default/files/matomo/matomo.js?tec0r8";s.parentNode.insertBefore(g,s);})();</script>
+<meta name="description" content="LLNL is excited to bring students back to our site." />
+<link rel="canonical" href="https://st.llnl.gov/sci-ed" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/ste/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Science Education Program | Science and Technology</title>
+    <link rel="stylesheet" media="all" href="/modules/contrib/ajax_loader/css/throbber-general.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/misc/components/progress.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/misc/components/ajax-progress.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/ajax_loader/css/circle.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/back_to_top/css/back_to_top.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/ckeditor_accordion/css/accordion.frontend.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/extlink/css/extlink.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/libraries/mmenu/dist/mmenu.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/libraries/mmenu/dist/wrappers/bootstrap/mmenu.bootstrap.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/responsive_menu/css/responsive_menu.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/user.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/progress.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/node.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/breadcrumb.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/affix.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/book.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/contextual.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/feed-icon.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/field.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/header.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/help.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/icons.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/image-button.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/item-list.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/list-group.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/media.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/page.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/search-form.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/shortcut.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/sidebar.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/site-footer.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/skip-link.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/table.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/tabledrag.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/tableselect.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/tablesort-indicator.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/ui.widget.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/tabs.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/toolbar.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/vertical-tabs.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/views.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/ui-dialog.css?tec0r8" />
+<link rel="stylesheet" media="all" href="//use.fontawesome.com/releases/v5.13.0/css/all.css" />
+<link rel="stylesheet" media="all" href="/themes/contrib/lwds-drupal/css/llnl.min.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/custom/ste/css/external/ihover.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/custom/ste/css/font/jquery-ui-1.12.icon-font.css?tec0r8" />
+<link rel="stylesheet" media="print" href="/themes/contrib/bootstrap_barrio/css/print.css?tec0r8" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700,800,800i&amp;display=swap" />
+<link rel="stylesheet" media="all" href="/themes/custom/ste/css/lwds-adjust.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/custom/ste/css/style.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/custom/ste/css/style-st.min.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/custom/ste/css/front-page.min.css?tec0r8" />
+<link rel="stylesheet" media="all" href="/themes/custom/ste/css/moderation.css?tec0r8" />
+
+    
+  </head>
+  <body class="layout-one-sidebar layout-sidebar-first page-node-271 path-node node--type-page">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="page-wrapper">
+  <div id="page">
+                                  
+<header class="navbar navbar-expand-md navbar-default navbar-fixed-top" id="navbar-main" id="navbar" role="banner" aria-label="Site header">
+  <section class="usa-banner" aria-label="Official website of the United States government"">
+    <div class="usa-accordion container">
+      <div class="usa-banner__inner">
+        <img aria-hidden="true" class="usa-banner__header-flag" src="/themes/contrib/lwds-drupal/images/flag.png" alt="" />
+        <p class="usa-banner__header-text">An official website of the United States government</p>
+        <p class="usa-banner__header-action" aria-hidden="true">Here's how you know</p>
+        <button type="button" class="usa-accordion__button usa-banner__button" data-toggle="collapse" data-target="#gov-banner" aria-expanded="false" aria-controls="gov-banner">
+            <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+      <div id="gov-banner" class="usa-banner__content usa-accordion__content row collapse" id="gov-banner">
+        <div class="usa-media-block__body col-12 col-md-6 col-lg-5">
+          <img class="usa-banner__icon usa-media-block__img" src="/themes/contrib/lwds-drupal/images/icon-dot-gov.svg" role="img" alt="" aria-hidden="true"/>
+          <p><strong>Official websites use .gov</strong><br />A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+        </div>
+        <div class="usa-media-block__body col-12 col-md-6 col-lg-5">
+          <img class="usa-banner__icon usa-media-block__img" src="/themes/contrib/lwds-drupal/images/icon-https.svg" role="img" alt="" aria-hidden="true" />
+          <p><strong>Secure .gov websites use HTTPS</strong><br />A <strong>lock</strong> (<span class="icon-lock">
+          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description-default" focusable="false">
+            <title id="banner-lock-title-default">Lock</title>
+            <desc id="banner-lock-description-default">Locked padlock icon</desc>
+            <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+          </svg>
+          </span>) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div id="llnl-menu" >
+    <div class="container">
+      <ul class="llnl-nav">
+        <li><a href="https://www.llnl.gov/purpose">Our Purpose</a></li>
+        <li><a href="https://www.llnl.gov/science-technology">Our Science and Technology</a></li>
+        <li><a href="https://www.llnl.gov/join-our-team">Join Our Team</a></li>
+        <li><a href="https://www.llnl.gov/partner">Partner with Us</a></li>
+        <li><a href="https://www.llnl.gov/news">News</a></li>
+        <li><a href="https://www.llnl.gov/community-education">Community and Education</a></li>
+        <li><a href="https://www.llnl.gov/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="container menu-wrap">
+    
+    <div class="llnl-logo-wrap">
+      <div id="llnl-logo">
+        <a href="https://www.llnl.gov"><img src="/themes/contrib/lwds-drupal/images/llnl-logo.png" alt="LLNL Logo" /></a>
+      </div>
+    </div>
+    <div class="nav-wrap">
+      <div id="llnl-org">
+        <div class="site-text-container">
+          <div class="site-text">
+            <a href="https://st.llnl.gov/" title="Home" rel="home">Science and Technology</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-header">
+          <nav role="navigation" aria-labelledby="block-ste-main-menu-menu" id="block-ste-main-menu">
+            <h2 class="sr-only" id="block-ste-main-menu-menu">Main navigation</h2>
+
+      
+              <ul id="block-ste-main-menu" block="block-ste-main-menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/research" class="nav-link" aria-expanded="false" data-drupal-link-system-path="node/16">Research</a>
+                        <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                          <a href="/research/core-competencies" data-drupal-link-system-path="node/30">Core Competencies </a>
+              </li>
+                <li class="dropdown-item menu-item--collapsed">
+                          <a href="/research/people" data-drupal-link-system-path="node/72">People</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/research/unique-facilities" data-drupal-link-system-path="node/31">Unique Facilities</a>
+              </li>
+                <li class="dropdown-item menu-item--collapsed">
+                          <a href="/research/internal-investments" data-drupal-link-system-path="node/90">Internal Investments</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/research/research-integrity" data-drupal-link-system-path="node/1407">Research Integrity</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/News-Center" class="nav-link" aria-expanded="false" data-drupal-link-system-path="node/99">S&amp;T News</a>
+                        <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                          <a href="/news/S%26T-highlights" data-drupal-link-system-path="node/67">S&amp;T Highlights</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/news/recognition" data-drupal-link-system-path="node/68">Recognition</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/news/directors-awards" data-drupal-link-system-path="node/721">Director&#039;s Awards</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/news/journal-covers" data-drupal-link-system-path="node/70">Journal Covers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/about-us/bookshelf" data-drupal-link-system-path="node/50">Bookshelf</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/news/a-look-back" data-drupal-link-system-path="node/71">A Look Back</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/partnerships" class="nav-link" aria-expanded="false" data-drupal-link-system-path="node/44">Partnerships</a>
+                        <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                          <a href="/partnerships/LLNL-Institutes-Centers" data-drupal-link-system-path="node/579">LLNL Institutes/Centers</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/opportunities" class="nav-link" aria-expanded="false" data-drupal-link-system-path="node/45">Opportunities</a>
+                        <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                          <a href="/opportunities/jobs" data-drupal-link-system-path="node/39">Jobs</a>
+              </li>
+                <li class="dropdown-item menu-item--collapsed">
+                          <a href="/opportunities/postdocs" data-drupal-link-system-path="node/281">Postdocs</a>
+              </li>
+                <li class="dropdown-item menu-item--collapsed">
+                          <a href="/opportunities/student-internships" data-drupal-link-system-path="node/41">Student Internships</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded active dropdown">
+                          <a href="/sci-ed" class="nav-link active is-active" aria-expanded="false" data-drupal-link-system-path="node/271" aria-current="page">Science Education</a>
+                        <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                          <a href="/sci-ed/fun-with-science" data-drupal-link-system-path="node/898">Fun with Science</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/sci-ed/class-visits-resources" data-drupal-link-system-path="node/889">Day at the Lab</a>
+              </li>
+                <li class="dropdown-item menu-item--collapsed">
+                          <a href="/sci-ed/student-workshops" data-drupal-link-system-path="node/902">Student Workshops</a>
+              </li>
+                <li class="dropdown-item menu-item--collapsed">
+                          <a href="/sci-ed/SAGE" data-drupal-link-system-path="node/1179">SAGE</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/sci-ed/teacher-research-academy" data-drupal-link-system-path="node/312">Teacher Research Academy</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/sci-ed/science-on-saturday" data-drupal-link-system-path="node/321">Science on Saturday</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/sci-ed/stem-sj" data-drupal-link-system-path="node/1513">STEM San Joaquin</a>
+              </li>
+                <li class="dropdown-item menu-item--collapsed">
+                          <a href="/sci-ed/Physics-with-Phones" data-drupal-link-system-path="node/799">Physics with Phones</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://virtual-discovery-center.llnl.gov/">Virtual Discovery Center</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/about-us" class="nav-link" aria-expanded="false" data-drupal-link-system-path="node/51">About Us</a>
+                        <ul class="dropdown-menu">
+                    <li class="dropdown-item menu-item--collapsed">
+                          <a href="/about-us/AEO" data-drupal-link-system-path="node/88">Academic Engagement Office</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://ipo.llnl.gov">Innovation and Partnerships Office</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://library.llnl.gov">Research Library</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/about-us/contact-us" data-drupal-link-system-path="node/93">Contact Us</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                <div id="llnl-header-search-form" class="block-llnl-search-mobile d-print-none">
+          <div class="search-form">
+            <div class="form-group form-group-search has-feedback">
+              <div class="sr-only">Search</div>
+              <div class="form-item">
+                <form class="search-block-form search-form form-row" data-drupal-selector="search-block-form" action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  
+
+
+
+          <fieldset class="js-form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label form-group">
+          <label for="edit-keys" class="sr-only">Search</label>
+                    <input title="Enter the terms you wish to search for." placeholder="Search this site" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search form-control" />
+
+                      </fieldset>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-group" id="edit-actions"><input class="pull-right button js-form-submit form-submit btn btn-primary form-control" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" />
+</div>
+
+</form>
+
+                <span class="fa fa-search form-control-feedback"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="block-responsivemenumobileicon" data-block-plugin-id="responsive_menu_toggle" class="responsive-menu-toggle-wrapper responsive-menu-toggle block block-responsive-menu block-responsive-menu-toggle clearfix">
+          <a id="toggle-icon" class="toggle responsive-menu-toggle-icon" title="Menu" href="#off-canvas">
+            <span class="icon"></span>
+          </a>
+        </section>
+      </div>
+      <div id="navbar-collapse" class="navbar-collapse collapse">
+        <div id="search-button">
+          <form class="search-block-form search-form form-row" data-drupal-selector="search-block-form-2" action="/search/node" method="get" id="search-block-form--2" accept-charset="UTF-8">
+  
+
+
+
+          <fieldset class="js-form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label form-group">
+          <label for="edit-keys--2" class="sr-only">Search</label>
+                    <input title="Enter the terms you wish to search for." placeholder="Search this site" data-drupal-selector="edit-keys" type="search" id="edit-keys--2" name="keys" value="" size="15" maxlength="128" class="form-search form-control" />
+
+                      </fieldset>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-group" id="edit-actions--2"><input class="pull-right button js-form-submit form-submit btn btn-primary form-control" data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" value="Search" />
+</div>
+
+</form>
+
+          <span class="fa fa-search form-control-feedback"></span>
+        </div>
+      </div>
+          </div>
+  </div>
+
+  
+</header>
+                          <div id="main-wrapper" class="layout-main-wrapper clearfix">
+              <div id="subpage-home" class="page-image" style="background-image: url('/sites/default/files/2021-03/SciEd_banner_1600x500.png')">
+      <div class="subpage-home-text">
+        <h1>
+            <div class="clearfix text-formatted field field--name-field-image-tagline field--type-text-long field--label-hidden field__item"><p><span><strong>Building bridges</strong> from the</span></p><p><span><strong>Laboratory</strong> to the <strong>classroom</strong></span></p></div>
+      </h1>
+      </div>
+    </div>
+
+        <div id="main" class="container white-background">
+    <div class="row clearfix">
+      <div class="col-lg-3 hidden-md-down">
+                  <div class="sidebar" id="sidebar-first">
+            <aside class="section" role="complementary">
+                <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="side-navigation block block-menu navigation menu--main">
+            
+  <h2 class="sr-only" id="block-mainnavigation-menu">Main navigation</h2>
+  
+
+        
+        <ul class="clearfix nav navbar-nav">
+                                    <li class="nav-item">
+                                                    <a href="/sci-ed/fun-with-science" class="nav-link" data-drupal-link-system-path="node/898">Fun with Science</a>
+                            </li>
+                                <li class="nav-item">
+                                                    <a href="/sci-ed/class-visits-resources" class="nav-link" data-drupal-link-system-path="node/889">Day at the Lab</a>
+                            </li>
+                                <li class="nav-item menu-item--expanded dropdown">
+                                                    <a href="/sci-ed/student-workshops" class="nav-link" data-target="#" aria-expanded="false" data-drupal-link-system-path="node/902">Student Workshops</a>
+                                <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                                    <a href="/sci-ed/summer-workshops/biotech-summer-experience" data-drupal-link-system-path="node/328">Biotech Summer Experience</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/summer-workshops/manufacturing-workshop" data-drupal-link-system-path="node/1494">Manufacturing Workshop</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/stem-with-phones" data-drupal-link-system-path="node/1388">STEM with Phones</a>
+                            </li>
+            </ul>
+        
+                            </li>
+                                <li class="nav-item menu-item--expanded dropdown">
+                                                    <a href="/sci-ed/SAGE" class="nav-link" data-target="#" aria-expanded="false" data-drupal-link-system-path="node/1179">SAGE</a>
+                                <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                                    <a href="/sci-ed/SAGE/about-SAGE" data-drupal-link-system-path="node/1201">About SAGE</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/SAGE/application-process" data-drupal-link-system-path="node/1202">Application Process</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/SAGE/camp-activities" data-drupal-link-system-path="node/1203">Camp Activities</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/SAGE/camp-guide" data-drupal-link-system-path="node/1204">Camp Guide</a>
+                            </li>
+            </ul>
+        
+                            </li>
+                                <li class="nav-item">
+                                                    <a href="/sci-ed/teacher-research-academy" class="nav-link" data-drupal-link-system-path="node/312">Teacher Research Academy</a>
+                            </li>
+                                <li class="nav-item">
+                                                    <a href="/sci-ed/science-on-saturday" class="nav-link" data-drupal-link-system-path="node/321">Science on Saturday</a>
+                            </li>
+                                <li class="nav-item">
+                                                    <a href="/sci-ed/stem-sj" class="nav-link" data-drupal-link-system-path="node/1513">STEM San Joaquin</a>
+                            </li>
+                                <li class="nav-item menu-item--expanded dropdown">
+                                                    <a href="/sci-ed/Physics-with-Phones" class="nav-link" data-target="#" aria-expanded="false" data-drupal-link-system-path="node/799">Physics with Phones</a>
+                                <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/introduction-and-applications" data-drupal-link-system-path="node/1286">Physics with Phones Introduction and Links</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/understanding-motion" data-drupal-link-system-path="node/830">Understanding Motion</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/exploring-acceleration" data-drupal-link-system-path="node/871">Exploring Acceleration</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/exploring-friction-mechanics" data-drupal-link-system-path="node/803">Exploring Friction &amp; Mechanics</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/physics-rotational-motion" data-drupal-link-system-path="node/801">The Physics of Rotational Motion</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/moment-inertia" data-drupal-link-system-path="node/807">Moment of Inertia</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/investigating-impulse-and-momentum" data-drupal-link-system-path="node/891">Investigating Impulse and Momentum</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/science-collisions" data-drupal-link-system-path="node/805">The Science of Collisions</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/measuring-pressure-around-us" data-drupal-link-system-path="node/802">Measuring the Pressure Around Us</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/foundation-understanding-waves" data-drupal-link-system-path="node/806">A Foundation for Understanding Waves</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/mechanical-waves-and-sound" data-drupal-link-system-path="node/808">Mechanical Waves and Sound</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/experimenting-electromagnetic-waves" data-drupal-link-system-path="node/994">Experimenting with Electromagnetic Waves</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/exploring-magnetic-fields-world-around-you" data-drupal-link-system-path="node/800">Exploring Magnetic Fields in the World Around You</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/making-digital-measurements-and-quantifying-uncertainty" data-drupal-link-system-path="node/1274">Making Digital Measurements and Quantifying Uncertainty</a>
+                            </li>
+                                <li class="dropdown-item">
+                                                    <a href="/sci-ed/Physics-with-Phones/introductory-physics-life-sciences" data-drupal-link-system-path="node/1660">Introductory Physics for the Life Sciences</a>
+                            </li>
+            </ul>
+        
+                            </li>
+                                <li class="nav-item">
+                                                    <a href="https://virtual-discovery-center.llnl.gov/" class="nav-link">Virtual Discovery Center</a>
+                            </li>
+            </ul>
+        
+
+
+  </nav>
+<div id="block-sciedcontactsidebarblock" class="block block-block-content block-block-contentfe00a022-8816-4d09-b3a6-d969e677cf51">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="card">
+<div class="card-block">
+<h4 class="card-title">Connect</h4>
+<div class="card-icon no-ext"><a href="https://llnl.us21.list-manage.com/subscribe?u=38bd7c3d219403ab22834a203&amp;id=47156034a8" target="_blank"><span aria-hidden="true" class="fa fa-solid fa-envelope fa-5x" style="color: #1f5498; padding-left: 22px ">&nbsp;</span></a></div>
+<p><a class="card-email no-ext" href="https://llnl.us21.list-manage.com/subscribe?u=38bd7c3d219403ab22834a203&amp;id=47156034a8" target="_blank">Join our mailing list</a></p></div>
+</div>
+</div>
+      
+    </div>
+  </div>
+<div id="block-ste-sciedcommunitysidebarblock" class="block block-block-content block-block-content52babbfa-a1cb-4e97-8e8a-eff5c9e7f5e3">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="card">
+<div class="card-block">
+<h4 class="card-title">Community</h4>
+<div class="card-icon no-ext">
+<svg height="73" width="73" viewBox="0 0 576 512"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><a href="https://education-llnl.submittable.com/submit/68295eff-d00f-48cb-ac53-dfc6b10b4a8d/community-volunteer-request-form" target="_blank"><path fill="#1f5498" d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 43.6L289.3 394.3c-8.2 8.2-14 18.5-16.8 29.7l-15 60.1c-2.3 9.4-1.8 19 1.4 27.8L48 512c-26.5 0-48-21.5-48-48L0 192zm120 80c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zM96 392c0 13.3 10.7 24 24 24l80 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-80 0c-13.3 0-24 10.7-24 24zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z" /></a></svg></div>
+<p><a class="card-email no-ext" href="https://education-llnl.submittable.com/submit/68295eff-d00f-48cb-ac53-dfc6b10b4a8d/community-volunteer-request-form" target="_blank">Submit event request form</a></p>
+</div>
+</div>
+</div>
+      
+    </div>
+  </div>
+<div class="card">
+    <div class="card-block">
+        <h4 class="card-title">Careers</h4>
+        <div class="card-icon no-ext"><a href="https://www.llnl.gov/join-our-team/careers" target="_blank"><span aria-hidden="true" class="fa fa-users fa-5x" style="color: #1f5498; padding-left: 22px ">&nbsp;</span></a></div>
+        <a href="https://www.llnl.gov/join-our-team/careers" target="_blank" class="card-email no-ext" target="_top">Join our team!</a></div>
+</div>
+
+            </aside>
+          </div>
+              </div>
+      <main class="col-md-12 col-lg-9">
+          <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-ste-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+      
+
+  <nav role="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+          <a href="/">Home</a>
+        </li>
+                        <li class="breadcrumb-item active">
+          sci ed
+        </li>
+              </ol>
+  </nav>
+
+    </div>
+  </div>
+
+
+        <div class="social-media no-ext float-right">
+          <p>Share:</p>
+          <a href="http://twitter.com/share?url=https://st.llnl.gov/sci-ed&amp;text=">
+            <span class="fa-stack fa-lg">
+              <span class="fa fa-circle fa-stack-2x" style="color: #1DA1F2"></span>
+              <span class="fab fa-twitter fa-stack-1x" style="color: white"></span>
+            </span>
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=https://st.llnl.gov/sci-ed&amp;t=">
+            <span class="fa-stack fa-lg">
+              <span class="fa fa-circle fa-stack-2x" style="color: #3B5998"></span>
+              <span class="fab fa-facebook-f fa-stack-1x" style="color: white"></span>
+            </span>
+          </a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://st.llnl.gov/sci-ed&amp;title=&amp;summary=&amp;source=Science%20and%20Technology">
+            <span class="fa-stack fa-lg">
+              <span class="fa fa-circle fa-stack-2x" style="color: #0077B5"></span>
+              <span class="fab fa-linkedin-in fa-stack-1x" style="color: white"></span>
+            </span>
+          </a>
+        </div>
+        <section class="section">
+          <div id="main-content" tabindex="-1">
+              <div id="block-ste-page-title" class="block block-core block-page-title-block">
+  
+    
+      <div class="content">
+      
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Science Education Program</span>
+</h1>
+
+
+    </div>
+  </div>
+<div id="block-ste-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+
+<article data-history-node-id="271" class="node node--type-page node--view-mode-full clearfix">
+  <header>
+    
+        
+      </header>
+  <div class="node__content clearfix">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>LLNL is excited to bring students back to our site. <a href="https://st-staging.llnl.gov/sci-ed/fun-with-science"><strong>The Fun with Science</strong></a> field trip program returns with new programming introducing 5th grade students to lasers and optics, the <a href="https://st-staging.llnl.gov/sci-ed/class-visits-resources"><strong>Day at the Lab</strong> </a>tour showcases facilities such as the National Ignition Facility or bring the field trip experience to your classroom with a virtual <a href="https://st-staging.llnl.gov/sci-ed/class-visits-resources"><strong>Scientist in the Classroom</strong></a> visit. The<strong> <a href="https://st.llnl.gov/sci-ed/Physics-with-Phones">Physics with Phones</a> </strong>lessons provide remote classroom resources or explore the new <a href="https://virtual-discovery-center.llnl.gov/" rel="noopener" target="_blank"><strong>Virtual Discovery Center! </strong></a></p>
+</div>
+      
+
+
+
+
+            <div class="row page-button-row">
+                            <div class="col-md-6">
+                    
+
+<article data-history-node-id="1372" class="node node--type-page-button node--promoted node--view-mode-default clearfix">
+  <header>
+    
+          <h2 class="node__title">
+        <a href="/node/1372" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Fun with Science</span>
+</a>
+      </h2>
+        
+      </header>
+  <div class="node__content clearfix">
+    
+
+
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">  <a href="https://st.llnl.gov/sci-ed/fun-with-science"><img loading="lazy" src="/sites/default/files/styles/page_button_image/public/2023-01/FwS_Button2_0.jpg?h=06177e84&amp;itok=CcckvjA5" width="345" height="210" alt="FunwScience" class="image-style-page-button-image"></a>
+
+
+</div>
+      
+            <div class="field field--name-field-page-button-link field--type-link field--label-hidden field__item"><a href="/sci-ed/fun-with-science">Fun with Science</a></div>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>5th grade field trips to the Discovery Center</p></div>
+      
+  </div>
+</article>
+
+                </div>
+                            <div class="col-md-6">
+                    
+
+<article data-history-node-id="890" class="node node--type-page-button node--promoted node--view-mode-default clearfix">
+  <header>
+    
+          <h2 class="node__title">
+        <a href="/node/890" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Day at the Lab</span>
+</a>
+      </h2>
+        
+      </header>
+  <div class="node__content clearfix">
+    
+
+
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">  <a href="https://st.llnl.gov/sci-ed/class-visits-resources"><img loading="lazy" src="/sites/default/files/styles/page_button_image/public/2026-02/Exterior_patio_of_the_National_Ignition_Facility.jpg?h=deaec4b9&amp;itok=5w2JipPd" width="345" height="210" alt="NIF_LLNL" class="image-style-page-button-image"></a>
+
+
+</div>
+      
+            <div class="field field--name-field-page-button-link field--type-link field--label-hidden field__item"><a href="/sci-ed/class-visits-resources">Day at the Lab</a></div>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>High school class visits to the Lab</p></div>
+      
+  </div>
+</article>
+
+                </div>
+                    </div>
+            <div class="row page-button-row">
+                            <div class="col-md-6">
+                    
+
+<article data-history-node-id="903" class="node node--type-page-button node--promoted node--view-mode-default clearfix">
+  <header>
+    
+          <h2 class="node__title">
+        <a href="/node/903" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Student Workshop&#039;s Button</span>
+</a>
+      </h2>
+        
+      </header>
+  <div class="node__content clearfix">
+    
+
+
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">  <a href="https://st.llnl.gov/sci-ed/student-workshops"><img loading="lazy" src="/sites/default/files/styles/page_button_image/public/2020-09/car.jpg?h=3aea297b&amp;itok=cWVgP3wQ" width="345" height="210" alt="Student Summer Workshops" class="image-style-page-button-image"></a>
+
+
+</div>
+      
+            <div class="field field--name-field-page-button-link field--type-link field--label-hidden field__item"><a href="/sci-ed/student-workshops">Student Workshops</a></div>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>&nbsp;Explore LLNL's summer student workshops</p></div>
+      
+  </div>
+</article>
+
+                </div>
+                            <div class="col-md-6">
+                    
+
+<article data-history-node-id="310" class="node node--type-page-button node--promoted node--view-mode-default clearfix">
+  <header>
+    
+          <h2 class="node__title">
+        <a href="/node/310" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Teacher Research Academy</span>
+</a>
+      </h2>
+        
+      </header>
+  <div class="node__content clearfix">
+    
+
+
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">  <a href="https://st.llnl.gov/sci-ed/teacher-research-academy"><img loading="lazy" src="/sites/default/files/styles/page_button_image/public/2018-08/TRA.jpg?h=82f92a78&amp;itok=JTzIlJhW" width="345" height="210" alt="TRA_Button" class="image-style-page-button-image"></a>
+
+
+</div>
+      
+            <div class="field field--name-field-page-button-link field--type-link field--label-hidden field__item"><a href="/sci-ed/teacher-research-academy">Teacher Research Academy</a></div>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Providing teachers with real world context to teach science</p></div>
+      
+  </div>
+</article>
+
+                </div>
+                    </div>
+            <div class="row page-button-row">
+                            <div class="col-md-6">
+                    
+
+<article data-history-node-id="798" class="node node--type-page-button node--promoted node--view-mode-default clearfix">
+  <header>
+    
+          <h2 class="node__title">
+        <a href="/node/798" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Distance Learning Button</span>
+</a>
+      </h2>
+        
+      </header>
+  <div class="node__content clearfix">
+    
+
+
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">  <a href="https://st.llnl.gov/sci-ed/distance-learning"><img loading="lazy" src="/sites/default/files/styles/page_button_image/public/2020-09/Physics_with_Phones.png?h=f1990468&amp;itok=MsrUYwFe" width="345" height="210" alt="Hand holding phone" class="image-style-page-button-image"></a>
+
+
+</div>
+      
+            <div class="field field--name-field-page-button-link field--type-link field--label-hidden field__item"><a href="/sci-ed/distance-learning">Physics with Phones</a></div>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><span><span><span>A series of downloadable lessons outlining a wide range of experiments for high school students and teachers</span></span></span></p></div>
+      
+  </div>
+</article>
+
+                </div>
+                            <div class="col-md-6">
+                    
+
+<article data-history-node-id="1114" class="node node--type-page-button node--promoted node--view-mode-default clearfix">
+  <header>
+    
+          <h2 class="node__title">
+        <a href="/node/1114" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Virtual Discovery Center</span>
+</a>
+      </h2>
+        
+      </header>
+  <div class="node__content clearfix">
+    
+
+
+            <div class="field field--name-field-image field--type-image field--label-hidden field__item">  <a href="https://virtual-discovery-center.llnl.gov/"><img loading="lazy" src="/sites/default/files/styles/page_button_image/public/2021-09/Picture1.png?h=03fdbdf7&amp;itok=43l_Sk4Q" width="345" height="210" alt="Discovery_center" class="image-style-page-button-image"></a>
+
+
+</div>
+      
+            <div class="field field--name-field-page-button-link field--type-link field--label-hidden field__item"><a href="https://virtual-discovery-center.llnl.gov/">Virtual Discovery Center</a></div>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Virtual visit to the LLNL Discovery Center</p></div>
+      
+  </div>
+</article>
+
+                </div>
+                    </div>
+    
+
+                                    
+            <div class="clearfix text-formatted field field--name-field-right-sidebar-content field--type-text-with-summary field--label-hidden field__item"><div class="bottombar"><h3 class="fancyTitle"><span>STEM Education at LLNL</span></h3><div class="bottombarVideos"><div class="bottombarVideo1"><iframe allowfullscreen="allowFullScreen" allowtransparency="true" src="https://www.youtube.com/embed/7EmKdhUfgtY?ecver=1&amp;iv_load_policy=1&amp;loop=1&amp;rel=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=red&amp;width=390&amp;width=390" width="350" height="250" frameborder="0"></iframe></div><div class="bottombarVideo2"><iframe allowfullscreen="allowFullScreen" allowtransparency="true" src="https://www.youtube.com/embed/BuGna3mc_Oc?ecver=1&amp;iv_load_policy=1&amp;loop=1&amp;rel=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=red&amp;width=390&amp;width=390" width="350" height="250" frameborder="0"></iframe></div></div></div></div>
+      
+  </div>
+</article>
+
+    </div>
+  </div>
+
+
+                                                                                                                                                                                              </div>
+        </section>
+      </main>
+          </div>
+  </div>
+    </div>
+      </div>
+</div>
+<footer class="site-footer">
+      <div id="footer-wrapper">
+            <div class="site-footer__bottom">
+                                    <div class="footer-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-2 col-lg-4 col-md-3 col-12" id="footer-logo-wrapper">
+        <div id="footer-logo">
+          <a class="llnl" href="http://www.llnl.gov/" target="_blank"><img src="/themes/contrib/lwds-drupal/images/llnl-logo-dark.png" alt="LLNL"></a>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-8 col-md-9 col-12" id="footer-text-wrapper">
+        <div id="footer-text">
+          <div id="footer-text-name">Lawrence Livermore National Laboratory </div>
+          <div id="footer-text-address">
+            <span class="hidden-xs">&nbsp;|</span>
+            7000 East Avenue • Livermore, CA 94550 | 
+          </div>
+          <div id="footer-text-info">
+            Operated by the Lawrence Livermore National Security, LLC for the
+            Department of Energy's National Nuclear Security Administration
+            Learn about the Department of Energy's <a href="https://www.energy.gov/vulnerability-disclosure-policy" target="_blank" rel="noopener noreferrer">Vulnerability Disclosure Program</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 col-12"  id="footer-affiliates">
+        <a class="llns" href="http://www.llnsllc.com/" target="_blank" rel="noopener noreferrer"><img src="/themes/contrib/lwds-drupal/images/llns.png" alt="LLNS"></a>
+        <a class="doe" href="https://www.energy.gov/" target="_blank" rel="noopener noreferrer"><img src="/themes/contrib/lwds-drupal/images/doe_small.svg" alt="U.S. DOE"></a>
+        <a class="nnsa" href="https://www.energy.gov/nnsa/national-nuclear-security-administration/" target="_blank" rel="noopener noreferrer"><img src="/themes/contrib/lwds-drupal/images/nnsa.png" alt="NNSA"></a>
+      </div>
+
+      <div class="col-xl-3 col-md-6 col-12" id="footer-links">
+        <div class="disclaimer">
+          <a href="https://st.llnl.gov/">Home</a>
+          <a href="https://www.llnl.gov/disclaimer" target="_blank">Disclaimer</a>
+          <a href="https://www.llnl.gov/website-privacy-notice" target="_blank">Privacy Notice</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>              </div>
+    </div>
+  </footer>
+  </div>
+
+    <div class="off-canvas-wrapper"><div id="off-canvas">
+              <ul>
+                    <li class="menu-item--bfecedb5-6cfa-4b1c-a9c3-adf9df4e2cc2 menu-name--main">
+        <a href="/research" data-drupal-link-system-path="node/16">Research</a>
+                                <ul>
+                    <li class="menu-item--_300ece7-0ee4-4dae-ae1d-553d389f6ff1 menu-name--main">
+        <a href="/research/core-competencies" data-drupal-link-system-path="node/30">Core Competencies </a>
+              </li>
+                <li class="menu-item--ea9cfd30-a1b4-4a5b-a2b3-0c50aa7cf393 menu-name--main">
+        <a href="/research/people" data-drupal-link-system-path="node/72">People</a>
+                                <ul>
+                    <li class="menu-item--db7e2163-e494-4dec-9fa2-596f4c9e2954 menu-name--main">
+        <a href="/research/people/careers" data-drupal-link-system-path="node/89">Careers</a>
+              </li>
+                <li class="menu-item--_7b14ef3-b543-423b-a857-8497eefa681b menu-name--main">
+        <a href="https://www.llnl.gov/inclusion" target="_blank">Inclusion</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_be0dc66-6a69-4c40-8f01-567b34cd54f9 menu-name--main">
+        <a href="/research/unique-facilities" data-drupal-link-system-path="node/31">Unique Facilities</a>
+              </li>
+                <li class="menu-item--_caff7c0-2406-4ca6-bfaa-555ee0f8e4d7 menu-name--main">
+        <a href="/research/internal-investments" data-drupal-link-system-path="node/90">Internal Investments</a>
+                                <ul>
+                    <li class="menu-item--d274c3bb-4037-44dc-a6a4-97db4e519095 menu-name--main">
+        <a href="/research/internal-investments/ldrd" data-drupal-link-system-path="node/29">Lab Directed Research and Development</a>
+              </li>
+                <li class="menu-item--_c1a44e4-be89-4338-b843-48bfce5e75d4 menu-name--main">
+        <a href="/research/internal-investments/strategic-focus-areas" data-drupal-link-system-path="node/32">Strategic Focus Areas</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_9c94fbd-4e8d-4e3b-8e28-c97ce1c54f8d menu-name--main">
+        <a href="/research/research-integrity" data-drupal-link-system-path="node/1407">Research Integrity</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_a1bbf01-367a-4161-bae1-406a2382971c menu-name--main">
+        <a href="/News-Center" data-drupal-link-system-path="node/99">S&amp;T News</a>
+                                <ul>
+                    <li class="menu-item--e50cc97e-2e1d-40b2-8b2d-d5a928f26179 menu-name--main">
+        <a href="/news/S%26T-highlights" data-drupal-link-system-path="node/67">S&amp;T Highlights</a>
+              </li>
+                <li class="menu-item--a82c0de5-5eb4-497e-95c4-7f34e4314725 menu-name--main">
+        <a href="/news/recognition" data-drupal-link-system-path="node/68">Recognition</a>
+              </li>
+                <li class="menu-item--f6b7d30b-b769-4b07-9e50-e2bc9b97f5c7 menu-name--main">
+        <a href="/news/directors-awards" data-drupal-link-system-path="node/721">Director&#039;s Awards</a>
+              </li>
+                <li class="menu-item--_ff6dced-77d3-4885-b9cb-6c47ff662b72 menu-name--main">
+        <a href="/news/journal-covers" data-drupal-link-system-path="node/70">Journal Covers</a>
+              </li>
+                <li class="menu-item--_062ae14-1fad-4199-b372-ee0a947a5c36 menu-name--main">
+        <a href="/about-us/bookshelf" data-drupal-link-system-path="node/50">Bookshelf</a>
+              </li>
+                <li class="menu-item--_0cd1a15-3d18-471f-9d6a-8b85c9fe32d4 menu-name--main">
+        <a href="/news/a-look-back" data-drupal-link-system-path="node/71">A Look Back</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_cd1a779-fafb-4fa0-b18b-3dc14d0f562f menu-name--main">
+        <a href="/partnerships" data-drupal-link-system-path="node/44">Partnerships</a>
+                                <ul>
+                    <li class="menu-item--fa7fbdb8-e654-451d-85d4-c013348d0de7 menu-name--main">
+        <a href="/partnerships/LLNL-Institutes-Centers" data-drupal-link-system-path="node/579">LLNL Institutes/Centers</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_e5ec03d-9abc-4c7c-a2ba-b5a303d7a082 menu-name--main">
+        <a href="/opportunities" data-drupal-link-system-path="node/45">Opportunities</a>
+                                <ul>
+                    <li class="menu-item--_279af36-723c-45f6-bd4c-52c1a04e6727 menu-name--main">
+        <a href="/opportunities/jobs" data-drupal-link-system-path="node/39">Jobs</a>
+              </li>
+                <li class="menu-item--_44fab3f-e829-4cff-ba10-97fcb9a63c68 menu-name--main">
+        <a href="/opportunities/postdocs" data-drupal-link-system-path="node/281">Postdocs</a>
+                                <ul>
+                    <li class="menu-item--_746a424-b973-4b69-8d6b-4420eeeea259 menu-name--main">
+        <a href="/opportunities/postdocs/postdoc-program" data-drupal-link-system-path="node/295">Postdoc Program</a>
+                                <ul>
+                    <li class="menu-item--_808c0d2-fd82-4877-88d1-db02d80c74d3 menu-name--main">
+        <a href="/opportunities/postdocs/postdoc-program/lawrence-fellowship" data-drupal-link-system-path="node/941">Lawrence Fellowship</a>
+                                <ul>
+                    <li class="menu-item--f95addb8-0e9a-4f0c-aa3f-92999002ac7a menu-name--main">
+        <a href="/opportunities/postdocs/postdoc-program/lawrence-fellowship/current-and-past-lawrence-fellows" data-drupal-link-system-path="node/733">Current and Former Lawrence Fellows</a>
+              </li>
+                <li class="menu-item--cba9b6db-bbe8-4ac1-bb24-e5d392e5f0c1 menu-name--main">
+        <a href="/opportunities/postdocs/postdoc-program/lawrence-fellowship/learn-more-and-apply" data-drupal-link-system-path="node/942">Lawrence Fellowship: Learn more and apply</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_03c6724-0ffc-4863-8362-0825dec4f4b0 menu-name--main">
+        <a href="/opportunities/postdocs/Career-development-and-Networking" data-drupal-link-system-path="node/356">Career Development &amp; Network Activities</a>
+              </li>
+                <li class="menu-item--_61d8fda-0384-4d4c-89b9-15d962a8633f menu-name--main">
+        <a href="/opportunities/postdocs/IPPB" data-drupal-link-system-path="node/352">IPPB</a>
+              </li>
+                <li class="menu-item--_93d3701-839c-48ef-89fb-b97f576d75b6 menu-name--main">
+        <a href="/opportunities/postdocs/resources" data-drupal-link-system-path="node/853">Life Around the Lab</a>
+              </li>
+                <li class="menu-item--_a66bb80-9a29-48e7-9e02-dd7a7e70991d menu-name--main">
+        <a href="/opportunities/postdocs/LLPA" data-drupal-link-system-path="node/1262">Lawrence Livermore Postdoc Association</a>
+              </li>
+                <li class="menu-item--_ef0771e-af1a-4cfc-8d4e-b27962dc6ecc menu-name--main">
+        <a href="/opportunities/postdocs/research-slam-2023" data-drupal-link-system-path="node/1444">Research SLAM!</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--d986e17d-dd86-420f-9234-070d41f75b6f menu-name--main">
+        <a href="/opportunities/student-internships" data-drupal-link-system-path="node/41">Student Internships</a>
+                                <ul>
+                    <li class="menu-item--_7361def-0361-4117-a71a-0750601a50a8 menu-name--main">
+        <a href="/opportunities/student-internships/internally-sponsored-internships" data-drupal-link-system-path="node/131">Internally Sponsored Internships</a>
+              </li>
+                <li class="menu-item--ec3d6876-b96f-4dfd-8548-1339a640d8c3 menu-name--main">
+        <a href="/opportunities/student-internships/externally-sponsored-internships" data-drupal-link-system-path="node/133">Externally Sponsored Internships</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--cd90c7ee-0368-475d-8f13-744dd11c1f50 menu-name--main menu-item--active-trail">
+        <a href="/sci-ed" data-drupal-link-system-path="node/271" class="is-active" aria-current="page">Science Education</a>
+                                <ul>
+                    <li class="menu-item--_05dc338-8fc5-42f9-b79b-98eb8b0ad375 menu-name--main">
+        <a href="/sci-ed/fun-with-science" data-drupal-link-system-path="node/898">Fun with Science</a>
+              </li>
+                <li class="menu-item--_6fac3f1-edb6-456c-850d-af582123da99 menu-name--main">
+        <a href="/sci-ed/class-visits-resources" data-drupal-link-system-path="node/889">Day at the Lab</a>
+              </li>
+                <li class="menu-item--_32e8e7d-23bf-411b-91dc-5ff18ba80736 menu-name--main">
+        <a href="/sci-ed/student-workshops" data-drupal-link-system-path="node/902">Student Workshops</a>
+                                <ul>
+                    <li class="menu-item--_c1a0c12-45a4-4e2a-a8cd-b9863aa28671 menu-name--main">
+        <a href="/sci-ed/summer-workshops/biotech-summer-experience" data-drupal-link-system-path="node/328">Biotech Summer Experience</a>
+              </li>
+                <li class="menu-item--d6e08c16-cae3-417e-aacb-6f3a77ac18e0 menu-name--main">
+        <a href="/sci-ed/summer-workshops/manufacturing-workshop" data-drupal-link-system-path="node/1494">Manufacturing Workshop</a>
+              </li>
+                <li class="menu-item--_63ce474-b770-4a2d-ac78-2c8336ff08de menu-name--main">
+        <a href="/sci-ed/stem-with-phones" data-drupal-link-system-path="node/1388">STEM with Phones</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--b36dedd7-8e99-46ff-9fa3-ec31d0143d51 menu-name--main">
+        <a href="/sci-ed/SAGE" data-drupal-link-system-path="node/1179">SAGE</a>
+                                <ul>
+                    <li class="menu-item--_f4b94aa-a68a-4491-a200-70c4c9f0df64 menu-name--main">
+        <a href="/sci-ed/SAGE/about-SAGE" data-drupal-link-system-path="node/1201">About SAGE</a>
+              </li>
+                <li class="menu-item--_8eac399-9fe9-415a-aa7a-a5ecaa86ade7 menu-name--main">
+        <a href="/sci-ed/SAGE/application-process" data-drupal-link-system-path="node/1202">Application Process</a>
+              </li>
+                <li class="menu-item--df787d54-a003-46a2-80e2-f65e5ea27f00 menu-name--main">
+        <a href="/sci-ed/SAGE/camp-activities" data-drupal-link-system-path="node/1203">Camp Activities</a>
+              </li>
+                <li class="menu-item--d15ed81e-3796-4a27-90aa-8ee383a42abe menu-name--main">
+        <a href="/sci-ed/SAGE/camp-guide" data-drupal-link-system-path="node/1204">Camp Guide</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--c54582a7-3a5e-478d-b00d-79dae5f1ddcb menu-name--main">
+        <a href="/sci-ed/teacher-research-academy" data-drupal-link-system-path="node/312">Teacher Research Academy</a>
+              </li>
+                <li class="menu-item--_936e763-79a3-4040-8f6b-09f04d1ae140 menu-name--main">
+        <a href="/sci-ed/science-on-saturday" data-drupal-link-system-path="node/321">Science on Saturday</a>
+              </li>
+                <li class="menu-item--f99fe194-7f76-4ce2-a225-f6f3ee6a4580 menu-name--main">
+        <a href="/sci-ed/stem-sj" data-drupal-link-system-path="node/1513">STEM San Joaquin</a>
+              </li>
+                <li class="menu-item--_9b02e3c-2bef-4b46-b7e0-8e35a4a7187e menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones" data-drupal-link-system-path="node/799">Physics with Phones</a>
+                                <ul>
+                    <li class="menu-item--daed0294-f343-477e-8dba-2d1fe8027800 menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/introduction-and-applications" data-drupal-link-system-path="node/1286">Physics with Phones Introduction and Links</a>
+              </li>
+                <li class="menu-item--bcb0d2d2-3b64-4029-b77a-3c3132f4eb5b menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/understanding-motion" data-drupal-link-system-path="node/830">Understanding Motion</a>
+              </li>
+                <li class="menu-item--c21e3597-9d73-4b94-aaec-34b6c40da546 menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/exploring-acceleration" data-drupal-link-system-path="node/871">Exploring Acceleration</a>
+              </li>
+                <li class="menu-item--_b897504-cda3-417c-91c6-1f85a1db420c menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/exploring-friction-mechanics" data-drupal-link-system-path="node/803">Exploring Friction &amp; Mechanics</a>
+              </li>
+                <li class="menu-item--cc870f04-3875-4768-a4b6-e1cc199ca9ca menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/physics-rotational-motion" data-drupal-link-system-path="node/801">The Physics of Rotational Motion</a>
+              </li>
+                <li class="menu-item--_364ea0a-8c2e-4ea1-bf87-7d4b3d360c41 menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/moment-inertia" data-drupal-link-system-path="node/807">Moment of Inertia</a>
+              </li>
+                <li class="menu-item--_cedef0d-5df7-408c-9611-b5efa6a7b440 menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/investigating-impulse-and-momentum" data-drupal-link-system-path="node/891">Investigating Impulse and Momentum</a>
+              </li>
+                <li class="menu-item--d6199c77-40d5-4eb3-b1c7-2615e3eefb9c menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/science-collisions" data-drupal-link-system-path="node/805">The Science of Collisions</a>
+              </li>
+                <li class="menu-item--_3ef13cc-60c5-47bb-ad0d-b28e0dc87d85 menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/measuring-pressure-around-us" data-drupal-link-system-path="node/802">Measuring the Pressure Around Us</a>
+              </li>
+                <li class="menu-item--dc8103bc-d586-4cd3-9bd8-fb2f655aa6b4 menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/foundation-understanding-waves" data-drupal-link-system-path="node/806">A Foundation for Understanding Waves</a>
+              </li>
+                <li class="menu-item--bda19c1f-469a-45c1-b1bc-793c2c8f2ebd menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/mechanical-waves-and-sound" data-drupal-link-system-path="node/808">Mechanical Waves and Sound</a>
+              </li>
+                <li class="menu-item--_f5f9cb0-c23d-4efa-aa5b-979506f2e5d9 menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/experimenting-electromagnetic-waves" data-drupal-link-system-path="node/994">Experimenting with Electromagnetic Waves</a>
+              </li>
+                <li class="menu-item--_2fc9a84-2f01-4c40-aecb-ca8f888a88ed menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/exploring-magnetic-fields-world-around-you" data-drupal-link-system-path="node/800">Exploring Magnetic Fields in the World Around You</a>
+              </li>
+                <li class="menu-item--_e75edbc-f351-4b29-932a-6cc4b23abccc menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/making-digital-measurements-and-quantifying-uncertainty" data-drupal-link-system-path="node/1274">Making Digital Measurements and Quantifying Uncertainty</a>
+              </li>
+                <li class="menu-item--f50ca0e9-bb0e-487e-8b96-9bed6267fc08 menu-name--main">
+        <a href="/sci-ed/Physics-with-Phones/introductory-physics-life-sciences" data-drupal-link-system-path="node/1660">Introductory Physics for the Life Sciences</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_c2a4c2d-d5a4-42db-b3b9-c8d7b948ff74 menu-name--main">
+        <a href="https://virtual-discovery-center.llnl.gov/">Virtual Discovery Center</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--c8bd7e60-0eed-411f-a035-ed2fd90994db menu-name--main">
+        <a href="/about-us" data-drupal-link-system-path="node/51">About Us</a>
+                                <ul>
+                    <li class="menu-item--_eb90197-3adb-4410-86ac-cef8b857fd2a menu-name--main">
+        <a href="/about-us/AEO" data-drupal-link-system-path="node/88">Academic Engagement Office</a>
+                                <ul>
+                    <li class="menu-item--_a9afdd0-4b4c-4b37-8e42-2c21c06d3e0e menu-name--main">
+        <a href="/about-us/AEO/university-collaborations" data-drupal-link-system-path="node/143">University Collaborations</a>
+                                <ul>
+                    <li class="menu-item--_cf2b040-e922-4c47-b412-73c12003decf menu-name--main">
+        <a href="/about-us/university-relations/university-collaborations/ambassador-lecture-series" data-drupal-link-system-path="node/668">Ambassador Lecture Series</a>
+              </li>
+                <li class="menu-item--_dc84520-594d-46be-9598-326d9ad181be menu-name--main">
+        <a href="/about-us/AEO/university-collaborations/faculty-sabbatical-program" data-drupal-link-system-path="node/604">Faculty Sabbatical Program</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--a488fb4f-20e8-437a-b3ac-a358430714c3 menu-name--main">
+        <a href="/sci-ed" data-drupal-link-system-path="node/271" class="is-active" aria-current="page">Science Education</a>
+              </li>
+                <li class="menu-item--_1f162b4-1041-4317-977f-695aab3a8337 menu-name--main">
+        <a href="/opportunities/postdocs" data-drupal-link-system-path="node/281">Postdoc Opportunities</a>
+              </li>
+                <li class="menu-item--_6a9d605-925f-4c60-b878-693c9161ce15 menu-name--main">
+        <a href="/opportunities/student-internships" data-drupal-link-system-path="node/41">Student Opportunities</a>
+              </li>
+                <li class="menu-item--_6f73281-9ce8-4f3f-9e7a-75a7987306e2 menu-name--main">
+        <a href="/partnerships/LLNL-Institutes-Centers" data-drupal-link-system-path="node/579">LLNL Institutes/Centers</a>
+              </li>
+                <li class="menu-item--_113d7ba-281c-4f60-a3c0-b6e9a5b3d9b5 menu-name--main">
+        <a href="/about-us/AEO/AEO-about-us" data-drupal-link-system-path="node/923">About Us: Academic Engagement Office</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--b1ce0e67-4e10-4a13-becf-62f9f77e4405 menu-name--main">
+        <a href="https://ipo.llnl.gov">Innovation and Partnerships Office</a>
+              </li>
+                <li class="menu-item--_7bfa1b0-3cb0-4737-9fe2-f14ee41aeaa8 menu-name--main">
+        <a href="https://library.llnl.gov">Research Library</a>
+              </li>
+                <li class="menu-item--_edfdd63-13e4-4045-9e63-b07108c70e2d menu-name--main">
+        <a href="/about-us/contact-us" data-drupal-link-system-path="node/93">Contact Us</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+</div></div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/271","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJyFUAGSwiAM_BCUJzEBokcLhEvoaX9_YD119BxnIOxmk7AAM5xtIgjIBu54al9MziErB36xjfqq5gHb6Km8FWdRjqhJY6jWAXMk4xgheF6ze9WOiRwkLW1LsRxf9Z5d_hlZKKDyC4bYiC14TxwiFXND04GpNCxB4bmNISbwWiFNV6oOXYYTCmU0D3hSKZVkAlTd7_PLMHXJjBrZ4ZPnS27-XpE3LSkGHJ1FYus2dnEEnbGsV3oKoh0I6m4GuUDa81SxaOmtKkOjTGY_FKNU6gN_0I4h5olPt9_5WPlnWRqae9dg-_MG6lvJ1mM2w-Mv99XY0A","theme":"ste","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"responsive_menu":{"position":"right","theme":"theme-dark","pagedim":"pagedim","modifyViewport":true,"use_bootstrap":true,"breakpoint":null,"drag":false},"ajaxLoader":{"markup":"\u003Cdiv class=\u0022ajax-throbber sk-circle\u0022\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle-dot\u0022\u003E\u003C\/div\u003E\n            \u003C\/div\u003E","hideAjaxMessage":false,"alwaysFullscreen":true,"throbberPosition":"body"},"back_to_top":{"back_to_top_button_trigger":100,"back_to_top_prevent_on_mobile":true,"back_to_top_prevent_in_admin":true,"back_to_top_button_type":"image","back_to_top_button_text":"Back to top"},"matomo":{"disableCookies":false,"trackMailto":true,"trackColorbox":true},"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":true,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"ipo.llnl.gov|idea.llnl.gov|library.llnl.gov|virtual-discovery-center.llnl.gov","extCssExclude":".no-ext","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"0","telClass":"0","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":true,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","whitelistedDomains":[],"extExcludeNoreferrer":""}},"ckeditorAccordion":{"accordionStyle":{"collapseAll":null,"keepRowsOpen":null,"animateAccordionOpenAndClose":1,"openTabsWithHash":1,"allowHtmlInTitles":0}},"user":{"uid":0,"permissionsHash":"da6c609f19d480c06ac34398784549538207366d87035d07be2cd0cebee52ad1"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.6.7"></script>
+<script src="/core/misc/drupal.js?v=10.6.7"></script>
+<script src="/core/misc/drupal.init.js?v=10.6.7"></script>
+<script src="/core/assets/vendor/tabbable/index.umd.min.js?v=6.3.0"></script>
+<script src="/core/misc/progress.js?v=10.6.7"></script>
+<script src="/core/assets/vendor/loadjs/loadjs.min.js?v=4.3.0"></script>
+<script src="/core/misc/debounce.js?v=10.6.7"></script>
+<script src="/core/misc/announce.js?v=10.6.7"></script>
+<script src="/core/misc/message.js?v=10.6.7"></script>
+<script src="/core/misc/ajax.js?v=10.6.7"></script>
+<script src="/modules/contrib/ajax_loader/js/ajax-throbber.js?v=1.x"></script>
+<script src="/modules/contrib/back_to_top/js/back_to_top.js?v=10.6.7"></script>
+<script src="/themes/contrib/bootstrap_barrio/js/barrio.js?v=10.6.7"></script>
+<script src="/themes/contrib/bootstrap_barrio/js/affix.js?v=10.6.7"></script>
+<script src="/modules/contrib/ckeditor_accordion/js/accordion.frontend.min.js?tec0r8"></script>
+<script src="/modules/contrib/extlink/js/extlink.js?v=10.6.7"></script>
+<script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE&amp;amp;subagency=LLNL&amp;amp;sdor=fda.gov&amp;amp;dclink=true" id="_fed_an_ua_tag" type="text/javascript"></script>
+<script src="/themes/contrib/lwds-drupal/js/jquery.slide-transition.js?v=0.x"></script>
+<script src="/themes/contrib/lwds-drupal/js/llnl-menu.js?v=1.x"></script>
+<script src="/modules/contrib/matomo/js/matomo.js?v=10.6.7"></script>
+<script src="/libraries/mmenu/dist/mmenu.js?v=10.6.7"></script>
+<script src="/modules/contrib/responsive_menu/js/responsive_menu.config.js?v=10.6.7"></script>
+<script src="/modules/contrib/responsive_menu/js/responsive_menu.bootstrap.js?v=10.6.7"></script>
+<script src="/libraries/popper/popper.min.js?tec0r8"></script>
+<script src="/libraries/bootstrap/bootstrap.min.js?tec0r8"></script>
+<script src="/themes/custom/ste/js/global.js?v=10.6.7"></script>
+<script src="/themes/custom/ste/js/st.js?v=10.6.7"></script>
+<script src="/themes/custom/ste/js/parallax.min.js?v=10.6.7"></script>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="origin">
+    <title>Sign In</title>
+    <script src="/sharing/files/scripts/detector.min.js?v=1C31438"></script>
+    <link rel="stylesheet" href="/sharing/files/css/site.min.css?v=1C31438">
+    <script src="/sharing/files/scripts/theme.min.js?v=1C31438"></script>
+    <script>
+        var oAuthInfo = {"oauth_state":"ak1vubOLuFOz1lQp3s9JNlA..uAXW9EEIajVlWs4AY10K1H3UoNTcdOLielgYeR5mGB1x2aGeJX_XA7ki_D137tF1DQ7mfOikl8I2bRi_UcjdraMeRMG0A_TM9Xz0vAy7NE6GlKLIRu9FBXLYq6J_72RN6Hxbgbd0o0kxx-baesIjh_7CjYFkZ2KziTBZWIbC2i6biO9saiP592GkCb-yfsAJmWSwSLJKJV_eK_KcpScUZLdeHHhfvBPvNusr2cJXfjSjFAVTpUjTymaiS6VWTNVSiAXm_B2LNerfbDeg4leRDRqkOYigb0bpg7q7RLdREMRUYc3r3iW8xWL5jEDURx88_UheS6O-3WkzjurFNKiBSrSbwQUYTgc31Rm4f5KMeu-rMJN1tSe2f7TwccwoBpzB4uux5xEZFyZeTQrLLIDgLULzcfp_yVMNK4jjN0NQlAp7LHY5l0TepxEBGFSkzg..","client_id":"arcgisstorymaps","appTitle":"ArcGIS StoryMaps","locale":"en","persistOption":true,"hideCancel":true,"showSocialLogins":true,"contextPath":"/sharing","appOrgInfo":{"id":"P3ePLMYs2RVChkJx","name":"Esri","description":"Esri publishes a set of ready-to-use maps and apps that are available as part of ArcGIS.  ArcGIS is a mapping platform that enables you to create interactive maps and apps to share within your organization or publicly.","thumbnail":"thumbnail1777662343281.png"},"orgUrlBase":"maps.arcgis.com","helpBase":"https://doc.arcgis.com/en/arcgis-online/","socialProviders":["github","facebook","google","apple"],"showSignupOption":true,"signupType":"publicaccount","originSignin":false,"isMfaRecoveryCodesEnabled":false,"customOrgLoginEnabled":false}
+        window.setTheme(oAuthInfo, "/sharing");
+    </script>
+    <script src="/sharing/files/scripts/oauth2.js?v=1C31438"></script>
+</head>
+<body>
+    <noscript>
+        <h1>JavaScript must be enabled to sign in</h1>
+    </noscript>
+    <div class="content-container"></div>
+</body>
+<script>
+    oAuthInfo.locale = ((oAuthInfo.locale && oAuthInfo.locale === "iw") ? "he" : oAuthInfo.locale);
+    require.config({
+        baseUrl: "/sharing/files/scripts/",
+        locale: oAuthInfo.locale && oAuthInfo.locale.toLowerCase() || ""
+    });
+    require(["signIn", "domReady!"], function (signIn) {
+        signIn.startup(oAuthInfo);
+    });
+</script>
+</html>

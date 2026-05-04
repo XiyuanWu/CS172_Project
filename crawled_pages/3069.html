@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Compensation at the University of California: Annual Wage</title>
+
+    <link rel="icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" href="js/jquery-ui-1.14.1.redmond/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/wg.css" />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui-1.14.1.redmond/jquery-ui.min.js"></script>
+    <script src="js/wg.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C59T8JP0JW"></script>
+    <script src="js/ort.js"></script>
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+
+      <div id="branding">
+        <img src="images/bannerimg.jpg" alt="UC Wage Banner" height="175" usemap="#Map" />
+      </div>
+      <map name="Map" id="Map">
+        <area alt="UC Seal" shape="rect" coords="4,3,198,171" title="www.universityofcalifornia.edu"
+          href="https://www.universityofcalifornia.edu/" />
+      </map>
+      <div id="features">
+        <img class="ie" width="199px" src="images/compass.jpg" alt="compass" />
+      </div>
+      <div id="banner">
+        <h1>
+          <a href="https://ucnet.universityofcalifornia.edu/compensation-and-benefits/index.html"
+                title="Compensation at the University of California" target="_blank" rel="noopener noreferrer">
+                Compensation at the University of California
+              </a>
+        </h1>
+      </div>
+
+      <div id="content">
+
+        <div id="content-hdr-blk">
+          <h3>University of California (UC) Employee Pay</h3>
+          <p>As part of its commitment to transparency and public accountability, each year the University of California
+            publicly reports employee pay data. The report covers UC's career faculty and staff employees, as well as
+            part-time, temporary and student employees.</p>
+          <p>
+					UC has released its employee pay data for the calendar year 2024. A summary of UC's 2024 payroll is available at <br />
+            <a title="UC 2024 Payroll Summary"
+              href="https://www.ucop.edu/institutional-research-academic-planning/content-analysis/employees/compensation-reporting.html">https://www.ucop.edu/institutional-research-academic-planning/content-analysis/employees/compensation-reporting.html</a>
+          </p>
+          <p>UC compensation information for the calendar year 2024 has also been reported to the California State
+            Controller's Office.</p>
+				<p>Below is a searchable database of payroll data. It may be used to search for pay information on an individual
+					UC employee or a group of employees (e.g., employees with the same job titles) in the desired calendar year. By
+					clicking on the category headings at the top of the display, data may also be sorted by location, salary level, and
+            other criteria.</p>
+        </div>
+
+        <!-- search-input -->
+        <div id="search-input" class="ui-tbgrid ui-widget ui-corner-bottom">
+          <div id="search-header" class="ui-tbgrid-header ui-widget-header ui-corner-top">
+            Search UC Annual Wage Data
+          </div>
+
+          <div id="search-form-wrapper" class="wrapper">
+            <div id="xhr-search" class="xhrloader hidden"></div>
+            <form name="sform" id="sform" method="post" role="search" aria-label="Employee search form">
+              <table id="sform-tbl">
+                <tr>
+                  <td class="ta-rgt"><label for="year">Calendar Year:</label></td>
+                  <td>
+					        <select id="year" name="year" tabindex="1" title="Select the calendar year for the search" aria-label="Calendar year selection">
+                      <option value="2024">2024</option>
+                      <option value="2023">2023</option>
+                      <option value="2022">2022</option>
+                      <option value="2021">2021</option>
+                      <option value="2020">2020</option>
+                      <option value="2019">2019</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                      <option value="2011">2011</option>
+                      <option value="2010">2010</option>
+                    </select>
+                  </td>
+                  <td class="ta-rgt"><label for="firstname">First Name:</label></td>
+                  <td>
+                    <input type="text" id="firstname" name="firstname" size="20" maxlength="50" placeholder=""
+                      title="First name" aria-label="First name input" tabindex="4" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="ta-rgt"><label for="location">Location:</label></td>
+                  <td>
+                    <select id="location" name="location" title="Single campus or ALL campuses"
+                      aria-label="Location selection" tabindex="2">
+                      <option value="ALL"> ALL </option>
+                      <option value="ASUCLA">ASUCLA</option>
+                      <option value="Berkeley">Berkeley</option>
+                      <option value="DANR" class="hidden">DANR</option>
+                      <option value="Davis">Davis</option>
+                      <option value="UC SF Law">UC SF Law</option>
+                      <option value="Irvine">Irvine</option>
+                      <option value="Los Angeles">Los Angeles</option>
+                      <option value="Merced">Merced</option>
+                      <option value="Riverside">Riverside</option>
+                      <option value="San Diego">San Diego</option>
+                      <option value="San Francisco">San Francisco</option>
+                      <option value="Santa Barbara">Santa Barbara</option>
+                      <option value="Santa Cruz">Santa Cruz</option>
+                      <option value="UCOP">UCOP</option>
+                    </select>
+                  </td>
+                  <td class="ta-rgt"><label for="lastname">Last Name:</label></td>
+                  <td>
+                    <input type="text" id="lastname" name="lastname" size="20" maxlength="50" placeholder=""
+                      title="Last name" aria-label="Last name input" tabindex="5" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="ta-rgt"><label for="title">Title:</label></td>
+                  <td>
+                    <input type="text" id="title" name="title" size="20" maxlength="50" placeholder="" title="Job title"
+                      aria-label="Job title input" tabindex="3" />
+                  </td>
+                  <td class="ta-rgt"><label for="startSal">Gross Pay Range:</label></td>
+                  <td>
+                    <input type="text" id="startSal" name="startSal" size="9" maxlength="16" placeholder=""
+                      title="Minimum gross pay" aria-label="Minimum gross pay input" tabindex="6" />
+                    <span> - </span>
+                    <input type="text" id="endSal" name="endSal" size="9" maxlength="16" placeholder=""
+                      title="Maximum gross pay" aria-label="Maximum gross pay input" tabindex="7" />
+                  </td>
+                </tr>
+              </table>
+              <div id="search-btn-group">
+                <button type="button" id="loadingButton" class="hidden ui-button ui-button-text-only" role="button"
+                  title="Loading..." aria-disabled="true" tabindex="-1">
+                  <span id="loading-txt-span">Loading...</span>
+                </button>
+                <button type="button" id="searchButton"
+                  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"
+                  title="Submit search" aria-disabled="false" tabindex="8">
+                  <span>Search</span>
+                </button>
+                <button type="button" id="clearButton" class="ui-button ui-widget ui-corner-all ui-button-text-only"
+                  role="button" aria-disabled="false" title="Clear search input and current results" tabindex="9">
+                  <span>Clear</span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="noResultsDiv" class="msgblk noresults hidden">Your search returned no results.</div>
+          <div id="errorDiv" class="msgblk error hidden">A search error occurred. Please try again shortly.</div>
+        </div><!-- #search-input -->
+
+        <!-- search-results -->
+        <div id="search-results" class="hidden">
+          <div class="ui-tbgrid-header ui-widget-header ui-corner-top">Search Results</div>
+          <div id="search-results-wrapper" class="wrapper">
+
+            <!-- xhr overlay -->
+            <div id="xhr-results" class="xhrloader hidden"></div>
+            <div id="xhr-results-spinner" class="spinner hidden"></div>
+
+            <div id="resultsTableWrapper">
+              <table id="resultsTable">
+                <colgroup>
+                  <col class="col-w-30 rownum">
+                  <col class="col-w-30">
+                  <col class="col-w-70">
+                  <col class="col-w-80">
+                  <col class="col-w-90">
+                  <col class="col-w-140">
+                  <col class="col-w-60 pay">
+                  <col class="col-w-60 pay">
+                  <col class="col-w-60 pay">
+                  <col class="col-w-60 pay">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th data-field="id" class="rownum" aria-label="Row Number"></th>
+                    <th data-field="year" class="year">Year</th>
+                    <th data-field="location" data-sort="asc" class="location">
+                      Location
+                      <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </th>
+                    <th data-field="firstname" data-sort="asc" class="firstname">
+                      First<br>Name
+                      <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </th>
+                    <th data-field="lastname" data-sort="asc" class="lastname">
+                      Last<br>Name
+                      <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </th>
+                    <th data-field="title" data-sort="asc" class="title">
+                      Title
+                      <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </th>
+                    <th data-field="grosspay" data-sort="asc" class="pay">
+                      Gross<br>Pay
+                      <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </th>
+                    <th data-field="basepay" data-sort="asc" class="pay">
+                      Regular<br>Pay
+                      <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </th>
+                    <th data-field="overtimepay" data-sort="asc" class="pay">
+                      Overtime<br>Pay
+                      <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </th>
+                    <th data-field="adjustpay" data-sort="asc" class="pay">
+                      Other<br>Pay
+                      <span class="ui-icon ui-icon-triangle-1-s"></span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+              </table>
+              <div id="rowDialog" class="hidden"></div>
+            </div><!-- #resultsTableWrapper -->
+
+            <!-- pager -->
+            <div id="pager" class="pager">
+
+              <div class="page-size left">
+                <select id="pageSizeSelect" class="ui-widget ui-corner-all">
+                  <option value="20">20</option>
+                  <option value="40">40</option>
+                  <option value="60">60</option>
+                </select>
+                <label for="pageSizeSelect">rows per page</label>
+              </div>
+
+              <div class="page-nav center">
+              	<div class="nav-buttons">	
+									
+									<button id="firstPage" title="First Page" class="ui-button ui-widget ui-corner-all">
+										<span class="ui-icon ui-icon-seek-first"></span>
+									</button>
+									<button id="prevPage" title="Previous Page" class="ui-button ui-widget ui-corner-all">
+										<span class="ui-icon ui-icon-seek-prev"></span>
+									</button>
+
+									<div class="nav-pageof">
+									  <label for="currentPage">Page</label>
+									  <div class="pager-center">
+									    <input id="currentPage" class="ui-widget ui-corner-all" type="text" size="3" maxlength="6" value="1" role="textbox">
+									  </div>
+                    <label for="currentPage">
+  									  <span>of</span>
+  									  <span id="totalPages">?</span>
+                    </label>
+									</div>
+
+									<button id="nextPage" title="Next Page" class="ui-button ui-widget ui-corner-all">
+										<span class="ui-icon ui-icon-seek-next"></span>
+									</button>
+									<button id="lastPage" title="Last Page" class="ui-button ui-widget ui-corner-all">
+										<span class="ui-icon ui-icon-seek-end"></span>
+									</button>
+                </div>
+              </div>
+							
+              <div class="view-range right">
+                <span id="viewRange">Viewing 1 - 20 of 22,555</span>
+              </div>
+
+            </div><!-- #pager -->
+
+          </div><!-- #search-results-wrapper -->
+        </div><!-- #search-results -->
+
+        <div id="notes" class="notes">
+          <b>Notes</b>:
+          <ul>
+            <li>Payroll data is based on the selected calendar year.</li>
+            <li>Pursuant to federal student privacy laws, the names of all employees whose employment was dependent upon
+						student status (including medical residents) at any point during a given calendar year have been redacted and
+              appear as ******.</li>
+            <li>Starting with the 2013 calendar year data, the format has changed slightly to match the earnings data
+              submitted to the State Controller's Office.</li>
+            <li>Starting with the calendar year 2018, payroll data included the employees at ASUCLA and Hastings.</li>
+            <li>Division of Agriculture and Natural Resources (DANR) employees are reported under one of the campuses
+						(Berkeley, Davis, or Riverside) or the UC Office of the President, depending on where their payroll was processed.
+            </li>
+            <li>Employee compensation listed in the "Regular Pay" category includes Base Pay and reductions due to
+              participation in the voluntary Employee Reduction in Time and phased retirement programs</li>
+            <li>Employee compensation listed in the "Other Pay" category includes:
+              <ul>
+							<li>Negotiated additional pay for clinical care and research by faculty in Health Sciences schools (funded
+                  from clinical revenues and contracts and grants)</li>
+                <li>Faculty pay for Summer Session or University Extension teaching</li>
+							<li>Pay for faculty research performed during summer months, funded by extramural contracts and grants</li>
+                <li>Performance-based incentive compensation and similar payments that recognize achievement of specific
+                  performance goals or exemplary service</li>
+							<li>Other categories such as shift differentials, payout of unused vacation leave upon separation, and lump
+                  sum payments made as part of the settlement of union bargaining agreements</li>
+              </ul>
+            </li>
+            <li>Individual gross pay numbers may not align with the numbers on form W-2 (Wage and Tax Statement) due to
+              differences in the parameters and methodologies.</li>
+          </ul>
+        </div>
+        <div id="notes2012" class="notes hidden">
+          <b>Notes</b>:
+          <ul>
+            <li>Payroll data is based on the selected calendar year.</li>
+            <li>Pursuant to federal student privacy laws, the names of all employees whose employment was dependent upon
+						student status (including medical residents) at any point during a given calendar year have been redacted and
+              appear as ******.</li>
+            <li>Employee compensation listed in the "Other Pay/Adjustment" category includes:
+              <ul>
+							<li>Negotiated additional pay for clinical care and research by faculty in Health Sciences schools, funded
+                  from clinical revenues and contracts and grants</li>
+                <li>Faculty pay for Summer Session or University Extension teaching</li>
+							<li>Pay for faculty research performed during summer months, funded by extramural contracts and grants</li>
+                <li>Performance-based incentive compensation and similar payments that recognize achievement of specific
+                  performance goals or exemplary service</li>
+							<li>Other categories such as shift differentials, payout of unused vacation leave upon separation, and lump
+                  sum payments made as part of the settlement of union bargaining agreements</li>
+							<li>Negative adjustments. Negative adjustments for 2010 were primarily due to reductions resulting from the
+								2009-10 UC furlough program. In subsequent years negative adjustments are primarily reflective of pay reductions
+								due to participation in the voluntary Employee Reduction in Time (ERIT) or phased retirement programs.</li>
+              </ul>
+            </li>
+          </ul>
+          <br />
+        </div><!-- #notes -->
+
+      </div><!-- #content -->
+
+      <div id="footerbar">&nbsp;</div>
+
+      <footer>
+        <div>
+          <div>
+					<a href="https://www.ucop.edu/" title="UCOP home page" target="_blank" tabindex="-1">Office of the President</a>
+            <span class="pipegap">|</span>
+
+					<a href="https://regents.universityofcalifornia.edu/" title="UC Board of Regents home page" target="_blank" tabindex="-1">Board of Regents</a>
+            <span class="pipegap">|</span>
+
+					<a href="https://www.universityofcalifornia.edu/accessibility" title="UC accessibility info" target="_blank" tabindex="-1">Accessibility</a>
+            <span class="pipegap">|</span>
+
+					<a href="https://www.ucop.edu/terms/index.html" title="Terms and conditions of use" target="_blank" tabindex="-1">Terms of Use</a>
+          </div>
+          <p class="cpyryt">Copyright &copy; The Regents of the University of California</p>
+        </div>
+      </footer>
+
+    </div><!-- #wrapper -->
+
+    <div class="version">v2.7.0</div>
+  </body>
+
+</html>

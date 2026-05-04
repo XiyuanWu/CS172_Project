@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<head>
+
+	<!-- Meta Data
+	================================================== -->
+    <title>UCSF Health</title> <!--  This will be dynamically updated  -->
+	<meta name="description" content="Volunteer Portal">
+	<meta name="author" content="Samaritan Technologies">
+	<meta name="Keywords" content="Volunteers">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+
+
+    <script>
+    var RECRUITER_ID = '502';
+    var HOME_URL = 'https://ucsfhealth.samaritan.com/';
+    var SERVER_URL = 'https://ucsfhealth.samaritan.com/';
+    var CUSTOM_URL = 'https://ucsfhealth.samaritan.com/custom/502/';
+    var CUSTOM_ROOT_URL = 'https://ucsfhealth.samaritan.com/custom/';
+    
+    </script>
+    <script>const REPORT_ERRORS = false;const NOTIFICATION = false;const MINIFIED = false;const ENABLE_MIGRATED_COMPONENTS = false;const COORDINATOR_BUILD = '147 [04/27 12:40pm]';</script>
+<base href='/custom/502/'>
+        <!-- Third Party Stylesheets START -->
+        <link rel="stylesheet" type="text/css" href="https://cstools.samaritan.com/css/third-party/angular-toastr-2.1.1.min.css">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/css/third-party/bootstrap-3.3.7.min.css">
+        <!--    Font Awesome Version 6-->
+        <link rel="stylesheet" href="https://cstools.samaritan.com/css/third-party/font-awesome/css/all.min.css" />
+        <link rel="stylesheet" href="https://cstools.samaritan.com/css/third-party/fullcalendar-3.0.0.min.css">
+        <link rel="stylesheet" media="print" href="https://cstools.samaritan.com/css/third-party/fullcalendar-3.0.0.print.css">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/css/third-party/ng-img-crop-0.3.2.css">
+        <!-- Third Party Stylesheets END -->
+
+
+
+        <!-- App Stylesheets START -->
+        <link rel="stylesheet" href="https://cstools.samaritan.com/lib/jquery-ui/jquery-ui-1.13.2.sortable-core/jquery-ui.min.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/lib/jquery-ui/jquery-ui-1.13.2.sortable-core/jquery-ui.structure.min.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/ng-img-crop.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/default_attachment_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/css/animations.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/angular_loading_bar_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/searchableDropdownStyleDefault.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/angular-toggle-switch-bootstrap-3.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/profileEditor.css?v=2248">
+        <!-- TODO determine if we can remove the stylesheet below: bs_vol_menu_tiles.css -->
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/bs_vol_menu_tiles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/password_validation_indicator_style_default.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/default_modal_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/css/field-adjustors.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/css/utility-styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/form_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/visual_clock_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/sign_in_station_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/calendar_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/onboarding_list_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/upcoming_schedule_widget.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/redirectObjDisplay.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/header_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/esar_layout.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/cookie_message_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/default_waiver_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/default_lms_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/default_logbook_styles.css?v=2248">
+		<link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/default_video_player_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/owl.carousel.min.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/owl.theme.default.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/training_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/faf_members_list_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/print_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/professions_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/approver_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/admin_panel_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/reschedule_service.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/form_item_editor_modal.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/group_module_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/waiver_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/org_search_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/approver_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/org_manager_styles.css?v=2248">
+        <link rel="stylesheet" href="https://cstools.samaritan.com/partials/directives/css/org_search_styles.css?v=2248">
+        <!-- App Stylesheets END -->
+
+
+
+        <!-- Bug Tracking START -->
+        <script src="https://dmc1acwvwny3.cloudfront.net/atatus-spa.js"></script>
+        <script type="text/javascript">
+            if(REPORT_ERRORS && window.atatus) window.atatus.config('a378c723278641fc8c3a1a5699da531c', {consoleTimelineLevels:["warn"]}).install();
+        </script>
+        <!-- Bug Tracking END -->
+
+
+
+        <!-- Build Version START -->
+        <script>
+            const RECRUITER_BUILD = '2248';
+            const CSTOOLS_URL = 'https://cstools.samaritan.com/';
+            // var keenClient;
+
+            /* Keen info here for future use */
+            // (function(name,path,ctx){ctx[name]=ctx[name]||{ready:function(fn){var h=document.getElementsByTagName('head')[0],s=document.createElement('script'),w=window,loaded;s.onload=s.onerror=s.onreadystatechange=function(){if((s.readyState&&!(/^c|loade/.test(s.readyState)))||loaded){return}s.onload=s.onreadystatechange=null;loaded=1;ctx[name].ready(fn)};s.async=1;s.src=path;h.parentNode.insertBefore(s,h)}}})
+            // ('KeenTracking', 'https://cdn.jsdelivr.net/npm/keen-tracking@4/dist/keen-tracking.min.js', this);
+            //
+            // KeenTracking.ready(function(){
+            //     // Configure a client instance
+            //     keenClient = new KeenTracking({
+            //         projectId: '562fe14996773d1c3437436e',
+            //         writeKey: 'c9863817a7de01560dc11744a5371effa96504d419e7e4d61ee2a72a51f71ae102eb284021593238cdc676de4b5a27b210bafa7f3917c9fda72a692bc5288a92e33e094e99a0f3f1ddd9477d42eccd5fb61a58b746fe9b916fdc4dd0b6b2c30bac99cd9d0aa006eba981195c2b535e0c'
+            //     });
+            // });
+        </script>
+        <!-- Build Version END -->
+
+
+
+		<!-- Third Party (Self-Hosted) Modules START -->
+        <script src="https://cstools.samaritan.com/modules/third-party/moment.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/moment-timezone-with-data-10-year-range.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/jquery-3.6.0.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/respond.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/jquery-ui.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-1.8.2.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/fullcalendar.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/jquery.flot.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-animate.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-messages.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-touch.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-sanitize.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/ui-bootstrap-tpls.min.js"></script>
+        <script src="https://cstools.samaritan.com/thirdparty/js/bootstrap.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-ui-utils.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-ui-router.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-moment.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/loading-bar.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/mask.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-breadcrumb.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/ng-infinite-scroll.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/owl.carousel.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-toastr.tpls.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/chart.min.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/angular-idle.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByrYBYPSYIVE8neqIpsBwVMWOtfap_SIQ&callback=initMap"></script>
+        <script src="https://cstools.samaritan.com/js/mapLoaded.js"></script>
+        <script src="https://cstools.samaritan.com/js/jquery.masked-input.1.4.1.js"></script>
+        <script src="https://cstools.samaritan.com/js/markerClusterer.js"></script>
+        <script src="https://cstools.samaritan.com/js/mapLabel.js"></script>
+        <script src="https://cstools.samaritan.com/modules/third-party/sortable.js"></script>
+        <script src='https://cstools.samaritan.com/thirdparty/js/tinymce/tinymce.min.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/angular-chart.1.1.1.min.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/angular-easyfb.1.5.2.min.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/angular-toggle-switch.min.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/angular-ui-scroll.1.7.2.min.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/angular-recaptcha.min.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/ng-map.1.18.4.min.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/angular-tinymce.min.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/angular-bind-html-compile.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/angular-owl-carousel.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/ng-img-crop.0.3.2.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/third-party/lodash.js?v=2248'></script>
+        <!-- Third Party (Self-Hosted) Modules END -->
+
+
+
+        <!-- other START -->
+        <script src="https://cstools.samaritan.com/js/polyfills.js"></script>
+        <!-- other END -->
+
+
+		<!-- App Modules START -->
+        <script src='https://cstools.samaritan.com/modules/app-modules/AccountManager.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/AdminPanelConfig.module.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/AnalyticsService.module.1.2.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Attachments.module.1.2.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/ConfigSettings.module.1.3.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/CookieFunctions.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/CookieMessage.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Forms.module.1.5.js?v=2248.03092020'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/FormEditor.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/FormContentDirective.module.1.4.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Groups.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/lbeFormat.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Logbook.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Login.module.1.4.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Logout.module.1.2.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/OppCalendar.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/OppDetails.module.1.2.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/OrgDetails.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/AffDetails.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Onboarding.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/OppFeed.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/OppSearch.module.1.4.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Pages.module.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/ProfessionsManager.module.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/RecordManager.module.1.6.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/RecordResultsViews.module.1.4.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/ReportService.module.1.6.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/ResetPassword.module.1.3.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/ResetOrgPassword.module.1.3.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/SamaritanDataService.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/SearchFilters.module.1.2.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Trainings.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/OrgSearch.module.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/UserIdleCheck.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/UserManager.module.1.3.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Utils.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/VolAssignments.module.1.1.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/VolAssignService.module.1.6.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/VolunteerFaq.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/OrganizationManager.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/Waivers.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/LMS.module.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/HeaderNav.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/FriendsAndFamily.module.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/FullCalendar.module.1.2.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/MCResizer.module.1.0.js?v=2248'></script>
+        <script src='https://cstools.samaritan.com/modules/app-modules/VueServices.module.js?v=2248'></script>
+		<!-- App Modules END -->
+    <script>const formver = {"A.json":"2106090221","d.json":"2106090221","new.json":"1901230123","passwordResetForm.json":"1901230123","privacyForm.json":"1901230123","volForm.json":"2106090221","volForm.json.backuptuesday":"2106090221","volForm06032019.json":"2106090221","volFormBak.json":"2101251224","volFormBakJan252021.json":"2106090221",};const partialsver = {"badgeModal.html":"1901231256","badgeReceivedModal.html":"1811090141","finalizeModal.html":"2106090221","header.html":"2106090221","healthClearanceModal.html":"1903301155","homePageSlideTemplate.html":"2106090221","index.html":"2209011007","interviewModal.html":"2104120415","opp_details_no_tabs.html":"2307310553","orientationModal.html":"1811021215","registration_success.html":"2309261048","vol_login.html":"2401310828","vol_menu.html":"2404220840","volagreement1modal.html":"1901230124","volunteer_faq.html":"2106090221",};</script>
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 400, 500, 600, 700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="https://cstools.samaritan.com/partials/template_1.3/css/styles.css?v=2102
+">
+
+    <!-- Custom Styles -->
+    <link href="https://ucsfhealth.samaritan.com/custom/502/css/recruiter-styles.css?v=2402191158" rel="stylesheet">
+    <link href="https://ucsfhealth.samaritan.com/custom/502/css/recruiter-responsive.css?v=2402060322" rel="stylesheet">
+
+
+
+	<!-- fav-icon
+	================================================== -->
+	<link rel="shortcut icon" href="https://ucsfhealth.samaritan.com/custom/502/images/favicon.ico">
+
+
+
+
+	<!-- Google Analytics  -->
+<!--	<script>-->
+<!--		var gaTrackers = [-->
+<!--			//{name:"clientTracker",id:"TRACKER-ID"}, //Client's Tracker if one exists (change ID)-->
+<!--			{name:"samTracker",id:"UA-31536058-14"}, //tracker setup for samaritan purpose (change ID)-->
+<!--			{name:"samGlobalTracker",id:"UA-31536058-9"} //Sends tracking info to Samaritan Global Tracker-->
+<!--			];-->
+<!--		ga_init(gaTrackers);-->
+<!--	</script>-->
+
+
+
+
+
+	<!-- Angular App Controllers-->
+	<script src="https://ucsfhealth.samaritan.com/custom/502/js/angular-config.js?v=2604230610"></script>
+
+
+</head>
+
+<!-- The body tag is given the page name as an id element for unique page css targeting -->
+<body id="page_{{currentRouteName}}">
+
+
+<div id="fb-root"></div>
+
+<!-- eRecruiter Container
+================================================== -->
+<div id="erec_main_container">
+    <section class="sectionBanner">
+        <div class="container">
+            <!--Web Banner-->
+            <div class="row webBanner">
+                <div class="col-sm-6">
+                    <h2 class="mb0">University of California San Francisco</h2>
+                </div>
+                <div class="col-sm-6 hidden-xs">
+                    <ul class="bannerList">
+                        <li class="bannerItem fr"><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+                        <li class="bannerItem fr"><a href="http://www.ucsf.edu/search">Search UCSF</a></li>
+                        <li class="bannerItem fr"><a href="http://www.ucsf.edu/about/ucsf-overview">About UCSF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+	<recruiter-header></recruiter-header>
+	<div id="erec_wrapper">
+			<div class="view-container clearfix"><div ui-view class="view-frame"></div></div>
+	
+
+
+		
+	
+
+		
+	<footer>
+		<!-- Client Footer
+		================================================== -->
+		<div id="client_footer" style="background:#052049;" class="pt30 pb30" >
+			       <div class="container">
+              <div class="row">
+                        <div class="footerMenu col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        <h4>Getting Care</h4>
+                        <ul>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/find_a_doctor/">Find a Doctor</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/clinics/emergency_department/">Emergency Care</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/clinics/primary_care/">Primary Care</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/clinics/">All Medical Services</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/services/international_services/">International Services</a></li>
+
+                        </ul>
+                    </div>
+                        <div class="footerMenu col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        <h4>Getting Involved</h4>
+                        <ul>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/about/how_to_donate/">Donate</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/about/volunteering/">Volunteer</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/about/jobs/">Join Our Team</a></li>
+                        </ul>
+                    </div>
+                        <div class="footerMenu col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/maps_and_directions/">Locations and Directions</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/contact_us/">Contact Us</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/services/patient_relations/">Contact Patient Relations</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/about/quality_of_patient_care/">Quality of Patient Care</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/about/">Our Organization</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/news/">News Center</a></li>
+                        </ul>
+                    </div>
+                        <div class="footerMenu col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                        <h4>Research &amp; Education</h4>
+                        <ul>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/clinical_trials/">Clinical Trials</a></li>
+                            <li><a class="menuButton" href="https://www.ucsf.edu/">UC San Francisco</a></li>
+                            <li><a class="menuButton" href="https://medschool.ucsf.edu/">UCSF School of Medicine</a></li>
+                            <li><a class="menuButton" href="https://nursing.ucsf.edu/">UCSF School of Nursing</a></li>
+                            <li><a class="menuButton" href="https://pharmacy.ucsf.edu/">UCSF School of Pharmacy</a></li>
+                        </ul>
+                    </div>
+                        <div class="footerMenu col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                        <h4>Referring Physicians</h4>
+                        <ul>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/health_professionals/make_a_referral/">Refer a Patient</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/health_professionals/transfer_a_patient/">Transfer a Patient</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/health_professionals/request_a_consultation/">Request a Consultation</a></li>
+                            <li><a class="menuButton" href="https://www.ucsfhealth.org/mdlink/">MD Link</a></li>
+                        </ul>
+                    </div>
+            <div class="footerMenu col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                      <div class="socFooter ac">
+                            <div>
+                                <a class="socIcon iconFBFooter" href="https://www.facebook.com/UCSFMedicalCenter"><img src="https://ucsfhealth.samaritan.com/custom/502/images/footerIcons/fbImgSprite.png" width="38" height="76" alt="Facebook"></a>
+                  <a class="socIcon iconTWFooter" href="https://twitter.com/UCSFHospitals"><img src="https://ucsfhealth.samaritan.com/custom/502/images/footerIcons/twitImgSprite.png" width="38" height="76" alt="Twitter"></a>
+                  <a class="socIcon iconYTFooter" href="https://www.youtube.com/user/UCSFMedicalCenter"><img src="https://ucsfhealth.samaritan.com/custom/502/images/footerIcons/youtImgSprite.png" width="38" height="76" alt="YouTube"></a>
+                            </div>
+                                <div>
+	                                <!-- -->
+
+                                  <a class="footer-award" href="https://www.ucsfhealth.org/news/2018/08/ucsf_medical_center_is_best_hospital_in_california_for_2018_.html"><img src="https://ucsfhealth.samaritan.com/custom/502/images/footerIcons/best.gif" alt=""></a>
+                                                               </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>		
+		
+		<!-- Samaritan Footer
+		================================================== -->
+        <div id="samFooter">
+        	<p>Need a doctor? Call us at <strong>(888) 689-UCSF</strong> or <a href="/find_a_doctor/">browse our directory</a>.</p>
+            <p class="copy mb5">© 2002 - 2016 The Regents of The University of California</p>
+            <sam-footer></sam-footer>
+        </div>
+
+	</footer>
+	</div> <!-- end erec_wrapper -->
+</div> <!-- end erec_main_container -->
+
+    <cookie-message></cookie-message>
+
+	
+
+	</body>
+</html>
+
+<!-- TODO figure out why this is here. -->
+<!--<script>
+    var headerHack;
+    var myLoop = setInterval(function(){
+        headerHack = $('#hdr_nav_links>li:first-of-type a').attr('href');
+        headerHack.length > 1 ? stopTheLoop() : '';
+    },1000);
+
+    function stopTheLoop() {
+        if(headerHack == "#/volunteer_registration") {
+            $('#hdr_nav_links>li:first-of-type').html('<a class="nav-link " title="Volunteer Registration" href="https://volunteering.ucsfmedicalcenter.org/volunteer-requirements" style="color: rgb(255, 255, 255);">Register</a>');
+        }
+        clearInterval(myLoop);
+    }
+</script>-->

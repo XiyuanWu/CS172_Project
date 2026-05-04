@@ -1,0 +1,4152 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><meta name="description" content="At Lawrence Livermore National Laboratory, our unique computational capabilities, specifically high-performance computing (HPC), simulation and data science, impact an array of mission challenges. Learn how our HPC work enhances scientific discovery and engineering design." />
+<meta name="keywords" content="high-performance computing, high performance computing, hpc, data science, simulation, computer simulation, artificial intelligence, ai" />
+<link rel="canonical" href="https://www.llnl.gov/science-technology/hpc-simulation-data-science" />
+<meta property="og:url" content="https://www.llnl.gov/science-technology/hpc-simulation-data-science" />
+<meta property="og:title" content="HPC, Simulation and Data Science | Lawrence Livermore National Laboratory" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="HPC, Simulation and Data Science" />
+<meta name="twitter:site" content="@Livermore_Lab" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="content-updated" content="2026-04-18 16:20:43" />
+<meta name="im-release" content="LLNL-WEB-2006733" />
+<link rel="alternate" type="text/markdown" title="HPC, Simulation and Data Science" href="https://www.llnl.gov/node/47441.md" />
+<link rel="icon" href="/themes/custom/sienna/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>HPC, Simulation and Data Science | Lawrence Livermore National Laboratory</title>
+    <link rel="stylesheet" media="all" href="/sites/www/files/css/css_b1Q29x5SOgJH5REH7zjWuCBDD46iRVMkPXiaQCri75E.css?delta=0&amp;language=en&amp;theme=sienna&amp;include=eJyFkmFu5CAMhS9Ew6rSSnsbyxAnoQWMMExmbr-eZKbdbZH6J4jnT9h-LyhCDUJ-I9-4Wi8yeazchSK43hpnaHRtBgcc50a5bd1Bpl2g4EojbkFYwpVEH0plCIQVPJYWtBnGsOakz8KQZGlUIdGM8egnI2qjyuAwZ0U3wjnkdcxxIri8jkqJVtQpOujUo3rpLgYPhbhEOha77zgij9rvX39OD0bE5RUSuxCH5u0e1Rx1uqIMJ7lxb93pHmEmFuO5kp1rLxgnfMPrf8IcMPJqNM8Y8vtTfVzNEqKaax9JmBhzhEfGoCHbe8inKoTVb_Y8ejAFK64VyybPNz-VqefDLNloNpWkcJZwIbi7a7_cJ8fcRFctP5OV8L1wyO1HVNpN91uNBMoZ7aI9qL7s-_5UzjBfzjCfYpd9FiM3_eGSdShkLkENsMd3Sjz3-JDgY2rrOWlrNUzMTm7hmv4pflP-Au8cYb0" />
+<link rel="stylesheet" media="print" href="/sites/www/files/css/css_hm9oz8jH2G52fOxPnijLrDwUBS9GyPLTDeLdGk47IXo.css?delta=1&amp;language=en&amp;theme=sienna&amp;include=eJyFkmFu5CAMhS9Ew6rSSnsbyxAnoQWMMExmbr-eZKbdbZH6J4jnT9h-LyhCDUJ-I9-4Wi8yeazchSK43hpnaHRtBgcc50a5bd1Bpl2g4EojbkFYwpVEH0plCIQVPJYWtBnGsOakz8KQZGlUIdGM8egnI2qjyuAwZ0U3wjnkdcxxIri8jkqJVtQpOujUo3rpLgYPhbhEOha77zgij9rvX39OD0bE5RUSuxCH5u0e1Rx1uqIMJ7lxb93pHmEmFuO5kp1rLxgnfMPrf8IcMPJqNM8Y8vtTfVzNEqKaax9JmBhzhEfGoCHbe8inKoTVb_Y8ejAFK64VyybPNz-VqefDLNloNpWkcJZwIbi7a7_cJ8fcRFctP5OV8L1wyO1HVNpN91uNBMoZ7aI9qL7s-_5UzjBfzjCfYpd9FiM3_eGSdShkLkENsMd3Sjz3-JDgY2rrOWlrNUzMTm7hmv4pflP-Au8cYb0" />
+<link rel="stylesheet" media="all" href="/sites/www/files/css/css_w5hfl6QNeKTZArl_WErnX_TBWvq4X4UHkkWqnA4ER-k.css?delta=2&amp;language=en&amp;theme=sienna&amp;include=eJyFkmFu5CAMhS9Ew6rSSnsbyxAnoQWMMExmbr-eZKbdbZH6J4jnT9h-LyhCDUJ-I9-4Wi8yeazchSK43hpnaHRtBgcc50a5bd1Bpl2g4EojbkFYwpVEH0plCIQVPJYWtBnGsOakz8KQZGlUIdGM8egnI2qjyuAwZ0U3wjnkdcxxIri8jkqJVtQpOujUo3rpLgYPhbhEOha77zgij9rvX39OD0bE5RUSuxCH5u0e1Rx1uqIMJ7lxb93pHmEmFuO5kp1rLxgnfMPrf8IcMPJqNM8Y8vtTfVzNEqKaax9JmBhzhEfGoCHbe8inKoTVb_Y8ejAFK64VyybPNz-VqefDLNloNpWkcJZwIbi7a7_cJ8fcRFctP5OV8L1wyO1HVNpN91uNBMoZ7aI9qL7s-_5UzjBfzjCfYpd9FiM3_eGSdShkLkENsMd3Sjz3-JDgY2rrOWlrNUzMTm7hmv4pflP-Au8cYb0" />
+<link rel="stylesheet" media="all" href="/sites/www/files/css/css_pJ0BvmrqL8mLd0mIdXg2zngrNG6jHyFdrYAY90RmM4M.css?delta=3&amp;language=en&amp;theme=sienna&amp;include=eJyFkmFu5CAMhS9Ew6rSSnsbyxAnoQWMMExmbr-eZKbdbZH6J4jnT9h-LyhCDUJ-I9-4Wi8yeazchSK43hpnaHRtBgcc50a5bd1Bpl2g4EojbkFYwpVEH0plCIQVPJYWtBnGsOakz8KQZGlUIdGM8egnI2qjyuAwZ0U3wjnkdcxxIri8jkqJVtQpOujUo3rpLgYPhbhEOha77zgij9rvX39OD0bE5RUSuxCH5u0e1Rx1uqIMJ7lxb93pHmEmFuO5kp1rLxgnfMPrf8IcMPJqNM8Y8vtTfVzNEqKaax9JmBhzhEfGoCHbe8inKoTVb_Y8ejAFK64VyybPNz-VqefDLNloNpWkcJZwIbi7a7_cJ8fcRFctP5OV8L1wyO1HVNpN91uNBMoZ7aI9qL7s-_5UzjBfzjCfYpd9FiM3_eGSdShkLkENsMd3Sjz3-JDgY2rrOWlrNUzMTm7hmv4pflP-Au8cYb0" />
+<link rel="stylesheet" media="all" href="/sites/www/files/asset_injector/css/home_v2-9966e31f8a9fcc9139144b456d91e98c.css?tebvp8" />
+<link rel="stylesheet" media="all" href="/sites/www/files/css/css_QLtkYZHWA7PfxepHg3YopSJi0hlP_EpkZx-Yuh6AntA.css?delta=5&amp;language=en&amp;theme=sienna&amp;include=eJyFkmFu5CAMhS9Ew6rSSnsbyxAnoQWMMExmbr-eZKbdbZH6J4jnT9h-LyhCDUJ-I9-4Wi8yeazchSK43hpnaHRtBgcc50a5bd1Bpl2g4EojbkFYwpVEH0plCIQVPJYWtBnGsOakz8KQZGlUIdGM8egnI2qjyuAwZ0U3wjnkdcxxIri8jkqJVtQpOujUo3rpLgYPhbhEOha77zgij9rvX39OD0bE5RUSuxCH5u0e1Rx1uqIMJ7lxb93pHmEmFuO5kp1rLxgnfMPrf8IcMPJqNM8Y8vtTfVzNEqKaax9JmBhzhEfGoCHbe8inKoTVb_Y8ejAFK64VyybPNz-VqefDLNloNpWkcJZwIbi7a7_cJ8fcRFctP5OV8L1wyO1HVNpN91uNBMoZ7aI9qL7s-_5UzjBfzjCfYpd9FiM3_eGSdShkLkENsMd3Sjz3-JDgY2rrOWlrNUzMTm7hmv4pflP-Au8cYb0" />
+<link rel="stylesheet" media="all" href="/sites/www/files/asset_injector/css/v2_mobile-242263732058e952678dcc50e15b9153.css?tebvp8" />
+<link rel="stylesheet" media="all" href="/sites/www/files/css/css_GEy-hmvX-LTOlMQBCa2PlvWQbODJBJ8yfIJOgQ6MFmg.css?delta=7&amp;language=en&amp;theme=sienna&amp;include=eJyFkmFu5CAMhS9Ew6rSSnsbyxAnoQWMMExmbr-eZKbdbZH6J4jnT9h-LyhCDUJ-I9-4Wi8yeazchSK43hpnaHRtBgcc50a5bd1Bpl2g4EojbkFYwpVEH0plCIQVPJYWtBnGsOakz8KQZGlUIdGM8egnI2qjyuAwZ0U3wjnkdcxxIri8jkqJVtQpOujUo3rpLgYPhbhEOha77zgij9rvX39OD0bE5RUSuxCH5u0e1Rx1uqIMJ7lxb93pHmEmFuO5kp1rLxgnfMPrf8IcMPJqNM8Y8vtTfVzNEqKaax9JmBhzhEfGoCHbe8inKoTVb_Y8ejAFK64VyybPNz-VqefDLNloNpWkcJZwIbi7a7_cJ8fcRFctP5OV8L1wyO1HVNpN91uNBMoZ7aI9qL7s-_5UzjBfzjCfYpd9FiM3_eGSdShkLkENsMd3Sjz3-JDgY2rrOWlrNUzMTm7hmv4pflP-Au8cYb0" />
+
+    
+  </head>
+  <body class="sienna path-node page-node-type-lead-page navbar-is-fixed-top has-glyphicons">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+      
+    <header class="navbar navbar-default navbar-fixed-top" id="navbar" role="banner">
+    
+
+<section
+  class="usa-banner"
+  aria-label="Official website of the United States government"
+>
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+         <img class="usa-banner__header-flag" src="/themes/custom/sienna/assets/images/us_flag_small.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">
+            An official website of the United States government
+          </p>
+          <p class="usa-banner__header-action">Here’s how you know</p>
+        </div>
+        <button
+          type="button"
+          class="usa-accordion__button usa-banner__button"
+          aria-expanded="false"
+          aria-controls="gov-banner-default"
+        >
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div
+      class="usa-banner__content usa-accordion__content"
+      id="gov-banner-default"
+    >
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/themes/custom/sienna/assets/images/icon-dot-gov.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br />A
+              <strong>.gov</strong> website belongs to an official government
+              organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img
+            class="usa-banner__icon usa-media-block__img"
+            src="/themes/custom/sienna/assets/images/icon-https.svg"
+            role="img"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br />A
+              <strong>lock</strong> (
+              <span class="icon-lock"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="52"
+                  height="64"
+                  viewBox="0 0 52 64"
+                  class="usa-banner__lock-image"
+                  role="img"
+                  aria-labelledby="banner-lock-description-default"
+                  focusable="false"
+                >
+                  <title id="banner-lock-title-default">Lock</title>
+                  <desc id="banner-lock-description-default">Locked padlock icon</desc>
+                  <path
+                    fill="#000000"
+                    fill-rule="evenodd"
+                    d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                  />
+                </svg> </span
+              >) or <strong>https://</strong> means you’ve safely connected to
+              the .gov website. Share sensitive information only on official,
+              secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>        <div id="llnl-menu" >
+        <div class="container">
+            <ul class="llnl-nav">
+                <li><a href="https://www.llnl.gov/purpose">Our Purpose</a></li>
+                <li><a href="https://www.llnl.gov/science-technology">Our Science and Technology</a></li>
+                <li><a href="https://www.llnl.gov/join-our-team">Join Our Team</a></li>
+                <li><a href="https://www.llnl.gov/partner">Partner with Us</a></li>
+                <li><a href="https://www.llnl.gov/news">News</a></li>
+                <li><a href="https://www.llnl.gov/community-education">Community and Education</a></li>
+                <li><a href="https://www.llnl.gov/about">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="container menu-wrap">
+        
+        <div class="llnl-logo-wrap">
+            <div id="llnl-logo">
+                <a href="https://www.llnl.gov"><img src="/themes/custom/sienna/assets/images/llnl-logo.png" alt="LLNL Logo" /></a>
+            </div>
+        </div>
+        <div class="nav-wrap">
+                        
+            <div class="navbar-header">
+                  <div class="region region-navigation">
+    <nav role="navigation" aria-labelledby="block-primary-menu-menu" id="block-primary-menu" data-block-plugin-id="menu_block:main">
+            
+  <h2 class="visually-hidden" id="block-primary-menu-menu">Primary Menu</h2>
+  
+
+        
+      <ul class="menu menu--main nav navbar-nav">
+          
+                    <li class="expanded dropdown">
+        <a href="/purpose" aria-label="Our Purpose - Main Nav" id="Our_Purpose-mainnav">Our Purpose </a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/purpose/management-sponsors" aria-label="Management and Sponsors - Main Nav" id="Management_and_Sponsors-mainnav" data-drupal-link-system-path="node/46151">Management and Sponsors</a>
+                  </li>
+          
+                    <li class="expanded dropdown-submenu">
+        <a href="/purpose/history" aria-label="Our History - Main Nav" id="Our_History-mainnav" data-drupal-link-system-path="node/46156">Our History</a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/purpose/history/1950s" aria-label="Our History - 1950s - Main Nav" id="Our_History_-_1950s-mainnav" data-drupal-link-system-path="node/46776">Our History - 1950s</a>
+                  </li>
+          
+                    <li>
+        <a href="/purpose/history/1960s" aria-label="Our History - 1960s - Main Nav" id="Our_History_-_1960s-mainnav" data-drupal-link-system-path="node/46781">Our History - 1960s</a>
+                  </li>
+          
+                    <li>
+        <a href="/purpose/history/1970s" aria-label="Our History - 1970s - Main Nav" id="Our_History_-_1970s-mainnav" data-drupal-link-system-path="node/46786">Our History - 1970s</a>
+                  </li>
+          
+                    <li>
+        <a href="/purpose/history/1980s" aria-label="Our History - 1980s - Main Nav" id="Our_History_-_1980s-mainnav" data-drupal-link-system-path="node/46811">Our History - 1980s</a>
+                  </li>
+          
+                    <li>
+        <a href="/purpose/history/1990s" aria-label="Our History - 1990s - Main Nav" id="Our_History_-_1990s-mainnav" data-drupal-link-system-path="node/46791">Our History - 1990s</a>
+                  </li>
+          
+                    <li>
+        <a href="/purpose/history/2000s" aria-label="Our History - 2000s - Main Nav" id="Our_History_-_2000s-mainnav" data-drupal-link-system-path="node/46796">Our History - 2000s</a>
+                  </li>
+          
+                    <li>
+        <a href="/purpose/history/2010s" aria-label="Our History - 2010s - Main Nav" id="Our_History_-_2010s-mainnav" data-drupal-link-system-path="node/46801">Our History - 2010s</a>
+                  </li>
+          
+                    <li>
+        <a href="/purpose/history/2020s" aria-label="Our History - 2020s - Main Nav" id="Our_History_-_2020s-mainnav" data-drupal-link-system-path="node/46806">Our History - 2020s</a>
+                  </li>
+        </ul>
+  
+            </li>
+        </ul>
+  
+            </li>
+          
+                    <li class="expanded dropdown active">
+        <a href="/science-technology" aria-label="Our Science and Technology - Main Nav" id="Our_Science_and_Technology-mainnav">Our Science and Technology </a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/science-technology/advanced-materials-manufacturing" aria-label="Advanced Materials and Manufacturing - Main Nav" id="Advanced_Materials_and_Manufacturing-mainnav" data-drupal-link-system-path="node/46056">Advanced Materials and Manufacturing</a>
+                  </li>
+          
+                    <li>
+        <a href="/science-technology/bioscience-bioengineering" aria-label="Bioscience &amp; Bioengineering - Main Nav" id="Bioscience_&amp;_Bioengineering-mainnav" data-drupal-link-system-path="node/47301">Bioscience &amp; Bioengineering</a>
+                  </li>
+          
+                    <li>
+        <a href="/science-technology/earth-atmospheric-science" aria-label="Earth and Atmospheric Science - Main Nav" id="Earth_and_Atmospheric_Science-mainnav" data-drupal-link-system-path="node/47371">Earth and Atmospheric Science</a>
+                  </li>
+          
+                    <li>
+        <a href="/science-technology/facilities-centers" aria-label="Facilities and Centers - Main Nav" id="Facilities_and_Centers-mainnav" data-drupal-link-system-path="node/46091">Facilities and Centers</a>
+                  </li>
+          
+                    <li>
+        <a href="/science-technology/high-energy-density-science" aria-label="High-Energy-Density Science - Main Nav" id="High-Energy-Density_Science-mainnav" data-drupal-link-system-path="node/47336">High-Energy-Density Science</a>
+                  </li>
+          
+                    <li class="active">
+        <a href="/science-technology/hpc-simulation-data-science" aria-label="HPC, Simulation and Data Science - Main Nav" id="HPC,_Simulation_and_Data_Science-mainnav" data-drupal-link-system-path="node/47441" class="is-active" aria-current="page">HPC, Simulation and Data Science</a>
+                  </li>
+          
+                    <li>
+        <a href="/science-technology/laser-optical-science-technology" aria-label="Lasers and Optical Science and Technology - Main Nav" id="Lasers_and_Optical_Science_and_Technology-mainnav" data-drupal-link-system-path="node/47406">Lasers and Optical Science and Technology</a>
+                  </li>
+          
+                    <li>
+        <a href="/science-technology/nuclear-chemical-isotopic-science-technology" aria-label="Nuclear, Chemical and Isotopic Science and Technology - Main Nav" id="Nuclear,_Chemical_and_Isotopic_Science_and_Technology-mainnav" data-drupal-link-system-path="node/47476">Nuclear, Chemical and Isotopic Science and Technology</a>
+                  </li>
+        </ul>
+  
+            </li>
+          
+                    <li class="expanded dropdown">
+        <a href="/join-our-team" aria-label="Join Our Team - Main Nav" id="Join_Our_Team-mainnav">Join Our Team </a>
+                          <ul class="dropdown-menu">
+          
+                    <li class="expanded dropdown-submenu">
+        <a href="/join-our-team/careers" aria-label="Careers - Main Nav" id="Careers-mainnav" data-drupal-link-system-path="node/40596">Careers</a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/join-our-team/careers/career-areas" aria-label="Career Areas - Main Nav" id="Career_Areas-mainnav" data-drupal-link-system-path="node/40536">Career Areas</a>
+                  </li>
+          
+                    <li>
+        <a href="/join-our-team/careers/student-internship-veteran-programs" aria-label="Students - Main Nav" id="Students-mainnav" data-drupal-link-system-path="node/40711">Students</a>
+                  </li>
+          
+                    <li>
+        <a href="/join-our-team/careers/llns-postdoc-fellowship-programs" aria-label="Postdocs - Main Nav" id="Postdocs-mainnav" data-drupal-link-system-path="node/40636">Postdocs</a>
+                  </li>
+          
+                    <li>
+        <a href="/join-our-team/careers/events-resources" aria-label="Events &amp; Resources - Main Nav" id="Events_&amp;_Resources-mainnav" data-drupal-link-system-path="node/40561">Events &amp; Resources</a>
+                  </li>
+          
+                    <li>
+        <a href="/join-our-team/careers/lca-notifications" aria-label="LCA Notifications - Main Nav" id="LCA_Notifications-mainnav" data-drupal-link-system-path="node/40661">LCA Notifications</a>
+                  </li>
+          
+                    <li>
+        <a href="/join-our-team/careers/affiliate-opportunities" aria-label="Affiliate Opportunities - Main Nav" id="Affiliate_Opportunities-mainnav" data-drupal-link-system-path="node/40676">Affiliate Opportunities</a>
+                  </li>
+          
+                    <li>
+        <a href="/join-our-team/careers/accessibility" aria-label="Accessibility - Main Nav" id="Accessibility-mainnav" data-drupal-link-system-path="node/46496">Accessibility</a>
+                  </li>
+        </ul>
+  
+            </li>
+          
+                    <li>
+        <a href="/join-our-team/culture" aria-label="Culture - Main Nav" id="Culture-mainnav" data-drupal-link-system-path="node/40566">Culture</a>
+                  </li>
+        </ul>
+  
+            </li>
+          
+                    <li class="expanded dropdown">
+        <a href="/partner" aria-label="Partner With Us - Main Nav" id="Partner_With_Us-mainnav">Partner With Us </a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/partner-us/ogea" aria-label="Office of Government and External Affairs - Main Nav" id="Office_of_Government_and_External_Affairs-mainnav" data-drupal-link-system-path="node/50861">Office of Government and External Affairs</a>
+                  </li>
+        </ul>
+  
+            </li>
+          
+                    <li class="expanded dropdown">
+        <a href="/news" aria-label="News - Main Nav" id="News-mainnav">News </a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/news/media-contacts" aria-label="Media Contacts - Main Nav" id="Media_Contacts-mainnav" data-drupal-link-system-path="node/45736">Media Contacts</a>
+                  </li>
+          
+                    <li>
+        <a href="/news/media-library" aria-label="Media Library - Main Nav" id="Media_Library-mainnav" data-drupal-link-system-path="node/45786">Media Library</a>
+                  </li>
+          
+                    <li>
+        <a href="/news/publications" aria-label="Publications - Main Nav" id="Publications-mainnav" data-drupal-link-system-path="node/45681">Publications</a>
+                  </li>
+          
+                    <li>
+        <a href="/news/lab-report" aria-label="Lab Report - Main Nav" id="Lab_Report-mainnav" data-drupal-link-system-path="node/47571">Lab Report</a>
+                  </li>
+          
+                    <li>
+        <a href="/news/fact-sheets" aria-label="Fact Sheets - Main Nav" id="Fact_Sheets-mainnav" data-drupal-link-system-path="node/45781">Fact Sheets</a>
+                  </li>
+          
+                    <li>
+        <a href="/news/social-media" aria-label="Social Media - Main Nav" id="Social_Media-mainnav" data-drupal-link-system-path="node/45746">Social Media</a>
+                  </li>
+        </ul>
+  
+            </li>
+          
+                    <li class="expanded dropdown">
+        <a href="/community-education" aria-label="Community and Education - Main Nav" id="Community_and_Education-mainnav">Community and Education </a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/community-education/discovery-center" aria-label="Discovery Center - Main Nav" id="Discovery_Center-mainnav" data-drupal-link-system-path="node/46121">Discovery Center</a>
+                  </li>
+          
+                    <li>
+        <a href="/community-education/community-giving" aria-label="Community Giving - Main Nav" id="Community_Giving-mainnav" data-drupal-link-system-path="node/46226">Community Giving</a>
+                  </li>
+          
+                    <li>
+        <a href="https://education.llnl.gov/" aria-label="Science Education - Main Nav" id="Science_Education-mainnav">Science Education</a>
+                  </li>
+          
+                    <li>
+        <a href="https://enviroinfo.llnl.gov/" aria-label="Environment, Safety, and Health - Main Nav" id="Environment,_Safety,_and_Health-mainnav">Environment, Safety, and Health</a>
+                  </li>
+          
+                    <li class="expanded dropdown-submenu">
+        <a href="/community-education/employee-retirement-resources" aria-label="Employee and Retirement Resources - Main Nav" id="Employee_and_Retirement_Resources-mainnav" data-drupal-link-system-path="node/46131">Employee and Retirement Resources</a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/community-education/employee-retirement-resources/want-ads" aria-label="Want Ads - Main Nav" id="Want_Ads-mainnav" data-drupal-link-system-path="node/46501">Want Ads</a>
+                  </li>
+          
+                    <li>
+        <a href="/community/retiree-employee-resources/in-memoriam" aria-label="In Memoriam - Main Nav" id="In_Memoriam-mainnav" data-drupal-link-system-path="node/256">In Memoriam</a>
+                  </li>
+        </ul>
+  
+            </li>
+          
+                    <li>
+        <a href="/community-education/tours" aria-label="Tours - Main Nav" id="Tours-mainnav" data-drupal-link-system-path="node/46136">Tours</a>
+                  </li>
+        </ul>
+  
+            </li>
+          
+                    <li class="expanded dropdown">
+        <a href="/about" aria-label="About LLNL - Main Nav" id="About_LLNL-mainnav">About LLNL </a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/about/leadership" aria-label="Our Leadership - Main Nav" id="Our_Leadership-mainnav" data-drupal-link-system-path="node/45946">Our Leadership</a>
+                  </li>
+          
+                    <li>
+        <a href="/about/impact" aria-label="Our Impact - Main Nav" id="Our_Impact-mainnav" data-drupal-link-system-path="node/51111">Our Impact</a>
+                  </li>
+          
+                    <li>
+        <a href="/about/by-the-numbers" aria-label="By the Numbers - Main Nav" id="By_the_Numbers-mainnav" data-drupal-link-system-path="node/46011">By the Numbers</a>
+                  </li>
+          
+                    <li class="expanded dropdown-submenu">
+        <a href="/about/organizations" aria-label="Our Organizations - Main Nav" id="Our_Organizations-mainnav" data-drupal-link-system-path="node/45851">Our Organizations</a>
+                          <ul class="dropdown-menu">
+          
+                    <li>
+        <a href="/about/organizations/operations-business" aria-label="Operations and Business - Main Nav" id="Operations_and_Business-mainnav" data-drupal-link-system-path="node/46636">Operations and Business</a>
+                  </li>
+        </ul>
+  
+            </li>
+          
+                    <li>
+        <a href="/about/protocol-special-events" aria-label="Protocol and Special Events - Main Nav" id="Protocol_and_Special_Events-mainnav" data-drupal-link-system-path="node/45856">Protocol and Special Events</a>
+                  </li>
+          
+                    <li>
+        <a href="/about/visiting" aria-label="Visiting - Main Nav" id="Visiting-mainnav" data-drupal-link-system-path="node/46016">Visiting</a>
+                  </li>
+          
+                    <li>
+        <a href="/about/directions" aria-label="Directions - Main Nav" id="Directions-mainnav" data-drupal-link-system-path="node/46021">Directions</a>
+                  </li>
+          
+                    <li>
+        <a href="/about/contact" aria-label="Contact - Main Nav" id="Contact-mainnav" data-drupal-link-system-path="node/46006">Contact</a>
+                  </li>
+        </ul>
+  
+            </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+                                
+                <div class="block-llnl-search-mobile hidden-sm hidden-md hidden-lg">
+                    <section data-drupal-selector="llnl-header-search-form" id="block-search-desktop" data-block-plugin-id="header_search_block" class="block block-llnl-search block-header-search-block clearfix">
+  
+    
+
+      <form action="/llnl-search" method="post" id="llnl-header-search-form" accept-charset="UTF-8">
+  
+<div class="search-form">
+    <div id="edit-description" class="form-item js-form-item form-type-item js-form-type-item form-item-description js-form-item-description form-no-label form-group">
+  
+  
+  
+
+  
+  
+  </div>
+<div class="form-group form-group-search has-feedback"><div class="sr-only">Search</div><div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-searchterm js-form-item-searchterm form-no-label form-group">
+  
+  
+  <input aria-label="Search" title="Search" data-drupal-selector="edit-searchterm" class="form-text form-control" type="text" id="edit-searchterm" name="searchterm" value="" size="60" maxlength="128" />
+
+  
+  
+  </div>
+<span class="glyphicon glyphicon-search form-control-feedback"></span></div><input data-drupal-selector="edit-searchspace" type="hidden" name="searchspace" value="all" /><button class="block-btn button js-form-submit form-submit btn-primary btn icon-before" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span>
+Search</button><input autocomplete="off" data-drupal-selector="form-bbqr23jxxe4ddh981vte6a-jx-nf13nvbvosnz-a7xi" type="hidden" name="form_build_id" value="form-bBQR23jxXe4Ddh981VtE6A-jx_nF13nVBVosNZ_A7xI" /><input data-drupal-selector="edit-llnl-header-search-form" type="hidden" name="form_id" value="llnl_header_search_form" />
+</div>
+</form>
+
+  </section>
+
+
+                </div>
+
+                <section id="block-responsivemenumobileicon" data-block-plugin-id="responsive_menu_toggle" class="responsive-menu-toggle-wrapper responsive-menu-toggle block block-responsive-menu block-responsive-menu-toggle clearfix">
+                    <a id="toggle-icon" class="toggle responsive-menu-toggle-icon" title="Menu" href="#off-canvas">
+                    <span class="icon"></span>
+                </a>
+                </section>
+                            </div>
+
+                                        <div id="navbar-collapse" class="navbar-collapse collapse">
+                    <div id="search-button">
+                        <section data-drupal-selector="llnl-header-search-form-2" id="block-search-mobile" data-block-plugin-id="header_search_block" class="block block-llnl-search block-header-search-block clearfix">
+  
+    
+
+      <form action="/llnl-search" method="post" id="llnl-header-search-form--2" accept-charset="UTF-8">
+  
+<div class="search-form">
+    <div id="edit-description--2" class="form-item js-form-item form-type-item js-form-type-item form-item-description js-form-item-description form-no-label form-group">
+  
+  
+  
+
+  
+  
+  </div>
+<div class="form-group form-group-search has-feedback"><div class="sr-only">Search</div><div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-searchterm js-form-item-searchterm form-no-label form-group">
+  
+  
+  <input aria-label="Search" title="Search" data-drupal-selector="edit-searchterm" class="form-text form-control" type="text" id="edit-searchterm--2" name="searchterm" value="" size="60" maxlength="128" />
+
+  
+  
+  </div>
+<span class="glyphicon glyphicon-search form-control-feedback"></span></div><input data-drupal-selector="edit-searchspace" type="hidden" name="searchspace" value="all" /><button class="block-btn button js-form-submit form-submit btn-primary btn icon-before" data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" name="op" value="Search"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span>
+Search</button><input autocomplete="off" data-drupal-selector="form-z1saqozlaud8m6gdu8zcefw0x0ucif0zk7ah1kyc1q4" type="hidden" name="form_build_id" value="form-z1saQozlAud8m6gDU8zcEFw0X0UCiF0ZK7AH1kyc1Q4" /><input data-drupal-selector="edit-llnl-header-search-form-2" type="hidden" name="form_id" value="llnl_header_search_form" />
+</div>
+</form>
+
+  </section>
+
+
+                    </div>
+                      <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-mobile-menu-menu" id="block-mobile-menu" data-block-plugin-id="menu_block:main">
+            
+  <h2 class="visually-hidden" id="block-mobile-menu-menu">Mobile Menu</h2>
+  
+
+        <div class="panel panel-default">
+	<div class="content panel-body">
+		<h5>Site Menu</h5>
+
+      <ul class="menu menu--mobile nav navbar-nav">
+			                    <li>
+        <a href="/purpose" aria-label="Our Purpose - Mobile Nav" data-drupal-link-system-path="node/46141">Our Purpose</a>
+                  </li>
+                        <li class="expanded active">
+        <a href="/science-technology" aria-label="Our Science and Technology - Mobile Nav">Our Science and Technology</a>
+                          <ul>
+			                    <li>
+        <a href="/science-technology/advanced-materials-manufacturing" aria-label="Advanced Materials and Manufacturing - Mobile Nav" data-drupal-link-system-path="node/46056">Advanced Materials and Manufacturing</a>
+                  </li>
+                        <li>
+        <a href="/science-technology/bioscience-bioengineering" aria-label="Bioscience &amp; Bioengineering - Mobile Nav" data-drupal-link-system-path="node/47301">Bioscience &amp; Bioengineering</a>
+                  </li>
+                        <li>
+        <a href="/science-technology/earth-atmospheric-science" aria-label="Earth and Atmospheric Science - Mobile Nav" data-drupal-link-system-path="node/47371">Earth and Atmospheric Science</a>
+                  </li>
+                        <li>
+        <a href="/science-technology/facilities-centers" aria-label="Facilities and Centers - Mobile Nav" data-drupal-link-system-path="node/46091">Facilities and Centers</a>
+                  </li>
+                        <li>
+        <a href="/science-technology/high-energy-density-science" aria-label="High-Energy-Density Science - Mobile Nav" data-drupal-link-system-path="node/47336">High-Energy-Density Science</a>
+                  </li>
+                        <li class="active">
+        <a href="/science-technology/hpc-simulation-data-science" aria-label="HPC, Simulation and Data Science - Mobile Nav" data-drupal-link-system-path="node/47441" class="is-active" aria-current="page">HPC, Simulation and Data Science</a>
+                  </li>
+                        <li>
+        <a href="/science-technology/laser-optical-science-technology" aria-label="Lasers and Optical Science and Technology - Mobile Nav" data-drupal-link-system-path="node/47406">Lasers and Optical Science and Technology</a>
+                  </li>
+                        <li>
+        <a href="/science-technology/nuclear-chemical-isotopic-science-technology" aria-label="Nuclear, Chemical and Isotopic Science and Technology - Mobile Nav" data-drupal-link-system-path="node/47476">Nuclear, Chemical and Isotopic Science and Technology</a>
+                  </li>
+    		</ul>
+  
+            </li>
+                        <li>
+        <a href="/join-our-team" aria-label="Join Our Team - Mobile Nav" data-drupal-link-system-path="node/43416">Join Our Team</a>
+                  </li>
+                        <li>
+        <a href="/partner" aria-label="Partner With Us - Mobile Nav" data-drupal-link-system-path="node/46161">Partner With Us</a>
+                  </li>
+                        <li>
+        <a href="/news" aria-label="News - Mobile Nav" data-drupal-link-system-path="node/44096">News</a>
+                  </li>
+                        <li>
+        <a href="/community-education" aria-label="Community and Education - Mobile Nav" data-drupal-link-system-path="node/46096">Community and Education</a>
+                  </li>
+                        <li>
+        <a href="/about" aria-label="About LLNL - Mobile Nav" data-drupal-link-system-path="node/45816">About LLNL</a>
+                  </li>
+    		</ul>
+  
+
+
+	<div id="llnl-mobile-menu" >
+		<h5>LLNL Menu</h5>
+		<ul>
+			<li><a href="https://www.llnl.gov/missions">Missions</a></li>
+			<li><a href="https://st.llnl.gov/">Research</a></li>
+			<li><a href="https://www.llnl.gov/doing-business">Doing Business</a></li>
+			<li><a href="https://www.llnl.gov/news">News</a></li>
+			<li><a href="https://www.llnl.gov/about">About</a></li>
+			<li><a href="https://careers.llnl.gov/">Careers</a></li>
+			<li><a href="https://www.llnl.gov/community">Community</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div>
+
+  </nav>
+
+  </div>
+
+                </div>
+                                </div>
+
+                    
+            
+
+
+<div id="megamenu">
+					
+	
+	<div class="mm" id="mm_46041" data-path="/science-technology">
+		<div class="mm-content">
+			<div class="row is-flex" style="height: 300px;">
+				
+
+    
+
+
+
+
+
+    
+    <div class="col-md-6 col-sm-6">
+        
+
+
+    
+
+
+
+	        
+    
+    
+<div class="mm-col mm-dark" style="padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;" id ="megamenu-snt-col-1" >
+    
+      <div class="field field--name-field-content-type field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text57636 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="lead"><a class="no-arrow" href="https://www.llnl.gov/science-technology">Our Science and Technology</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/advanced-materials-manufacturing">Advanced Materials and Manufacturing</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/bioscience-bioengineering">Bioscience and Bioengineering</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/earth-atmospheric-science">Earth and Atmospheric Science</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/facilities-centers">Facilities, Centers and Institutes</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/high-energy-density-science">High-Energy-Density Science</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/hpc-simulation-data-science">HPC, Simulation and Data Science</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/laser-optical-science-technology">Lasers &amp; Optical Science and Technology</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/nuclear-chemical-isotopic-science-technology">Nuclear, Chemical &amp; Isotopic Science and Technology</a></p></div>
+      
+      </div>
+</div>
+          </div>
+  
+</div>
+
+    </div>
+
+    
+    <div class="col-md-6 col-sm-6">
+        
+
+
+    
+
+
+            
+	        
+    
+    
+<div class="mm-col container-background-image mm-light" style="background-image: url(/sites/www/files/styles/orig/public/2023-03/mega-menu-snt-image%402x.png?itok=7CzPxUJp);padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;" id ="megamenu-snt-col-2" >
+    
+      <div class="field field--name-field-content-type field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text57651 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="lead">Learn How We Make<br>
+Science and Technology Happen</p>
+
+<div class="section-transparent-llnl-blue">
+<p>We support diverse research activities with talented staff, state-of-the-art facilities and core competencies. From internal collaboration to external partnerships, we work together to advance scientific discovery.</p>
+
+<p class="text-align-right"><a class="chevron-right" href="https://st.llnl.gov/">Learn More About Our Science and Technology</a></p>
+</div></div>
+      
+      </div>
+</div>
+          </div>
+  
+</div>
+
+    </div>
+
+			</div>
+		</div>
+	</div>
+					
+	
+	<div class="mm" id="mm_44096" data-path="/news">
+		<div class="mm-content">
+			<div class="row is-flex" style="height: 300px;">
+				
+
+    
+
+
+
+
+
+    
+    <div class="col-md-6 col-sm-6">
+        
+
+
+    
+
+
+
+	        
+    
+    
+<div class="mm-col mm-dark" style="padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;" id ="megamenu-news-col-1" >
+    
+      <div class="field field--name-field-content-type field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text66896 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="lead"><a class="no-arrow" href="https://www.llnl.gov/news">News</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/podcasts">Podcasts</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/highlights">Highlights</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/media-contacts">Media Contacts</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/media-library">Media Library</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/publications">Publications</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/lab-report">Lab Report</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/fact-sheets">Fact Sheets</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/social-media">Social Media</a></p></div>
+      
+      </div>
+</div>
+          </div>
+  
+</div>
+
+    </div>
+
+    
+    <div class="col-md-6 col-sm-6">
+        
+
+
+    
+
+
+            
+	        
+    
+    
+<div class="mm-col container-background-image mm-light" style="background-image: url(/sites/www/files/styles/orig/public/2024-11/el-cap-cabinet.jpg?itok=MqYJZjZi);padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;" id ="megamenu-news-col-2" >
+    
+      <div class="field field--name-field-content-type field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text66906 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="lead">Exascale Computing<br>
+Comes to LLNL</p>
+
+<div class="section-transparent-llnl-blue">
+<p>The El Capitan supercomputer will give complex high-fidelity modeling, artificial intelligence and simulation an exascale boost. Learn how it will support national security and stockpile stewardship.</p>
+
+<p class="text-align-right"><a class="chevron-right" href="https://www.llnl.gov/news/highlights/el-capitan-high-performance-computing">Learn More About Exascale Computing</a></p>
+</div></div>
+      
+      </div>
+</div>
+          </div>
+  
+</div>
+
+    </div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="megamenu-mobile">
+						<div class="mm-mobile mm-mobile-0" id="mm_46041" data-path="/science-technology">
+		<div class="mm-content">
+			<div class="row is-flex">
+				
+
+    
+
+
+
+
+
+    
+    <div class="col-md-6 col-sm-6">
+        
+
+
+    
+
+
+
+	        
+    
+    
+<div class="mm-col mm-dark" style="padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;" id ="megamenu-snt-col-1" >
+    
+      <div class="field field--name-field-content-type field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text57636 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="lead"><a class="no-arrow" href="https://www.llnl.gov/science-technology">Our Science and Technology</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/advanced-materials-manufacturing">Advanced Materials and Manufacturing</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/bioscience-bioengineering">Bioscience and Bioengineering</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/earth-atmospheric-science">Earth and Atmospheric Science</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/facilities-centers">Facilities, Centers and Institutes</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/high-energy-density-science">High-Energy-Density Science</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/hpc-simulation-data-science">HPC, Simulation and Data Science</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/laser-optical-science-technology">Lasers &amp; Optical Science and Technology</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/science-technology/nuclear-chemical-isotopic-science-technology">Nuclear, Chemical &amp; Isotopic Science and Technology</a></p></div>
+      
+      </div>
+</div>
+          </div>
+  
+</div>
+
+    </div>
+
+    
+    <div class="col-md-6 col-sm-6">
+        
+
+
+    
+
+
+            
+	        
+    
+    
+<div class="mm-col container-background-image mm-light" style="background-image: url(/sites/www/files/styles/orig/public/2023-03/mega-menu-snt-image%402x.png?itok=7CzPxUJp);padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;" id ="megamenu-snt-col-2" >
+    
+      <div class="field field--name-field-content-type field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text57651 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="lead">Learn How We Make<br>
+Science and Technology Happen</p>
+
+<div class="section-transparent-llnl-blue">
+<p>We support diverse research activities with talented staff, state-of-the-art facilities and core competencies. From internal collaboration to external partnerships, we work together to advance scientific discovery.</p>
+
+<p class="text-align-right"><a class="chevron-right" href="https://st.llnl.gov/">Learn More About Our Science and Technology</a></p>
+</div></div>
+      
+      </div>
+</div>
+          </div>
+  
+</div>
+
+    </div>
+
+			</div>
+		</div>
+	</div>
+						<div class="mm-mobile mm-mobile-1" id="mm_44096" data-path="/news">
+		<div class="mm-content">
+			<div class="row is-flex">
+				
+
+    
+
+
+
+
+
+    
+    <div class="col-md-6 col-sm-6">
+        
+
+
+    
+
+
+
+	        
+    
+    
+<div class="mm-col mm-dark" style="padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;" id ="megamenu-news-col-1" >
+    
+      <div class="field field--name-field-content-type field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text66896 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="lead"><a class="no-arrow" href="https://www.llnl.gov/news">News</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/podcasts">Podcasts</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/highlights">Highlights</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/media-contacts">Media Contacts</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/media-library">Media Library</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/publications">Publications</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/lab-report">Lab Report</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/fact-sheets">Fact Sheets</a></p>
+
+<p><a class="no-arrow" href="https://www.llnl.gov/news/social-media">Social Media</a></p></div>
+      
+      </div>
+</div>
+          </div>
+  
+</div>
+
+    </div>
+
+    
+    <div class="col-md-6 col-sm-6">
+        
+
+
+    
+
+
+            
+	        
+    
+    
+<div class="mm-col container-background-image mm-light" style="background-image: url(/sites/www/files/styles/orig/public/2024-11/el-cap-cabinet.jpg?itok=MqYJZjZi);padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;" id ="megamenu-news-col-2" >
+    
+      <div class="field field--name-field-content-type field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text66906 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="lead">Exascale Computing<br>
+Comes to LLNL</p>
+
+<div class="section-transparent-llnl-blue">
+<p>The El Capitan supercomputer will give complex high-fidelity modeling, artificial intelligence and simulation an exascale boost. Learn how it will support national security and stockpile stewardship.</p>
+
+<p class="text-align-right"><a class="chevron-right" href="https://www.llnl.gov/news/highlights/el-capitan-high-performance-computing">Learn More About Exascale Computing</a></p>
+</div></div>
+      
+      </div>
+</div>
+          </div>
+  
+</div>
+
+    </div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+            </div>
+
+    
+</header>
+  
+  <div role="main" class="main-container js-quickedit-main-content">
+    <div class="">
+
+                  <section>
+                
+                                      
+                  
+                          <a id="main-content"></a>
+          <div id="onelab-content">  <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+<article class="lead-page full clearfix">
+
+  
+    
+
+  
+  <div class="content">
+    
+      <div class="field field--name-field-row field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-row widget-row60236 field--item">
+
+  
+  
+    
+        
+  
+  
+          
+  
+  
+  
+  
+        
+        
+        
+  
+                      
+        
+  
+        
+        
+        
+        
+  
+  
+        
+  
+            
+  
+  
+  
+      
+                    
+        
+        
+        
+  
+  
+  
+    <div class="hero-banner advanced-widget-row-image container-fluid text-light container-background-image advanced-widget-row-no-pad advanced-widget-vertical-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/sites/www/files/styles/orig/public/2024-05/hpc-hero-background-2024-v2.jpg?itok=C4LmY4xq);min-height: 200px;">
+    
+    
+    
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60231 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 0px 0 0px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60226 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60226">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60221 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h1 class="text-center hero-banner-title">OUR RESEARCH</h1>
+
+<h2 class="text-center hero-banner-subtitle"><span><strong>HPC, Simulation</strong> and <strong>Data Science</strong></span></h2></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+      
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60266 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                                          
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="no-decoration slide-right padded-links container text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-two-column-layout widget-two-column-layout60261 field--item">  
+  
+
+  
+
+
+    
+    
+
+
+        
+<div class="row row-pad" style="padding: 80px 0 50px 0;">
+    <div class="col-md-6">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60246 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60246">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60241 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2>What We Do</h2>
+
+<div class="pad-bottom"><p>At Lawrence Livermore National Laboratory (LLNL), our unique computational capabilities, specifically high-performance computing (HPC), simulation and data science, impact an array of mission challenges. State-of-the-art simulations running on the world’s most advanced computers are the integrating element of science-based stockpile stewardship and broadly underpin our ability to meet national security needs. Data science offers innovative pattern-recognition approaches to better understand and predict the behavior of multifaceted systems. The expanding scale and complexity of the Laboratory’s mission require data-driven and artificial intelligence/machine learning (AI/ML)–augmented approaches to scientific discovery and engineering design.</p></div></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+    <div class="col-md-6">
+      
+                        <div class="field field--name-field-column-2-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60256 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60256">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60251 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><figure>
+<div alt="  Decorative image of swirling colors in a computer simulation" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="{&quot;image_style&quot;:&quot;orig&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_loading&quot;:{&quot;attribute&quot;:&quot;lazy&quot;}}" data-entity-type="media" data-entity-uuid="91d0862c-6a2b-46cb-918c-21d3b62aeefc" data-langcode="en" title="Power wall" class="embedded-entity">  <img loading="lazy" src="https://www.llnl.gov/sites/www/files/styles/orig/public/2024-05/hpc-power-wall.jpg?itok=QWxYEgki" alt="  Decorative image of swirling colors in a computer simulation" title="Power wall" class="img-responsive">
+
+
+</div>
+
+<figcaption>World-class computational capabilities make LLNL a premier destination for high-performance computing researchers, whether their expertise is artificial intelligence, simulation or software development.</figcaption>
+</figure>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60286 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="small-section container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60281 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 0px 0 0px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60276 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default text-center" id="col60276">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60271 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2>Who We Are</h2></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row61331 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="small-section container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout61326 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 0px 0 30px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content61321 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default extra-small-section" id="col61321">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text61316 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p>Computational scientists, computer scientists, software engineers, data scientists, statisticians and mathematicians develop and use HPC to support nuclear deterrence, national security and basic scientific research. Meet a few of the people who work in HPC, simulation and data science:</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60306 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="core-competency-people container text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60301 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 15px 0 50px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60296 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default spcl-flex-wrap-ctr" id="col60296">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-public-people widget-public-people60291 field--item">  <div class="row">
+  <div class="col-md-4">
+      
+  <div class="center-block people">
+  <a href="#" data-toggle="modal" data-target="#sunshine-balingit"><img src="/sites/www/files/styles/scalecrop200x200/public/2025-06/sunshine-balingit-hpc.jpg?itok=W0ELSsvT" alt="Sunshine Balingit" class="img-responsive img-circle center-block"></a>
+    <div class="text-center title">
+      <div class="name"><a href="#" data-toggle="modal" data-target="#sunshine-balingit" class="name">Sunshine Balingit</a></div>
+                  <div class="byline">Information System Security Officer </div>
+            <div class="org">Livermore Computing</div>
+    </div>
+    <div class="icon-card contact-info">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="icon-card-icons">
+                                              </div>
+        </div>
+        <div class="col-md-10">
+                                      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="sunshine-balingit">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="col-md-3">
+          <div class="image"><img src="/sites/www/files/styles/scalecrop200x200/public/2025-06/sunshine-balingit-hpc.jpg?itok=W0ELSsvT" alt="Sunshine Balingit" class="img-responsive img-circle"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9 modal-person-info">
+            <div class="modal-person-name">
+              Sunshine Balingit
+            </div>
+                        <div class="modal-person-title">
+                            Information System Security Officer 
+            </div>            <div class="modal-person-org">
+              Livermore Computing
+            </div>
+          </div>
+        </div>
+        <div class="modal-person-bio">
+          
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden processed-text field--item"><p>Sunshine Balingit started in Livermore Computing (LC) as an HPC Cluster Academy intern and joined the Laboratory in 2020 after earning her bachelor of science degree in computer science from California State University, East Bay. In her current roles as LC’s Information System Security Officer (ISSO) and Cybersecurity System Administrator, Sunshine manages security plans, completes assessments and reauthorizations and validates that LC systems are compliant with existing policies. She says, “I have to understand how LC works as a whole to ensure that the services we are managing and any ideas we implement can be executed in a safe way.”</p>
+
+<p>To further improve LC’s cybersecurity posture, she is leading a project to automate the process of verifying LC’s systems are correctly implementing the TOSS (Tri-Lab Operating System) STIG (Stack Security Technical Implementation Guide). This work includes accounting for any adjustments that have to be made for HPC systems as policies are typically written with much smaller systems, such as laptops, in mind. She is also helping to establish the STIG for the upcoming TOSS 5.0 environment.</p>
+
+<p>Outside the Laboratory, Sunshine expands her skill set through initiatives like <a class="no-arrow" href="https://sc25.supercomputing.org/scinet/" rel="noopener" target="_blank">SCinet</a> and recruitment activities at her alma mater. She says, “Participating in activities like these allows me share what I know to help others, learn about what people are doing elsewhere and apply insights to see what we could do better."</p></div>
+      
+        </div>
+      </div><!-- /.modal-body -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  </div>
+  <div class="col-md-4">
+      
+  <div class="center-block people">
+  <a href="#" data-toggle="modal" data-target="#yohann-dudouit"><img src="/sites/www/files/styles/scalecrop200x200/public/2025-06/yohann-dudoit-comp.jpg?itok=r2aswxX2" alt="Yohann Dudouit" class="img-responsive img-circle center-block"></a>
+    <div class="text-center title">
+      <div class="name"><a href="#" data-toggle="modal" data-target="#yohann-dudouit" class="name">Yohann Dudouit</a></div>
+                  <div class="byline">Computational Mathematician</div>
+            <div class="org">Center for Applied Scientific Computing</div>
+    </div>
+    <div class="icon-card contact-info">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="icon-card-icons">
+                                              </div>
+        </div>
+        <div class="col-md-10">
+                                      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="yohann-dudouit">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="col-md-3">
+          <div class="image"><img src="/sites/www/files/styles/scalecrop200x200/public/2025-06/yohann-dudoit-comp.jpg?itok=r2aswxX2" alt="Yohann Dudouit" class="img-responsive img-circle"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9 modal-person-info">
+            <div class="modal-person-name">
+              Yohann Dudouit
+            </div>
+                        <div class="modal-person-title">
+                            Computational Mathematician
+            </div>            <div class="modal-person-org">
+              Center for Applied Scientific Computing
+            </div>
+          </div>
+        </div>
+        <div class="modal-person-bio">
+          
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden processed-text field--item"><p>Yohann Dudouit wrote his first finite element simulation as an undergraduate student — creating a video game physics engine involving complex meshing, discretizing, problem solving and visualization — in just three months. This project was the genesis of a career focused on developing generalized mathematical libraries for simulating complex physical phenomena.</p>
+
+<p>After earning his Ph.D. from the University of Bordeaux, Yohann joined the Laboratory as a postdoc in 2017. Working with the MFEM team on <a class="no-arrow" href="https://ceed.exascaleproject.org/" rel="noopener" target="_blank">CEED (Center for Efficient Exascale Discretizations)</a>, he gained insight into mapping abstract mathematics to physical hardware, memory hierarchy and the critical metrics for optimizing performance on GPU architectures. He applied this expertise to the Laboratory’s BLAST project, extending matrix-free approaches to discontinuous Galerkin methods and adaptive mesh refinement, and later implemented those same performance-optimization techniques for the GEOS project.</p>
+
+<p>As part of the Laboratory’s <a class="no-arrow" href="https://computing.llnl.gov/casc" rel="noopener" target="_blank">Center for Applied Scientific Computing</a>, Yohann continues work on high-dimensional applications, from transport and kinetic simulations to space-time discretizations, using matrix-free, high-order and GPU-accelerated finite element methods. Since 2024, he’s led an LDRD project to implement these methods for inertial confinement fusion simulations. He is also exploring ways to bridge formal methods with applied mathematics to produce provably correct numerical simulation software.</p></div>
+      
+        </div>
+      </div><!-- /.modal-body -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  </div>
+  <div class="col-md-4">
+      
+  <div class="center-block people">
+  <a href="#" data-toggle="modal" data-target="#stefanie-guenther"><img src="/sites/www/files/styles/scalecrop200x200/public/2024-11/stefanie-guenther.jpg?itok=T8YvG9hB" alt="Stefanie Guenther" class="img-responsive img-circle center-block"></a>
+    <div class="text-center title">
+      <div class="name"><a href="#" data-toggle="modal" data-target="#stefanie-guenther" class="name">Stefanie Guenther</a></div>
+                  <div class="byline">Computational Mathematician</div>
+            <div class="org">Quantum Computing</div>
+    </div>
+    <div class="icon-card contact-info">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="icon-card-icons">
+                                              </div>
+        </div>
+        <div class="col-md-10">
+                                      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="stefanie-guenther">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="col-md-3">
+          <div class="image"><img src="/sites/www/files/styles/scalecrop200x200/public/2024-11/stefanie-guenther.jpg?itok=T8YvG9hB" alt="Stefanie Guenther" class="img-responsive img-circle"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9 modal-person-info">
+            <div class="modal-person-name">
+              Stefanie Guenther
+            </div>
+                        <div class="modal-person-title">
+                            Computational Mathematician
+            </div>            <div class="modal-person-org">
+              Quantum Computing
+            </div>
+          </div>
+        </div>
+        <div class="modal-person-bio">
+          
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden processed-text field--item"><p>Stefanie Guenther appreciates the application-driven aspect of the research at LLNL. “I enjoy seeing my work being used for larger project goals and enabling exciting, innovative technologies,” she says.</p>
+
+<p>Stefanie’s current research is in optimal control and optimization methods that are deployed efficiently on HPC machines. She is focused mainly on optimal quantum control, which aims to reduce errors of logical operations on Livermore’s <a class="no-arrow" href="https://quantum.llnl.gov/" rel="noopener" target="_blank">quantum computing testbed</a>, QuDIT. Stefanie is motivated by the direct impact her work has on this specific Lab application but also more broadly for the quantum science community.</p>
+
+<p>The draw of advanced technology is complemented by the collaborative environment at LLNL, where continuous learning and knowledge exchange thrive. “Working at LLNL exposes you to many different advanced research technologies,” Stefanie says. “It is an excellent place to constantly learn new things and contribute new findings within your area of expertise. People here are similarly eager to learn from you, meaning that your knowledge and viewpoints are valued and appreciated.”</p>
+
+<p>Stefanie joined the Lab as a postdoc in 2019, after a three-month appointment as a visiting researcher during her Ph.D. studies at Rheinisch-Westfälische Technische Hochschule Aachen University, in Germany.</p></div>
+      
+        </div>
+      </div><!-- /.modal-body -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  </div>
+  <div class="col-md-4">
+      
+  <div class="center-block people">
+  <a href="#" data-toggle="modal" data-target="#nisha-mulakken"><img src="/sites/www/files/styles/scalecrop200x200/public/2024-11/nisha-mulakken.jpg?itok=8sgISlBg" alt="Nisha Mulakken" class="img-responsive img-circle center-block"></a>
+    <div class="text-center title">
+      <div class="name"><a href="#" data-toggle="modal" data-target="#nisha-mulakken" class="name">Nisha Mulakken</a></div>
+                  <div class="byline">Bioinformatics Software Engineer</div>
+            <div class="org">Computing and Data Science</div>
+    </div>
+    <div class="icon-card contact-info">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="icon-card-icons">
+                                              </div>
+        </div>
+        <div class="col-md-10">
+                                      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="nisha-mulakken">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="col-md-3">
+          <div class="image"><img src="/sites/www/files/styles/scalecrop200x200/public/2024-11/nisha-mulakken.jpg?itok=8sgISlBg" alt="Nisha Mulakken" class="img-responsive img-circle"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9 modal-person-info">
+            <div class="modal-person-name">
+              Nisha Mulakken
+            </div>
+                        <div class="modal-person-title">
+                            Bioinformatics Software Engineer
+            </div>            <div class="modal-person-org">
+              Computing and Data Science
+            </div>
+          </div>
+        </div>
+        <div class="modal-person-bio">
+          
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden processed-text field--item"><p>Nisha Mulakken is one of a growing number of “boomerang” employees — she left the Lab to work in industry and returned several years later, drawn back by the Lab’s strong mission focus and real-world applications that improve society and human life.</p>
+
+<p>Today, Nisha is both a line manager and a project leader supporting several biosecurity projects, mostly focused on designing assays for pathogen detection, a skill she learned entirely on the job. In a recent project, Nisha designed a system, Meta2DB, for showcasing curated metagenomic data and standardized metadata from over 10,000 samples processed through LLNL’s metagenomic classification pipeline. The system, once released to the public, will enable researchers to compare microbiome features and their impact on multiple human diseases across diverse study designs in a way that is near impossible to do currently. Unique analysis tools, including sophisticated machine learning models developed at LLNL, will also be available for download.</p>
+
+<p>“LLNL has provided me with opportunities to get involved with exciting new technical areas and to grow my skills in a nurturing, collaborative environment,” Nisha says. “Every year, I take on projects that are different from things I’ve done before. I can work on the same team for a long time without ever getting bored.”</p></div>
+      
+        </div>
+      </div><!-- /.modal-body -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  </div>
+  <div class="col-md-4">
+      
+  <div class="center-block people">
+  <a href="#" data-toggle="modal" data-target="#britton-olson"><img src="/sites/www/files/styles/scalecrop200x200/public/2025-12/britton-olson-headshot.jpg?itok=Uu-81vb4" alt="Britton Olson" class="img-responsive img-circle center-block"></a>
+    <div class="text-center title">
+      <div class="name"><a href="#" data-toggle="modal" data-target="#britton-olson" class="name">Britton Olson</a></div>
+                  <div class="byline">Computational Physicist</div>
+            <div class="org">Computational Physics Program</div>
+    </div>
+    <div class="icon-card contact-info">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="icon-card-icons">
+                                              </div>
+        </div>
+        <div class="col-md-10">
+                                      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="britton-olson">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="col-md-3">
+          <div class="image"><img src="/sites/www/files/styles/scalecrop200x200/public/2025-12/britton-olson-headshot.jpg?itok=Uu-81vb4" alt="Britton Olson" class="img-responsive img-circle"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9 modal-person-info">
+            <div class="modal-person-name">
+              Britton Olson
+            </div>
+                        <div class="modal-person-title">
+                            Computational Physicist
+            </div>            <div class="modal-person-org">
+              Computational Physics Program
+            </div>
+          </div>
+        </div>
+        <div class="modal-person-bio">
+          
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden processed-text field--item"><p>Britton Olson is a computational physicist at the Lab, specializing in turbulence modeling, direct numerical simulation and the use of high-performance computing (HPC) to advance scientific discovery. His primary responsibilities include leading large-scale simulation projects, mentoring students and supporting the Lab’s mission through both research and teaching. Britton is highly skilled in computational physics and simulation code development, consistently pushing the boundaries of what is possible with modern HPC resources.</p>
+
+<p>A highlight of Britton’s career was leading one of the largest high-order turbulence simulations ever performed on the El Capitan supercomputer, harnessing 75% of its capacity. This milestone demonstrates both his technical expertise and the rapid progress in HPC capabilities. Britton’s passion for turbulence research began during a formative undergraduate internship in 2006, where he and his mentor discovered that astrophysical-scale turbulent mixing could generate shock waves — a breakthrough published early in his career and one that shaped his professional trajectory.</p>
+
+<p>Britton leads a team of researchers focused on large-scale turbulence simulations and coordinates Ph.D. students in a Department of Energy fellowship program. He also teaches computational physics, fostering collaboration and knowledge exchange within the Lab’s vibrant HPC community. Britton earned his Ph.D. in aeronautics and astronautics from Stanford University and a Bachelor of Science in mechanical engineering from Brigham Young University.</p>
+
+<p>Outside of work, Britton enjoys woodworking, hiking and cooking for his family — a creative outlet that complements his scientific pursuits.</p></div>
+      
+        </div>
+      </div><!-- /.modal-body -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  </div>
+  <div class="col-md-4">
+      
+  <div class="center-block people">
+  <a href="#" data-toggle="modal" data-target="#rob-rieben"><img src="/sites/www/files/styles/scalecrop200x200/public/2023-03/biopic-rob-rieben.jpg?itok=wnDYiwtM" alt="Rob Rieben" class="img-responsive img-circle center-block"></a>
+    <div class="text-center title">
+      <div class="name"><a href="#" data-toggle="modal" data-target="#rob-rieben" class="name">Rob Rieben</a></div>
+                  <div class="byline">Computational Physicist</div>
+            <div class="org">High Performance Computing</div>
+    </div>
+    <div class="icon-card contact-info">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="icon-card-icons">
+                                              </div>
+        </div>
+        <div class="col-md-10">
+                                      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="rob-rieben">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="col-md-3">
+          <div class="image"><img src="/sites/www/files/styles/scalecrop200x200/public/2023-03/biopic-rob-rieben.jpg?itok=wnDYiwtM" alt="Rob Rieben" class="img-responsive img-circle"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9 modal-person-info">
+            <div class="modal-person-name">
+              Rob Rieben
+            </div>
+                        <div class="modal-person-title">
+                            Computational Physicist
+            </div>            <div class="modal-person-org">
+              High Performance Computing
+            </div>
+          </div>
+        </div>
+        <div class="modal-person-bio">
+          
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden processed-text field--item"><p>Rob Rieben was hooked after visiting the Laboratory during a summer institute while a physics undergrad at the University of California, Riverside. He joined Lawrence Livermore as a graduate research fellow in 2000 and progressed to a postdoctoral research position after earning his Ph.D. “You will never be bored or run out of new and exciting things to learn and apply when working here. This is truly a place where team-based ‘big science’ happens every day,” he says.</p>
+
+<p>A computational physicist by training, Rob now leads a large multi-physics code project in the Weapons Simulation and Computing program. He recently won a Gold Award from the Strategic Deterrence Principal Directorate for sustained contributions in advancing next-generation simulation and computing.</p>
+
+<p>Between applying state-of-the-art computation and numerical methods, having access to some of the world’s most powerful high-performance computing platforms and collaborating with some of the best minds in the field, Rob is excited to face the next challenges his work may bring. “What keeps me here is the never-ending set of interesting problems to solve and the constant learning and collaborative team-based scientific work required to solve them,” he says.</p>
+
+<p>Rob holds a Ph.D. in engineering/applied science from the University of California, Davis and B.S. in physics from the University of California, Riverside. In 2026, Rob was named as a <a class="no-arrow" href="https://www.llnl.gov/article/54161/llnl-honors-36-2026-distinguished-members-technical-staff">Distinguished Member of Technical Staff,</a> the highest technical staff level achievable by a scientist or engineer at LLNL.</p></div>
+      
+        </div>
+      </div><!-- /.modal-body -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  </div>
+</div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60326 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="text-center container text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60321 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 20px 0 0px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60316 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60316">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60311 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2>Our Latest News</h2></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row62021 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="hidden-xs container text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout62016 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 30px 0 30px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content62011 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col62011">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-news widget-news62006 field--item">
+
+
+  
+    
+    
+
+
+
+<script>
+  var domain_url = "https://contenthub.llnl.gov";
+</script>
+
+<div id="news-container" class="news" news-limit="9" news-layout="Slider" news-widget="" news-search-options="None" news-pager="None" news-tags="846" news-domain=""></div>
+
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60386 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+  
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="container text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60381 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 0px 0 60px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60376 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60376">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60371 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p class="text-center"><a class="btn btn-default" href="https://www.llnl.gov/news"><span class="text">See All Latest News</span></a></p></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60406 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+                                      
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="small-section slide-lightgray container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60401 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 80px 0 0px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60396 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default text-center" id="col60396">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60391 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2>Our Current Projects</h2></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row61351 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+                                      
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="small-section slide-lightgray container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout61346 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 0px 0 30px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content61341 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default extra-small-section" id="col61341">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text61336 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p>Our multidisciplinary projects in HPC, simulation and data science vary in size, scope and duration but have one thing in common: innovation.</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60446 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+                                      
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="llnl-icons-one-col slide-lightgray container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60441 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 1px 0 1px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60436 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60436">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-image-with-text widget-image-with-text60431 field--item">  
+
+
+
+<div class="row image-with-text">
+      <div class="col-md-2">
+      <img class="img-fluid img-circle" src="/sites/www/files/styles/orig/public/2025-01/el-capitan-wiring.jpg?itok=KUfmeO4d" alt="Looking down the row between supercomputer racks with the doors off, exposing hundreds of multicolored cables.">
+    </div>
+
+    <div class="col-md-10">
+      
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2><a href="https://www.llnl.gov/news/highlights/el-capitan-high-performance-computing">El Capitan: Exascale Computing</a></h2>
+
+<p>Currently the world’s fastest supercomputer, El Capitan is NNSA’s first exascale system, with peak processing power of 2.79 exaflops, or 2.79 quintillion (10<sup>18</sup>) calculations per second. El Capitan ushers in a new era of predictive and experimental capability, producing high-fidelity 3D simulations beyond what’s possible now with the other supercomputers. With El Capitan, LLNL will apply this enhanced realm of simulations to several critical mission spaces including stockpile stewardship, <a class="no-arrow" href="https://sd.llnl.gov/nuclear-deterrence/enterprise-modernization" target="_blank">weapon modernization</a> and more.</p></div>
+      
+    </div>
+
+  </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60426 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+                                      
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="llnl-icons-one-col slide-lightgray container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60421 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 1px 0 1px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60416 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60416">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-image-with-text widget-image-with-text60411 field--item">  
+
+
+
+<div class="row image-with-text">
+      <div class="col-md-2">
+      <img class="img-fluid img-circle" src="/sites/www/files/styles/orig/public/2025-03/darkstar4.jpg?itok=CoAywUzm" alt="Colorful laser lines and a circle against a dark sky.">
+    </div>
+
+    <div class="col-md-10">
+      
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2><a href="https://str.llnl.gov/str-octobernovember-2024/beginning-end" target="_blank">AI Accelerates Next-Generation Designs</a></h2>
+
+<p>AI has emerged as the fourth pillar of scientific research alongside theory, experimentation and simulation. LLNL’s DarkStar project team has created a new way to leverage AI techniques and HPC power to optimize physics and engineering designs, such as for a new high-explosive device. This approach — called inverse design — starts from the desired final result, using AI models to translate huge simulation datasets into adjustable, visualized representations of the physics under investigation.</p></div>
+      
+    </div>
+
+  </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60466 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+                                      
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="llnl-icons-one-col slide-lightgray container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60461 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 1px 0 1px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60456 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60456">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-image-with-text widget-image-with-text60451 field--item">  
+
+
+
+<div class="row image-with-text">
+      <div class="col-md-2">
+      <img class="img-fluid img-circle" src="/sites/www/files/styles/orig/public/2025-03/spherical-fusion-simulation-cutaway.jpg?itok=fVSBkhcx" alt="3D cutaway view of a spherical fusion simulation with a blue center, red and yellow middle layers, and a green spiky outer layer.">
+    </div>
+
+    <div class="col-md-10">
+      
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2><a href="https://sd.llnl.gov/stockpile-science/high-performance-computing/proprietary-software" target="_blank">Extreme Physics, Real Codes</a></h2>
+
+<p>We develop and deploy a suite of multiphysics simulation codes that address nuclear security and inertial confinement fusion, among other missions, and support defense projects such as the design of new conventional weapons and protective equipment for soldiers. These simulation codes employ a range of physics regimes from solids to plasmas under extreme conditions and must be able to run on multiple advanced HPC architectures with efficient solvers and numerical algorithms.</p></div>
+      
+    </div>
+
+  </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60471 field--item">
+
+  
+  
+    
+        
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+  
+        
+                                      
+        
+        
+        
+        
+  
+  
+        
+  
+            
+  
+  
+  
+      
+  
+        
+  
+        
+  
+  
+  
+    <div class="advanced-widget-row-image slide-lightgray container-fluid text-dark container-background-image advanced-widget-row-no-pad" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/sites/www/files/styles/orig/public/2021-10/areas-of-research-dots-bg.png?itok=cu8eT5Sz);">
+    
+    
+    
+            
+      
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60491 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                                
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="text-center long-h2 container text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60486 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 80px 0 0px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60481 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60481">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60476 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2>Our Facilities, Centers and Institutes</h2></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60511 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="small-section container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60506 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 10px 0 30px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60501 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default extra-small-section" id="col60501">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60496 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p>The Laboratory is home to several state-of-the-art computationally focused facilities and centers to help researchers tackle the hardest and most complex national security challenges.</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60531 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                                
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="llnl-slider slide-right container text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout60526 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 5px 0 60px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60521 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60521">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-content-list widget-content-list60516 field--item">  <div class="paragraph paragraph--type--content-list paragraph--view-mode--default">
+          
+<div class="field field--name-field-content-view field--type-viewfield field--label-hidden">
+  
+    
+        
+<div class="field__item field__item-label-hidden">
+  
+    
+      <div class="views-element-container form-group"><div class="view view-resources view-id-resources view-display-id-carousel js-view-dom-id-4afd3299afbfe2fdda8dcebab8ec899bc66d8ffc232296ed498c7e34352ff5b2">
+  
+    
+      
+      <div class="view-content">
+      
+
+<div id="views-bootstrap-resources-carousel" class="carousel slide" data-ride="carousel" data-interval="0" data-pause="hover" data-wrap="1">
+
+        <ol class="carousel-indicators">
+                              <li class="active" data-target="#views-bootstrap-resources-carousel" data-slide-to="0"></li>
+                                      <li class="" data-target="#views-bootstrap-resources-carousel" data-slide-to="1"></li>
+                                      <li class="" data-target="#views-bootstrap-resources-carousel" data-slide-to="2"></li>
+                                      <li class="" data-target="#views-bootstrap-resources-carousel" data-slide-to="3"></li>
+                                      <li class="" data-target="#views-bootstrap-resources-carousel" data-slide-to="4"></li>
+                                      <li class="" data-target="#views-bootstrap-resources-carousel" data-slide-to="5"></li>
+                  </ol>
+  
+    <div class="carousel-inner" role="listbox">
+                                <div  class="item row active">
+            <div class="col-md-12">
+                    <div class="px-25">
+    <div class="row">
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-longtext2 field--type-text-long field--label-hidden processed-text field--item"><h3 class="text-blue">CASC</h3>
+
+<h4>Center for Applied Scientific Computing</h4>
+
+<p>CASC enables collaboration with the broader computer, computational and data science communities in academia, industry and government.</p>
+
+<p><a class="slide-link" href="https://computing.llnl.gov/casc" target="_blank">Learn More About CASC</a></p></div>
+      
+      </div>
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-page-background-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/www/files/styles/orig/public/2026-04/casc-fci-slider.jpg?itok=WOPMIz6H" width="532" height="300" alt="A computer simulation." class="img-responsive" />
+
+
+</div>
+      
+      </div>
+    </div>
+  </div>
+  
+              </div>
+              </div>
+                                      <div  class="item row">
+            <div class="col-md-12">
+                    <div class="px-25">
+    <div class="row">
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-longtext2 field--type-text-long field--label-hidden processed-text field--item"><h3 class="text-blue">DSI</h3>
+
+<h4>Data Science Institute</h4>
+
+<p>The Data Science Institute (DSI) acts as a hub for all data science activity at the Laboratory such as areas of artificial intelligence, big-data analytics, computer vision, machine learning, predictive modeling, statistical inference, uncertainty quantification and more.</p>
+
+<p><a class="slide-link" href="//data-science.llnl.gov" target="_blank">Learn More About DSI</a></p></div>
+      
+      </div>
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-page-background-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/www/files/styles/orig/public/2023-03/llnl-facilities-centers-institutes-dsi.jpg?itok=e0CJsw9Z" width="532" height="300" alt="computer rendering of eye receiving data stream" class="img-responsive" />
+
+
+</div>
+      
+      </div>
+    </div>
+  </div>
+  
+              </div>
+              </div>
+                                      <div  class="item row">
+            <div class="col-md-12">
+                    <div class="px-25">
+    <div class="row">
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-longtext2 field--type-text-long field--label-hidden processed-text field--item"><h3 class="text-blue">HPCIC</h3>
+
+<h4>High Performance Computing Innovation Center</h4>
+
+<p>HPCIC facilitates LLNL’s external engagements in advanced computing with academic, government and industry partners who can benefit from using Livermore’s open-source software and expertise to solve their challenges.</p>
+
+<p><a class="slide-link" href="https://hpcic.llnl.gov/" target="_blank">Learn More About HPCIC</a></p></div>
+      
+      </div>
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-page-background-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/www/files/styles/orig/public/2023-03/llnl-facilities-centers-institutes-hpc.jpg?itok=PM6NGqys" width="532" height="300" alt="Data scientists standing at super computer cluster" class="img-responsive" />
+
+
+</div>
+      
+      </div>
+    </div>
+  </div>
+  
+              </div>
+              </div>
+                                      <div  class="item row">
+            <div class="col-md-12">
+                    <div class="px-25">
+    <div class="row">
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-longtext2 field--type-text-long field--label-hidden processed-text field--item"><h3 class="text-blue">Livermore Center for Quantum Science</h3>
+
+<p>The Livermore Center for Quantum Science fosters a thriving quantum research community at LLNL, enabling multidisciplinary teams to harness the power of quantum-enabled technology to solve increasingly complex national security challenges.</p>
+
+<p><a class="slide-link" href="https://quantum.llnl.gov/" target="_blank">Learn More About Quantum Research at LLNL</a></p></div>
+      
+      </div>
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-page-background-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/www/files/styles/orig/public/2025-03/quantum-testbed-slider.jpg?itok=4UjGwyxz" width="532" height="300" alt="A researcher working on a quantum testbed." class="img-responsive" />
+
+
+</div>
+      
+      </div>
+    </div>
+  </div>
+  
+              </div>
+              </div>
+                                      <div  class="item row">
+            <div class="col-md-12">
+                    <div class="px-25">
+    <div class="row">
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-longtext2 field--type-text-long field--label-hidden processed-text field--item"><h3 class="text-blue">LCC</h3>
+
+<h4>Livermore Computing Complex</h4>
+
+<p>Livermore Computing Complex (LCC) is one of the world’s dominant high-performance computing (HPC) centers. LCC is key to the Laboratory’s stockpile stewardship mission, helping to ensure the safety, reliability and effectiveness of the nation’s nuclear weapons.</p>
+
+<p><a class="slide-link" href="https://hpc.llnl.gov/" target="_blank">Learn More About LCC</a></p></div>
+      
+      </div>
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-page-background-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/www/files/styles/orig/public/2023-03/llnl-facilities-centers-institutes-lc.jpg?itok=_d2gn0SR" width="532" height="300" alt="super computer cluster" class="img-responsive" />
+
+
+</div>
+      
+      </div>
+    </div>
+  </div>
+  
+              </div>
+              </div>
+                                      <div  class="item row">
+            <div class="col-md-12">
+                    <div class="px-25">
+    <div class="row">
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-longtext2 field--type-text-long field--label-hidden processed-text field--item"><h3 class="text-blue">Skyfall</h3>
+
+<p>Skyfall is a cyber–physical hardware-in-the-loop test bed that connects real equipment with high-performance computers (HPC) to enable co-simulation of complex systems at scale to analyze the impacts of natural hazards and cyber-attacks and to increase resiliency.</p>
+
+<p><a class="slide-link" href="https://str.llnl.gov/2018-12/helms" target="_blank">Learn More About Skyfall</a></p></div>
+      
+      </div>
+      <div class="col-md-6">
+        
+                        <div class="field field--name-field-page-background-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/www/files/styles/orig/public/2023-03/llnl-facilities-centers-institutes-skyfall.jpg?itok=SdvsuWEj" width="532" height="300" alt="Computer scientist reviewing data from skyfall" class="img-responsive" />
+
+
+</div>
+      
+      </div>
+    </div>
+  </div>
+  
+              </div>
+              </div>
+            </div>
+
+        <a class="left carousel-control" href="#views-bootstrap-resources-carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#views-bootstrap-resources-carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+    </div>
+  
+      
+          </div>
+</div>
+
+  </div>
+
+    </div>
+
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row64231 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="small-section container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout64226 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 0px 0 0px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content64221 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default text-center" id="col64221">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text64216 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2>Related Organizations</h2></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row64251 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="small-section container-fluid text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout64246 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 0px 0 0px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content64241 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default extra-small-section" id="col64241">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text64236 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p>World-class science takes teamwork. Explore the organizations that contribute to our HPC, simulation and data science research by clicking the images below.</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row61746 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+  
+                      
+  
+  
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+  
+        
+  
+  
+  
+    <div class="orgs container text-dark" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-one-column-layout widget-one-column-layout61741 field--item">  
+
+
+    
+    
+
+<div class="row row-pad" style="padding: 30px 0 30px 0;">
+    <div class="col-md-12">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content61736 field--item">                <div class="paragraph paragraph--type--column-content paragraph--view-mode--default min-ht-335" id="col61736">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text61731 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 card-layout-1">
+<div class="img-circle center-block text-center"><a href="https://computing.llnl.gov/">
+<div alt="Computing" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="{&quot;image_style&quot;:&quot;scalecrop200x200&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_loading&quot;:{&quot;attribute&quot;:&quot;lazy&quot;}}" data-entity-type="media" data-entity-uuid="e1dccebc-6c43-4248-961c-2c4cb775c158" data-langcode="en" title="Computing" class="embedded-entity">  <img loading="lazy" src="https://www.llnl.gov/sites/www/files/styles/scalecrop200x200/public/2023-01/about-our-organizations-computing.jpg?itok=ZcHQXZAY" width="200" height="200" alt="Computing" title="Computing" class="img-responsive">
+
+
+</div>
+
+</a><br>
+<a href="https://computing.llnl.gov/">Computing</a></div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 card-layout-1">
+<div class="img-circle center-block text-center"><a href="https://engineering.llnl.gov/research/computational-engineering">
+<div alt="Engineering" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="{&quot;image_style&quot;:&quot;scalecrop200x200&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_loading&quot;:{&quot;attribute&quot;:&quot;lazy&quot;}}" data-entity-type="media" data-entity-uuid="c39d91b0-4c77-47e7-884b-6510b1b210e0" data-langcode="en" title="Engineering" class="embedded-entity">  <img loading="lazy" src="https://www.llnl.gov/sites/www/files/styles/scalecrop200x200/public/2021-11/LLNL-homepage-our-programs-engineering.jpg?itok=BvOHt_GE" width="200" height="200" alt="Engineering" title="Engineering" class="img-responsive">
+
+
+</div>
+
+</a><br>
+<a href="https://engineering.llnl.gov/research/computational-engineering">Engineering</a></div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 card-layout-1">
+<div class="img-circle center-block text-center"><a href="https://gs.llnl.gov/">
+<div alt="Global Security" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="{&quot;image_style&quot;:&quot;scalecrop200x200&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_loading&quot;:{&quot;attribute&quot;:&quot;lazy&quot;}}" data-entity-type="media" data-entity-uuid="b6039e04-d060-4cb5-b905-32d2bb0ed37d" data-langcode="en" title="Global Security" class="embedded-entity">  <img loading="lazy" src="https://www.llnl.gov/sites/www/files/styles/scalecrop200x200/public/2021-11/LLNL-homepage-our-programs-gs.jpg?itok=cbnE_98c" width="200" height="200" alt="Global Security" title="Global Security" class="img-responsive">
+
+
+</div>
+
+</a><br>
+<a href="https://gs.llnl.gov/">Global Security</a></div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 card-layout-1">
+<div class="img-circle center-block text-center"><a href="https://lasers.llnl.gov">
+<div alt="National Ignition Facility and Photon Science" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="{&quot;image_style&quot;:&quot;scalecrop200x200&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_loading&quot;:{&quot;attribute&quot;:&quot;lazy&quot;}}" data-entity-type="media" data-entity-uuid="74a7949b-9df9-45c5-ab62-9af3d61afd2a" data-langcode="en" title="LLNL National Ignition Facility and Photon Science" class="embedded-entity">  <img loading="lazy" src="https://www.llnl.gov/sites/www/files/styles/scalecrop200x200/public/2023-01/about-our-organizations-nif.jpg?itok=99HTwlMH" width="200" height="200" alt="National Ignition Facility and Photon Science" title="LLNL National Ignition Facility and Photon Science" class="img-responsive">
+
+
+</div>
+
+</a><br>
+<a href="https://lasers.llnl.gov">National Ignition Facility and Photon Science</a></div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 card-layout-1">
+<div class="img-circle center-block text-center"><a href="//pls.llnl.gov">
+<div alt="Physical and Life Sciences" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="{&quot;image_style&quot;:&quot;scalecrop200x200&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_loading&quot;:{&quot;attribute&quot;:&quot;lazy&quot;}}" data-entity-type="media" data-entity-uuid="5d703796-d5f5-4d9c-a5e4-52770cc84ced" data-langcode="en" title="Physical and Life Sciences" class="embedded-entity">  <img loading="lazy" src="https://www.llnl.gov/sites/www/files/styles/scalecrop200x200/public/2023-01/about-our-organizations-pls.jpg?itok=k6mDYvq2" width="200" height="200" alt="Physical and Life Sciences" title="Physical and Life Sciences" class="img-responsive">
+
+
+</div>
+
+</a><br>
+<a href="//pls.llnl.gov">Physical and Life Sciences</a></div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 card-layout-1">
+<div class="img-circle center-block text-center"><a aria-label href="https://sd.llnl.gov/" id rel target title>
+<div alt="LLNL Weapons and Complex Integration" data-embed-button="media_browser" data-entity-embed-display="media_image" data-entity-embed-display-settings="{&quot;image_style&quot;:&quot;scalecrop200x200&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_loading&quot;:{&quot;attribute&quot;:&quot;lazy&quot;}}" data-entity-type="media" data-entity-uuid="34777faf-f43b-4058-a9f7-8157be1c2f09" data-langcode="en" title="Strategic Deterrence" class="embedded-entity">  <img loading="lazy" src="https://www.llnl.gov/sites/www/files/styles/scalecrop200x200/public/2023-01/about-our-organizations-wci.jpg?itok=x1QJFTAZ" width="200" height="200" alt="LLNL Weapons and Complex Integration" title="Strategic Deterrence" class="img-responsive">
+
+
+</div>
+
+</a><br>
+<a href="https://sd.llnl.gov/">Strategic Deterrence</a></div>
+</div></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+                      
+        <div class="widget-row widget-row60561 field--item">
+
+  
+  
+    
+  
+  
+  
+          
+  
+  
+  
+  
+        
+  
+        
+                    
+                                          
+  
+                                      
+        
+        
+        
+        
+  
+  
+        
+  
+  
+  
+  
+  
+      
+  
+  
+        
+        
+  
+  
+  
+    <div class="mobile-pad-top join-tall spcl-col-padding-x-30 slide-blue container-fluid text-light advanced-widget-vertical-center" id="join-our-team-cta" style="">
+    
+    
+        <div class="container full-width-bg-centered-content">
+      
+            
+                        <div class="field field--name-field-content-layout field--type-entity-reference-revisions field--label-hidden widget-two-column-layout widget-two-column-layout60556 field--item">  
+
+
+  
+  
+
+    
+    
+
+
+        
+<div class="row row-pad" id="join-llnl" style="padding: 25px 0 25px 0;">
+    <div class="col-md-9">
+      
+                        <div class="field field--name-field-column-1-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60541 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60541">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60536 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><h2>Join <span class="yellow-text">Our Team</span></h2>
+
+<p>We offer opportunities in a variety of fields, not just science and technology. We are home to a diverse staff of professionals that includes administrators, researchers, creatives, supply chain staff, health services workers and more. Visit our careers page to learn more about the different career paths we offer and find the one that speaks to you. Make your mark on the world!<span></span></p></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+    <div class="col-md-3">
+      
+                        <div class="field field--name-field-column-2-widgets field--type-entity-reference-revisions field--label-hidden widget-column-content widget-column-content60551 field--item">  <div class="paragraph paragraph--type--column-content paragraph--view-mode--default" id="col60551">
+          
+      <div class="field field--name-field-column-content field--type-entity-reference-revisions field--label-hidden field--items">
+                      
+        <div class="widget-text widget-text60546 field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-longtext field--type-text-long field--label-hidden processed-text field--item"><p><a class="btn btn-default" href="https://www.llnl.gov/join-our-team/careers/find-your-job"><span class="text">View Open Jobs</span> </a></p></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+      
+    </div>
+</div>
+</div>
+      
+          </div>
+    
+  </div>
+
+  
+  
+  </div>
+          </div>
+  
+  </div>
+
+</article>
+
+  </div>
+</div>
+              </section>
+
+    </div>
+  </div>
+
+            <footer class="footer" role="contentinfo">
+          <div class="container">
+            	
+<div class="row hidden-xs">
+			
+		
+													
+		<div class="col-sm-3 col-xs-12 footer-column first">
+			  <div class="paragraph paragraph--type--footer-column paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-footer-column-content field--type-entity-reference-revisions field--label-hidden widget-llnl-links widget-llnl-links6 field--item"><div class="clearfix footer-llnl-links">
+	<h4>LLNL.GOV</h4>
+	<ul>
+		<li><a href="https://www.llnl.gov/purpose" title="Our Purpose" target="_blank">Our Purpose</a></li>
+		<li><a href="https://www.llnl.gov/science-technology" title="Science and Technology" target="_blank">Our Science and Technology</a></li>
+    <li><a href="https://www.llnl.gov/join-our-team" title="Careers" target="_blank">Join Our Team</a></li>
+    <li><a href="https://www.llnl.gov/partner" title="Partner with Us" target="_blank">Partner with Us</a></li>
+		<li><a href="https://www.llnl.gov/news" title="News" target="_blank">News</a></li>
+    <li><a href="https://www.llnl.gov/community-education" title="Community and Education" target="_blank">Community and Education</a></li>
+		<li><a href="https://www.llnl.gov/about" title="About" target="_blank">About LLNL</a></li>
+	</ul>
+</div>
+</div>
+      
+      </div>
+
+		</div>
+			
+		
+													
+		<div class="col-sm-3 col-xs-12 footer-column first footer-column mid">
+			  <div class="paragraph paragraph--type--footer-column paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-footer-column-content field--type-entity-reference-revisions field--label-hidden widget-mission-areas widget-mission-areas11 field--item"><div class="clearfix footer-mission-areas">
+	<h4>ORGANIZATIONS</h4>
+	<ul>
+    <li><a href="https://computing.llnl.gov/" title="Computation" target="_blank">Computing</a></li>
+    <li><a href="https://engineering.llnl.gov/" title="Engineering" target="_blank">Engineering</a></li>
+		<li><a href="https://gs.llnl.gov/" title="Global Security" target="_blank">Global Security</a></li>
+		<li><a href="https://lasers.llnl.gov/" title="Lasers" target="_blank">National Ignition Facility and Photon Science</a></li>
+    <li><a href="https://www.llnl.gov/about/organizations/operations-business" title="Computation" target="_blank">Operations and Business</a></li>
+		<li><a href="https://pls.llnl.gov/" title="Physical and Life Sciences" target="_blank">Physical and Life Sciences</a></li>
+    <li><a href="https://sd.llnl.gov/" title="Strategic Deterrence" target="_blank">Strategic Deterrence</a></li>
+	</ul>
+</div>
+</div>
+      
+      </div>
+
+		</div>
+			
+		
+													
+		<div class="col-sm-3 col-xs-12 footer-column first footer-column mid footer-column mid">
+			  <div class="paragraph paragraph--type--footer-column paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-footer-column-content field--type-entity-reference-revisions field--label-hidden widget-about-llnl widget-about-llnl16 field--item"><div class="clearfix footer-about-llnl">
+	<h4>RESOURCES</h4>
+	<ul>
+		<li><a href="https://www.llnl.gov/about/contact" title="Contact" target="_blank">Contact</a></li>
+		<li><a href="https://www.llnl.gov/about/visiting" title="Visiting" target="_blank">Visiting</a></li>
+		<li><a href="https://www.llnl.gov/about/emergency-communication" title="Emergency Communication" target="_blank">Emergency Communication</a></li>
+		<li><a href="https://fcoi.llnl.gov/" title="Research Ethics" target="_blank">Research Ethics</a></li>
+		<li><a href="https://www.llnl.gov/disclaimer" title="Disclaimer" target="_blank">Disclaimer</a></li>
+		<li><a href="https://www.llnl.gov/copyright-and-reuse" title="Copyright and Reuse" target="_blank">Copyright and Reuse</a></li>
+		<li><a href="https://www.llnl.gov/sitemap" title="Site Map" target="_blank">Sitemap</a></li>
+	</ul>
+</div>
+</div>
+      
+      </div>
+
+		</div>
+			
+		
+													
+		<div class="col-sm-3 col-xs-12 footer-column first footer-column mid footer-column mid footer-column last">
+			  <div class="paragraph paragraph--type--footer-column paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-footer-column-content field--type-entity-reference-revisions field--label-hidden widget-social-media widget-social-media21 field--item"><div class="clearfix footer-social-media">
+	<h4>STAY CONNECTED</h4>
+			<a href="https://www.facebook.com/livermore.lab" target="_blank" aria-label="Facebook">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="social-svg-icon"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+    	</a>
+				<a href="https://www.instagram.com/livermore_lab/" target="_blank" aria-label="Instagram">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="social-svg-icon"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+		</a>
+				<a href="http://www.linkedin.com/company/4994?trk=tyah" target="_blank" aria-label="Linkedin">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="social-svg-icon"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+		</a>
+				<a href="https://www.twitter.com/Livermore_Lab" target="_blank" aria-label="X">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="social-svg-icon"><path id="path1009" class="st0" d="M0.5,0l49.5,70.6L0,128h11.4l43.4-50.2L89.8,128H128L75.9,53.5L122.3,0H111L70.7,46.3L38.2,0H0.5z M16.5,8.8h17.5l77.4,110.3H93.9L16.5,8.8z"/></svg>
+    </a>
+		    	<a href="https://www.youtube.com/user/LivermoreLab" target="_blank" aria-label="YouTube">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="social-svg-icon"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    	</a>
+				<a href="https://www.glassdoor.com/Reviews/Lawrence-Livermore-National-Laboratory-Reviews-E35235.htm" target="_blank" aria-label="Glassdoor">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-svg-icon"><path d="M17.144 20.572H3.43C3.43 22.465 4.963 24 6.856 24h10.286c1.893 0 3.428-1.535 3.428-3.428V6.492c0-.07-.054-.125-.124-.125h-3.18c-.067 0-.123.056-.123.126v14.08zm0-20.572c1.892 0 3.427 1.535 3.427 3.43H6.858v14.078c0 .068-.056.125-.125.125H3.554c-.07 0-.125-.057-.125-.125V3.428C3.43 1.536 4.963 0 6.856 0h10.287"/></svg>
+    	</a>
+	</div>
+</div>
+      
+      </div>
+
+		</div>
+	</div>
+<div class="hidden-sm hidden-md hidden-lg" id="footer-stay-connected">
+	<div class="footer-social-media text-center">
+		<h4>STAY CONNECTED</h4>
+		<a href="https://www.facebook.com/livermore.lab" target="_blank" aria-label="Facebook">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="social-svg-icon"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+		</a>
+		<a href="https://www.instagram.com/livermore_lab" target="_blank" aria-label="Instagram">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="social-svg-icon"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+		</a>
+		<a href="http://www.linkedin.com/company/4994?trk=tyah" target="_blank" aria-label="Linkedin">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="social-svg-icon"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+		</a>
+		<a href="https://www.twitter.com/Livermore_Lab" target="_blank" aria-label="X">
+      <svg id="X_footer" xmlns="http://www.w3.org/2000/svg" class="social-svg-icon" viewBox="0 0 128 128"><path id="path1009" class="st0" d="M0.5,0l49.5,70.6L0,128h11.4l43.4-50.2L89.8,128H128L75.9,53.5L122.3,0H111L70.7,46.3L38.2,0H0.5z M16.5,8.8h17.5l77.4,110.3H93.9L16.5,8.8z"/></svg>
+    </a>
+		<a href="https://www.youtube.com/user/LivermoreLab" target="_blank" aria-label="YouTube">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="social-svg-icon"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+		</a>
+		<a href="https://www.glassdoor.com/Reviews/Lawrence-Livermore-National-Laboratory-Reviews-E35235.htm" target="_blank" aria-label="=GlassDoor">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-svg-icon"><path d="M17.144 20.572H3.43C3.43 22.465 4.963 24 6.856 24h10.286c1.893 0 3.428-1.535 3.428-3.428V6.492c0-.07-.054-.125-.124-.125h-3.18c-.067 0-.123.056-.123.126v14.08zm0-20.572c1.892 0 3.427 1.535 3.427 3.43H6.858v14.078c0 .068-.056.125-.125.125H3.554c-.07 0-.125-.057-.125-.125V3.428C3.43 1.536 4.963 0 6.856 0h10.287"/></svg>
+    </a>
+  </div>
+</div>
+
+<div class="accordion panel-group hidden-sm hidden-md hidden-lg" id="footer-accordion" role="tablist" aria-multiselectable="true">
+			<div class="card panel" id="card-0">
+			<div class="card-header" id="heading0" role="tab">
+					<button class="btn btn-link collapsed" role="button" data-toggle="collapse" data-parent="#footer-accordion" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+						<div class="footer-accordion-title" id="footer-accordion-title-0"></div>
+						<div class="footer-accordion-arrow"></div>
+					</button>
+			</div>
+			<div id="collapse0" class="collapse in" role="tabpanel" aria-labelledby="heading0">
+				<div class="card-body" id="footer-card-body-0">
+					  <div class="paragraph paragraph--type--footer-column paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-footer-column-content field--type-entity-reference-revisions field--label-hidden widget-llnl-links widget-llnl-links6 field--item"><div class="clearfix footer-llnl-links">
+	<h4>LLNL.GOV</h4>
+	<ul>
+		<li><a href="https://www.llnl.gov/purpose" title="Our Purpose" target="_blank">Our Purpose</a></li>
+		<li><a href="https://www.llnl.gov/science-technology" title="Science and Technology" target="_blank">Our Science and Technology</a></li>
+    <li><a href="https://www.llnl.gov/join-our-team" title="Careers" target="_blank">Join Our Team</a></li>
+    <li><a href="https://www.llnl.gov/partner" title="Partner with Us" target="_blank">Partner with Us</a></li>
+		<li><a href="https://www.llnl.gov/news" title="News" target="_blank">News</a></li>
+    <li><a href="https://www.llnl.gov/community-education" title="Community and Education" target="_blank">Community and Education</a></li>
+		<li><a href="https://www.llnl.gov/about" title="About" target="_blank">About LLNL</a></li>
+	</ul>
+</div>
+</div>
+      
+      </div>
+
+				</div>
+			</div>
+		</div>
+			<div class="card panel" id="card-1">
+			<div class="card-header" id="heading1" role="tab">
+					<button class="btn btn-link collapsed" role="button" data-toggle="collapse" data-parent="#footer-accordion" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+						<div class="footer-accordion-title" id="footer-accordion-title-1"></div>
+						<div class="footer-accordion-arrow"></div>
+					</button>
+			</div>
+			<div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1">
+				<div class="card-body" id="footer-card-body-1">
+					  <div class="paragraph paragraph--type--footer-column paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-footer-column-content field--type-entity-reference-revisions field--label-hidden widget-mission-areas widget-mission-areas11 field--item"><div class="clearfix footer-mission-areas">
+	<h4>ORGANIZATIONS</h4>
+	<ul>
+    <li><a href="https://computing.llnl.gov/" title="Computation" target="_blank">Computing</a></li>
+    <li><a href="https://engineering.llnl.gov/" title="Engineering" target="_blank">Engineering</a></li>
+		<li><a href="https://gs.llnl.gov/" title="Global Security" target="_blank">Global Security</a></li>
+		<li><a href="https://lasers.llnl.gov/" title="Lasers" target="_blank">National Ignition Facility and Photon Science</a></li>
+    <li><a href="https://www.llnl.gov/about/organizations/operations-business" title="Computation" target="_blank">Operations and Business</a></li>
+		<li><a href="https://pls.llnl.gov/" title="Physical and Life Sciences" target="_blank">Physical and Life Sciences</a></li>
+    <li><a href="https://sd.llnl.gov/" title="Strategic Deterrence" target="_blank">Strategic Deterrence</a></li>
+	</ul>
+</div>
+</div>
+      
+      </div>
+
+				</div>
+			</div>
+		</div>
+			<div class="card panel" id="card-2">
+			<div class="card-header" id="heading2" role="tab">
+					<button class="btn btn-link collapsed" role="button" data-toggle="collapse" data-parent="#footer-accordion" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+						<div class="footer-accordion-title" id="footer-accordion-title-2"></div>
+						<div class="footer-accordion-arrow"></div>
+					</button>
+			</div>
+			<div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
+				<div class="card-body" id="footer-card-body-2">
+					  <div class="paragraph paragraph--type--footer-column paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-footer-column-content field--type-entity-reference-revisions field--label-hidden widget-about-llnl widget-about-llnl16 field--item"><div class="clearfix footer-about-llnl">
+	<h4>RESOURCES</h4>
+	<ul>
+		<li><a href="https://www.llnl.gov/about/contact" title="Contact" target="_blank">Contact</a></li>
+		<li><a href="https://www.llnl.gov/about/visiting" title="Visiting" target="_blank">Visiting</a></li>
+		<li><a href="https://www.llnl.gov/about/emergency-communication" title="Emergency Communication" target="_blank">Emergency Communication</a></li>
+		<li><a href="https://fcoi.llnl.gov/" title="Research Ethics" target="_blank">Research Ethics</a></li>
+		<li><a href="https://www.llnl.gov/disclaimer" title="Disclaimer" target="_blank">Disclaimer</a></li>
+		<li><a href="https://www.llnl.gov/copyright-and-reuse" title="Copyright and Reuse" target="_blank">Copyright and Reuse</a></li>
+		<li><a href="https://www.llnl.gov/sitemap" title="Site Map" target="_blank">Sitemap</a></li>
+	</ul>
+</div>
+</div>
+      
+      </div>
+
+				</div>
+			</div>
+		</div>
+			<div class="card panel" id="card-3">
+			<div class="card-header" id="heading3" role="tab">
+					<button class="btn btn-link collapsed" role="button" data-toggle="collapse" data-parent="#footer-accordion" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+						<div class="footer-accordion-title" id="footer-accordion-title-3"></div>
+						<div class="footer-accordion-arrow"></div>
+					</button>
+			</div>
+			<div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3">
+				<div class="card-body" id="footer-card-body-3">
+					  <div class="paragraph paragraph--type--footer-column paragraph--view-mode--default">
+          
+                        <div class="field field--name-field-footer-column-content field--type-entity-reference-revisions field--label-hidden widget-social-media widget-social-media21 field--item"><div class="clearfix footer-social-media">
+	<h4>STAY CONNECTED</h4>
+			<a href="https://www.facebook.com/livermore.lab" target="_blank" aria-label="Facebook">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="social-svg-icon"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+    	</a>
+				<a href="https://www.instagram.com/livermore_lab/" target="_blank" aria-label="Instagram">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="social-svg-icon"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+		</a>
+				<a href="http://www.linkedin.com/company/4994?trk=tyah" target="_blank" aria-label="Linkedin">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="social-svg-icon"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+		</a>
+				<a href="https://www.twitter.com/Livermore_Lab" target="_blank" aria-label="X">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="social-svg-icon"><path id="path1009" class="st0" d="M0.5,0l49.5,70.6L0,128h11.4l43.4-50.2L89.8,128H128L75.9,53.5L122.3,0H111L70.7,46.3L38.2,0H0.5z M16.5,8.8h17.5l77.4,110.3H93.9L16.5,8.8z"/></svg>
+    </a>
+		    	<a href="https://www.youtube.com/user/LivermoreLab" target="_blank" aria-label="YouTube">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="social-svg-icon"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    	</a>
+				<a href="https://www.glassdoor.com/Reviews/Lawrence-Livermore-National-Laboratory-Reviews-E35235.htm" target="_blank" aria-label="Glassdoor">
+      		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-svg-icon"><path d="M17.144 20.572H3.43C3.43 22.465 4.963 24 6.856 24h10.286c1.893 0 3.428-1.535 3.428-3.428V6.492c0-.07-.054-.125-.124-.125h-3.18c-.067 0-.123.056-.123.126v14.08zm0-20.572c1.892 0 3.427 1.535 3.427 3.43H6.858v14.078c0 .068-.056.125-.125.125H3.554c-.07 0-.125-.057-.125-.125V3.428C3.43 1.536 4.963 0 6.856 0h10.287"/></svg>
+    	</a>
+	</div>
+</div>
+      
+      </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+          </div>
+        </footer>
+    
+
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-lg-2 mb-2" id="footer-logo-wrapper">
+                <div id="footer-logo">
+                  <a class="llnl" href="https://www.llnl.gov/" target="_blank"><img src="/themes/custom/sienna/assets/images/llnl-logo-dark.png" alt="LLNL"></a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4 mb-2" id="footer-text-wrapper">
+                <div id="footer-text">
+                  <div id="footer-text-name">Lawrence Livermore National Laboratory </div>
+                  <div id="footer-text-address">
+                    <span class="hidden-xs">&nbsp;|</span>
+                    7000 East Avenue • Livermore, CA 94550 | LLNL-WEB-2006733
+                  </div>
+
+                  <div id="footer-text-info">
+                    Operated by the Lawrence Livermore National Security, LLC for the
+                    Department of Energy's National Nuclear Security Administration
+                    Learn about the Department of Energy's <a href="https://www.energy.gov/vulnerability-disclosure-policy" target="_blank" rel="noopener noreferrer">Vulnerability Disclosure Program</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-5 col-lg-3"  id="footer-affiliates">
+                <a class="llns" href="http://www.llnsllc.com/" target="_blank" rel="noopener noreferrer"><img src="/themes/custom/sienna/assets/images/llns.png" alt="LLNS"></a>
+                <a class="doe" href="https://www.energy.gov/" target="_blank" rel="noopener noreferrer"><img src="/themes/custom/sienna/assets/images/doe_small.png" alt="U.S. DOE"></a>
+                <a class="nnsa" href="https://www.energy.gov/nnsa/national-nuclear-security-administration/" target="_blank" rel="noopener noreferrer"><img src="/themes/custom/sienna/assets/images/nnsa.png" alt="NNSA"></a>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-lg-3" id="footer-links">
+              <div class="disclaimer">
+                <a href="/">Home</a>
+                <a href="https://www.llnl.gov/disclaimer" target="_blank">Disclaimer</a>
+                <a href="https://www.llnl.gov/website-privacy-notice" target="_blank">Privacy Notice</a>
+              </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+  
+
+  </div>
+
+    <div class="off-canvas-wrapper"><div id="off-canvas">
+              <ul>
+                    <li class="menu-item--_cb11c60-4b40-43e2-8ece-13aa4c36e34d menu-name--main">
+        <a href="/purpose" data-drupal-link-system-path="node/46141">Our Purpose</a>
+                                <ul>
+                    <li class="menu-item--_5d2edeb-c68e-44c9-9bbf-2b2499180b0f menu-name--main">
+        <a href="/purpose/management-sponsors" data-drupal-link-system-path="node/46151">Management and Sponsors</a>
+              </li>
+                <li class="menu-item--_d8c4312-17ba-4bb7-bccf-c228dbb95493 menu-name--main">
+        <a href="/purpose/history" data-drupal-link-system-path="node/46156">Our History</a>
+                                <ul>
+                    <li class="menu-item--f35ecc08-f2ee-4b5f-8efd-9ac130cbe884 menu-name--main">
+        <a href="/purpose/history/1950s" data-drupal-link-system-path="node/46776">Our History - 1950s</a>
+              </li>
+                <li class="menu-item--_f0d2555-4f59-4d4b-b851-c4689729c38f menu-name--main">
+        <a href="/purpose/history/1960s" data-drupal-link-system-path="node/46781">Our History - 1960s</a>
+              </li>
+                <li class="menu-item--_7770cbd-9924-4c14-b5a3-8868858c9d54 menu-name--main">
+        <a href="/purpose/history/1970s" data-drupal-link-system-path="node/46786">Our History - 1970s</a>
+              </li>
+                <li class="menu-item--_e7f1de4-a516-45a7-8381-ead1b1180ecf menu-name--main">
+        <a href="/purpose/history/1980s" data-drupal-link-system-path="node/46811">Our History - 1980s</a>
+              </li>
+                <li class="menu-item--d3c6a3ef-9f11-4da2-9178-a970b7e802a9 menu-name--main">
+        <a href="/purpose/history/1990s" data-drupal-link-system-path="node/46791">Our History - 1990s</a>
+              </li>
+                <li class="menu-item--_6ae385c-9f6e-4535-b950-c000a52e7ca3 menu-name--main">
+        <a href="/purpose/history/2000s" data-drupal-link-system-path="node/46796">Our History - 2000s</a>
+              </li>
+                <li class="menu-item--_c5217b7-aaa3-416a-9268-b82e60ad7f90 menu-name--main">
+        <a href="/purpose/history/2010s" data-drupal-link-system-path="node/46801">Our History - 2010s</a>
+              </li>
+                <li class="menu-item--_290811a-4a3d-48cb-a704-b7cf6a96643a menu-name--main">
+        <a href="/purpose/history/2020s" data-drupal-link-system-path="node/46806">Our History - 2020s</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_4f4522d-efbc-4bf0-b098-2c720fc1afed menu-name--main menu-item--active-trail">
+        <a href="/science-technology" data-drupal-link-system-path="node/46041">Our Science and Technology</a>
+                                <ul>
+                    <li class="menu-item--_a8164bc-c1d8-436f-a605-5f63c2612ce7 menu-name--main">
+        <a href="/science-technology/advanced-materials-manufacturing" data-drupal-link-system-path="node/46056">Advanced Materials and Manufacturing</a>
+              </li>
+                <li class="menu-item--_c6bc44a-586a-4fca-8e11-0bbea81abd98 menu-name--main">
+        <a href="/science-technology/bioscience-bioengineering" data-drupal-link-system-path="node/47301">Bioscience &amp; Bioengineering</a>
+              </li>
+                <li class="menu-item--bbeb8948-38ab-4b9b-8274-dd97e3342ea9 menu-name--main">
+        <a href="/science-technology/earth-atmospheric-science" data-drupal-link-system-path="node/47371">Earth and Atmospheric Science</a>
+              </li>
+                <li class="menu-item--ff22bcc4-551d-4ccb-8db4-f6a942780fff menu-name--main">
+        <a href="/science-technology/facilities-centers" data-drupal-link-system-path="node/46091">Facilities and Centers</a>
+              </li>
+                <li class="menu-item--_b1f5560-f336-4343-b4f0-a63fd314d5f1 menu-name--main">
+        <a href="/science-technology/high-energy-density-science" data-drupal-link-system-path="node/47336">High-Energy-Density Science</a>
+              </li>
+                <li class="menu-item--_03342de-776a-499f-8e21-2de3c8c2e000 menu-name--main menu-item--active-trail">
+        <a href="/science-technology/hpc-simulation-data-science" data-drupal-link-system-path="node/47441" class="is-active" aria-current="page">HPC, Simulation and Data Science</a>
+              </li>
+                <li class="menu-item--_3df63e4-5fa2-4b5d-bf90-8c806d4f8312 menu-name--main">
+        <a href="/science-technology/laser-optical-science-technology" data-drupal-link-system-path="node/47406">Lasers and Optical Science and Technology</a>
+              </li>
+                <li class="menu-item--_9eca34f-bab4-4814-9ff8-1319dad16b9b menu-name--main">
+        <a href="/science-technology/nuclear-chemical-isotopic-science-technology" data-drupal-link-system-path="node/47476">Nuclear, Chemical and Isotopic Science and Technology</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--e7cd07f9-fb88-47a4-ab5f-0bd9f7b56fe7 menu-name--main">
+        <a href="/join-our-team" data-drupal-link-system-path="node/43416">Join Our Team</a>
+                                <ul>
+                    <li class="menu-item--_f5975f8-d644-4a7a-94e6-cd429ad8cc57 menu-name--main">
+        <a href="/join-our-team/careers" data-drupal-link-system-path="node/40596">Careers</a>
+                                <ul>
+                    <li class="menu-item--_52e9e45-25f6-42b1-b144-eff0aecd0f6c menu-name--main">
+        <a href="/join-our-team/careers/career-areas" data-drupal-link-system-path="node/40536">Career Areas</a>
+              </li>
+                <li class="menu-item--_9d11aa3-a912-4f2a-ab17-364bbd8fbb2f menu-name--main">
+        <a href="/join-our-team/careers/student-internship-veteran-programs" data-drupal-link-system-path="node/40711">Students</a>
+              </li>
+                <li class="menu-item--_84dbfe4-9c37-4724-9238-6aba7ac24298 menu-name--main">
+        <a href="/join-our-team/careers/llns-postdoc-fellowship-programs" data-drupal-link-system-path="node/40636">Postdocs</a>
+              </li>
+                <li class="menu-item--_8bc64e4-869e-4938-a5ea-0be2ee8ae817 menu-name--main">
+        <a href="/join-our-team/careers/events-resources" data-drupal-link-system-path="node/40561">Events &amp; Resources</a>
+              </li>
+                <li class="menu-item--b1d74103-72bf-4883-8048-a5f486b3e9e2 menu-name--main">
+        <a href="/join-our-team/careers/lca-notifications" data-drupal-link-system-path="node/40661">LCA Notifications</a>
+              </li>
+                <li class="menu-item--_f97d196-1ba7-42c9-ab5a-1493f5fae6fd menu-name--main">
+        <a href="/join-our-team/careers/affiliate-opportunities" data-drupal-link-system-path="node/40676">Affiliate Opportunities</a>
+              </li>
+                <li class="menu-item--ea4a5396-9979-48ba-aea2-9a641aa13b3a menu-name--main">
+        <a href="/join-our-team/careers/accessibility" data-drupal-link-system-path="node/46496">Accessibility</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_7ab7e7c-638d-489c-950a-9dc83f18a86c menu-name--main">
+        <a href="/join-our-team/culture" data-drupal-link-system-path="node/40566">Culture</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_5e7dfb2-dddb-4a18-bf14-31ed1f24258a menu-name--main">
+        <a href="/partner" data-drupal-link-system-path="node/46161">Partner With Us</a>
+                                <ul>
+                    <li class="menu-item--_a410e12-8c2c-489f-8a3e-f77fab76360a menu-name--main">
+        <a href="/partner-us/ogea" data-drupal-link-system-path="node/50861">Office of Government and External Affairs</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_c867f1f-175a-44d5-b3d7-9f1a036d52cf menu-name--main">
+        <a href="/news" data-drupal-link-system-path="node/44096">News</a>
+                                <ul>
+                    <li class="menu-item--b6de0a8c-1edc-42d7-97c8-79ea39448f19 menu-name--main">
+        <a href="/news/media-contacts" data-drupal-link-system-path="node/45736">Media Contacts</a>
+              </li>
+                <li class="menu-item--e7572604-eda7-4ed6-81f1-bafcb443e8ad menu-name--main">
+        <a href="/news/media-library" data-drupal-link-system-path="node/45786">Media Library</a>
+              </li>
+                <li class="menu-item--_1d732c4-9b5a-4332-a7fa-4a710e4b9ec1 menu-name--main">
+        <a href="/news/publications" data-drupal-link-system-path="node/45681">Publications</a>
+              </li>
+                <li class="menu-item--_f6b848c-5f57-4518-9b52-c310b0fe4555 menu-name--main">
+        <a href="/news/lab-report" data-drupal-link-system-path="node/47571">Lab Report</a>
+              </li>
+                <li class="menu-item--_a9ee06e-fcd3-4014-a369-efb84a6d34c6 menu-name--main">
+        <a href="/news/fact-sheets" data-drupal-link-system-path="node/45781">Fact Sheets</a>
+              </li>
+                <li class="menu-item--_2fc2a0a-fa52-4f55-a2d7-d45699c87e85 menu-name--main">
+        <a href="/news/social-media" data-drupal-link-system-path="node/45746">Social Media</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--f195a819-d8ec-4551-b9d9-fa1ef875f4f7 menu-name--main">
+        <a href="/community-education" data-drupal-link-system-path="node/46096">Community and Education</a>
+                                <ul>
+                    <li class="menu-item--_1fb0e30-2f18-43d4-83bf-a2b4c31e277a menu-name--main">
+        <a href="/community-education/discovery-center" data-drupal-link-system-path="node/46121">Discovery Center</a>
+              </li>
+                <li class="menu-item--fc3e0cb3-a38a-4ce9-b9e6-446f5b24cc3b menu-name--main">
+        <a href="/community-education/community-giving" data-drupal-link-system-path="node/46226">Community Giving</a>
+              </li>
+                <li class="menu-item--_65a164a-ab2a-4025-94bc-21c69f43651e menu-name--main">
+        <a href="https://education.llnl.gov/">Science Education</a>
+              </li>
+                <li class="menu-item--baf516e1-77a5-41b0-973a-9d7f2ab13934 menu-name--main">
+        <a href="https://enviroinfo.llnl.gov/">Environment, Safety, and Health</a>
+              </li>
+                <li class="menu-item--_8d056e6-b99a-4566-8bb5-02489e2f0d5d menu-name--main">
+        <a href="/community-education/employee-retirement-resources" data-drupal-link-system-path="node/46131">Employee and Retirement Resources</a>
+                                <ul>
+                    <li class="menu-item--_b219f32-40bf-4c55-8919-6acddc00569f menu-name--main">
+        <a href="/community-education/employee-retirement-resources/want-ads" data-drupal-link-system-path="node/46501">Want Ads</a>
+              </li>
+                <li class="menu-item--dea31a5b-0933-4187-8987-f9dd27de79cf menu-name--main">
+        <a href="/community/retiree-employee-resources/in-memoriam" data-drupal-link-system-path="node/256">In Memoriam</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--_14f8f21-9527-40ef-9657-01df8b513fe3 menu-name--main">
+        <a href="/community-education/tours" data-drupal-link-system-path="node/46136">Tours</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--e8f0f18a-3469-404b-80a8-070363726a24 menu-name--main">
+        <a href="/about" data-drupal-link-system-path="node/45816">About LLNL</a>
+                                <ul>
+                    <li class="menu-item--a4638ada-c0e4-4ae6-b74d-b4b5f376ab41 menu-name--main">
+        <a href="/about/leadership" data-drupal-link-system-path="node/45946">Our Leadership</a>
+              </li>
+                <li class="menu-item--_5983080-a935-49fe-8e9c-49b8f43581fa menu-name--main">
+        <a href="/about/impact" data-drupal-link-system-path="node/51111">Our Impact</a>
+              </li>
+                <li class="menu-item--_713bef7-3df5-4f7f-a212-6a7618c4f0cf menu-name--main">
+        <a href="/about/by-the-numbers" data-drupal-link-system-path="node/46011">By the Numbers</a>
+              </li>
+                <li class="menu-item--_6705e38-2cc5-4eda-b5af-b19137dccd59 menu-name--main">
+        <a href="/about/organizations" data-drupal-link-system-path="node/45851">Our Organizations</a>
+                                <ul>
+                    <li class="menu-item--_8f64d57-2010-4c0f-9ef9-92a7ca9e79dc menu-name--main">
+        <a href="/about/organizations/operations-business" data-drupal-link-system-path="node/46636">Operations and Business</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item--d850cf8c-7a3b-4740-bb8c-aff7e647781b menu-name--main">
+        <a href="/about/protocol-special-events" data-drupal-link-system-path="node/45856">Protocol and Special Events</a>
+              </li>
+                <li class="menu-item--a19e4f2a-7d19-4814-a460-5d39477dad04 menu-name--main">
+        <a href="/about/visiting" data-drupal-link-system-path="node/46016">Visiting</a>
+              </li>
+                <li class="menu-item--b38ab22a-02de-47de-abe8-f020437acbf6 menu-name--main">
+        <a href="/about/directions" data-drupal-link-system-path="node/46021">Directions</a>
+              </li>
+                <li class="menu-item--_d8f5d1f-1f57-4af9-ae2b-51c3b09879c1 menu-name--main">
+        <a href="/about/contact" data-drupal-link-system-path="node/46006">Contact</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+</div></div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/47441","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJyFU-2O4yAMfKE0nFY66d4GOeAmtIARhqR9-3O-ut1dpP2TxOMB2-MJMGPRLt7QFMrKMPcGMlVGr4daCkVd8FE6aPAoFoxlqoOOuLBOMGKLdwV9dQ9kuSikJsGN2kAqToqBd2MMcq1uMokLZh3Qgt_qcYs1YSY9QIxCnRCsi2ObRwH1_NFKBRxBuqhaum7lUx28MzohJY_bYOuMLeaW-_vn365BizF_6ECD803xFgMijiidgZudPKmWOsgcziL9uP8mayqg5bS5iwyN9LIsOqNFFt27gaiwkJN6femUUQ648pZMlGjG_IYUIl9c6gxlVDbXBL63DjyNPdzg0YmFvIv3M3WE3dV52ac6lt95H704QCBYY1bHcJdX_xvjMJ4W56nVeTvKCNlMan9V1yXIMEpvE59VP5G-xm2DPKHtMnKSYm5Gva5cfYv715S_MzPCPZGL5Vcql6dfB2KHMYKCCP5ZnOETuEpRzBfZzldkPXwip0nPeDflZTflCWaIlsJlEAFH-a-jPROVFyvlnvJHBTUAYzc7EVNtzz6Qrf6A9OeeDQUZQ8TnbsHhSjm8JX8g_wE0Ubs6","theme":"sienna","theme_token":null},"ajaxTrustedUrl":{"\/llnl-search":true},"responsive_menu":{"position":"right","theme":"theme-dark","pagedim":"pagedim","modifyViewport":true,"use_bootstrap":true,"breakpoint":"(min-width: 960px)","drag":false},"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowDisplay":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":true,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"llnl\\.gov","extInclude":"","extCssExclude":"ul.menu, #block-secondary-menu, .footer-bottom, .toolbar, .btn, .persona-boxes, ul.navbar-nav","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"0","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"before","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":["llnl.gov"],"extExcludeNoreferrer":""}},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajax":[],"user":{"uid":0,"permissionsHash":"1db73df652701e54d39ea1530e5b38b72225a42a285a0f4a6847a6048112f99d"}}</script>
+<script src="/sites/www/files/js/js_MEw8oE9xi3neG9cgAsKjwho3FHhXukrcADmeP8PWbs0.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=sienna&amp;include=eJxlkG1uwzAIhi_kxkeyiENTWgcswEl7-3nrkkXrL_x-gB4ZzNAT8R2zi8a7DdkhuUJ-EM8BPuJt25LihEYzh1HErZdrPF6pKvYF8lNYpcqKenJcpDjVkEUxTtoqlGEiKDIPcIdnwKcX4sce_cpQCpcExVHBSdjiS5q3ES8H8E8jCzuyp1sbI-Nmb9cQNN_iezQKilb7DVoxLcgt_tPDQRuMkBkiMJSXU7bduPYG6nd5dxac4awVeJLlMna6WaXxtAfNtsnCSp0u_X1LlqUjdHQLG45X0eUUfjhfe5qw4A"></script>
+<script src="https://analytics.llnl.gov/matomo.js"></script>
+<script src="/sites/www/files/js/js_2u1Nj2WDlobJroLCLRDc-1k-zZ5ZCOSZfjOMKEMU6Sk.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=sienna&amp;include=eJxlkG1uwzAIhi_kxkeyiENTWgcswEl7-3nrkkXrL_x-gB4ZzNAT8R2zi8a7DdkhuUJ-EM8BPuJt25LihEYzh1HErZdrPF6pKvYF8lNYpcqKenJcpDjVkEUxTtoqlGEiKDIPcIdnwKcX4sce_cpQCpcExVHBSdjiS5q3ES8H8E8jCzuyp1sbI-Nmb9cQNN_iezQKilb7DVoxLcgt_tPDQRuMkBkiMJSXU7bduPYG6nd5dxac4awVeJLlMna6WaXxtAfNtsnCSp0u_X1LlqUjdHQLG45X0eUUfjhfe5qw4A"></script>
+
+       <script>
+      var siteID = 168;
+      var user = "Anonymous";
+      window.site = null;
+      window.llnl = null;
+      let userTypeDimension = 1;
+      var _paq = window._paq = window._paq || [];
+
+      window.ANALYTICS_SERVER = "https://analytics.llnl.gov";
+      window.GLOBAL_MATOMO_ID = 1;
+      window.SITE_MATOMO_ID   = 168;
+
+      //builds a function that will provide a cached copy of the tracker for a given ID
+      function cached_tracker_generator(id) {
+          return function() {
+              var tracker = null;
+              return function(){
+                  if (tracker === null) {
+                      tracker = Piwik.getTracker("https://analytics.llnl.gov/matomo.php", id);
+                  }
+                  return tracker;
+              }
+          }();
+      }
+
+      var get_global_tracker = cached_tracker_generator(1);
+
+      function initial_tracking(error_message) {
+          var current_path = location.pathname;
+          var search = false;
+          var keyword = '';
+          var result_count = 0;
+          current_path = current_path.split("/");
+          if (current_path.length > 1) {
+              if (current_path[1] === "llnl-search") {
+                  search = true;
+                  keyword = jQuery('#edit-searchterm').val();
+                  result_count = jQuery('#search-result-total').text();
+                  if (result_count === '') {
+                    result_count = 0;
+                  }
+              }
+          }
+          try {
+              window.llnl = get_global_tracker();
+              window.llnl.setCustomVariable(1, "drupal", window.location.hostname, "visit");
+              window.llnl.enableLinkTracking();
+              pingUserType('https://osc.llnl.gov/ping/', function(userType) {
+                if (search) {
+                  window.llnl.trackSiteSearch(keyword, false, result_count);
+                }
+                else {
+                  window.llnl.setCustomDimension(userTypeDimension, userType);
+                  window.llnl.trackPageView();
+                  
+                  window.MatomoAsyncWait = Matomo.HeatmapSessionRecording.setMatomoTrackers([site, llnl]);
+                  window.MatomoAsyncWait = Matomo.HeatmapSessionRecording.enable();
+                }
+                if (typeof error_message !== undefined) {
+                  window.llnl.setCustomVariable(1, "error", error_message, "page");
+                }
+              });
+          } catch(err){}
+
+          try {
+            var get_local_tracker = cached_tracker_generator(siteID);
+            window.site =get_local_tracker();
+            window.site.enableLinkTracking();
+            pingUserType('https://osc.llnl.gov/ping/', function(userType) {
+              if (search) {
+                window.site.trackSiteSearch(keyword, false, result_count);
+              }
+              else {
+                window.site.setCustomDimension(userTypeDimension, userType);
+                window.site.trackPageView();
+                
+                window.MatomoAsyncWait = Matomo.HeatmapSessionRecording.setMatomoTrackers([site, llnl]);
+                window.MatomoAsyncWait = Matomo.HeatmapSessionRecording.enable();
+              }
+              if (user !== "Anonymous" && user !== "") {
+                window.site.setUserId(user);
+              }
+              if (typeof error_message !== undefined) {
+                window.site.setCustomVariable(1, "error", error_message, "page");
+              }
+            });
+          } catch(err){}
+      }
+
+            window.matomoAsyncInit = initial_tracking();
+            function pingUserType(url, callbackFn) {
+        /**
+         * Pings the specified URL, and stores last result in localStorage,
+         * if possible. If localStorage cache is marked as an internal user,
+         * will send to Matomo without ping re-verification.
+         **/
+        var pingKey = 'userType',
+          defaultUserType = 'Anonymous',
+          internalUserType = 'Internal',
+          userType = defaultUserType;
+
+        // check localStorage cache (previous pings) for userType, if possible
+        if ("localStorage" in window) {
+          let storedUserType = localStorage.getItem(pingKey) || defaultUserType;
+          // Only allow known values
+          if (storedUserType !== internalUserType && storedUserType !== defaultUserType) {
+            storedUserType = defaultUserType;
+          }
+          userType = storedUserType;
+        }
+
+        // if identified as internal from localStorage cache, record as internal
+        if (userType === internalUserType) {
+          recordUserType(userType);
+          return;
+        }
+
+        // use ping URL to attempt to determine user type
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            var isSuccess = this.status >= 200 && this.status < 400;
+            if (isSuccess) {
+              userType = internalUserType;
+            }
+            recordUserType(userType);
+          }
+        };
+
+        // consider a timeout to be an unsuccessful attempt
+        xhr.ontimeout = function() {
+          recordUserType(userType);
+        };
+        xhr.timeout = 500;
+        xhr.open('GET', url, true);
+        xhr.send();
+
+        function recordUserType(userType) {
+          // Only allow known values
+          if (userType !== internalUserType) {
+            userType = defaultUserType;
+          }
+          localStorage.setItem(pingKey, userType);
+          callbackFn(userType);
+        }
+      }
+  </script>
+  <noscript>
+    <p>
+      <img src="https://analytics.llnl.gov/matomo.php?idsite=1" style="border:0" alt="" />
+    </p>
+  </noscript>
+                <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+        <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE&amp;subagency=LLNL&amp;sdor=fda.gov&amp;dclink=true" id="_fed_an_ua_tag"></script>
+                <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"d51c82eee4ae4536a16cfd0f1e076f21","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

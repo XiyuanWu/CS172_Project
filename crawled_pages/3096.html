@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!--
+			Copyright Triad National Security, LLC.
+			See http://www.lanl.gov/copyright.shtml
+		-->
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+		
+		<link href="/includes/bootstrap-4.6.2-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="/includes/font-awesome/css/all.css" rel="stylesheet" type="text/css" />
+		<link href="/includes/app_v7.css" rel="stylesheet" type="text/css" />
+		<link href="/includes/site_v2_4.css" rel="stylesheet" type="text/css" />
+		<title>Weblogin</title>
+		<script src="/includes/jquery-3.7.1.min.js" type="text/javascript"></script>
+		<script src="/includes/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+		<script src="/includes/app.js" type="text/javascript"></script>
+		
+	<script src="/includes/js.cookie.js" type="text/javascript"></script>
+	<script language="Javascript" type="text/javascript">
+		var monster_submit = false;
+	</script>
+	<script language="Javascript" type="text/javascript">
+	$(document).ready(function() {
+		$("#login_form").submit( function(event) {
+			showLoading(true, 'modal');
+		});
+	});
+</script>
+
+	<script language="Javascript" type="text/javascript">
+	$(document).ready(function() {
+		function showExpressFailure(msg) {
+			if ( typeof(msg) === 'undefined' || msg === null ) {
+				$("#express_failure").html('					<p>Here are some questions to aid in troubleshooting:</p><ul><li>Are your Kerberos credentials still valid?</li><li>Does your browser support Express Login?</li><li>Is your browser configured to send your credentials to Weblogin?</li></ul><hr /><div class="alert alert-warning" role="alert">Please try again.&nbsp;&nbsp;				<a class="alert-link" href="http://int.lanl.gov/computing/access-passwords/authentication/single-sign-on/weblogin-xp.shtml#clientauto">[Troubleshoot]</a></div>');
+	} else {
+		$("#express_failure").html(msg);
+	}
+}
+function tryExpress(isModal) {
+	$("#express_failure").html('');
+	if (isModal == undefined) {
+		isModal = false
+		}
+			mode = 'modal';
+			if (isModal) {
+				mode = 'plain';
+			}
+	showLoading(true, mode);
+	$.ajax({
+		type: "GET",
+		url: "https://tk.weblogin.lanl.gov/nop",
+	}).done(function( data, textStatus, jqXHR ) {
+	$.ajax({
+		xhrFields: {
+			withCredentials: true
+		},
+		type: "POST",
+		url: "https://tk.weblogin.lanl.gov/express",
+		data: {
+			code: "1",
+			csrf_token: ".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU",
+		},
+	}).done(function( data, textStatus, jqXHR ) {
+		if (data['result'] == "E_OK") {
+				$.ajax({
+					type: "POST",
+					url: "/claim",
+					data: {
+						code: "1",
+						connectionId: "",
+						resumePath: "",
+						csrf_token: ".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU",
+					}
+				}).done(function( data, textStatus, jqXHR ) {
+					if ( data['result'] == "E_OK" ) {
+						$("#link_form").submit();
+					} else if ( data['result'] == "E_CSRF" ) {
+						$("#link_form").submit();
+					} else {
+						showExpressFailure();
+						setWarningIcon();
+						showLoading(false, mode);
+					}
+				}).fail(function( jqXHR, textStatus, errorThrown ) {
+					showExpressFailure();
+					setWarningIcon();
+					showLoading(false, mode);
+				});
+		} else if ( data['result'] == "E_CSRF" ) {
+			$("#link_form").submit();
+		} else if (data['result'] == "E_EXPRESS_SMARTCARD") {
+			showExpressFailure('				<hr /><div class="alert alert-danger" role="alert">This feature is only available on your system when you log in using a smartcard.			</div>');
+		setWarningIcon();
+		showLoading(false, mode);
+		$("#login_express").hide();
+	} else {
+		showExpressFailure();
+		setWarningIcon();
+		showLoading(false, mode);
+	}
+}).fail(function( jqXHR, textStatus, errorThrown ) {
+	showExpressFailure();
+	setWarningIcon();
+	showLoading(false, mode);
+});
+}).fail(function( jqXHR, textStatus, errorThrown ) {
+	$('#app_express_tab').addClass('hidden');
+	showLoading(false, mode);
+});
+}
+$('#express_modal').on('show.bs.modal', function (e) {
+tryExpress(true);
+});
+$('#express_modal').on('hidden.bs.modal', function (e) {
+showLoading(false, 'plain');
+$("#express_failure").html('');
+});
+$("#login_express").click( function(event) {
+event.preventDefault();
+tryExpress(true);
+});
+$("#express_div").html('<a id="app_express_tab" class="nav-link" data-target="#express_modal" data-toggle="modal" href="#">Express Login</a>');
+tryExpress();
+});
+</script>
+
+	<script language="Javascript" type="text/javascript">
+	$(document).ready(function() {
+		function tryKrb5Preauth() {
+			$.ajax({
+				type: "GET",
+				url: "https://tk.weblogin.lanl.gov/nop",
+			}).done(function( data, textStatus, jqXHR ) {
+			$.ajax({
+				xhrFields: {
+					withCredentials: true
+				},
+				type: "POST",
+				url: "https://tk.weblogin.lanl.gov/krb5_preauth",
+				data: {
+					csrf_token: ".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU",
+				},
+			}).done(function( data, textStatus, jqXHR ) {
+				if (data['result'] == "E_OK") {
+					setSuccessIcon();
+				} else {
+					setWarningIcon();
+				}
+			}).fail(function( jqXHR, textStatus, errorThrown ) {
+				setWarningIcon();
+			});
+			}).fail(function( jqXHR, textStatus, errorThrown ) {
+				$('#app_express_tab').addClass('hidden');
+			});
+		}
+	});
+</script>
+
+	<script language="Javascript" type="text/javascript">
+	$(document).ready(function() {
+	});
+</script>
+
+	<script language="Javascript" type="text/javascript">
+	var sc_counter = 0;
+	var sc_timer = -1;
+	var auto_form = true;
+	var sc_wait = 10;
+	function stopProgress() {
+		if ( sc_timer != -1 ) clearTimeout(sc_timer);
+		showLoading(false, 'plain');
+		$("#sc_progress_div").hide();
+		$("#sc_progress").css({'width': '0%'});
+		sc_counter = 0;
+	}
+	function resetSC() {
+		stopProgress();
+		$("#sc_status").html('<div class="alert alert-warning" role="alert">Please&nbsp;try&nbsp;again.&nbsp;&nbsp;<a class="alert-link" href="/help/sc#Troubleshooting">[Troubleshoot]</a></div>')
+		$("#sc_inst").html('<ol> <li> <p> Make sure to satisfy the <a href="/help/sc#Requirements">PIV or zToken Requirements.</a> </p> </li> <li> <p>Insert your PIV or zToken into the reader.</p> </li> <li> <p>Click the "Use PIV or zToken" button below.</p> </li> <li id="cryptocard_inst" class="cryptocard-inst hidden"> <p>Or click the "Use YubiKey or CRYPTOCard" button or "Cancel" button below to show the password log in form.</p> </li> </ol> ');
+		$("#cancel_sc").show();
+		$("#login_sc").show();
+		if ( auto_form ) {
+			$("#use_cryptocard").removeClass("hidden");
+			$("#cryptocard_inst").removeClass("hidden");
+		}
+	}
+	function updateProgress() {
+		sc_timer = setTimeout(function() {
+			sc_counter += 1;
+			if (sc_counter < sc_wait) {
+				var sc_width = Math.floor((sc_counter / (sc_wait * 1.0)) * 100);
+				var sc_width_percent = sc_width.toString() + '%';
+				$("#sc_progress").css({'width': sc_width_percent});
+			}
+			if (sc_counter == sc_wait) {
+				sc_counter = 0;
+				$("#sc_progress").css({'width': '0%'});
+			}
+			updateProgress();
+		}, 1000);
+	}
+	function trySC() {
+		stopProgress();
+		showLoading(true, 'plain', 30000);
+		$("#msgs").hide();
+		$("#sc_inst").html('<ul> <li> <p>When prompted, enter the PIN for your PIV or zToken.</p> </li> <li> <p>When prompted, select a matching certificate according to your browser:</p> <dl> <dt>Unhandled</dt> <dd>No certificate hints are available for your browser.</dd> </dl> </li> </ul> ');
+		if ( auto_form ) {
+			$("#use_cryptocard").addClass("hidden");
+			$("#cancel_sc").hide();
+		}
+		$("#login_sc").hide();
+		$("#sc_status").html('<div class="alert alert-info">Authenticating ...</div>');
+		$("#sc_progress_div").show();
+		updateProgress();
+		$.ajax({
+			xhrFields: {
+				withCredentials: true
+			},
+			type: "POST",
+			url: "https://sc.weblogin.lanl.gov/client_auth",
+			data: {
+				code: "1",
+				csrf_token: ".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU",
+			}
+		}).done(function( data, textStatus, jqXHR ) {
+			if ( data['result'] == "E_OK" ) {
+				$.ajax({
+					type: "POST",
+					url: "/claim",
+					data: {
+						code: "1",
+						connectionId: "",
+						resumePath: "",
+						csrf_token: ".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU",
+					}
+				}).done(function( data, textStatus, jqXHR ) {
+					if ( data['result'] == "E_OK" ) {
+						$("#link_form").submit();
+					} else if ( data['result'] == "E_CSRF" ) {
+						$("#link_form").submit();
+					} else {
+						resetSC();
+					}
+				}).fail(function( jqXHR, textStatus, errorThrown ) {
+					resetSC();
+				});
+			} else if ( data['result'] == "E_CSRF" ) {
+				$("#link_form").submit();
+			} else if ( data['result'] == "E_WRONG_CERT" ) {
+				stopProgress();
+				$("#sc_status").html('<div class="alert alert-danger" role="alert">Wrong&nbsp;Certificate&nbsp;&nbsp;<a href="/help/sc#Troubleshooting" class="alert-link">[Troubleshoot]</a></div>');
+				$("#sc_inst").html('<p>The wrong certificate was selected for authentication.</p> <p>Your browser needs to be reset so that it will give you a choice of certificates:</p> <ol> <li>Remove the PIV or zToken from the reader and reinsert it.</li> <li>Close all browser windows and reopen the page.</li> <li>Retry PIV or zToken Login with a different certificate. <ul> <li> See <a data-toggle="tab" href="#Authentication">Authentication Process</a> &nbsp;for the list of correct certificates by browser. </li> <li> If you selected a matching certificate then try the next matching certificate from the available certificates. </li> </ul></li> </ol> ');
+				$("#cancel_sc").show();
+				if ( auto_form ) {
+					$("#use_cryptocard").removeClass("hidden");
+					$("#cryptocard_inst").removeClass("hidden");
+				}
+			} else if ( data['result'] == "E_NOT_AUTHORIZED" || data['result'] == "E_NOT_MAPPED" ) {
+				stopProgress();
+				$("#sc_status").html('<div class="alert alert-danger" role="alert">Authorization&nbsp;Failure&nbsp;&nbsp;<a href="/help/sc#Troubleshooting" class="alert-link">[Troubleshoot]</a></div>');
+				$("#sc_inst").html('<p>The certificate on the PIV or zToken was correctly presented to the server, but the attributes in the certificate are not correctly mapped to a user.</p> <p>Here are some questions to aid in troubleshooting:</p> <ol> <li>Is your training up to date?</li> <li>Is your PIV or zToken expired?</li> <li>Was your PIV or zToken recently reprogrammed? Data propagation can take up to one hour.</li> </ol> ');
+				$("#cancel_sc").show();
+				if ( auto_form ) {
+					$("#use_cryptocard").removeClass("hidden");
+					$("#cryptocard_inst").removeClass("hidden");
+				}
+			} else {
+				stopProgress();
+				$("#sc_status").html('<div class="alert alert-danger" role="alert">Unhandled&nbsp;Failure</div><div class="alert alert-warning">Please&nbsp;try&nbsp;again.</div>');
+				$("#sc_inst").html('<ol> <li> <p> Make sure to satisfy the <a href="/help/sc#Requirements">PIV or zToken Requirements.</a> </p> </li> <li> <p>Insert your PIV or zToken into the reader.</p> </li> <li> <p>Click the "Use PIV or zToken" button below.</p> </li> <li id="cryptocard_inst" class="cryptocard-inst hidden"> <p>Or click the "Use YubiKey or CRYPTOCard" button or "Cancel" button below to show the password log in form.</p> </li> </ol> ');
+				$("#cancel_sc").show();
+				$("#login_sc").show();
+				if ( auto_form ) {
+					$("#use_cryptocard").removeClass("hidden");
+					$("#cryptocard_inst").removeClass("hidden");
+				}
+			}
+		}).fail(function( jqXHR, textStatus, errorThrown ) {
+			resetSC();
+		});
+	}
+	function msoTrySC() {
+		showLoading(true, 'modal');
+		$.ajax({
+			xhrFields: {
+				withCredentials: true
+			},
+			type: "POST",
+			url: "https://sc.weblogin.lanl.gov/client_auth",
+			data: {
+				code: "1",
+				csrf_token: ".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU",
+			}
+		}).done(function( data, textStatus, jqXHR ) {
+			if ( data['result'] == "E_OK" ) {
+				$.ajax({
+					type: "POST",
+					url: "/claim",
+					data: {
+						code: "1",
+						connectionId: "",
+						resumePath: "",
+						csrf_token: ".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU",
+					}
+				}).done(function( data, textStatus, jqXHR ) {
+					if ( data['result'] == "E_OK" ) {
+						monster_submit = true;
+					}
+				});
+			}
+		}).always(function( data, textStatus, jqXHR ) {
+			showLoading(false, 'modal');
+		});
+	}
+	$(document).ready(function() {
+		$('#sc_modal').on('show.bs.modal', function (e) {
+			trySC();
+		});
+		$('#sc_modal').on('hide.bs.modal', function (e) {
+			stopProgress();
+			auto_form = false;
+			$("#app_login_tab").removeClass("hidden");
+			$("#help_link").removeClass("hidden");
+			$("#monster_card").addClass('hidden');
+			$("#express_menu").removeClass("d-none");
+			$("#krb5_div").removeClass("hidden");
+			$("#krb5_preauth_failure").removeClass("hidden");
+			$("#krb5_preauth_success").removeClass("hidden");
+			$("#login_card_sc").removeClass('hidden');
+			$("#login_card_up").removeClass('hidden');
+			$("#use_cryptocard").addClass('hidden');
+			$("#cryptocard_inst").addClass('hidden');
+		});
+		$("#login_sc").click( function(event) {
+			event.preventDefault();
+			trySC();
+		});
+		$("#sc_div").html('			<a id="app_sc_tab" class="btn btn-primary login-button" data-target="#sc_modal" data-toggle="modal" href="#">PIV or zToken Log In</a>');
+	});
+</script>
+
+	<script language="Javascript" type="text/javascript">
+	$(document).ready(function() {
+			$("#app_login_tab").addClass("hidden");
+			$("#help_link").addClass("hidden");
+			$("#krb5_div").addClass("hidden");
+			$("#krb5_preauth_failure").addClass("hidden");
+			$("#krb5_preauth_success").addClass("hidden");
+			$("#login_card_sc").addClass("hidden");
+			$("#login_card_up").addClass("hidden");
+		$("#login_monster").click( function(event) {
+			event.preventDefault();
+			if ( monster_submit ) {
+				$("#link_form").submit();
+			} else {
+			$('#sc_modal').modal('show');
+			}
+		});
+		scroll_timer = setTimeout(function() {
+			var scroll_to = $("#app_long")[0].getBoundingClientRect().top;
+			window.scroll(0, scroll_to);
+		}, 250);
+	});
+</script>
+
+
+	</head>
+	<body>
+		<div id="main">
+			<div id="spinner-type-1">
+				<div id="spinner-plain" class="d-none">
+					<div class="cv-spinner">
+						<div class="spinner"></div>
+					</div>
+				</div>
+			</div>
+			<div id="spinner-type-2">
+				<div id="spinner-modal" class="loading-modal d-none close" data-dismiss="modal">
+					<div class="modal-dialog modal-dialog-centered">
+						<div id="s-modal-nested" class="overlay-modal">
+							<div class="cv-spinner-modal">
+								<div class="spinner"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="content">
+				<header>
+					<div class="top-header">&nbsp;</div>
+					<div class="main-header main-header-app">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12">
+									<a href="http://www.lanl.gov">
+										<img class="brand-logo" alt="LANL INSIDE" src="/images/lanl-logo.2020.svg" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="container page-container">
+					<div class="row">
+						<div class="col-12">
+							<div class="divtable">
+								<div class="divrow">
+									<div id="app_long" class="divcell shadowed appBlack">Weblogin</div>
+								</div>
+							</div>
+							<br />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-2 col-md-3 page-menu">
+							<div id="app_tab" class="nav flex-column nav-pills" aria-orientation="vertical" role="tablist">
+								
+	<a id="app_login_tab" class="nav-link active" aria-controls="app_login" aria-selected="true" data-toggle="pill" href="#app_login" role="tab">Login</a>
+	<a id="help_link" class="nav-link" href="/help">Help</a>
+	<div id="express_menu" class="d-none">
+		<span class="d-inline-block">
+			<div id="express_div">
+				<form id="login_express_form" action="https://tk.weblogin.lanl.gov/express" method="post" name="login_express_form">
+					<input name="csrf_token" type="hidden" value=".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU" />
+					<input name="referer" type="hidden" value="https://phonebook.lanl.gov/" />
+					<input name="resumePath" type="hidden" value="" />
+					<input name="connectionId" type="hidden" value="" />
+					<input class="btn btn-link" type="submit" value="Express Login" />
+				</form>
+			</div>
+		</span>
+		<div class="d-inline-block">
+			<a data-content="Express Login is available for your session." data-toggle="popover" data-trigger="hover" href="#" title="Express Login Available">
+				<span id="krb5_preauth_success" class="d-none">
+					<i class="fas fa-check-circle" style="color: green"></i>
+				</span>
+			</a>
+		</div>
+		<div class="d-inline-block">
+			<a data-content="Express Login is unable to verify your credentials." data-toggle="popover" data-trigger="hover" href="#" title="Express Login Failed">
+				<span id="krb5_preauth_failure" class="d-none">
+					<i class="fas fa-exclamation-triangle" style="color: orange"></i>
+				</span>
+			</a>
+		</div>
+		<div></div>
+	</div>
+
+							</div>
+						</div>
+						<div class="col-sm-10 col-md-9 page-content">
+							<div class="container">
+								<div class="row">
+									<div class="col-12 d-flex mobile-show"></div>
+								</div>
+								<div class="row">
+									<div id="msgs_div" class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex">
+									</div>
+								</div>
+							</div>
+							
+
+
+<div id="auth_type">
+	<div class="wrapper">
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex">
+						<div id="krb5_div" class="jumbotron alert-info d-none">
+							<h1 class="display-4">Express Login Available</h1>
+							<p>Express Login is compatible with your session.</p>
+							<p class="lead">
+								Express Login offers automatic login using your existing credentials.
+								<br />
+								To use Express Login click the following button.
+							</p>
+							<p class="border-bottom jumbotron-border"></p>
+							<p class="text-center">
+								<a class="btn btn-success btn-lg" data-target="#express_modal" data-toggle="modal" href="#">Express Login</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="monster_card" class="col-12 col-sm-10 col-md-8 d-flex align-items-stretch">
+						<div class="monster-card d-flex flex-column">
+							<div class="sc-form">
+								<a>
+									<div id="monster" class="jumbotron alert-warning">
+										<p class="text-center">**WARNING**WARNING**WARNING**</p>
+										<p class="border-top jumbotron-border"></p>
+										<p>
+											This is a Department of Energy (DOE) computer system. DOE computer systems are provided for the processing of
+											official U.S. Government information only. All data contained within DOE computer systems is owned by the
+											DOE, and may be audited, intercepted, recorded, read, copied, or captured in any manner and disclosed in any
+											manner, by authorized personnel.  THERE IS NO RIGHT OF PRIVACY IN THIS SYSTEM.
+											System personnel may disclose any potential evidence of crime found on DOE computer systems to appropriate authorities.
+										</p>
+										<p>
+											USE OF THIS SYSTEM BY ANY USER, AUTHORIZED OR UNAUTHORIZED, CONSTITUTES CONSENT TO THIS AUDITING,
+											INTERCEPTION, RECORDING, READING, COPYING, CAPTURING, and DISCLOSURE OF COMPUTER ACTIVITY.
+										</p>
+										<p class="border-bottom jumbotron-border"></p>
+										<p class="text-center">**WARNING**WARNING**WARNING**</p>
+									</div>
+								</a>
+							</div>
+							<div class="mt-auto sc-form">
+								<div class="text-center sc-form card-read-more">
+									<a id="login_monster" class="btn btn-primary login-button" ata-toggle="modal" data-target="#sc_modal" href="#">Accept and Log In</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="login_card_sc" class="col-12 col-sm-5 col-md-4 col-lg-3 d-flex align-items-stretch">
+						<div class="card d-flex flex-column">
+							<a class="img-card">
+								<img src="/images/piv_ztoken.jpg" />
+							</a>
+							<div id="sc_div_help" class="card-content mobile-hide">
+								<a href="/help/sc"><div class="text-center">PIV or zToken Login Help</div></a>
+							</div>
+							<div class="mt-auto sc-form">
+								<div id="sc_div" class="text-center sc-form card-read-more">
+									<form id="login_sc_form" action="/sc" method="post" name="login_sc_form">
+										<input name="csrf_token" type="hidden" value=".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU" />
+										<input name="referer" type="hidden" value="https://phonebook.lanl.gov/" />
+										<input name="resumePath" type="hidden" value="" />
+										<input name="connectionId" type="hidden" value="" />
+										<input class="btn btn-primary login-button" type="submit" value="PIV or zToken Log In" />
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="login_card_up" class="col-12 col-sm-5 col-md-4 col-lg-3 d-flex">
+						<div class="card">
+							<a class="img-card">
+								<img src="/images/yubikey5ci.png" />
+							</a>
+							<div class="card-content">
+								<div id="app_tabContent" class="tab-content">
+									<div id="app_login" class="tab-pane fade show active" aria-labelledby="app_login_tab" role="tabpanel">
+										<form id="login_form" action="/" method="post" name="login_form">
+											<div class="form-group row">
+												<label class="col-lg-6" for="form_zn">Z&nbsp;Number</label>
+												<div class="col-lg-6">
+													<input id="form_zn" class="form-control" maxlength="13" name="form_zn" size="10" tabindex="1" type="text" value="" />
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-lg-6" for="form_pw">Passcode and Tap</label>
+												<div class="col-lg-6">
+													<input id="form_pw" class="form-control" autocomplete="off" maxlength="100" name="form_password" size="10" tabindex="2" type="password" />
+												</div>
+											</div>
+											<div>
+												<div class="text-center card-read-more">
+													<input class="btn btn-primary login-button cc-form mt-auto" name="action" tabindex="3" type="submit" value="YubiKey or CRYPTOCard Log In" />
+												</div>
+											</div>
+											<input name="csrf_token" type="hidden" value=".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU" />
+											<input name="referer" type="hidden" value="https://phonebook.lanl.gov/" />
+											<input name="resumePath" type="hidden" value="" />
+											<input name="connectionId" type="hidden" value="" />
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-10 col-md-8 col-lg-6">
+						<div id="redirect_notice" class="jumbotron">
+							<h3>This page will redirect you to:</h3>
+							<p class="text-break">https://phonebook.lanl.gov/</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div>
+	<form id="link_form" action="/" method="post" name="link_form">
+		<input name="csrf_token" type="hidden" value=".eJwFwQEBACEIA8AuJhDQPcYZOvpH-LthgHqXheMiP8YJ6z4yHtK3LwU150sv7y7mLciTT0QuaPxYhBKG.afkKTw.TGD4JjT8bqdY_WaFM-K9TOs1VITtKrMEqkvHQODHtIU" />
+		<input name="referer" type="hidden" value="https://phonebook.lanl.gov/" />
+		<input name="resumePath" type="hidden" value="" />
+		<input name="connectionId" type="hidden" value="" />
+	</form>
+</div>
+<div id="express_modal" class="modal fade float-left" aria-hidden="true" aria-labelledby="expressLabel" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 id="expressLabel" class="modal-title h4">Express Login</h5>
+			</div>
+			<div class="modal-body">
+				<p>Express Login allows Kerberos users to authenticate automatically to protected Web services.</p>
+				<p>
+					See
+					<a href="http://int.lanl.gov/computing/access-passwords/authentication/single-sign-on/weblogin-xp.shtml#clientauto">About&nbsp;Weblogin&nbsp;Express</a>
+					for more information.
+				</p>
+				<div id="express_failure"></div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+				<button id="login_express" class="btn btn-primary" type="button">Use Express</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="sc_modal" class="modal fade float-left" aria-hidden="true" aria-labelledby="scLabel" data-backdrop="static" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 id="scLabel" class="modal-title h4">PIV or zToken Log In</h5>
+			</div>
+			<div class="modal-body">
+				<div id="sc_inst"></div>
+				<hr />
+				<div id="sc_status"></div>
+				<div id="sc_frame" class="ajax_loader"></div>
+				<div id="sc_progress_div" class="progress">
+					<div id="sc_progress" class="progress-bar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" style="width: 0%;"></div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button id="cancel_sc" class="btn btn-secondary" data-dismiss="modal" type="button">Cancel</button>
+				<button id="login_sc" class="btn btn-primary" type="button">Use PIV or zToken</button>
+				<div id="use_cryptocard" class="use-cryptocard hidden">
+					<button id="auto_pw" class="btn btn-primary" data-dismiss="modal" type="button">Use YubiKey or CRYPTOCard</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+						</div>
+					</div>
+				</div>
+				<footer class="main-footer main-footer-app">
+					<div class="footer-body">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 text-center">
+									<small>
+										Operated by
+										<a href="https://www.triadns.org/">Triad&nbsp;National&nbsp;Security,&nbsp;LLC</a>
+										, for the
+										<a href="https://www.energy.gov/">US&nbsp;Department&nbsp;of&nbsp;Energy's</a>
+										<a href="https://nnsa.energy.gov/">NNSA</a>
+										.
+										<a href="http://www.lanl.gov/resources/web-policies/copyright-legal.php">&#169;&nbsp;Copyright&nbsp;Triad&nbsp;National&nbsp;Security,&nbsp;LLC. All&nbsp;Rights&nbsp;Reserved</a>
+									</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
