@@ -23,7 +23,11 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Crawler output: tracked for course submission (re-ignore locally if repo gets too large)
+# Crawler output: do not commit HTML/metadata — pages often embed third-party
+# keys/tokens in JS, which triggers secret scanners. Share data via zip or
+# Release instead (see docs/usage.md).
+crawled_pages/*
+!crawled_pages/.gitkeep
 
 # Logs
 *.log

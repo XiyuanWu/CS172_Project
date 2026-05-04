@@ -48,3 +48,12 @@ Example:
 ```bash
 python main.py --seed-file seed.txt --max-pages 0 --max-hops 6 --target-size-mb 500 --allowed-domain ucr.edu -v
 ```
+
+## Sharing crawled data (Part A → Part B)
+
+Do **not** commit raw `crawled_pages/*.html` to a public Git repo: saved pages often contain third-party JavaScript or URL parameters that look like API keys to automated secret scanners.
+
+Recommended instead:
+
+- Zip `crawled_pages/` (including `metadata.csv`) and share via course submission, team drive, or a **GitHub Release** asset.
+- Or document the same `seed.txt` + crawler command so teammates can reproduce the crawl locally.
