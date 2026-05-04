@@ -1,6 +1,6 @@
-"""HTML link extraction and URL normalization.
+f"""HTML link extraction and URL normalization.
 
-Owned by: Jake Wang.
+Owned by: Person 4: Jake Wang.
 
 Agreed interface (dev-doc-a.md, section 5):
     extract_links(html, base_url) -> [urls]

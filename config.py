@@ -21,9 +21,10 @@ from typing import Tuple
 @dataclass
 class CrawlerConfig:
     seed_file: str = "seed.txt"
-    max_pages: int = 10000
+    max_pages: int = 0
     max_hops: int = 6
     output_dir: str = "crawled_pages"
+    target_size_mb: int = 500
     allowed_domain: str = ""
 
     request_timeout: float = 5.0

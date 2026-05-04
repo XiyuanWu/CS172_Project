@@ -14,21 +14,23 @@ This project aims to build a **web crawler** that automatically collects web pag
 * Store HTML files and metadata in a structured format
 
 
-## 🧠 Core Idea
+## 🧠 Core Idea (Current Implementation)
 
 The web can be modeled as a **graph**:
 
 * Pages = nodes
 * Links = edges
 
-The crawler performs a **Breadth-First Search (BFS)**:
+The crawler currently uses a **FIFO frontier queue with depth tracking**.
+In practice, this is a queue-driven crawl order (BFS-style), implemented by
+single-threaded orchestration in `main.py`:
 
 ```txt
-Seed → Links → More Links → ...
+Seed -> dequeue URL -> fetch -> extract links -> enqueue children
 ```
 
 
-## ⚙️ 2. System Workflow
+## ⚙️ 2. System Workflow (As Implemented)
 
 ### 🔁 High-Level Pipeline
 
@@ -37,7 +39,7 @@ Load Seeds
    ↓
 Add to Queue (depth = 0)
    ↓
-Loop:
+Main loop (single thread):
    ↓
 Take URL from queue
    ↓
@@ -49,10 +51,18 @@ Extract links
    ↓
 Filter links (domain + duplicates)
    ↓
-Add new URLs to queue (depth + 1)
+Add new URLs to queue (depth + 1, deduped by visited set)
    ↓
 Repeat
 ```
+
+### Stop Conditions (Current)
+
+The crawler stops when any of these happens:
+
+* Frontier queue becomes empty
+* `max_pages` is reached (if `max_pages > 0`)
+* Saved HTML size reaches `target_size_mb` (default: 500MB)
 
 
 ## 🔄 Example Execution
@@ -173,20 +183,21 @@ Frontier.is_empty() → True/False
 * Save pages + metadata
 
 
-## 🔗 7. Component Interaction
+## 🔗 7. Component Interaction (Current Runtime)
 
 ```txt
-Frontier (P2)
+main.py loop:
+Frontier.next()
    ↓
-Downloader (P3)
+Downloader.download()
    ↓
-Storage (P5)
+Storage.save_page()
    ↓
-Parser (P4)
+Parser.extract_links()
    ↓
-Filter (P5)
+Filters.is_valid_url()/has_visited()/mark_visited()
    ↓
-Frontier (P2)
+Frontier.add()
 ```
 
 
@@ -203,6 +214,9 @@ P3 → downloader
 P4 → parser
 P5 → filter/storage
 ```
+
+Note: this section describes team development split. The current crawler runtime
+in `main.py` is single-threaded (one URL processed at a time).
 
 ### Step 3: Integration
 
@@ -283,5 +297,5 @@ The system is modular, scalable, and designed for team collaboration.
 ## 🔥 Final Insight
 
 ```txt
-Crawler = BFS over the web graph + data collection pipeline
+Crawler = queue-driven crawl (BFS-style) + filtering + storage pipeline
 ```
