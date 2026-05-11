@@ -1,11 +1,11 @@
 # Developer Documentation (Part A)
 
-## 📌 1. Project Overview
+## 1. Project Overview
 
 This project aims to build a **web crawler** that automatically collects web pages starting from a small set of seed URLs. The crawler explores the web by following hyperlinks, stores downloaded HTML pages, and prepares the dataset for indexing in Part B (search engine).
 
 
-## 🎯 Objectives
+## Objectives
 
 * Start from a list of seed URLs
 * Crawl web pages up to a specified depth (hops)
@@ -14,7 +14,7 @@ This project aims to build a **web crawler** that automatically collects web pag
 * Store HTML files and metadata in a structured format
 
 
-## 🧠 Core Idea (Current Implementation)
+## Core Idea (Current Implementation)
 
 The web can be modeled as a **graph**:
 
@@ -30,9 +30,9 @@ Seed -> dequeue URL -> fetch -> extract links -> enqueue children
 ```
 
 
-## ⚙️ 2. System Workflow (As Implemented)
+## 2. System Workflow (As Implemented)
 
-### 🔁 High-Level Pipeline
+### High-Level Pipeline
 
 ```txt
 Load Seeds
@@ -65,7 +65,7 @@ The crawler stops when any of these happens:
 * Saved HTML size reaches `target_size_mb` (default: 500MB)
 
 
-## 🔄 Example Execution
+## Example Execution
 
 ```txt
 seed.txt:
@@ -79,7 +79,7 @@ Step 4: Extract ~500 links
 ```
 
 
-## 📂 3. Project Structure
+## 3. Project Structure
 
 ```txt
 crawler_project/
@@ -103,7 +103,7 @@ crawler_project/
 ```
 
 
-## ⚙️ 4. Configuration
+## 4. Configuration
 
 ```python
 SEED_FILE = "seed.txt"
@@ -115,7 +115,7 @@ REQUEST_TIMEOUT = 5
 ```
 
 
-## 🔌 5. Core Function Interfaces
+## 5. Core Function Interfaces
 
 All components must follow these agreed interfaces:
 
@@ -136,9 +136,9 @@ Frontier.is_empty() → True/False
 ```
 
 
-## 👥 6. Task Distribution (Balanced)
+## 6. Task Distribution (Balanced)
 
-### 👤 Person 1 — Setup + Configuration
+### Person 1 — Setup + Configuration
 
 * Create project structure
 * Implement config system
@@ -146,7 +146,7 @@ Frontier.is_empty() → True/False
 * Prepare `main.py` skeleton
 
 
-### 👤 Person 2 — Frontier (Queue + BFS)
+### Person 2 — Frontier (Queue + BFS)
 
 * Manage URL queue
 * Track depth (hops)
@@ -156,7 +156,7 @@ Frontier.is_empty() → True/False
   * max hops
 
 
-### 👤 Person 3 — Downloader
+### Person 3 — Downloader
 
 * Send HTTP requests
 * Handle:
@@ -167,7 +167,7 @@ Frontier.is_empty() → True/False
 * Return clean HTML
 
 
-### 👤 Person 4 — Link Extraction
+### Person 4 — Link Extraction
 
 * Parse HTML
 * Extract `<a href="">`
@@ -175,7 +175,7 @@ Frontier.is_empty() → True/False
 * Normalize URLs (remove fragments)
 
 
-### 👤 Person 5 — Filtering + Storage
+### Person 5 — Filtering + Storage
 
 * Remove duplicate URLs
 * Restrict domain (e.g., `.edu`)
@@ -183,7 +183,7 @@ Frontier.is_empty() → True/False
 * Save pages + metadata
 
 
-## 🔗 7. Component Interaction (Current Runtime)
+## 7. Component Interaction (Current Runtime)
 
 ```txt
 main.py loop:
@@ -201,30 +201,7 @@ Frontier.add()
 ```
 
 
-## ⚡ 8. Parallel Development Strategy
-
-### Step 1: Agree on interfaces (team)
-
-### Step 2: Work in parallel
-
-```txt
-P1 → setup/config
-P2 → queue
-P3 → downloader
-P4 → parser
-P5 → filter/storage
-```
-
-Note: this section describes team development split. The current crawler runtime
-in `main.py` is single-threaded (one URL processed at a time).
-
-### Step 3: Integration
-
-* Connect all components
-* Debug mismatches
-
-
-## 📊 9. Data Storage Format
+## 8. Data Storage Format
 
 ### HTML Files
 
@@ -242,7 +219,7 @@ id, url, filename, depth
 ```
 
 
-## ⚠️ 10. Key Challenges
+## 9. Key Challenges
 
 ### 1. Duplicate URLs
 
@@ -268,7 +245,7 @@ A → B → A
 ```
 
 
-## 🚫 11. Limitations
+## 10. Limitations
 
 * Cannot crawl JavaScript-rendered content
 * Some websites block crawlers
@@ -276,14 +253,14 @@ A → B → A
 * Limited to static HTML pages
 
 
-## 🚀 12. Expected Output
+## 11. Expected Output
 
 * Thousands of HTML files
 * Structured metadata
 * Clean dataset ready for indexing (Part B)
 
 
-## 🎯 13. Summary
+## 12. Summary
 
 This project builds a foundational **web crawler system** that:
 
@@ -294,7 +271,7 @@ This project builds a foundational **web crawler system** that:
 The system is modular, scalable, and designed for team collaboration.
 
 
-## 🔥 Final Insight
+## Final Insight
 
 ```txt
 Crawler = queue-driven crawl (BFS-style) + filtering + storage pipeline

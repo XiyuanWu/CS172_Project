@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Search</title>
+</head>
+<body>
+  <h1>Search</h1>
+
+  <form method="get" action="{% url 'search_app:search' %}">
+    <input type="text" name="q" value="{{ query }}" placeholder="q">
+    <button type="submit">Search</button>
+  </form>
+
+  {% if error %}
+    <p><strong>Error:</strong> {{ error }}</p>
+  {% endif %}
+
+  {% if query and not error %}
+    <p><strong>Debug (P5 replaces):</strong> top_k={{ top_k }}</p>
+    <pre>{{ results }}</pre>
+  {% endif %}
+</body>
+</html>
