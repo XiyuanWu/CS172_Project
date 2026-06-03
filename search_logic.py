@@ -1,18 +1,28 @@
 """
 Person 2 — Search Logic
 
-Temporary non-PyLucene implementation.
-The public interface is intentionally the same as the future PyLucene version:
-
+Public function:
     search(query_text, index_dir="index", k=10)
 
-Django can call this function now, and we can swap internals later.
+Django should call this function.
+
+Current behavior:
+- Uses PyLucene if installed.
+- Falls back to local HTML search if PyLucene is unavailable.
 """
 
 import os
 import csv
 import re
 from bs4 import BeautifulSoup
+
+
+try:
+    import lucene
+    PYLUCENE_AVAILABLE = True
+except ImportError:
+    lucene = None
+    PYLUCENE_AVAILABLE = False
 
 
 OUTPUT_DIR = "output"
@@ -108,7 +118,7 @@ def score_document(query_terms, title, description, body, url):
     return score
 
 
-def search(query_text, index_dir="index", k=10):
+def fallback_search(query_text, index_dir="index", k=10):
     query = clean_query(query_text)
 
     if not query:
@@ -176,6 +186,41 @@ def search(query_text, index_dir="index", k=10):
         ranked_results.append(result)
 
     return ranked_results
+
+
+def pylucene_search(query_text, index_dir="index", k=10):
+    """
+    Future PyLucene implementation.
+
+    Person 4's indexer should create these fields:
+    title, body, description, url, filename, depth, updated_time
+
+    This function will:
+    - open the Lucene index from index_dir
+    - parse query_text across title/description/body/url
+    - retrieve top-k results with Lucene scores
+    - return the same dictionary format as fallback_search
+    """
+    raise NotImplementedError(
+        "PyLucene is not installed in this environment yet. "
+        "Install PyLucene or use fallback_search for testing."
+    )
+
+
+def search(query_text, index_dir="index", k=10, use_pylucene=True):
+    """
+    Main public function for Django.
+
+    Django should call:
+        search(query_text, index_dir='index', k=10)
+
+    If PyLucene is available, this will use PyLucene.
+    Otherwise, it falls back to local HTML search for testing.
+    """
+    if use_pylucene and PYLUCENE_AVAILABLE:
+        return pylucene_search(query_text, index_dir=index_dir, k=k)
+
+    return fallback_search(query_text, index_dir=index_dir, k=k)
 
 
 if __name__ == "__main__":
