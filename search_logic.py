@@ -1,81 +1,184 @@
 """
-Person 2 — Search interface
+Person 2 — Search Logic
+
+Temporary non-PyLucene implementation.
+The public interface is intentionally the same as the future PyLucene version:
+
+    search(query_text, index_dir="index", k=10)
+
+Django can call this function now, and we can swap internals later.
 """
 
 import os
 import csv
+import re
 from bs4 import BeautifulSoup
 
 
+OUTPUT_DIR = "output"
+METADATA_FILE = "metadata.csv"
+
+
 def clean_query(query):
+    if query is None:
+        return ""
     return query.strip().lower()
 
 
-def extract_title(html):
+def tokenize(text):
+    if text is None:
+        return []
+    return re.findall(r"[a-zA-Z0-9]+", text.lower())
+
+
+def extract_html_fields(html):
     soup = BeautifulSoup(html, "html.parser")
 
-    if soup.title:
-        return soup.title.text.strip()
+    for tag in soup(["script", "style", "noscript"]):
+        tag.decompose()
 
-    return "Untitled"
+    title = "Untitled"
+    if soup.title and soup.title.text:
+        title = soup.title.text.strip()
+
+    description = ""
+    desc_tag = soup.find("meta", attrs={"name": "description"})
+    if desc_tag and desc_tag.get("content"):
+        description = desc_tag.get("content").strip()
+
+    updated_time = ""
+    updated_tag = soup.find("meta", attrs={"property": "og:updated_time"})
+    if updated_tag and updated_tag.get("content"):
+        updated_time = updated_tag.get("content").strip()
+
+    body = soup.get_text(" ", strip=True)
+
+    return {
+        "title": title,
+        "description": description,
+        "updated_time": updated_time,
+        "body": body,
+    }
+
+
+def make_snippet(text, query_terms, max_length=220):
+    if not text:
+        return ""
+
+    text = re.sub(r"\s+", " ", text).strip()
+    lower_text = text.lower()
+
+    first_match = -1
+
+    for term in query_terms:
+        pos = lower_text.find(term)
+        if pos != -1:
+            first_match = pos
+            break
+
+    if first_match == -1:
+        snippet = text[:max_length]
+    else:
+        start = max(first_match - 80, 0)
+        end = min(start + max_length, len(text))
+        snippet = text[start:end]
+
+    snippet = snippet.strip()
+
+    if len(snippet) >= max_length:
+        snippet += "..."
+
+    return snippet
+
+
+def score_document(query_terms, title, description, body, url):
+    title_tokens = tokenize(title)
+    description_tokens = tokenize(description)
+    body_tokens = tokenize(body)
+    url_tokens = tokenize(url)
+
+    score = 0.0
+
+    for term in query_terms:
+        score += title_tokens.count(term) * 3.0
+        score += description_tokens.count(term) * 2.0
+        score += body_tokens.count(term) * 1.0
+        score += url_tokens.count(term) * 0.5
+
+    return score
 
 
 def search(query_text, index_dir="index", k=10):
-    """
-    Temporary implementation.
-    Keeps same interface that PyLucene will use later.
-    """
-
     query = clean_query(query_text)
 
     if not query:
         return []
 
-    metadata = "output/metadata.csv"
+    query_terms = tokenize(query)
 
-    if not os.path.exists(metadata):
+    if not query_terms:
+        return []
+
+    metadata_path = os.path.join(OUTPUT_DIR, METADATA_FILE)
+
+    if not os.path.exists(metadata_path):
         return []
 
     results = []
 
-    with open(metadata, "r", encoding="utf-8") as f:
+    with open(metadata_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
 
-        rank = 1
-
         for row in reader:
+            filename = row.get("filename", "")
+            url = row.get("url", "")
+            depth = row.get("depth", "")
 
-            filename = row["filename"]
-            html_file = os.path.join("output", filename)
+            html_path = os.path.join(OUTPUT_DIR, filename)
 
-            if not os.path.exists(html_file):
+            if not os.path.exists(html_path):
                 continue
 
-            with open(html_file, "r", encoding="utf-8", errors="ignore") as page:
+            with open(html_path, "r", encoding="utf-8", errors="ignore") as page:
                 html = page.read()
 
-            title = extract_title(html)
+            fields = extract_html_fields(html)
 
-            if query in html.lower():
+            score = score_document(
+                query_terms=query_terms,
+                title=fields["title"],
+                description=fields["description"],
+                body=fields["body"],
+                url=url,
+            )
 
-                results.append({
-                    "rank": rank,
-                    "title": title,
-                    "url": row["url"],
-                    "filename": filename,
-                    "score": 1.0,
-                })
+            if score <= 0:
+                continue
 
-                rank += 1
+            snippet_source = fields["description"] or fields["body"]
 
-            if len(results) >= k:
-                break
+            results.append({
+                "title": fields["title"],
+                "url": url,
+                "filename": filename,
+                "depth": depth,
+                "updated_time": fields["updated_time"],
+                "score": round(score, 3),
+                "snippet": make_snippet(snippet_source, query_terms),
+            })
 
-    return results
+    results.sort(key=lambda item: item["score"], reverse=True)
+
+    ranked_results = []
+
+    for rank, result in enumerate(results[:k], start=1):
+        result["rank"] = rank
+        ranked_results.append(result)
+
+    return ranked_results
 
 
 if __name__ == "__main__":
-
     import sys
 
     query = " ".join(sys.argv[1:])
@@ -85,10 +188,10 @@ if __name__ == "__main__":
     if not results:
         print("No results.")
     else:
-
         for r in results:
-
             print("\nRank:", r["rank"])
             print("Title:", r["title"])
             print("Score:", r["score"])
             print("URL:", r["url"])
+            print("File:", r["filename"])
+            print("Snippet:", r["snippet"])
