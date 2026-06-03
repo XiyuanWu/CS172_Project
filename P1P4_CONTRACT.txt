@@ -1,0 +1,44 @@
+Person 2 Search Logic Contract
+
+Index directory:
+- Person 4 must write the Lucene index to: index/
+
+Required indexed + stored fields:
+- title
+- body
+- description
+- url
+- filename
+- depth
+- updated_time
+
+Searchable fields:
+- title
+- description
+- body
+- url
+
+Field weighting:
+- title: highest priority
+- description: medium priority
+- body: normal priority
+- url: lowest priority
+
+Public function for Django:
+- from search_logic import search
+- results = search(query_text, index_dir="index", k=10)
+
+Return format:
+[
+    {
+        "rank": 1,
+        "title": "...",
+        "url": "...",
+        "filename": "...",
+        "score": 1.234,
+        "snippet": "..."
+    }
+]
+
+Person 1 should not call PyLucene directly.
+Person 4 should make sure all result fields are stored in the Lucene document.
