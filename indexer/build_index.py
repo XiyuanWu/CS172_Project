@@ -1,21 +1,19 @@
 """Indexer entry point.
 
 P3 owns the input layer (walk `crawled_pages`, join `metadata.csv`).
-  → see indexer/input_layer.py
-
 P4 owns the Lucene layer (fields + analyzer + IndexWriter, plus the
 `indexer.bat` / `indexer.sh` wiring).
 """
 from __future__ import annotations
 
 import argparse
+import csv
 import logging
 import os
 from datetime import datetime, timezone
 from pathlib import Path
 
 from bs4 import BeautifulSoup
-from indexer.input_layer import load_metadata, iter_pages
 
 try:
     import lucene
@@ -70,38 +68,53 @@ def build_index(crawl_dir: Path, metadata_csv: Path, index_dir: Path) -> None:
     rows_indexed = 0
     rows_skipped = 0
 
-    # P3: load metadata and walk crawled pages
-    metadata = load_metadata(metadata_csv)
+    with open(metadata_csv, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            url = row.get("url", "").strip()
+            filename = row.get("filename", "").strip()
+            depth = row.get("depth", "0").strip()
 
-    for page in iter_pages(crawl_dir, metadata):
-        url      = page["url"]
-        filename = page["filename"]
-        depth    = page["depth"]
-        html     = page["html"]
+            if not filename:
+                rows_skipped += 1
+                continue
 
-        try:
-            title, description, body = _extract_fields(html)
-        except Exception as e:
-            log.warning("Parse error for %s: %s — skipping", filename, e)
-            rows_skipped += 1
-            continue
+            html_path = crawl_dir / filename
+            if not html_path.exists():
+                log.warning("Missing HTML file: %s — skipping", html_path)
+                rows_skipped += 1
+                continue
 
-        mtime = os.path.getmtime(crawl_dir / filename)
-        updated_time = datetime.fromtimestamp(mtime, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            try:
+                html = html_path.read_text(encoding="utf-8", errors="replace")
+            except OSError as e:
+                log.warning("Cannot read %s: %s — skipping", html_path, e)
+                rows_skipped += 1
+                continue
 
-        doc = Document()
-        # Searchable + stored fields (TextField is tokenized and indexed)
-        doc.add(TextField("title",       title or "",      Field.Store.YES))
-        doc.add(TextField("body",        body,             Field.Store.YES))
-        doc.add(TextField("description", description,      Field.Store.YES))
-        doc.add(TextField("url",         url,              Field.Store.YES))
-        # Stored-only fields (not tokenized, used only for result retrieval)
-        doc.add(StoredField("filename",     filename))
-        doc.add(StoredField("depth",        depth))
-        doc.add(StoredField("updated_time", updated_time))
+            try:
+                title, description, body = _extract_fields(html)
+            except Exception as e:
+                log.warning("Parse error for %s: %s — skipping", filename, e)
+                rows_skipped += 1
+                continue
 
-        writer.addDocument(doc)
-        rows_indexed += 1
+            mtime = os.path.getmtime(html_path)
+            updated_time = datetime.fromtimestamp(mtime, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+            doc = Document()
+            # Searchable + stored fields (TextField is tokenized and indexed)
+            doc.add(TextField("title",       title or "",      Field.Store.YES))
+            doc.add(TextField("body",        body,             Field.Store.YES))
+            doc.add(TextField("description", description,      Field.Store.YES))
+            doc.add(TextField("url",         url,              Field.Store.YES))
+            # Stored-only fields (not tokenized, used only for result retrieval)
+            doc.add(StoredField("filename",     filename))
+            doc.add(StoredField("depth",        depth))
+            doc.add(StoredField("updated_time", updated_time))
+
+            writer.addDocument(doc)
+            rows_indexed += 1
 
     writer.commit()
     writer.close()
