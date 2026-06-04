@@ -1,6 +1,20 @@
+# Part A — crawler dependencies
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
 urllib3>=2.0.0
 
+# Part B — web app
 django>=5.0,<6.0
+
+# Part B — indexer / search
+#
+# PyLucene cannot be installed via pip. It requires a manual build or a
+# pre-built binary that matches your JDK and OS. See docs/installation.md
+# for setup instructions.
+#
+# PyLucene >= 9.0 (matches Lucene 9.x)
+# Download: https://lucene.apache.org/pylucene/
+#
+# All other indexer dependencies (beautifulsoup4, lxml) are already listed
+# above and shared with the crawler.
