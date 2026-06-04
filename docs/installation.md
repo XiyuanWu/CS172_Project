@@ -9,7 +9,8 @@ End users who only want to run the crawler should read [`usage.md`](usage.md) in
 - Python 3.10 or newer (`python --version` to check)
 - `pip` (bundled with Python)
 - Git
-- For Part B: a JDK 11+ on PATH (needed by PyLucene when it lands; not required for plain Django dev)
+- For Part B (Option A — Docker): Docker Desktop installed and running
+- For Part B (Option B — WSL2): Windows Subsystem for Linux 2 with Ubuntu
 
 ## 1. Clone the repo
 
@@ -125,9 +126,104 @@ python -m indexer.build_index --crawl-dir crawled_pages --metadata crawled_pages
 
 Currently raises `NotImplementedError` (P3 + P4 will fill in the real logic).
 
-### 6.5 PyLucene (not installed yet)
+### 6.5 PyLucene Installation
 
-PyLucene installation is platform-specific and will be documented separately when wired in. It is **not** required to start the Django dev server or to work on the indexer scaffolding.
+PyLucene **cannot** be installed with `pip install pylucene`. It requires a
+pre-built environment or a manual source build. Two supported options are
+described below.
+
+---
+
+#### Option A — Docker (Recommended)
+
+Docker provides a pre-built image with PyLucene already compiled, so no
+manual JDK/Ant setup is needed.
+
+**1. Install Docker Desktop**
+Download from https://www.docker.com/products/docker-desktop and follow the
+installer. Make sure Docker is running before continuing.
+
+**2. Pull the PyLucene image**
+```bash
+docker pull coady/pylucene
+```
+
+**3. Run the indexer inside the container**
+
+From the repo root:
+```bash
+docker run --rm \
+  -v "$(pwd)":/app \
+  -w /app \
+  coady/pylucene \
+  python -m indexer.build_index --crawl-dir crawled_pages --metadata crawled_pages/metadata.csv --index-dir index/lucene_index
+```
+
+On Windows (PowerShell), replace `$(pwd)` with `${PWD}`:
+```powershell
+docker run --rm -v "${PWD}:/app" -w /app coady/pylucene python -m indexer.build_index --crawl-dir crawled_pages --metadata crawled_pages/metadata.csv --index-dir index/lucene_index
+```
+
+The generated index will appear in `index/lucene_index/` on your host machine.
+
+---
+
+#### Option B — WSL2 (Windows Subsystem for Linux)
+
+WSL2 lets you build and run PyLucene on Ubuntu inside Windows without Docker.
+
+**1. Enable WSL2 and install Ubuntu**
+
+In PowerShell (run as Administrator):
+```powershell
+wsl --install
+```
+Restart your machine, then open the Ubuntu app to finish setup.
+
+**2. Install build dependencies inside Ubuntu**
+```bash
+sudo apt update
+sudo apt install -y default-jdk ant python3-dev python3-pip gcc g++ make
+```
+
+Verify Java is installed:
+```bash
+java -version
+```
+
+**3. Download and build PyLucene**
+```bash
+# Download the source (check https://lucene.apache.org/pylucene/ for the latest version)
+wget https://downloads.apache.org/lucene/pylucene/pylucene-9.10.0-src.tar.gz
+tar -xzf pylucene-9.10.0-src.tar.gz
+cd pylucene-9.10.0
+```
+
+Edit `Makefile` to set your Python path:
+```makefile
+PREFIX_PYTHON=/usr
+ANT=ant
+PYTHON=$(PREFIX_PYTHON)/bin/python3
+JCC=$(PYTHON) -m jcc
+NUM_FILES=8
+```
+
+Then build and install:
+```bash
+make
+make install
+```
+
+**4. Navigate to the project and run the indexer**
+```bash
+cd /mnt/e/CS\ 172/CS172_Project/Web_Crawler
+python -m indexer.build_index --crawl-dir crawled_pages --metadata crawled_pages/metadata.csv --index-dir index/lucene_index
+```
+
+---
+
+> **Note:** PyLucene is only required to build the index and run searches.
+> The Django dev server and crawler work without it.
 
 ## 7. Deactivate (when done)
 

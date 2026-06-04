@@ -1,6 +1,17 @@
+# Part A — crawler dependencies
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
 urllib3>=2.0.0
 
+# Part B — web app
 django>=5.0,<6.0
+
+# Part B — PyLucene (indexer + search)
+#
+# PyLucene CANNOT be installed via pip.
+# Install using one of the two methods in docs/installation.md:
+#   Option A: Docker  →  docker pull coady/pylucene
+#   Option B: WSL2   →  build from source on Ubuntu
+#
+# PyLucene >= 9.0  (https://lucene.apache.org/pylucene/)
