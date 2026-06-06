@@ -1,24 +1,80 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS172 Search Engine</title>
+  <link rel="stylesheet" href="{% static 'search_app/style.css' %}">
 </head>
 <body>
-  <h1>Search</h1>
+  <div class="page {% if not query %}page-empty{% endif %}">
 
-  <form method="get" action="{% url 'search_app:search' %}">
-    <input type="text" name="q" value="{{ query }}" placeholder="q">
-    <button type="submit">Search</button>
-  </form>
+    <header class="header">
+      <h1 class="logo">CS172 Search Engine</h1>
+      <p class="subtitle">A Lucene-based search engine over crawled UC web pages</p>
+    </header>
 
-  {% if error %}
-    <p><strong>Error:</strong> {{ error }}</p>
-  {% endif %}
+    <form class="search-form" method="get" action="{% url 'search_app:search' %}">
+      <input
+        type="text"
+        name="q"
+        value="{{ query }}"
+        placeholder="Search the index..."
+        autocomplete="off"
+        autofocus>
+      <button type="submit">Search</button>
+    </form>
 
-  {% if query and not error %}
-    <p><strong>Debug (P5 replaces):</strong> top_k={{ top_k }}</p>
-    <pre>{{ results }}</pre>
-  {% endif %}
+    {% if error %}
+      <div class="error">
+        <strong>Error:</strong> {{ error }}
+      </div>
+    {% endif %}
+
+    {% if query and not error %}
+      <div class="results-meta">
+        Showing top {{ results|length }} result{{ results|length|pluralize }} for
+        <span class="query-echo">"{{ query }}"</span>
+      </div>
+
+      {% if results %}
+        <ol class="results">
+          {% for r in results %}
+            <li class="result-card">
+              <div class="result-header">
+                <a href="{{ r.url }}" class="result-title" target="_blank" rel="noopener">
+                  {{ r.title|default:r.url }}
+                </a>
+                <span class="result-score" title="Lucene relevance score">
+                  score: {{ r.score }}
+                </span>
+              </div>
+              <div class="result-url">{{ r.url }}</div>
+              {% if r.snippet %}
+                <p class="result-snippet">{{ r.snippet }}</p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <div class="no-results">
+          No results found for "{{ query }}".
+        </div>
+      {% endif %}
+    {% endif %}
+
+    <footer class="footer">
+      <p>CS172 &middot; Spring 2026 &middot; Team Project</p>
+      <ul class="team">
+        <li>Xiyuan Wu</li>
+        <li>Jake Wang</li>
+        <li>Jia Desai</li>
+        <li>Alex Back</li>
+        <li>Prathmesh Jain</li>
+      </ul>
+    </footer>
+
+  </div>
 </body>
 </html>
