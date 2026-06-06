@@ -8,7 +8,7 @@ A two-part course project:
 ## Documentation
 
 - **[Installation (developers)](docs/installation.md)** — local setup for Part A and Part B.
-- **[Usage (Part A)](docs/usage.md)** — running the crawler. 
+- **[Usage](docs/usage.md)** — running the crawler (Part A) and search site (Part B).
 - **[Developer notes — Part A](docs/dev-doc-a.md)** — crawler architecture and team split.
 - **[Developer notes — Part B](docs/dev-doc-b.md)** — search engine architecture and team split.
 - **[Project instructions](docs/instructions.md)** — original assignment text.
