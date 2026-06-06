@@ -2,7 +2,7 @@
 
 This guide is for **developers** working on the project. It covers the full local setup for Part A (crawler) and Part B (indexer + Django search site).
 
-End users who only want to run the crawler should read [`usage.md`](usage.md) instead.
+End users who only want to run the project should read [`usage.md`](usage.md) instead.
 
 ## Prerequisites
 
