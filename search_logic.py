@@ -34,6 +34,8 @@ try:
         StandardAnalyzer
     )
 
+    from java.nio.file import Paths as JPaths
+
     PYLUCENE_AVAILABLE = True
 
 except ImportError:
@@ -89,10 +91,13 @@ def pylucene_search(
             "PyLucene not installed."
         )
 
-    lucene.initVM()
+    try:
+        lucene.initVM()
+    except ValueError:
+        lucene.getVMEnv().attachCurrentThread()
 
     directory = FSDirectory.open(
-        index_dir
+        JPaths.get(str(index_dir))
     )
 
     reader = DirectoryReader.open(
@@ -110,11 +115,8 @@ def pylucene_search(
         analyzer
     )
 
-    parser.setMultiFields(
-        DEFAULT_FIELDS
-    )
-
-    query = parser.parse(
+    query = MultiFieldQueryParser.parse(
+        parser,
         query_text
     )
 
@@ -130,7 +132,7 @@ def pylucene_search(
         start=1
     ):
 
-        doc = searcher.doc(
+        doc = searcher.storedFields().document(
             hit.doc
         )
 
